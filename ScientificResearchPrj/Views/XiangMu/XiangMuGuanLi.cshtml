@@ -1,0 +1,292 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>项目管理</title>
+    <!-- Jquery EasyUI styles for this template -->
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/bootstrap/easyui.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/icon.css">
+     
+    <style>
+        /*改变propertygrid行高*/
+        .datagrid-row {
+            height: 32px;
+        }
+        /*改变propertygrid格子内的字体样式*/
+        .datagrid-cell {
+            font-size: 18px !important;
+        }
+        /*改变propertygrid格子内编辑框的样式*/
+        .datagrid-view .datagrid-editable-input {
+            font-size: 18px !important;
+            height: 30px !important;
+        }
+        /*propertygrid工具栏toolbar的文字显示*/
+        .l-btn-text {
+            font-weight: bold !important;
+            font-size: 16px !important;
+        }
+        /*propertygrid时间选择框的显示框*/
+        .datagrid-row-editing .textbox, .datagrid-row-editing .textbox-text {
+            height: 30px !important;
+            font-size: 18px !important;
+        }
+        /*propertygrid时间选择框的图标样式*/
+        .datebox .combo-arrow {
+            height: 30px !important;
+            width: 28px !important;
+        }
+        a {
+            color: #ff6a00;
+        }
+
+        a:hover {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div title="项目管理" style="padding: 10px; border: 0;">
+            <div id="tb" style="height:auto">
+                <table cellspacing="0" cellpadding="0" style="margin-left:20px">
+                    <tr>
+                        <td>
+                            <a href="javascript:void(0)" id="link_add" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true">Add</a>
+                            <a href="javascript:void(0)" id="link_edit" class="easyui-linkbutton" data-options="iconCls:'icon-edit',plain:true">Edit</a>
+                            <a href="javascript:void(0)" id="link_remove" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true">Remove</a>
+                        </td>
+                        <td>
+                            <div style="margin-left:75px">
+                                <input id="" class="easyui-combobox" data-options="valueField:'value',textField:'text',data:LanMuData,prompt :'栏目类型'">
+                                <input id="link_projectgroup" class="easyui-combobox" data-options="valueField:'value',textField:'text',data:ProjectGroupData,prompt :'项目组'">
+                                <input class="easyui-searchbox" data-options="prompt:'搜索项目'" style="width:200px; vertical-align:middle;">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <table class="easyui-datagrid" id="tTable"
+                   data-options="fix:true,fitColumns:true" style="width:100%;position:absolute;">
+                <thead>
+                    <tr>
+                        <th data-options="field:'No',align:'center'" style="width:10%;">项目编号</th>
+                        <th data-options="field:'Name',align:'center'" style="width: 20%;">项目名称</th>
+                        <th data-options="field:'ProposerName',align:'center'" style="width: 10%;">拟定者</th>
+                        <th data-options="field:'ProposeTime',align:'center'" style="width: 15%;">拟定时间</th>
+                        <th data-options="field:'Keys',align:'center'" style=" width:20%;">关键字</th>
+                        <th data-options="field:'FK_XMZName',align:'center'" style="width: 10%;">项目组</th>
+                        <th data-options="field:'Columns',align:'center',
+                                formatter: function(value) {
+                                    for (var i = 0; i < LanMuData.length; i++) {
+                                        if (LanMuData[i].value == value){
+                                            return LanMuData[i].text;
+                                        }
+                                    }
+                                    return value;
+                                },editor:{
+                                    type:'combobox',
+                                    options:{
+                                        data: LanMuData,
+                                        valueField: 'value',
+                                        textfield :'text' 
+                                    }
+                                }" style="width: 10%;">栏目</th>
+                </thead>
+            </table>
+        </div>
+
+        <div id="divEditProject" class="easyui-dialog"  data-options="{
+                    title: '编辑项目',
+                    closed: true,
+                    cache: false,
+                    height: 500,
+                    width: 1000,
+                    modal: true,
+                    buttons: [{
+                            iconCls: 'icon-ok',
+                            text: '确定',
+                            handler:  BS_.saveEditProject
+                        },{
+                            text: '取消',
+                            iconCls: 'icon-cancel',
+                            handler:  BS_.cancelSaveEditProject
+                        }
+                    ] ,
+                    closable: false
+                 }">
+            
+            <div style="width: 100%;">
+                <table id="pg" style="width: 100%;" data-options="fix:true,fitColumns:true" ></table>
+            </div>
+            
+        </div>
+    </div>
+
+    <!--Jquery EasyUI  js文件   -->
+    <script src="~/Content/jquery-easyui-1.4.1/jquery.min.js"></script>
+    <script src="~/Content/jquery-easyui-1.4.1/jquery.easyui.min.js"></script>
+    <script src="~/Scripts/easyui_extend.js"></script>
+    <script src="~/Scripts/jquery_extend.js"></script>
+     
+    <script src="~/Views/XiangMu/js/AT_.js"></script>
+    <script src="~/Views/XiangMu/js/BS_.js"></script>
+    <script src="~/Views/XiangMu/js/ET_.js"></script>
+    <script>
+        var currentLoginUser = '@ViewData["LoginUser"]';
+        var currentLoginUserName = '@ViewData["LoginUserName"]';
+        
+        
+        var LanMuData = [
+            { "value": 1, "text": "全部" }, { "value": 2, "text": "综合" }, { "value": 3, "text": "电子电信" },
+            { "value": 4, "text": "工程技术" }, { "value": 5, "text": "航空航天" }, { "value": 6, "text": "化学" },
+            { "value": 7, "text": "物理" }, { "value": 8, "text": "自动化/计算机" }, { "value": 9, "text": "土木工程" },
+            { "value": 10, "text": "能源动力" }, { "value": 11, "text": "医药卫生" }, { "value": 12, "text": "水利科学" },
+            { "value": 13, "text": "自然科学" }, { "value": 14, "text": "社会科学" }, { "value": 15, "text": "生物科学" },
+            { "value": 16, "text": "食品科学" }, { "value": 17, "text": "农业科学" }, { "value": 18, "text": "图书馆学/信息科学" }
+        ];
+        var ProjectGroupData = undefined;
+        AT_.AjaxPost("/XiangMuZu/GetXiangMuZuForCombobox", null, function (data, status) {
+            if (data.state == "0") {
+                ProjectGroupData = parseJSON(data._Json).rows;
+                $('#link_projectgroup').combobox({ data: ProjectGroupData });
+            }
+        });
+        
+
+
+        var jsonResult = { total: 0, rows: [] };
+        var jsonData = undefined;
+
+        $(function () {
+            $('#tTable').datagrid({
+                //显示序号
+                rownumbers: true,
+                //单选还是多选
+                singleSelect: true,
+                //工具栏
+                toolbar: '#tb',
+                //分页
+                pagination: true,
+                onDblClickRow: BS_.onDblClickRow
+            });
+            //设置分页数据，使得可以获取分页进行加载
+            //注意：加载成功后必须重新设置分页数据，因为分页的正确显示是在数据加载成功后设置才有效的
+            $('#tTable').datagrid("getPager").pagination({
+                pageSize: 10//每页显示的记录条数，默认为10 
+            });
+
+            //初始化
+            ET_.onload();
+
+        });
+
+
+
+        
+ 
+
+
+        var propertygridJsonResult = undefined;
+        var propertygridData =
+          {
+              "total": 999, "rows": [
+                  { "name": "项目编号", "id": "No", "value": "Prj_", "group": "项目基本信息", "editor": "text" },
+                  { "name": "项目名称", "id": "Name", "group": "项目基本信息", "editor": "text" },
+                  { "name": "拟定者", "id": "ProposerName","value":currentLoginUserName, "group": "项目基本信息"},
+                  { "name": "拟定时间", "id": "ProposeTime", "group": "项目基本信息", "editor": "datetimebox" },
+                  { "name": "关键字", "id": "Keys", "group": "项目基本信息", "editor": "text" },
+                  {
+                      "name": "项目组", "id": "FK_Xmz", "group": "项目基本信息", editor: {
+                          type: 'combobox',
+                          options: {
+                              data: ProjectGroupData,
+                              valueField: 'value',
+                              textfield: 'text'
+                          }
+                      }
+                  },
+                  {
+                      "name": "栏目", "id": "Columns", "group": "项目基本信息",
+                      editor: {
+                          type: 'combobox',
+                          options: {
+                              data: LanMuData,
+                              valueField: 'value',
+                              textfield: 'text'
+                          }
+                      }
+                  },
+                  { "name": "项目描述", "id": "Description", "group": "项目基本信息", "editor": "ex_textarea" },
+                  { "name": "实现任务", "id": "Tasks", "value": "", "group": "项目基本信息", "editor": "ex_textarea" },
+                  { "name": "问题分解", "id": "Questions", "group": "项目基本信息", "editor": "ex_textarea" },
+                  { "name": "补充说明", "id": "Remarks", "group": "项目基本信息", "editor": "ex_textarea" },
+                  { "name": "上次修改时间", "id": "ModifyTime", "group": "其他信息" }
+              ]
+          }
+
+        $(function () {
+            if ($.fn.propertygrid) {
+                $.fn.propertygrid.defaults.columns[0][0].title = "标题"; // 对应Name  
+                $.fn.propertygrid.defaults.columns[0][1].title = "内容"; // 对应Value  
+                $.fn.propertygrid.defaults.columns[0][0].width = "20%"; // 对应Name  
+                $.fn.propertygrid.defaults.columns[0][1].width = "75%"; // 对应Value  
+            }
+            $("#pg").propertygrid({ 
+                showGroup: true,
+                scrollbarSize: 0,
+                groupFormatter: function (fvalue, rows) {
+                    return fvalue + ' - <span style="color:red">' + rows.length + ' rows</span>';
+                },
+                data: cloneJSON(propertygridData),
+                onClickRow: function () {
+                    //单击行的时候，设置进入编辑状态
+                    var row = $("#pg").propertygrid("getSelected");
+                    var editIndex = $("#pg").propertygrid('getRowIndex', row);
+                    $("#pg").propertygrid('beginEdit', editIndex);
+                },
+                
+                rowStyler: function (index, row) {
+                    /*
+                    if (row.editor.type == "ex_textarea") {
+                        return 'background-color:#6293BB;color:#fff;font-weight:bold;height:100px';
+                    }
+                    */
+                }
+            });
+        });
+
+
+        $.extend($.fn.propertygrid.defaults.columns[0][1], {
+            formatter: function (value, rowData, rowIndex) {
+                if (rowData.name == "栏目") {
+                    for (var i = 0; i < LanMuData.length; i++) {
+                        if (LanMuData[i].value == value) {
+                            return LanMuData[i].text;
+                        }
+                    }
+                }
+                else if (rowData.name == "项目组") {
+                    if (ProjectGroupData != undefined) {
+                        for (var i = 0; i < ProjectGroupData.length; i++) {
+                            if (ProjectGroupData[i].value == value) {
+                                return ProjectGroupData[i].text;
+                            }
+                        }
+                    }
+                }
+                else {
+                    return value;
+                }
+            }
+        });
+    </script>
+ 
+</body>
+</html>

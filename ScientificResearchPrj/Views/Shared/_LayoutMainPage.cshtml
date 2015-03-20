@@ -1,0 +1,54 @@
+﻿<!--布局页，用于登录后页面的统一布局-->
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+
+     
+    <!-- Jquery EasyUI styles for this template -->
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/bootstrap/easyui.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/icon.css">
+    <style type="text/css">
+        body {
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 100%;
+            /*加上position: absolute;才能设置body的高度不为0*/
+            position: absolute;
+        }
+         
+    </style>
+   
+</head>
+<body>
+    <div class="easyui-layout"   style="width:100%;height:100%;position:absolute">
+        <div data-options="region:'north',collapsible:true" style="height:50px;">
+            <div>&copy; 顶部</div>
+        </div>
+        <div data-options="region:'west',split:true" title="菜单区" style="width: 150px;" id="menuLeft">
+            @RenderSection("menu_left", required: true)
+        </div>
+        <div data-options="region:'center'" id="contentCenter">
+            @RenderSection("content_center", required: true)
+        </div>
+        <div data-options="region:'south',collapsible:true" style="height:50px;">
+            <div>&copy; 底部</div>
+        </div>
+    </div>
+    @RenderBody()
+ 
+    <!--Jquery EasyUI  js文件   -->
+    <script src="~/Content/jquery-easyui-1.4.1/jquery.min.js"></script>
+    <script src="~/Content/jquery-easyui-1.4.1/jquery.easyui.min.js"></script>
+    
+    @RenderSection("necessary_js", required: true)
+    
+     
+</body>
+</html>

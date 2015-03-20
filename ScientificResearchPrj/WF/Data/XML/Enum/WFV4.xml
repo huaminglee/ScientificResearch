@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Item Key="WhoIsPK"
+   CH="@0=工作ID是主键@1=流程ID是主键@2=父流程ID是主键@3=延续流程ID是主键"
+   EN="@0=工作ID是主键@1=流程ID是主键@2=父流程ID是主键@3=延续流程ID是主键"
+   JP="@0=工作ID是主键@1=流程ID是主键@2=父流程ID是主键@3=延续流程ID是主键"
+   RU="@0=工作ID是主键@1=流程ID是主键@2=父流程ID是主键@3=延续流程ID是主键"
+/>
+
+  <Item Key="WFSta"
+   CH="@0=运行中@1=已完成@2=其他"
+   EN="@0=运行中@1=已完成@2=其他"
+   JP="@0=运行中@1=已完成@2=其他"
+   RU="@0=运行中@1=已完成@2=其他"
+/>
+  
+  <Item Key="SaveModel"
+    CH="@0=仅节点表@1=节点表与Rpt表"
+    EN="@0=仅节点表@1=节点表与Rpt表"
+    JP="@0=仅节点表@1=节点表与Rpt表"
+    RU="@0=仅节点表@1=节点表与Rpt表"  />
+
+  <Item Key="AuthorWay"
+  CH="@0=不授权@1=全部流程授权@2=指定流程授权"
+  EN="@0=不授权@1=全部流程授权@2=指定流程授权"
+  JP="@0=不授权@1=全部流程授权@2=指定流程授权"
+  RU="@0=不授权@1=全部流程授权@2=指定流程授权"  />
+    
+    <Item Key="PRI"
+  CH="@0=低@1=中@2=高"
+  EN="@0=低@1=中@2=高"
+  JP="@0=低@1=中@2=高"
+  RU="@0=低@1=中@2=高"  />
+    
+  <Item Key="SelectAccepterEnable"
+    CH="@0=不启用@1=单独启用@2=在发送前打开@3=转入新页面"
+    EN="@0=不启用@1=单独启用@2=在发送前打开@3=转入新页面"
+    JP="@0=不启用@1=单独启用@2=在发送前打开@3=转入新页面"
+    RU="@0=不启用@1=单独启用@2=在发送前打开@3=转入新页面"
+        />
+  
+    <Item Key="FrmType"
+    CH="@0=自由表单@1=傻瓜表单@2=自定义表单@3=表单树"
+    EN="@0=自由表单@1=傻瓜表单@2=自定义表单@3=表单树"
+    JP="@0=自由表单@1=傻瓜表单@2=自定义表单@3=表单树"
+    RU="@0=自由表单@1=傻瓜表单@2=自定义表单@3=表单树"
+        />
+  
+    <Item Key="DeliveryWay"
+    CH="@0=按当前操作员所属组织结构逐级查找岗位@1=按部门计算@2=按SQL计算@3=按设置的人员计算@4=由上一步发送人选择@5=按上一节点表单SysSendEmps字段计算@6=按上一步操作人员@7=按上一步操作人员并自动跳转@8=按指定节点的工作人员计算@9=按岗位与部门交集计算@10=按岗位计算(以部门集合为纬度)@11=按指定节点的人员岗位计算@12=按SQL确定子线程接受人与数据源@13=由上一节点的明细表来决定子线程的接受人@14=仅按岗位计算@100=按ccflow的BPM模式处理"
+    EN=""
+    JP=""
+    RU=""
+        />
+
+    <!-- 跳转规则 -->
+    <Item Key="JumpWay"
+    CH="@0=不能跳转@1=只能向后跳转@2=只能向前跳转@3=任意节点跳转@4=按指定规则跳转"
+    EN=""
+    JP=""
+    RU=""
+        />
+
+    <!-- 退回规则 -->
+    <Item Key="ReturnRole"
+    CH="@0=不能退回@1=只能退回上一个节点@2=可退回以前任意节点@3=可退回指定的节点@4=由流程图设计的退回路线决定"
+    EN=""
+    JP=""
+    RU=""        />
+  
+    <!-- 抄送规则 -->
+    <Item Key="CCRole"
+    CH="@0=不能抄送@1=手工抄送@2=自动抄送@3=手工与自动@4=按表单SysCCEmps字段计算"
+    EN="@0=不能抄送@1=手工抄送@2=自动抄送@3=手工与自动"
+    JP="@0=不能抄送@1=手工抄送@2=自动抄送@3=手工与自动"
+    RU="@0=不能抄送@1=手工抄送@2=自动抄送@3=手工与自动"         />
+
+  <!-- 流程删除规则 -->
+  <Item Key="DelEnable"
+  CH="@0=不能删除@1=逻辑删除@2=记录日志方式删除@3=彻底删除@4=让用户决定删除方式"
+  EN=""
+  JP=""
+  RU=""         />
+  
+    
+	<Item Key="EventDoType" 
+        CH="@0=禁用@1=执行存储过程@2=执行SQL语句@3=执行URL@4=WebServices(未完成)@5=exe文件(未完成)@6=EventBase类"
+        EN="@0=禁用@1=执行存储过程@2=执行SQL语句@3=执行URL@4=WebServices(未完成)@5=exe文件(未完成)@6=EventBase类"
+        JP="@0=禁用@1=执行存储过程@2=执行SQL语句@3=执行URL@4=WebServices(未完成)@5=exe文件(未完成)@6=EventBase类"
+        RU="@0=禁用@1=执行存储过程@2=执行SQL语句@3=执行URL@4=WebServices(未完成)@5=exe文件(未完成)@6=EventBase类"   />
+
+  <Item Key="WFState"
+        CH="@0=空白@1=草稿@2=运行中@3=已完成@4=挂起@5=退回@6=转发@7=删除@8=加签@9=冻结@10=批处理"
+        EN="@0=空白@1=草稿@2=运行中@3=已完成@4=挂起@5=退回@6=转发@7=删除@8=加签@9=冻结@10=批处理"
+        JP="@0=空白@1=草稿@2=运行中@3=已完成@4=挂起@5=退回@6=转发@7=删除@8=加签@9=冻结@10=批处理"
+        RU="@0=空白@1=草稿@2=运行中@3=已完成@4=挂起@5=退回@6=转发@7=删除@8=加签@9=冻结@10=批处理" />
+
+  <Item Key="WFStateApp"
+        CH="@2=运行中@3=已完成@4=挂起@5=退回@6=转发@7=删除@8=加签@9=冻结@10=批处理"
+        EN="@2=运行中@3=已完成@4=挂起@5=退回@6=转发@7=删除@8=加签@9=冻结@10=批处理"
+        JP="@2=运行中@3=已完成@4=挂起@5=退回@6=转发@7=删除@8=加签@9=冻结@10=批处理"
+        RU="@2=运行中@3=已完成@4=挂起@5=退回@6=转发@7=删除@8=加签@9=冻结@10=批处理" />
+  
+  <!-- 运行模式  -->
+<Item Key="RunModel"
+          CH="@0=普通@1=合流@2=分流@3=分合流@4=子线程"
+          EN="@0=General@1=Confluence@2=Shunt@3=Sub-confluent"
+          JP="@0=General@1=Confluence@2=Shunt@3=Sub-confluent"
+          RU="@0=General@1=Confluence@2=Shunt@3=Sub-confluent" />
+
+  <!-- 分流规则  -->
+<Item Key="FLRole"
+        CH="@0=按接受人@1=按部门@2=按岗位"
+        EN="@0=By recipient@1=By sector@2=By post"
+        JP="@0=By recipient@1=By sector@2=By post"
+        RU="@0=By recipient@1=By sector@2=By post"
+         />
+
+  <!-- 附件权限  -->
+<Item Key="FJOpen"
+    CH="@0=关闭附件@1=操作员@2=工作ID@3=流程ID"
+    EN="@0=Close attachments@1=Operator@2=WorkID@3=FlowID"
+    JP="@0=Close attachments@1=Operator@2=WorkID@3=FlowID"
+    RU="@0=Close attachments@1=Operator@2=WorkID@3=FlowID" />
+    
+  <!-- 表单类型  -->
+<Item Key="FormType"
+     CH="@0=傻瓜表单@1=自由表单@2=自定义表单@3=SDK表单@4=SL表单(测试版本)@5=表单树@9=禁用(对多表单流程有效)"
+     EN="@0=System Form@1=Custom Form@2=SDK Form"
+     JP="@0=System Form@1=Custom Form@2=SDK Form"
+     RU="@0=System Form@1=Custom Form@2=SDK Form" />
+
+  <!-- 公文类型  -->
+<Item Key="DocType"
+    CH="@0=正式公文@1=便函"
+    EN="@0=Official documents@1=Memo"
+    JP="@0=Official documents@1=Memo"
+    RU="@0=Official documents@1=Memo" />
+
+  <!-- 运行方式  -->
+<Item Key="FlowRunWay"
+ CH="@0=手工启动@1=指定人员按时启动@2=数据集按时启动@3=触发式启动"
+ EN="@0=By Hand@1=By Year@2=By Month@3=By Week@4=By Day@5=By Hour"
+ JP="@0=By Hand@1=By Year@2=By Month@3=By Week@4=By Day@5=By Hour"
+ RU="@0=By Hand@1=By Year@2=By Month@3=By Week@4=By Day@5=By Hour" />
+
+<!-- 应用类型  -->
+<Item Key="AppType"
+  CH="@0=外部Url连接@1=本地可执行文件"
+  EN="@0=Url@1=exe"
+  JP="@0=Url@1=exe"
+  RU="@0=Url@1=exe" />
+  <!-- 提示信息类型  -->
+<Item Key="AlertType"
+CH="@0=短信@1=邮件@2=邮件与短信@3=系统(内部)消息"
+EN="@0=SMS@1=Email@2=SMS-Email@3=系统(内部)消息"
+JP="@0=SMS@1=Email@2=SMS-Email@3=系统(内部)消息"
+RU="@0=SMS@1=Email@2=SMS-Email@3=系统(内部)消息" />
+     
+<!-- 收听方式  -->
+<Item Key="AlertWay"  
+CH="@0=不接收@1=短信@2=邮件@3=内部消息@4=QQ消息@5=RTX消息@6=MSN消息"
+EN="@0=None@1=SMS@2=Email@3=SMS-Email"
+JP="@0=None@1=SMS@2=Email@3=SMS-Email"
+RU="@0=None@1=SMS@2=Email@3=SMS-Email" />
+ 
+  <!-- Target  -->
+    <Item Key="Target"
+CH="@0=新窗口@1=本窗口@2=父窗口"
+EN="@0=New@1=Self@2=Parent"
+JP="@0=New@1=Self@2=Parent"
+RU="@0=New@1=SMS@2=Parent" />
+
+  <!-- SharingType  -->
+<Item Key="SharingType"
+CH="@0=共享@1=私有"
+EN="@0=Share@1=Privete"
+JP="@0=Share@1=Privete"
+RU="@0=Share@1=Privete" />
+
+<!-- TaskSta状态  -->
+<Item Key="TaskSta"
+CH="@0=未开始@1=进行中@2=完成@3=推迟"
+EN="@0=Init@1=Runing@2=Complete@3=Postpone"
+JP="@0=Init@1=Runing@2=Complete@3=Postpone"
+RU="@0=Init@1=Runing@2=Complete@3=Postpone" />
+
+  <!-- JMCD机密程度  -->
+  <Item Key="JMCD"
+  CH="@0=一般@1=保密@2=秘密@3=机密"
+  EN="@0=Init@1=Runing@2=Complete@3=Postpone"
+  JP="@0=Init@1=Runing@2=Complete@3=Postpone"
+  RU="@0=Init@1=Runing@2=Complete@3=Postpone" />
+</NewDataSet>

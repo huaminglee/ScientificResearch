@@ -1,0 +1,118 @@
+﻿<!--岗位管理页面-->
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>岗位管理</title>
+    <!-- Jquery EasyUI styles for this template -->
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/bootstrap/easyui.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/icon.css">
+   
+    <style>
+        a {
+            color: #ff6a00;
+        }
+
+        a:hover {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div title="岗位" style="padding: 10px; border: 0px solid red;">
+        <div id="tb" style="height:auto">
+            <table cellspacing="0" cellpadding="0" style="margin-left:20px">
+                <tr>
+                    <td>
+                        <a href="javascript:void(0)" id="link_add" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true">Add</a>
+                        <a href="javascript:void(0)" id="link_remove" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true">Remove</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <table class="easyui-datagrid" id="tTable"
+               data-options="fix:true,fitColumns:true" style="width:100%;position:absolute;">
+            <thead>
+                <tr>
+                    <th data-options="field:'StaNo',align:'center',editor:'textbox'" style="width:15%;">编号</th>
+                    <th data-options="field:'Name',align:'center',editor:'textbox'" style="width:25%;">名称</th>
+                    <th data-options="field:'Description',align:'center',editor:{
+                            type:'ex_wintextarea',
+                            options:{
+                                readonly:false
+                            }
+                        }" style="width:40%;">岗位描述</th>
+                    <th data-options="field:'StaGrade',align:'center',
+                            formatter: function(value) {
+                                for (var i = 0; i < StaGradeData.length; i++) {
+                                    if (StaGradeData[i].value == value){
+                                        return StaGradeData[i].text;
+                                    }
+                                }
+                                return value;
+                            },editor:{
+                                type:'combobox',
+                                options:{
+                                    data: StaGradeData,
+                                    valueField: 'value',
+                                    textfield :'text' 
+                                }
+                            }" style="width:15%;">类型</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+
+    <!--Jquery EasyUI  js文件   -->
+    <script src="~/Content/jquery-easyui-1.4.1/jquery.min.js"></script>
+    <script src="~/Content/jquery-easyui-1.4.1/jquery.easyui.min.js"></script>
+    <script src="~/Scripts/easyui_extend.js"></script>
+    <script src="~/Scripts/jquery_extend.js"></script>
+
+    <script src="~/Views/Station/js/AT_.js"></script>
+    <script src="~/Views/Station/js/BS_.js"></script>
+    <script src="~/Views/Station/js/ET_.js"></script>
+    <script>
+        var StaGradeData = [
+            {value:"1",text: "高层岗"},
+            {value:"2",text: "中层岗"},
+            {value:"3",text: "执行岗"} 
+        ];
+
+        var jsonResult = { total: 0, rows: [] };
+        var jsonData = undefined;
+
+        $(function () {
+            $('#tTable').datagrid({
+                //显示序号
+                rownumbers: true,
+                //单选还是多选
+                singleSelect: true,
+                //工具栏
+                toolbar: '#tb',
+                //分页
+                pagination: true,
+                onClickRow: BS_.onClickRow
+            });
+
+            //设置分页数据，使得可以获取分页进行加载
+            //注意：加载成功后必须重新设置分页数据，因为分页的正确显示是在数据加载成功后设置才有效的
+            $('#tTable').datagrid("getPager").pagination({
+                pageSize: 10//每页显示的记录条数，默认为10 
+            });
+
+            //初始化
+            ET_.onload();
+        });
+    
+        
+    </script>
+
+</body>
+</html>
+

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ScientificResearchPrjModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="MyPort_Dept">
+    <Key>
+      <PropertyRef Name="DeptNo" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DeptNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ParentNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Leader" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Tel" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Addr" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MyPort_Emp" Relationship="Self.MyPort_EmpDept" FromRole="MyPort_Dept" ToRole="MyPort_Emp" />
+  </EntityType>
+  <EntityType Name="MyPort_Emp">
+    <Key>
+      <PropertyRef Name="EmpNo" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmpNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LoginName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Pass" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Leader" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SID" Type="String" MaxLength="36" FixedLength="false" Unicode="true" />
+    <Property Name="Tel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="FK_Dept" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MyPort_Dept" Relationship="Self.MyPort_EmpDept" FromRole="MyPort_Emp" ToRole="MyPort_Dept" />
+    <NavigationProperty Name="MyPort_Station" Relationship="Self.MyPort_EmpStation" FromRole="MyPort_Emp" ToRole="MyPort_Station" />
+  </EntityType>
+  <EntityType Name="MyPort_Station">
+    <Key>
+      <PropertyRef Name="StaNo" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StaNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DutyReq" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Makings" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="StaGrade" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MyPort_Emp" Relationship="Self.MyPort_EmpStation" FromRole="MyPort_Station" ToRole="MyPort_Emp" />
+  </EntityType>
+  <Association Name="MyPort_EmpDept">
+    <End Role="MyPort_Dept" Type="Self.MyPort_Dept" Multiplicity="*" />
+    <End Role="MyPort_Emp" Type="Self.MyPort_Emp" Multiplicity="*" />
+  </Association>
+  <Association Name="MyPort_EmpStation">
+    <End Role="MyPort_Emp" Type="Self.MyPort_Emp" Multiplicity="*" />
+    <End Role="MyPort_Station" Type="Self.MyPort_Station" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="MyPortModelEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="MyPort_Dept" EntityType="Self.MyPort_Dept" />
+    <EntitySet Name="MyPort_Emp" EntityType="Self.MyPort_Emp" />
+    <EntitySet Name="MyPort_Station" EntityType="Self.MyPort_Station" />
+    <AssociationSet Name="MyPort_EmpDept" Association="Self.MyPort_EmpDept">
+      <End Role="MyPort_Dept" EntitySet="MyPort_Dept" />
+      <End Role="MyPort_Emp" EntitySet="MyPort_Emp" />
+    </AssociationSet>
+    <AssociationSet Name="MyPort_EmpStation" Association="Self.MyPort_EmpStation">
+      <End Role="MyPort_Emp" EntitySet="MyPort_Emp" />
+      <End Role="MyPort_Station" EntitySet="MyPort_Station" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ScientificResearchPrjModel1StoreContainer" CdmEntityContainer="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaEntities">
+    <EntitySetMapping Name="MyPort_Emp">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel1.MyPort_Emp">
+        <MappingFragment StoreEntitySet="MyPort_Emp">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EmpNo" ColumnName="EmpNo" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Leader" ColumnName="Leader" />
+          <ScalarProperty Name="SID" ColumnName="SID" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="FK_Dept" ColumnName="FK_Dept" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,417 @@
+﻿<!--布局页，用于流程页面共享部分-->
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <!-- Jquery EasyUI styles for this template -->
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/bootstrap/easyui.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/icon.css">
+    <link href="~/Content/myview/scoller.css" rel="stylesheet" />
+    <style>
+        /*改变propertygrid行高*/
+        .datagrid-row {
+            height: 32px;
+        }
+        /*改变propertygrid格子内的字体样式*/
+        .datagrid-cell {
+            font-size: 18px !important;
+        }
+        /*改变propertygrid格子内编辑框的样式*/
+        .datagrid-view .datagrid-editable-input {
+            font-size: 18px !important;
+            height: 30px !important;
+        }
+        /*propertygrid工具栏toolbar的文字显示*/
+        .l-btn-text {
+            font-weight: bold !important;
+            font-size: 16px !important;
+        }
+        /*propertygrid时间选择框的显示框*/
+        .datagrid-row-editing .textbox, .datagrid-row-editing .textbox-text {
+            height: 30px !important;
+            font-size: 18px !important;
+        }
+        /*propertygrid时间选择框的图标样式*/
+        .datebox .combo-arrow {
+            height: 30px !important;
+            width: 28px !important;
+        }
+        a {
+            color: #ff6a00;
+        }
+
+        a:hover {
+            color: #000;
+        }
+    </style>
+     
+</head>
+<body>
+
+    <!--此四个数据域保存当前流程参数
+           <input type="hidden" id="FK_Flow" value='@ViewData["FK_Flow"]' />
+           <input type="hidden" id="WorkID" value='@ViewData["WorkID"]' />
+           <input type="hidden" id="FK_Node" value='@ViewData["FK_Node"]' />
+           <input type="hidden" id="FID" value='@ViewData["FID"]' />
+              
+    FK_Flow:<input type="text" id="FK_Flow" value='@ViewData["FK_Flow"]' />
+    WorkID:<input type="text" id="WorkID" value='@ViewData["WorkID"]' />
+    FK_Node:<input type="text" id="FK_Node" value='@ViewData["FK_Node"]' />
+    FID:<input type="text" id="FID" value='@ViewData["FID"]' /> -->
+    <!--有效链接dialog-->
+    <div id="divAddLink" class="easyui-dialog" data-options="{
+                    title: '链接及其说明',
+                    closed: true,
+                    cache: false,
+                    height: 250,
+                    width: 400,
+                    modal: true
+                 }">
+        <div class="easyui-panel" style="width: 100%; padding: 20px 60px; " data-options="fit:true,fitColumns:true">
+            <div style="margin-bottom:20px">
+                <div>链接地址:</div>
+                <input class="easyui-textbox" id="linkHref" value="http://" data-options="prompt:'请于此处附上链接...'" style="width:100%;height:32px" autofocus>
+            </div>
+            <div style="margin-bottom:20px">
+                <div>链接说明:</div>
+                <input class="easyui-textbox" id="linkInstruction" data-options="prompt:'请于此处附上链接说明...'" style="width:100%;height:32px">
+            </div>
+            <div>
+                <a href="#" class="easyui-linkbutton" onclick="saveLink()" iconcls="icon-ok" style="width:100%;height:32px">确定</a>
+            </div>
+        </div>
+    </div>
+    <!--有效链接dialog-->
+
+
+    <!--附件dialog-->
+    <div id="tb">
+        <div id="divNoFileWarn" style="display:none; color: red;">*请先选择要上传的附件</div>
+        <br>
+    </div>
+    <div id="divSelectFile" class="easyui-dialog" data-options="{
+                    title: '附件清单(最大支持100m)',
+                    closed: true,
+                    closable:false,
+                    cache: false,
+                    height: 320,
+                    width: 600,
+                    modal: true,
+                    toolbar: '#tb' ,
+                    buttons: [{
+                            iconCls: 'icon-ok',
+                            text: '确定',
+                            handler: saveFileInfo
+                         }
+                    ]
+                 }">
+        <!--
+        <form id="fileUploadForm" method="post" enctype="multipart/form-data" action="/File/Upload">
+            <div id="divAttach" style="margin:5px 20px">
+                <div id="fileboxExample">
+                    <input type="file" name="file" data-options="buttonText:'浏览'" style="width:540px;margin-bottom:2px"><br>
+                </div>
+            </div>
+        </form>-->
+        <div id="uploader" style="margin:5px 20px">
+            <div class="btns">
+                <span id="picker">选择文件</span> 
+                <span id="ctlBtn">开始上传</span>
+            </div>
+            <!--用来存放文件信息-->
+            <div id="thelist" class="uploader-list"></div>
+        </div>
+
+    </div>
+        
+    <!--附件dialog-->
+
+     
+    <!--抄送dialog-->
+    <div id="divChaoSong" class="easyui-dialog" data-options="{
+                    title: '抄送',
+                    closed: true,
+                    cache: false,
+                    height: 400,
+                    width: 600,
+                    modal: true,
+                    buttons: [{
+                            iconCls: 'icon-ok',
+                            text: '确定',
+                            handler: chaoSong
+                        },{
+                            text: '取消',
+                            iconCls: 'icon-cancel',
+                            handler: quXiaoChaoSong
+                        }
+                    ]
+                 }">
+        <form>
+            <input type="hidden" id="FK_Flow" name="FK_Flow" value='@ViewData["FK_Flow"]' />
+            <input type="hidden" id="WorkID" name="WorkID" value='@ViewData["WorkID"]' />
+            <input type="hidden" id="FK_Node" name="FK_Node" value='@ViewData["FK_Node"]' />
+            <input type="hidden" id="FID" name="FID" value='@ViewData["FID"]' />
+            <div class="easyui-panel" style="width: 100%; border: 0; padding: 10px 60px; " data-options="fit:true,fitColumns:true">
+                <div style="color: black; margin-bottom: 10px" id="divChaoSongClose"></div>
+                <div style="color: red; margin-bottom: 10px" id="divChaoSongJieGuo"></div>
+                <div style="margin-bottom:10px;text-align:right">
+                    <span style="width: 10%;">抄送给:</span>
+                    <input class="easyui-combobox" style="width: 90%;" name="ChaoSongRenTo" id="ChaoSongRenTo" data-options="
+                           valueField:'value',textField:'text',data:PreviousNodesInfoData,multiple:true">
+                </div>
+                <div style="margin-bottom: 10px; text-align: right">
+                    <span style="width: 10%;">或者是:</span>
+                    <input style="width: 90%;" class="easyui-textbox" name="ChaoSongRenTo2" id="ChaoSongRenTo2" data-options="
+                        icons: [{
+                                    iconCls:'icon-add',
+                                    handler: function(e){
+                                        _EmpsSelect.open_EmpsDialog()
+                                    }
+                                }],
+                           plain:true">
+                </div>
+                <div style="margin-bottom: 10px; text-align: right">
+                    <span style="width: 10%;">标题:</span>
+                    <input style="width: 90%;" class="easyui-textbox" name="ChaoSongBiaoTi" id="ChaoSongBiaoTi">
+                </div>
+                <div style="text-align: right">
+                    <span style="width: 10%; ">内容:</span>
+                    <textarea style="width: 89%;height:150px" name="ChaoSongNeiRong" id="ChaoSongNeiRong"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--抄送dialog-->
+
+     <!--抄送选择人员dialog-->
+     <div id="divSelect_Emps" class="easyui-dialog"  data-options="{
+                    title: '选择人员',
+                    closed: true,
+                    cache: false,
+                    height: 411,
+                    width: 800,
+                    modal: true,
+                    buttons: [{
+                            iconCls: 'icon-ok',
+                            text: '确定',
+                            handler: select_Emps
+                        },{
+                            text: '取消',
+                            iconCls: 'icon-cancel',
+                            handler:  _EmpsSelect.cancelSelect_Emps
+                        }
+                    ]
+                 }">
+
+            <div id="tb__Emps" style="height:auto">
+                <table cellspacing="0" cellpadding="0" style="margin-left:20px">
+                    <tr>
+                        <td>
+                            <a href="javascript:void(0)" id="link_get_Empstoselected" class="easyui-linkbutton" data-options="iconCls:'icon-redo',plain:true">右移</a>
+                        </td>
+                        <td>
+                        <div style="margin-left:86px">
+                            <input id="link__Empstype" class="easyui-combobox" 
+                                data-options="valueField:'value',textField:'text',value:'2',data:TypeData,prompt :'类型',
+                                    onSelect:_EmpsSelect.select_EmpsType
+                                ">
+                        </div>
+                    </td>
+                    </tr>
+                </table>
+            </div>
+            <div  style="float:left;width:60%;" >
+                <table class="easyui-datagrid" id="tTable_Emps"
+                   data-options="fix:true,fitColumns:true,
+                                //显示序号
+                                rownumbers: true,
+                                singleSelect: false,
+                                //工具栏
+                                toolbar: '#tb__Emps',
+                                //分页
+                                pagination: true,
+                                onClickRow: _EmpsSelect.select_EmpsOnClickRow" style="width:100%;position:absolute;">
+                    <thead>
+                        <tr>
+                            <th data-options="field:'EmpNo',align:'center'" style="width:18%;">编号</th>
+                            <th data-options="field:'Name',align:'center'" style="width:18%;">姓名</th>
+                            <th data-options="field:'FK_DeptName',align:'center',hidden:'true'" style="width:20%;">部门</th>
+                            <th data-options="field:'FK_StationName',align:'center',hidden:'true'" style="width:20%;">岗位</th>
+
+                            <th data-options="field:'AdmissionYear',align:'center'" style="width:20%;">入学年份</th>
+                            <th data-options="field:'FK_TutorName',align:'center'" style="width:20%;">导师</th>
+
+                            <th data-options="field:'Type',align:'center',
+                                formatter: function(value) {
+                                    for (var i = 0; i < TypeDataForSelect.length; i++) {
+                                        if (TypeDataForSelect[i].value == value){
+                                            return TypeDataForSelect[i].text;
+                                        }
+                                    }
+                                    return value;
+                                },editor:{
+                                    type:'combobox',
+                                    options:{
+                                        data: TypeDataForSelect,
+                                        valueField: 'value',
+                                        textfield :'text' 
+                                    }
+                                }" style="width:20%;">类型</th>
+                        </tr>
+                    </thead>
+                </table>
+           </div>
+
+            <div id="tb_Selected_Emps" style="height:auto">
+                <table cellspacing="0" cellpadding="0" style="margin-left:20px">
+                    <tr>
+                        <td>
+                            <a href="javascript:void(0)" id="link_removeselect_Emps" class="easyui-linkbutton" data-options="iconCls:'icon-undo',plain:true">移出</a>
+                            <a href="javascript:void(0)" id="link_removeallselect_Emps" class="easyui-linkbutton" data-options="iconCls:'icon-cut',plain:true">全部移出</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div  style="float:right;width:35%;margin-right:3%;" >
+                <table class ="easyui-datagrid" id="tTableSelect_Emps"
+                    data-options="fix:true,fitColumns:true,
+                            //显示序号
+                            rownumbers: true,
+                            //单选还是多选
+                            singleSelect: false,
+                            //工具栏
+                            toolbar: '#tb_Selected_Emps',
+                            onClickRow: _EmpsSelect.selected_EmpsOnClickRow" style="width:100%;position:absolute;">
+                    <thead>
+                        <tr>
+                            <th data-options="field:'EmpNo',align:'left'" style="width:40%;">编号</th>
+                            <th data-options="field:'Name',align:'center'" style="width:50%;">名称</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+    </div>
+     <!--抄送选择人员dialog-->
+
+
+    <!--以下文件放置于Jquery EasyUI  js文件之前，可确保可验证，且不影响easyui功能-->
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <!--微软提供的验证，结合jquery文件-->
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+    <!--微软提供的ajax服务-->
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+
+
+
+    <!--Jquery EasyUI  js文件   -->
+    <script src="~/Content/jquery-easyui-1.4.1/jquery.min.js"></script>
+    <script src="~/Content/jquery-easyui-1.4.1/jquery.easyui.min.js"></script>
+    <script src="~/Content/jquery-easyui-1.4.1/locale/easyui-lang-zh_CN.js"></script>
+    <script src="~/Content/jquery-easyui-1.4.1/datagrid-detailview.js"></script>
+    <!--easyui自定义扩展文件-->
+    <script src="~/Scripts/easyui_extend.js"></script>
+    <!--jquery自定义扩展文件-->
+    <script src="~/Scripts/jquery_extend.js"></script>
+    <!--公共变量-->
+    <script src="~/Scripts/_commom-variable.js"></script>
+    <!--选择人员js文件-->
+    <script src="~/Scripts/select_emps.js"></script>
+    <!--抄送js文件-->
+    <script src="~/Scripts/chaosong.js"></script>
+    <!--有效链接js文件-->
+    <script src="~/Scripts/link.js"></script>
+    <!--添加附件js css文件-->
+    <script src="~/Scripts/attach.js"></script> 
+    <link href="~/Scripts/webuploader-0.1.5/webuploader.css" rel="stylesheet" />
+    <script src="~/Scripts/webuploader-0.1.5/webuploader.js"></script>
+    <!--审核js文件-->
+    <script src="~/Scripts/shenhe.js"></script>
+    
+    <script>
+  
+        //当前流程信息
+        var NodeInfo = parseJSON('@Html.Raw(@ViewData["CurrentFlowInfo"])');
+        //前一节点
+        var PreviousNodeInfo = { NodeID: "", NodeName: "" };
+
+        var currentLoginUser = '@ViewData["LoginUser"]';
+        var currentLoginUserName = '@ViewData["LoginUserName"]';
+        //全局变量
+        var FK_Flow = '@ViewData["FK_Flow"]';
+        var WorkID = '@ViewData["WorkID"]';
+        var FK_Node = '@ViewData["FK_Node"]';
+        var FID = '@ViewData["FID"]';
+
+
+        var StepType = {
+            "PROJECT_XUQIUFENXI": 1,
+            "SUBJECT_XUQIUFENXI": 2,
+            "DIAOYAN": 3,
+            "TICHUWENTI": 4,
+            "JIEJUESILU": 5,
+            "XINGSHIHUA": 6,
+            "SHEJISUANFA": 7,
+            "SHEJISHIYAN": 8,
+            "LIANGHUADUIBIFENXI": 9,
+            "DECHUJIELUN": 10,
+            "LUNWENZHUANXIE": 11
+        };
+
+        var SHENHEJIEGUO = {
+            "PASS": "1",
+            "RETURN": "0"
+        };
+        var BACKTRACKING = {
+            "YES": "true",
+            "NO": "false"
+        };
+
+    </script>
+    
+     @RenderBody()
+
+    <script>
+
+        /*----------------------------------使用该布局页的页面全局设置----------------------------------------------*/
+
+        //设置流程退回信息的显示
+        $(function (e) {
+            var TuiHuiXiaoXi = '@Html.Raw(@ViewData["TuiHuiXiaoXi"])';
+            if (TuiHuiXiaoXi == '') return;
+            //将换行符号、空格符号更换为html格式
+            TuiHuiXiaoXi = TuiHuiXiaoXi.replace(/[\r\n]+/g, '\\<br\\>\\<br\\>').replace(/ /gi, "&nbsp;&nbsp;");
+            TuiHuiXiaoXi = parseJSON(TuiHuiXiaoXi);
+            if (TuiHuiXiaoXi.rows.length == 0) return;
+            var TuiHuiBiaoTou = "来自节点：" + TuiHuiXiaoXi.rows[0].NDFromT + "&nbsp;&nbsp;退回人：" + TuiHuiXiaoXi.rows[0].EmpFrom + ":" + TuiHuiXiaoXi.rows[0].EmpFromT + "&nbsp;&nbsp;" + TuiHuiXiaoXi.rows[0].RDT;
+            //更新界面信息
+            $('#fieldsetTuiHuiBiaoTou').html(TuiHuiBiaoTou);
+            $('#divTuiHuiLiYou').html(TuiHuiXiaoXi.rows[0].Msg);
+            $('#fieldsetLiuChengtuiHui').css('display', "block");
+            //打开提示信息的accordion
+            $("#ad").accordion({
+                selected: 0
+            });
+            //消息提示
+            $.messager.show({
+                title: '消息提示',
+                msg: '<br>您有一条新的退回消息，请注意查看',
+                timeout: 5000,
+                showType: 'show'
+            });
+           // alert(TuiHuiXiaoXi.rows[0].Note)
+        })
+        /*----------------------------------使用该布局页的页面全局设置----------------------------------------------*/
+
+        
+    </script>
+   
+</body>
+</html>

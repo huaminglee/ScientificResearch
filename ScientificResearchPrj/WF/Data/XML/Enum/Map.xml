@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Item Key="DtlShowModel"
+    CH="@0=表格@1=卡片(自由模式)@2=卡片(傻瓜模式)"
+    EN=""
+    JP=""
+    RU=""    />
+
+  <Item Key="PopValFormat"
+    CH="@0=No(仅编号)@1=Name(仅名称)@2=No,Name(编号与名称,比如zhangsan,张三;lisi,李四;)"
+    EN=""
+    JP=""
+    RU=""    />
+
+ <Item Key="DTSearchWay"
+ CH="@0=不启用@1=按日期@2=按日期时间"
+ EN="@0=不启用@1=按日期@2=按日期时间"
+ JP="@0=不启用@1=按日期@2=按日期时间"
+ RU="@0=不启用@1=按日期@2=按日期时间" />
+    
+    <Item Key="CtrlWay"
+  CH="@0=按岗位@1=按部门@2=按人员@3=按SQL"
+  EN="@0=Disable@1=SQL/Produces@2=URL@3=WebServices@4=exe file"
+  JP="@0=Disable@1=SQL/Produces@2=URL@3=WebServices@4=exe file"
+  RU="@0=Disable@1=SQL/Produces@2=URL@3=WebServices@4=exe file" />
+    
+
+    <Item Key="FrmUrlShowWay"
+    CH="@0=不显示@1=自动大小@2=指定大小@3=新窗口"
+    EN="@0=Disable@1=SQL/Produces@2=URL@3=WebServices@4=exe file"
+    JP="@0=Disable@1=SQL/Produces@2=URL@3=WebServices@4=exe file"
+    RU="@0=Disable@1=SQL/Produces@2=URL@3=WebServices@4=exe file" />
+    
+ <Item Key="TBModel"
+    CH="@0=单行文本@1=多行文本@2=富文本"
+    EN="@0=单行文本@1=多行文本@2=富文本"
+    JP="@0=单行文本@1=多行文本@2=富文本"
+    RU="@0=单行文本@1=多行文本@2=富文本" />
+</NewDataSet>

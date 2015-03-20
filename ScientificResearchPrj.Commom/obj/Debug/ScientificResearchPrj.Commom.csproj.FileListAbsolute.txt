@@ -1,0 +1,4 @@
+F:\Keith_Code\DOTNETMVC\ScientificResearch\ScientificResearchPrj.Commom\bin\Debug\ScientificResearchPrj.Commom.dll
+F:\Keith_Code\DOTNETMVC\ScientificResearch\ScientificResearchPrj.Commom\bin\Debug\ScientificResearchPrj.Commom.pdb
+F:\Keith_Code\DOTNETMVC\ScientificResearch\ScientificResearchPrj.Commom\obj\Debug\ScientificResearchPrj.Commom.dll
+F:\Keith_Code\DOTNETMVC\ScientificResearch\ScientificResearchPrj.Commom\obj\Debug\ScientificResearchPrj.Commom.pdb

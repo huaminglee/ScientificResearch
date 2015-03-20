@@ -1,0 +1,44 @@
+﻿<!--布局页，用于点击左边栏菜单后tab显示部分的iframe统一布局-->
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+ 
+    <!-- bootstrap styles for this template -->
+    <link href="~/Content/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="~/Content/myview/layoutframe/layout.css" rel="stylesheet" />
+    <style>
+        a {
+            color: #ff6a00;
+        }
+
+        a:hover {
+            color: #000;
+        }
+
+    </style>
+</head>
+<body>
+
+    @RenderBody()
+ 
+
+
+    
+    <script>
+        function Open_dialog(url, w, h) {
+            var left = (screen.width - w) / 2;
+            var top = (screen.height - h) / 2;
+            var newWin = window.open(url, name, "left=" + left + ",top=" + top + ",width=" + w + ",height=" + h + ",scrollbars=yes");
+            newWin.focus();
+            return newWin;
+            //showModalDialog(url, window, 'edge: Raised; center: Yes; help: Yes; resizable: Yes; status: No; dialogHeight:' + h + 'px;dialogWidth:' + w + 'px');
+            //showModelessDialog(url,window,'edge: Raised; center: Yes; help: Yes; resizable: Yes; status:No; dialogHeight:'+h+'px;dialogWidth:'+w+'px');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+﻿<!--需求分析页面-->
+
+@{
+    ViewBag.Title = "需求分析";
+    Layout = "~/Views/Shared/_BasicProcess.cshtml";
+}
+ 
+
+    <div  id="ad" class="easyui-accordion" style="padding: 10px; width: 100%; height: 100%;border:0; position: absolute;" data-options="fit:true,fitColumns:true">
+        <div title="需求分析" data-options="iconCls:'icon-search'" style="padding: 10px; border: 0;">
+            <!--流程退回提示信息-->
+            <fieldset id="fieldsetLiuChengtuiHui" style="display:none">
+                <legend style="font-weight:bold;color:blue">流程退回提示</legend>
+                <div>
+                    <fieldset>
+                        <legend style="font-weight:bold;color:blue" id="fieldsetTuiHuiBiaoTou"></legend>
+                        <div id="divTuiHuiLiYou">
+                        </div>
+                    </fieldset>
+                </div>
+            </fieldset>
+            <!--此四个数据域保存当前流程参数
+                <input type="hidden" id="FK_Flow" value='@ViewData["FK_Flow"]' />
+                <input type="hidden" id="WorkID" value='@ViewData["WorkID"]' />
+                <input type="hidden" id="FK_Node" value='@ViewData["FK_Node"]' />
+                <input type="hidden" id="FID" value='@ViewData["FID"]' />
+            -->
+            FK_Flow:<input type="text" id="FK_Flow" value='@ViewData["FK_Flow"]' />
+            WorkID:<input type="text" id="WorkID" value='@ViewData["WorkID"]' />
+            FK_Node:<input type="text" id="FK_Node" value='@ViewData["FK_Node"]' />
+            FID:<input type="text" id="FID" value='@ViewData["FID"]' />
+        </div>
+        
+        <div title="自拟课题" data-options="iconCls:'icon-search'" style="padding-top: 10px; border: 0; " >
+            <form method="post" novalidate>
+                <div id="pgtb" style="height:auto">
+                    <table cellspacing="0" cellpadding="0" style="margin-left:10px">
+                        <tr>
+                            <td>
+                                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true" id="link_xuanzexiangmu">选择项目</a>
+                                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true" id="link_xuanzeketi">选择课题</a>
+                            </td>
+                            <td>
+                                <div class="datagrid-btn-separator"></div>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-ok',plain:true" id="link_fasong">发送</a>
+                                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-save',plain:true" id="link_baocun">保存</a>
+                                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-large-picture',plain:true" id="link_liuchengtu">流程图</a>
+                            </td>
+                    </table>
+                </div>
+                <div style="width: 96%;margin-left:2%">
+                    <table id="pg" style="width: 100%;"></table>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+    <div id="divSelectProject" class="easyui-dialog"  data-options="{
+                        title: '选择项目',
+                        closed: true,
+                        cache: false,
+                        height: 411,
+                        width: 800,
+                        modal: true,
+                        buttons: [{
+                                iconCls: 'icon-ok',
+                                text: '确定',
+                                handler:  BS_.selectProject
+                            },{
+                                text: '取消',
+                                iconCls: 'icon-cancel',
+                                handler:  BS_.cancelSelectProject
+                            }
+                        ]
+                     }">
+        <div id="tb_Project" style="height:auto">
+            <table cellspacing="0" cellpadding="0" style="margin-left:20px">
+                <tr>
+                    <td>
+                        <a href="javascript:void(0)" id="link_unselectproject" class="easyui-linkbutton" data-options="iconCls:'icon-undo',plain:true">取消选择</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <table class="easyui-datagrid" id="tTableProject"
+            data-options="fix:true,fitColumns:true,
+                        //显示序号
+                        rownumbers: true,
+                        //单选还是多选
+                        singleSelect: true,
+                        //工具栏
+                        toolbar: '#tb_Project',
+                        //分页
+                        pagination: true,
+                        onClickRow: BS_.selectProjectOnClickRow" style="width:100%;position:absolute;">
+            <thead>
+                <tr>
+                    <th data-options="field:'No',align:'center'" style="width:15%;">项目编号</th>
+                    <th data-options="field:'Name',align:'center'" style="width: 20%;">项目名称</th>
+                    <th data-options="field:'ProposerName',align:'center'" style="width: 10%;">拟定者</th>
+                    <th data-options="field:'ProposeTime',align:'center'" style="width: 15%;">拟定时间</th>
+                    <th data-options="field:'Keys',align:'center'" style=" width:20%;">关键字</th>
+                    <th data-options="field:'FK_XMZName',align:'center'" style="width: 15%;">项目组</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+
+    <div id="divSelectSubject" class="easyui-dialog"  data-options="{
+                        title: '选择课题',
+                        closed: true,
+                        cache: false,
+                        height: 411,
+                        width: 800,
+                        modal: true,
+                        buttons: [{
+                                iconCls: 'icon-ok',
+                                text: '确定',
+                                handler:  BS_.selectSubject
+                            },{
+                                text: '取消',
+                                iconCls: 'icon-cancel',
+                                handler:  BS_.cancelSelectSubject
+                            }
+                        ]
+                     }">
+        <div id="tb_Subject" style="height:auto">
+            <table cellspacing="0" cellpadding="0" style="margin-left:20px">
+                <tr>
+                    <td>
+                        <a href="javascript:void(0)" id="link_unselectsubject" class="easyui-linkbutton" data-options="iconCls:'icon-undo',plain:true">取消选择</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <table class="easyui-datagrid" id="tTableSubject"
+            data-options="fix:true,fitColumns:true,
+                        //显示序号
+                        rownumbers: true,
+                        //单选还是多选
+                        singleSelect: true,
+                        //工具栏
+                        toolbar: '#tb_Subject',
+                        //分页
+                        pagination: true,
+                        onClickRow: BS_.selectSubjectOnClickRow" style="width:100%;position:absolute;">
+            <thead>
+                <tr>
+                    <th data-options="field:'No',align:'center'" style="width:15%;">项目编号</th>
+                    <th data-options="field:'Name',align:'center'" style="width: 20%;">项目名称</th>
+                    <th data-options="field:'ProposerName',align:'center'" style="width: 10%;">拟定者</th>
+                    <th data-options="field:'ProposeTime',align:'center'" style="width: 15%;">拟定时间</th>
+                    <th data-options="field:'Keys',align:'center'" style=" width:20%;">关键字</th>
+                    <th data-options="field:'FK_XmName',align:'center'" style="width: 15%;">所属项目</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+<script src="~/Scripts/step-data-commom.js"></script>
+<script src="~/Scripts/step-data-load.js"></script>
+<script src="~/Scripts/step-data.js"></script>
+
+<script src="~/Views/XuQiuFenXi/js/XuQiuFenXi/AT_.js"></script>
+<script src="~/Views/XuQiuFenXi/js/XuQiuFenXi/BS_.js"></script>
+<script src="~/Views/XuQiuFenXi/js/XuQiuFenXi/ET_.js"></script>
+ 
+    <script>
+        
+        var LanMuData = [
+            { "value": 1, "text": "全部" }, { "value": 2, "text": "综合" }, { "value": 3, "text": "电子电信" },
+            { "value": 4, "text": "工程技术" }, { "value": 5, "text": "航空航天" }, { "value": 6, "text": "化学" },
+            { "value": 7, "text": "物理" }, { "value": 8, "text": "自动化/计算机" }, { "value": 9, "text": "土木工程" },
+            { "value": 10, "text": "能源动力" }, { "value": 11, "text": "医药卫生" }, { "value": 12, "text": "水利科学" },
+            { "value": 13, "text": "自然科学" }, { "value": 14, "text": "社会科学" }, { "value": 15, "text": "生物科学" },
+            { "value": 16, "text": "食品科学" }, { "value": 17, "text": "农业科学" }, { "value": 18, "text": "图书馆学/信息科学" }
+        ];
+        var ProjectGroupData = undefined;
+        AT_.AjaxPost("/XiangMuZu/GetXiangMuZuForCombobox", null, function (data, status) {
+            if (data.state == "0") {
+                ProjectGroupData = parseJSON(data._Json).rows; 
+            }
+        });
+
+        var XiangMuGroupName = "需求分析-项目结果";
+        var XiangMuOriginResult = undefined;//初始加载的项目数据
+        var XiangMuPropertygridResult = undefined;//重新选择项目的数据
+        var XiangMuPropertygridData = [
+            { "name": "项目编号", "id": "XM_No", "value": "Prj_", "group": XiangMuGroupName, "editor": "text" },
+                  { "name": "项目名称", "id": "XM_Name", "group": XiangMuGroupName, "editor": "text" },
+                  { "name": "拟定者", "id": "XM_ProposerName", "value": currentLoginUserName, "group": XiangMuGroupName },
+                  { "name": "拟定时间", "id": "XM_ProposeTime", "group": XiangMuGroupName, "editor": "datetimebox" },
+                  { "name": "关键字", "id": "XM_Keys", "group": XiangMuGroupName, "editor": "text" },
+                  {
+                      "name": "项目组", "id": "XM_FK_Xmz", "group": XiangMuGroupName, editor: {
+                          type: 'combobox',
+                          options: {
+                              data: ProjectGroupData,
+                              valueField: 'value',
+                              textfield: 'text'
+                          }
+                      }
+                  },
+                  {
+                      "name": "栏目", "id": "XM_Columns", "group": XiangMuGroupName,
+                      editor: {
+                          type: 'combobox',
+                          options: {
+                              data: LanMuData,
+                              valueField: 'value',
+                              textfield: 'text'
+                          }
+                      }
+                  },
+                  { "name": "项目描述", "id": "XM_Description", "group": XiangMuGroupName, "editor": "ex_textarea" },
+                  { "name": "实现任务", "id": "XM_Tasks", "value": "", "group": XiangMuGroupName, "editor": "ex_textarea" },
+                  { "name": "问题分解", "id": "XM_Questions", "group": XiangMuGroupName, "editor": "ex_textarea" },
+                  { "name": "补充说明", "id": "XM_Remarks", "group": XiangMuGroupName, "editor": "ex_textarea" },
+                  { "name": "上次修改时间", "id": "XM_ModifyTime", "group": XiangMuGroupName }
+        ];
+
+        var KeTiGroupName = "需求分析-课题结果";
+        var KeTiOriginResult = undefined;//初始课题的项目数据
+        var KeTiPropertygridResult = undefined;//重新加载的课题数据
+        var KeTiPropertygridData = [
+            { "name": "课题编号", "id": "KT_No", "value": "Sub_", "group": KeTiGroupName, "editor": "text" },
+                    { "name": "课题名称", "id": "KT_Name", "group": KeTiGroupName, "editor": "text" },
+                    { "name": "拟定者", "id": "KT_ProposerName", "value": currentLoginUserName, "group": KeTiGroupName },
+                    { "name": "拟定时间", "id": "KT_ProposeTime", "group": KeTiGroupName, "editor": "datetimebox" },
+                    { "name": "关键字", "id": "KT_Keys", "group": KeTiGroupName, "editor": "text" },
+                    { "name": "课题描述", "id": "KT_Description", "group": KeTiGroupName, "editor": "ex_textarea" },
+                    { "name": "来源描述", "id": "KT_SourceDesc", "group": KeTiGroupName, "editor": "ex_textarea" },
+                    {
+                        "name": '有效链接及链接说明', "id": "KT_Link", "group": KeTiGroupName, "editor": {
+                            type: "ex_panel",
+                            options: {
+                                callback: function () {
+                                    BS_.addLink()
+                                }
+                            }
+                        }
+                    },
+                    { "name": "分析结果", "id": "KT_AnalysisResult", "group": KeTiGroupName, "editor": "ex_textarea" },
+                    { "name": "拟实现任务", "id": "KT_TargetTask", "group": KeTiGroupName, "editor": "ex_textarea" },
+                    { "name": "理想创新之处", "id": "KT_Innovation", "group": KeTiGroupName, "editor": "ex_textarea" },
+                    {
+                        "name": '附件清单以及说明', "id": "KT_Attach", "group": KeTiGroupName, "editor": {
+                            type: "ex_panel",
+                            options: {
+                                callback: function () {
+                                    BS_.addAttach()
+                                }
+                            }
+                        }
+                    },
+                    { "name": "补充说明", "id": "KT_Remarks", "group": KeTiGroupName, "editor": "ex_textarea" },
+                    { "name": "上次修改时间", "id": "KT_ModifyTime", "group": KeTiGroupName }
+        ];
+
+        var propertygridData = { "total": XiangMuPropertygridData.length + KeTiPropertygridData.length, "rows": [] }
+
+        XiangMuPropertygridData.forEach(function (e) {
+            propertygridData.rows.push(e);
+        });
+        KeTiPropertygridData.forEach(function (e) {
+            propertygridData.rows.push(e);
+        });
+         
+        $(function () {
+            //选择显示第二项
+            $("#ad").accordion({
+                selected:1
+            });
+            if ($.fn.propertygrid) {
+                $.fn.propertygrid.defaults.columns[0][0].title = "标题"; // 对应Name  
+                $.fn.propertygrid.defaults.columns[0][1].title = "内容"; // 对应Value  
+                $.fn.propertygrid.defaults.columns[0][0].width = "20%"; // 对应Name  
+                $.fn.propertygrid.defaults.columns[0][1].width = "75%"; // 对应Value  
+            }
+            $("#pg").propertygrid({
+                toolbar:pgtb,
+                showGroup: true,
+                scrollbarSize: 0,
+                groupFormatter: function (fvalue, rows) {
+                    return fvalue + ' - <span style="color:red">' + rows.length + ' rows</span>';
+                },
+                data: cloneJSON(propertygridData),
+                onClickRow: function () {
+                    //单击行的时候，设置进入编辑状态
+                    var row = $("#pg").propertygrid("getSelected");
+                    var editIndex = $("#pg").propertygrid('getRowIndex', row);
+                    $("#pg").propertygrid('beginEdit', editIndex);
+                },
+                rowStyler: function (index, row) {
+                    if ((row.group == XiangMuGroupName|| row.group == KeTiGroupName) && row.editor == null) {
+                        return 'background-color:#F2F2F2;color:#000;font-weight:bold;height:100px;text-align:right';
+                    }
+                }
+            });
+            $("#pg").propertygrid("collapseGroup");
+            $("#pg").propertygrid("expandGroup", 1);
+            
+            //初始化
+            ET_.onload();
+        });
+
+
+        $.extend($.fn.propertygrid.defaults.columns[0][1], {
+            formatter: function (value, rowData, rowIndex) {
+                if (rowData.name == "栏目") {
+                    for (var i = 0; i < LanMuData.length; i++) {
+                        if (LanMuData[i].value == value) {
+                            return LanMuData[i].text;
+                        }
+                    }
+                }
+                else if (rowData.name == "项目组") {
+                    if (ProjectGroupData != undefined) {
+                        for (var i = 0; i < ProjectGroupData.length; i++) {
+                            if (ProjectGroupData[i].value == value) {
+                                return ProjectGroupData[i].text;
+                            }
+                        }
+                    }
+                }
+                else {
+                    return value;
+                }
+            }
+        });
+
+       
+    </script>
+
+ 

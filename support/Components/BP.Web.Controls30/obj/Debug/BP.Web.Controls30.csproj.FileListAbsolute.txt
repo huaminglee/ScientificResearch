@@ -1,0 +1,5 @@
+E:\ScientificResearch\support\Components\BP.Web.Controls30\obj\Debug\BP.Web.Controls30.csprojResolveAssemblyReference.cache
+E:\ScientificResearch\support\DLL\BP.Web.Controls.dll
+E:\ScientificResearch\support\DLL\BP.Web.Controls.pdb
+E:\ScientificResearch\support\Components\BP.Web.Controls30\obj\Debug\BP.Web.Controls.dll
+E:\ScientificResearch\support\Components\BP.Web.Controls30\obj\Debug\BP.Web.Controls.pdb

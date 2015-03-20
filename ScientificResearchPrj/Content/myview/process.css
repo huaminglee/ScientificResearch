@@ -1,0 +1,22 @@
+﻿ .ftitle {
+            font-size: 14px;
+            font-weight: bold;
+            padding: 5px 0;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+}
+
+.ftable {
+    width: 100%;
+    /*使用 table-layout:fixed;可使得合并不同宽度的单元格时不出错*/
+    table-layout: fixed;
+}
+
+.ttitle {
+    width: 15%;
+    background-color: #f0f0f0;
+}
+
+.tcontent {
+    width: 35%;
+}

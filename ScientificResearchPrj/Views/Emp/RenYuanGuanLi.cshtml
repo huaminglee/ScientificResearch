@@ -1,0 +1,413 @@
+﻿<!--人员管理页面-->
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>人员管理</title>
+    <!-- Jquery EasyUI styles for this template -->
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/bootstrap/easyui.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/icon.css">
+     
+    <style>
+        a {
+            color: #ff6a00;
+        }
+        a:hover {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div title="用户信息" style="padding: 10px; border: 0px solid red;">
+        <div id="tb" style="height:auto">
+            <table cellspacing="0" cellpadding="0" style="margin-left:20px">
+                <tr>
+                    <td>
+                        <a href="javascript:void(0)" id="link_add" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true">Add</a>
+                        <a href="javascript:void(0)" id="link_remove" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true">Remove</a>
+                    </td>
+                    <td>
+                        <div style="margin-left:86px">
+                            <input id="link_type" class="easyui-combobox" 
+                                data-options="valueField:'value',textField:'text',value:'2',data:TypeData,prompt :'类型',
+                                    onSelect:BS_.selectType
+                                ">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <table class="easyui-datagrid" id="tTable"
+               data-options="fix:true,fitColumns:true" style="width:100%;position:absolute;">
+            <thead>
+                <tr>
+                    <th data-options="field:'EmpNo',align:'center',editor:'textbox'" style="width:13%;">编号</th>
+                    <th data-options="field:'Name',align:'center',editor:'textbox'" style="width:10%;">姓名</th>
+                    
+                    <th data-options="field:'FK_DeptName',align:'center',editor:{
+                            type:'textbox',
+                            options:{
+                                icons: [{
+                                    iconCls:'icon-tip',
+                                    handler: function(e){
+                                        BS_.openDeptDialog()
+                                    }
+                                }]
+                            }
+                        }" style="width:10%;">部门</th>
+                    <th data-options="field:'FK_StationName',hidden:'true',align:'center',editor:{
+                            type:'textbox',
+                            options:{
+                                icons: [{
+                                    iconCls:'icon-tip',
+                                    handler: function(e){
+                                       BS_.openStationDialog()
+                                    }
+                                }]
+                            }
+                        }" style="width:10%;">岗位</th>
+                    <th data-options="field:'ChargeWork',align:'center',hidden:'true',editor:{
+                            type:'ex_wintextarea',
+                            options:{
+                                readonly:false
+                            }
+                        }" style="width:10%;">主管工作</th>
+                    <th data-options="field:'OfficeAddr',align:'center',hidden:'true',editor:{
+                            type:'ex_wintextarea',
+                            options:{
+                                readonly:false
+                            }
+                        }" style="width:10%;">办公地址</th>
+                    <th data-options="field:'OfficeTel',align:'center',hidden:'true',editor:'textbox'" style="width:10%;">办公电话</th>
+                    
+
+                    <th data-options="field:'AdmissionYear',align:'center', editor:'textbox'" style="width:10%;">入学年份</th>
+                    <th data-options="field:'SchoolingLength',align:'center', editor:'textbox'" style="width:10%;">学制</th>
+                    <th data-options="field:'FK_TutorName',align:'center', editor:{
+                            type:'textbox',
+                            options:{
+                                icons: [{
+                                    iconCls:'icon-tip',
+                                    handler: function(e){
+                                        BS_.openTutorDialog()
+                                    }
+                                }]
+                            }
+                        }" style="width:10%;">导师</th>
+                    <th data-options="field:'LabAddr',align:'center', editor:'textbox'" style="width:10%;">实验室</th>
+
+                    <th data-options="field:'Tel',align:'center',editor:'textbox'" style="width:10%;">电话</th>
+                    <th data-options="field:'Email',align:'center',editor:'textbox'" style="width:10%;">邮箱</th>
+                    <th data-options="field:'Type',align:'center',
+                            formatter: function(value) {
+                                for (var i = 0; i < TypeDataForSelect.length; i++) {
+                                    if (TypeDataForSelect[i].value == value){
+                                        return TypeDataForSelect[i].text;
+                                    }
+                                }
+                                return value;
+                            },editor:{
+                                type:'combobox',
+                                options:{
+                                    data: TypeDataForSelect,
+                                    valueField: 'value',
+                                    textfield :'text' 
+                                }
+                            }" style="width:5%;">类型</th>
+
+                    
+                    
+                </tr>
+            </thead>
+        </table>
+
+        <div id="divSelectDept" class="easyui-dialog"  data-options="{
+                    title: '选择部门',
+                    closed: true,
+                    cache: false,
+                    height: 411,
+                    width: 600,
+                    modal: true,
+                    buttons: [{
+                            iconCls: 'icon-ok',
+                            text: '确定',
+                            handler:  BS_.selectDept
+                        },{
+                            text: '取消',
+                            iconCls: 'icon-cancel',
+                            handler:  BS_.cancelSelectDept
+                        }
+                    ]
+                 }">
+            <div id="tb_Dept" style="height:auto">
+                <table cellspacing="0" cellpadding="0" style="margin-left:20px">
+                    <tr>
+                        <td>
+                            <a href="javascript:void(0)" id="link_unselectdept" class="easyui-linkbutton" data-options="iconCls:'icon-undo',plain:true">取消选择</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <table class="easyui-treegrid" id="tTableDept"
+               data-options="fix:true,fitColumns:true,
+                            //显示序号
+                            rownumbers: true,
+                            //单选还是多选
+                            singleSelect: true,
+                            idField: 'TreeId',
+                            treeField: 'Name',
+                            toolbar:'#tb_Dept',
+                            lines: true,
+                            onClickRow: BS_.selectDeptOnClickRow" style="width:100%;position:absolute;">
+                <thead>
+                    <tr>
+                        <th data-options="field:'Name',align:'left'" style="width:25%;">名称</th>
+                        <th data-options="field:'DeptNo',align:'center'" style="width:25%;">编号</th>
+                        <th data-options="field:'Description',align:'center',editor:{
+                                type:'ex_wintextarea',
+                                options:{
+                                    readonly:true
+                                }
+                            }" style="width:40%;">描述</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+
+        <div id="divSelectStation" class="easyui-dialog"  data-options="{
+                    title: '选择岗位',
+                    closed: true,
+                    cache: false,
+                    height: 411,
+                    width: 800,
+                    modal: true,
+                    buttons: [{
+                            iconCls: 'icon-ok',
+                            text: '确定',
+                            handler:  BS_.selectStation
+                        },{
+                            text: '取消',
+                            iconCls: 'icon-cancel',
+                            handler:  BS_.cancelSelectStation
+                        }
+                    ]
+                 }">
+            <div id="tb_Station" style="height:auto">
+                <table cellspacing="0" cellpadding="0" style="margin-left:20px">
+                    <tr>
+                        <td>
+                            <a href="javascript:void(0)" id="link_getstationtoselected" class="easyui-linkbutton" data-options="iconCls:'icon-redo',plain:true">右移</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div  style="float:left;width:60%;" >
+                <table class="easyui-datagrid" id="tTableStation"
+                   data-options="fix:true,fitColumns:true,
+                                //显示序号
+                                rownumbers: true,
+                                //单选还是多选
+                                singleSelect: false,
+                                //工具栏
+                                toolbar: '#tb_Station',
+                                //分页
+                                pagination: true,
+                                onClickRow: BS_.selectStationOnClickRow" style="width:100%;position:absolute;">
+                    <thead>
+                        <tr>
+                            <th data-options="field:'StaNo',align:'left'" style="width:25%;">编号</th>
+                            <th data-options="field:'Name',align:'center'" style="width:25%;">名称</th>
+                            <th data-options="field:'Description',align:'center',editor:{
+                                    type:'ex_wintextarea',
+                                    options:{
+                                        readonly:true
+                                    }
+                                }" style="width:40%;">描述</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            
+            <div id="tb_SelectedStation" style="height:auto">
+                <table cellspacing="0" cellpadding="0" style="margin-left:20px">
+                    <tr>
+                        <td>
+                            <a href="javascript:void(0)" id="link_removeselectstation" class="easyui-linkbutton" data-options="iconCls:'icon-undo',plain:true">移出</a>
+                            <a href="javascript:void(0)" id="link_removeallselectstation" class="easyui-linkbutton" data-options="iconCls:'icon-cut',plain:true">全部移出</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div  style="float:right;width:35%;margin-right:3%;" >
+                <table class ="easyui-datagrid" id="tTableSelectStation"
+                    data-options="fix:true,fitColumns:true,
+                            //显示序号
+                            rownumbers: true,
+                            //单选还是多选
+                            singleSelect: false,
+                            //工具栏
+                            toolbar: '#tb_SelectedStation',
+                            onClickRow: BS_.selectedStationOnClickRow" style="width:100%;position:absolute;">
+                    <thead>
+                        <tr>
+                            <th data-options="field:'StaNo',align:'left'" style="width:40%;">编号</th>
+                            <th data-options="field:'Name',align:'center'" style="width:50%;">名称</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            
+        </div>
+
+
+        <div id="divSelectTutor" class="easyui-dialog"  data-options="{
+                    title: '选择导师',
+                    closed: true,
+                    cache: false,
+                    height: 411,
+                    width: 600,
+                    modal: true,
+                    buttons: [{
+                            iconCls: 'icon-ok',
+                            text: '确定',
+                            handler:  BS_.selectTutor
+                        },{
+                            text: '取消',
+                            iconCls: 'icon-cancel',
+                            handler:  BS_.cancelSelectTutor
+                        }
+                    ]
+                 }">
+            <div id="tb_Tutor" style="height:auto">
+                <table cellspacing="0" cellpadding="0" style="margin-left:20px">
+                    <tr>
+                        <td>
+                            <a href="javascript:void(0)" id="link_unselecttutor" class="easyui-linkbutton" data-options="iconCls:'icon-undo',plain:true">取消选择</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <table class="easyui-datagrid" id="tTableTutor"
+               data-options="fix:true,fitColumns:true,
+                            //显示序号
+                            rownumbers: true,
+                            //单选还是多选
+                            singleSelect: true,
+                            //工具栏
+                            toolbar: '#tb_Tutor',
+                            //分页
+                            pagination: true,
+                            onClickRow: BS_.selectTutorOnClickRow" style="width:100%;position:absolute;">
+                <thead>
+                    <tr>
+                        <th data-options="field:'EmpNo',align:'center'" style="width:18%;">编号</th>
+                        <th data-options="field:'Name',align:'center'" style="width:18%;">姓名</th>
+                        <th data-options="field:'FK_DeptName',align:'center'" style="width:20%;">部门</th>
+                        <th data-options="field:'FK_StationName',align:'center'" style="width:20%;">岗位</th>
+                        <th data-options="field:'Type',align:'center',
+                            formatter: function(value) {
+                                for (var i = 0; i < TypeDataForSelect.length; i++) {
+                                    if (TypeDataForSelect[i].value == value){
+                                        return TypeDataForSelect[i].text;
+                                    }
+                                }
+                                return value;
+                            },editor:{
+                                type:'combobox',
+                                options:{
+                                    data: TypeDataForSelect,
+                                    valueField: 'value',
+                                    textfield :'text' 
+                                }
+                            }" style="width:20%;">类型</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+
+
+    <!--Jquery EasyUI  js文件   -->
+    <script src="~/Content/jquery-easyui-1.4.1/jquery.min.js"></script>
+    <script src="~/Content/jquery-easyui-1.4.1/jquery.easyui.min.js"></script>
+    <script src="~/Scripts/easyui_extend.js"></script>
+    <script src="~/Scripts/jquery_extend.js"></script>
+
+    <script src="~/Views/Emp/js/AT_.js"></script>
+    <script src="~/Views/Emp/js/BS_.js"></script>
+    <script src="~/Views/Emp/js/ET_.js"></script>
+    <script>
+
+        var Type = {
+            DAOSHI: 1,//导师
+            XUESHENG: 2,//学生
+            BENKESHENG: 3,//本科生
+            YANJIUSHENG: 4,//研究生
+            BOSHISHENG: 5//博士生
+        };
+
+        //用以查询
+        var TypeData = [
+           { value: Type.DAOSHI, text: "导师" },
+           { value: Type.XUESHENG, text: "学生" },
+           { value: Type.BENKESHENG, text: "本科生" },
+           { value: Type.YANJIUSHENG, text: "研究生" },
+           { value: Type.BOSHISHENG, text: "博士生" }
+        ];
+
+        //用以datagrid选择
+        var TypeDataForSelect = [
+           { value: Type.DAOSHI, text: "导师" },
+           { value: Type.BENKESHENG, text: "本科生" },
+           { value: Type.YANJIUSHENG, text: "研究生" },
+           { value: Type.BOSHISHENG, text: "博士生" }
+        ];
+
+        var jsonResult = { total: 0, rows: [] };
+        var jsonData = undefined;
+
+        $(function () {
+            $('#tTable').datagrid({
+                //显示序号
+                rownumbers: true,
+                //单选还是多选
+                singleSelect: true,
+                //工具栏
+                toolbar: '#tb',
+                //分页
+                pagination: true,
+                onClickRow: BS_.onClickRow
+            });
+
+            //设置分页数据，使得可以获取分页进行加载
+            //注意：加载成功后必须重新设置分页数据，因为分页的正确显示是在数据加载成功后设置才有效的
+            $('#tTable').datagrid("getPager").pagination({
+                pageSize: 10//每页显示的记录条数，默认为10 
+            });
+
+             
+            $('#tTableStation').datagrid("getPager").pagination({
+                pageSize: 10//每页显示的记录条数，默认为10 
+            });
+
+            $('#tTableTutor').datagrid("getPager").pagination({
+                pageSize: 10//每页显示的记录条数，默认为10 
+            });
+
+            //初始化
+            ET_.onload();
+        });
+    </script>
+ 
+ 
+</body>
+</html>

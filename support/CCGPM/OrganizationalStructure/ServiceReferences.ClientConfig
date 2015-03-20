@@ -1,0 +1,14 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="OSSoap" maxReceivedMessageSize="2147483647" />
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:35586/GPM/OrganizationalStructure.asmx"
+                binding="basicHttpBinding" bindingConfiguration="OSSoap" contract="OS.OSSoap"
+                name="OSSoap" />
+        </client>
+    </system.serviceModel>
+</configuration>

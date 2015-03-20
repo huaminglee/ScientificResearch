@@ -1,0 +1,251 @@
+﻿@{
+    ViewBag.Title = "需求分析审核";
+    Layout = "~/Views/Shared/_BasicProcess.cshtml";
+}
+ 
+    <div id="ad" class="easyui-accordion" style="padding: 10px; width: 100%; height: 100%;border:0; position: absolute;" data-options="fit:true,fitColumns:true">
+        <div title="需求分析审核" data-options="iconCls:'icon-search'" style="padding: 10px; border: 0;">
+            <!--流程退回提示信息-->
+            <fieldset id="fieldsetLiuChengtuiHui" style="display:none">
+                <legend style="font-weight:bold;color:blue">流程退回提示</legend>
+                <div>
+                    <fieldset>
+                        <legend style="font-weight:bold;color:blue" id="fieldsetTuiHuiBiaoTou"></legend>
+                        <div id="divTuiHuiLiYou">
+                        </div>
+                    </fieldset>
+                </div>
+            </fieldset>
+            <!--此四个数据域保存当前流程参数
+        <input type="hidden" id="FK_Flow" value='@ViewData["FK_Flow"]' />
+        <input type="hidden" id="WorkID" value='@ViewData["WorkID"]' />
+        <input type="hidden" id="FK_Node" value='@ViewData["FK_Node"]' />
+        <input type="hidden" id="FID" value='@ViewData["FID"]' />
+            -->
+            FK_Flow:<input type="text" id="FK_Flow" value='@ViewData["FK_Flow"]' />
+            WorkID:<input type="text" id="WorkID" value='@ViewData["WorkID"]' />
+            FK_Node:<input type="text" id="FK_Node" value='@ViewData["FK_Node"]' />
+            FID:<input type="text" id="FID" value='@ViewData["FID"]' />
+        </div>
+        <div title="请进行审核"  data-options="iconCls:'icon-search'" style="padding-top: 10px; border: 0; ">
+            
+            <form method="post" novalidate>
+                <div id="pgtb" style="height:auto">
+                    <table cellspacing="0" cellpadding="0" style="margin-left:10px">
+                        <tr>
+                            <td>
+                                <a href="javascript:void(0)" id="link_fasong" class="easyui-linkbutton" data-options="iconCls:'icon-ok',plain:true">发送</a>
+                                <a href="javascript:void(0)" id="link_baocun" class="easyui-linkbutton" data-options="iconCls:'icon-save',plain:true">保存</a>
+                                <a href="javascript:void(0)" id="link_chaosong" class="easyui-linkbutton" data-options="iconCls:'icon-tip',plain:true">抄送</a>
+                                <a href="javascript:void(0)" id="link_liuchengtu" class="easyui-linkbutton" data-options="iconCls:'icon-large-picture',plain:true">流程图</a>
+                            </td> 
+                    </table>
+                </div>
+                <div style="width: 96%;margin-left:2%">
+                    <table id="pg" style="width: 100%;"></table>
+                </div>
+                
+            </form>
+             
+        </div>
+    </div>
+
+<script src="~/Scripts/step-data-commom.js"></script>
+<script src="~/Scripts/step-data-load.js"></script>
+<script src="~/Scripts/step-data.js"></script>
+
+<script src="~/Views/XuQiuFenXi/js/XuQiuFenXiShenHe/AT_.js"></script>
+<script src="~/Views/XuQiuFenXi/js/XuQiuFenXiShenHe/BS_.js"></script>
+<script src="~/Views/XuQiuFenXi/js/XuQiuFenXiShenHe/ET_.js"></script>
+    <script>
+         
+        var ReturnToNodeData = [];
+        var returnArgsVal = {
+            "FK_Node": FK_Node,
+            "WorkID": WorkID,
+            "FID": FID,
+            "random": new Date().getTime()
+        }
+        AT_.AjaxPost("/XuQiuFenXi/HuoQuTuiHuiJieDian", returnArgsVal, function (data, status) {
+            //"RecName" + "=>" + "Name" + "No" + "Rec";
+            //"admin=>需求分析;101@admin"
+            if (data.state == "0") {
+                var returnNodesResult = parseJSON(data._Json);
+                returnNodesResult.rows.forEach(function (e) {
+                    var temp = {
+                        text: e.RecName + "=>" + e.Name,
+                        value: e.No + '&' + e.Rec
+                    };
+                    
+                    ReturnToNodeData.push(temp);
+
+                    PreviousNodeInfo.NodeID = data._previousNodeID;
+                    PreviousNodeInfo.NodeName = data._previousNodeName;
+                });
+            }
+        });
+         
+         
+        var XQFXSHGroupName = "需求分析审核结果";
+        var XQFXShenHeOriginResult = undefined;//初始课题审核的项目数据
+        var XQFXShenHePropertygridData = [
+            { "name": "审核人", "id": "XQFXSH_ShenHeRenName", "value": currentLoginUserName, "group": XQFXSHGroupName },
+            { "name": "审核时间", "id": "XQFXSH_ShenHeShiJian", "group": XQFXSHGroupName, "editor": "datetimebox" },
+            {
+                "name": "审核结果", value: SHENHEJIEGUO.PASS, "id": "XQFXSH_ShenHeJieGuo", "group": XQFXSHGroupName, "editor": {
+                    type: "combobox",
+                    options: {
+                        valueField: 'value',
+                        textfield: 'text',
+                        data: [{
+                            "value": SHENHEJIEGUO.PASS,
+                            "text": "通过"
+                        }, {
+                            "value": SHENHEJIEGUO.RETURN,
+                            "text": "退回" 
+                        }],
+                        onSelect: _ShenHe.onSelectShenHeJieGuo
+                    }
+                }
+            },
+            { "name": "审核意见", "id": "XQFXSH_ShenHeYiJian", "group": XQFXSHGroupName, "editor": "ex_textarea" },
+            {
+                "name": '有效链接及链接说明', "id": "XQFXSH_Link", "group": XQFXSHGroupName, "editor": {
+                    type: "ex_panel",
+                    options: {
+                        callback: function () {
+                            BS_.addLink()
+                        }
+                    }
+                }
+            },
+            {
+                "name": '附件清单以及说明', "id": "XQFXSH_Attach", "group": XQFXSHGroupName, "editor": {
+                    type: "ex_panel",
+                    options: {
+                        callback: function () {
+                            BS_.addAttach()
+                        }
+                    }
+                }
+            },
+            { "name": "上次修改时间", "id": "XQFXSH_ModifyTime", "group": XQFXSHGroupName }
+        ];
+
+
+        var returnPropertygridData = [
+            {
+                "name": "退回到", "id": "ReturnTo", "group": XQFXSHGroupName, "editor": {
+                    type: "combobox",
+                    options: {
+                        data: ReturnToNodeData,
+                        valueField: 'value',
+                        textfield: 'text',
+                        onSelect: _ShenHe.onSelectReturnToNodeCombobox
+                    }
+                }
+            },
+            {
+                "name": "是否按原路返回", "value": BACKTRACKING.YES, "id": "IsBackTracking", "group": XQFXSHGroupName, "editor": {
+                    type: "combobox",
+                    options: {
+                        valueField: 'value',
+                        textfield: 'text',
+                        data: [{
+                            "value": BACKTRACKING.YES,
+                            "text": "是"
+                        }, {
+                            "value": BACKTRACKING.NO,
+                            "text": "否"
+                        }]
+                    }
+                }
+            },
+        ];
+
+        var propertygridData = { "total": XiangMuPropertygridData.length + KeTiPropertygridData.length +
+            XQFXShenHePropertygridData.length, "rows": []
+        }
+        OthersShenHePropertygridData.forEach(function (e) {
+            propertygridData.rows.push(e);
+        });
+        XQFXShenHePropertygridData.forEach(function (e) {
+            propertygridData.rows.push(e);
+        });
+        KeTiPropertygridData.forEach(function (e) {
+            propertygridData.rows.push(e);
+        });
+        XiangMuPropertygridData.forEach(function (e) {
+            propertygridData.rows.push(e);
+        });
+        
+                
+        $(function () {
+            //选择显示第二项
+            $("#ad").accordion({
+                selected: 1
+            });
+
+            if ($.fn.propertygrid) {
+                $.fn.propertygrid.defaults.columns[0][0].title = "标题"; // 对应Name  
+                $.fn.propertygrid.defaults.columns[0][1].title = "内容"; // 对应Value  
+                $.fn.propertygrid.defaults.columns[0][0].width = "20%"; // 对应Name  
+                $.fn.propertygrid.defaults.columns[0][1].width = "75%"; // 对应Value  
+            }
+             
+            $("#pg").propertygrid({
+                toolbar:pgtb,
+                showGroup: true,
+                scrollbarSize: 0,
+                groupFormatter: function (fvalue, rows) {
+                    return fvalue + ' - <span style="color:red">' + rows.length + ' rows</span>';
+                },
+                data: cloneJSON(propertygridData),
+                onClickRow: function () {
+                    //单击行的时候，设置进入编辑状态
+                    var row = $("#pg").propertygrid("getSelected");
+                    var editIndex = $("#pg").propertygrid('getRowIndex', row);
+                    $("#pg").propertygrid('beginEdit', editIndex);
+                },
+                rowStyler: function (index, row) {
+                    if ((row.group == XQFXSHGroupName && row.editor != null) ||
+                        (row.type != undefined && row.type == "load")) {
+                        return 'background-color:#F2F2F2;color:#000;font-weight:bold;height:100px;text-align:right';
+                    }
+                }
+            });
+
+            $("#pg").propertygrid("collapseGroup");
+            $("#pg").propertygrid("expandGroup", 1);
+            //初始化
+            ET_.onload();
+             
+        });
+
+        $.extend($.fn.propertygrid.defaults.columns[0][1], {
+            formatter: function (value, rowData, rowIndex) {
+                if (rowData.name == "审核结果") {
+                    return value == SHENHEJIEGUO.PASS ? "通过" : "退回";
+                }
+                else if (rowData.name == "是否按原路返回") {
+                    return value == BACKTRACKING.YES ? "是" : "否";
+                }
+                else if (rowData.name == "退回到") {
+                    for (var i = 0; i < ReturnToNodeData.length; i++) {
+                        if (ReturnToNodeData[i].value == value) {
+                            return ReturnToNodeData[i].text;
+                        }
+                    }
+                }
+                else {
+                    return value;
+                }
+            }
+        });
+         
+
+
+        
+    </script>
+
+ 

@@ -1,0 +1,20 @@
+
+安装说明适用于开发人员. 
+-------------------------------------------
+
+
+1, 创建一个空白的数据库ccPort.
+
+2, 用vs2010打开D:\ccflow\CCPortal\CCGPM\CCGPM.sln
+
+3, 打开 web.config 配置的 AppCenterDSN  正确的配置好数据库连接.
+
+4, ctrl+F5 运行 http://localhost:xxxxx/GPM/DBInstall.aspx 执行安装.
+
+5, GPM 目前仅支持sqlserver.
+
+
+安装过程中的常见问题与ccflow相同，请参考:D:\ccflow\doc\ccflow5.许可声明.安装步骤.txt
+
+
+

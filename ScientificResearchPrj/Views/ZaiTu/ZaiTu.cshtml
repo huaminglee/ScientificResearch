@@ -1,0 +1,89 @@
+﻿@{
+    ViewBag.Title = "ZaiTu";
+    Layout = "~/Views/Shared/_LayoutFrame.cshtml";
+}
+
+ <!-- Jquery EasyUI styles for this template -->
+<link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/bootstrap/easyui.css">
+<link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/icon.css">
+
+
+<div title="在途" style="padding: 10px; border: 0px solid red;">
+    <div id="tb" style="height:auto">
+        <table cellspacing="0" cellpadding="0" style="margin-left:18px">
+            <tr>
+                <td>
+                    <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-reload',plain:true" id="link_reload">刷新</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <table id="tTable" class="easyui-datagrid" style="width: 100%; "
+           data-options="fix:true,fitColumns:true">
+        <thead>
+            <tr>
+                <!--
+                    RDT -记录时间,ADT  -发送时间,SDT - 应该完成日期
+                -->
+                <th data-options="field:'FlowName'" width="18%">流程名称</th>
+                <th data-options="field:'Title'" width="25%">标题</th>
+                <th data-options="field:'NodeName'" width="15%">当前节点</th>
+                <th data-options="field:'StarterName'" width="5%">发起人</th>
+                <th data-options="field:'RDT'" width="10%">记录时间</th>
+                <th data-options="field:'SDTOfNode'" width="10%">节点应完成时间</th>
+                <!--<th data-options="field:'SDTOfFlow'" width="10%">流程应完成时间</th>-->
+                <th data-options="field:'TodoEmps'" width="10%">当前处理人</th>
+                <th data-options="field:'State'" width="5%">状态</th>
+                 
+            </tr>
+        </thead>
+    </table>
+</div>
+
+<!--Jquery EasyUI  js文件   -->
+<script src="~/Content/jquery-easyui-1.4.1/jquery.min.js"></script>
+<script src="~/Content/jquery-easyui-1.4.1/jquery.easyui.min.js"></script>
+
+<script src="~/Scripts/jquery_extend.js"></script>
+<script src="~/Views/ZaiTu/js/ZaiTu/AT_.js"></script>
+<script src="~/Views/ZaiTu/js/ZaiTu/BS_.js"></script>
+<script src="~/Views/ZaiTu/js/ZaiTu/ET_.js"></script>
+<script>
+
+
+    $(function () {
+        //获取数据
+        var jsonResult = parseJSON('@Html.Raw(@ViewData["_Json"])'); debugger
+        var total = jsonResult.total;
+        var jsonData = jsonResult.rows;
+        var index = 1;
+        for (var i = 0; i < total; i++) {
+            if (jsonData[i]["_parentId"] != null) {
+                /*
+                jsonData[i]["Title"] = '<a href="javascript:void(0)" onclick="BS_.open('
+                    + "'" + jsonData[i]["TitleLink"] + "','在途"+(index++)+"_" + jsonData[i]["FlowName"] + "'" + ')">' + jsonData[i]["Title"] + '</a>';
+                    */
+                jsonData[i]["Title"] = '<a href="javascript:void(0)" onclick="window.open(\''
+                     + jsonData[i]["TitleLink"] + '\')">' + jsonData[i]["Title"] + '</a>';
+                /*
+                jsonData[i]["Operation"] = '<a href="javascript:void(0)" onclick="BS_.jieShuLiuCheng(\''
+                     + jsonData[i]["FK_Flow"] + '\',\'' + jsonData[i]["WorkID"] + '\')">结束流程</a>';
+                     */
+            }
+        }
+        //设置treegrid
+        $('#tTable').treegrid({
+            data: jsonResult,
+            singleSelect: true,
+            rownumbers: true,
+            idField: 'TreeID',
+            treeField: 'FlowName',
+            line: true,
+            toolbar: '#tb'
+        });
+        //初始化
+        ET_.onload();
+    })
+
+
+</script>

@@ -1,0 +1,169 @@
+﻿
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>驰骋工作流 - 流程设计器</title>
+    <link href="Style/Main.css" rel="stylesheet" type="text/css" />
+
+    <link  type="text/css" href="../../Scripts/easyUI/themes/default/easyui.css" rel="stylesheet" />
+    <link  type="text/css" href="../../Scripts/easyUI/themes/icon.css" rel="stylesheet"/>
+    <script  type="text/javascript" src="../../Scripts/easyUI/jquery-1.8.0.min.js"></script>
+    <script  type="text/javascript" src="../../Scripts/easyUI/jquery.easyui.min.js" ></script>
+    <script  type="text/javascript" src="../../Scripts/QueryString.js"></script>
+    <script  type="text/javascript" src="../../Scripts/EasyUIUtility.js"></script>   
+    <script  type="text/javascript" src="main.js"></script>
+
+    <script type="text/javascript">
+        // login check
+        var UserNo = getQueryStringByName("UserNo");
+        var SID = getQueryStringByName("SID");
+        if (UserNo != null && UserNo.length > 0) {
+
+        } else {
+            window.location.href = 'Login.htm';
+        }
+
+        $(function () {
+            maximizeWindow();
+            load();
+          
+        });   
+
+    </script>
+</head>
+<body class="easyui-layout">
+    <div data-options="region:'west',split:true,border:false" style="width: 300px">
+        <div class="easyui-layout" data-options="fit:true">
+            <div id="logoArea" data-options="region:'north',split:false,border:true" style="height: 75px;overflow: hidden">
+                <img src="../../Img/Icon.png" width="100%" height="100%" />
+            </div>
+            <div id="menuArea" data-options="region:'center',border:false" style="">
+                <div id="menuTab" class="easyui-tabs" data-options="fit:true,border:true">
+                    <div title="流程树" style="padding: 5px;">
+                        <ul id="flowTree" class="easyui-tree" >
+
+                        </ul>
+                    </div>
+                    <div title="表单库" style="padding: 5px;">
+                        <ul id="formTree" class="easyui-tree">
+                        </ul>
+                    </div>
+                    <div title="系统维护" style="padding: 5px;">
+                        <ul id="sysTree" class="easyui-tree">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-options="region:'center',border:false">
+        <div class="easyui-layout" data-options="fit:true">
+            <div id="toolbarArea" data-options="region:'north',split:false,border:true" style="height: 38px; line-height:35px; padding:0 10px;
+                overflow: hidden">
+                <a href="javascript:action('Login')" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-user'">
+                    登录</a>
+                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-save'">
+                    工具箱</a>
+                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-save'">
+                    保存</a>
+                <a href="javascript:action('FlowRpt')" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-save'">
+                    设计报表</a>
+                <a href="javascript:action('FlowCheck')" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-save'">
+                    检查</a>
+                <a href="javascript:action('FlowRun')" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-save'">
+                    运行</a>
+                <a href="javascript:action('FlowP')" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-config'">
+                    属性</a>
+                <a href="javascript:action('FlowDel')" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-delete'">
+                    删除</a>
+                <a href="javascript:action('FlowExp')" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-save'">
+                    导出</a>
+                <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-save'">
+                    模板库</a>
+                <a href="javascript:action('Help')" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-help'">
+                    帮助</a>
+            </div>
+            <div id="designerArea" 
+            class="easyui-tabs" 
+            data-options="region:'center',border:true" 
+            style="">
+
+                 <div title="主页" 
+                     style="background-position: center center; padding: 0px; overflow:hidden; background-image: url('../../../DataUser/ICON/Welcome.png'); background-repeat: no-repeat;"> 
+			    </div>           
+            </div>
+        </div>
+    </div>
+
+    <!--  context menu -->
+    <div id="mFlowRoot" class="easyui-menu" style="width: 120px;">
+        <div onclick="append()" data-options="iconCls:'icon-add'">
+            新建/导入流程</div>
+        <div onclick="remove()" data-options="iconCls:'icon-remove'">
+            新建子级类别</div>
+        <div onclick="remove()" data-options="iconCls:'icon-remove'">
+            编辑</div>
+        <div onclick="remove()" data-options="iconCls:'icon-remove'">
+            刷新</div>
+    </div>
+    <div id="mFlowSort" class="easyui-menu" style="width: 120px;">
+        <div onclick="append()" data-options="iconCls:'icon-add'">
+            新建/导入流程</div>
+        <div onclick="remove()" data-options="iconCls:'icon-remove'">
+            新建同级类别</div>
+        <div onclick="remove()" data-options="iconCls:'icon-remove'">
+            新建子级类别</div>
+        <div onclick="remove()" data-options="iconCls:'icon-remove'">
+            编辑</div>
+        <div onclick="remove()" data-options="iconCls:'icon-remove'">
+            删除</div>
+        <div onclick="remove()" data-options="iconCls:'icon-remove'">
+            刷新</div>
+    </div>
+    <div id="mFlow" class="easyui-menu" style="width: 120px;">
+        <div onclick="append()" data-options="iconCls:'icon-add'">
+            打开</div>
+        <div onclick="remove()" data-options="iconCls:'icon-remove'">
+            编辑</div>
+        <div onclick="remove()" data-options="iconCls:'icon-remove'">
+            删除</div>
+        <div onclick="remove()" data-options="iconCls:'icon-remove'">
+            刷新</div>
+    </div>
+
+     <div id="mFormRoot" class="easyui-menu" style="width: 120px;">
+        <div onclick="append()" data-options="iconCls:'icon-add'">
+            新建/导入</div>
+        <div onclick="remove()" data-options="iconCls:'icon-remove'">
+            新建子级类别</div>
+        <div onclick="remove()" data-options="iconCls:'icon-remove'">
+            编辑</div>
+        <div onclick="remove()" data-options="iconCls:'icon-remove'">
+            刷新</div>
+    </div>
+    <div id="mFormSort" class="easyui-menu" style="width: 120px;">
+        <div onclick="append()" data-options="iconCls:'icon-add'">
+            新建/导入</div>
+        <div onclick="remove()" data-options="iconCls:'icon-remove'">
+            新建同级类别</div>
+        <div onclick="remove()" data-options="iconCls:'icon-remove'">
+            新建子级类别</div>
+        <div onclick="remove()" data-options="iconCls:'icon-remove'">
+            编辑</div>
+        <div onclick="remove()" data-options="iconCls:'icon-remove'">
+            删除</div>
+        <div onclick="remove()" data-options="iconCls:'icon-remove'">
+            刷新</div>
+    </div>
+    <div id="mForm" class="easyui-menu" style="width: 120px;">
+        <div onclick="append()" data-options="iconCls:'icon-add'">
+            打开</div>
+        <div onclick="remove()" data-options="iconCls:'icon-remove'">
+            编辑</div>
+        <div onclick="remove()" data-options="iconCls:'icon-remove'">
+            删除</div>
+        <div onclick="remove()" data-options="iconCls:'icon-remove'">
+            刷新</div>
+    </div>
+</body>
+</html>

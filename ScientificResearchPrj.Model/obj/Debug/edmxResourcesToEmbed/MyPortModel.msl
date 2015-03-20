@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ScientificResearchPrjModelStoreContainer" CdmEntityContainer="MyPortEntities">
+    <EntitySetMapping Name="MyPort_Dept">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.MyPort_Dept">
+        <MappingFragment StoreEntitySet="MyPort_Dept">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DeptNo" ColumnName="DeptNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ParentNo" ColumnName="ParentNo" />
+          <ScalarProperty Name="Leader" ColumnName="Leader" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Addr" ColumnName="Addr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MyPort_Emp">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.MyPort_Emp">
+        <MappingFragment StoreEntitySet="MyPort_Emp">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EmpNo" ColumnName="EmpNo" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Leader" ColumnName="Leader" />
+          <ScalarProperty Name="SID" ColumnName="SID" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="FK_Dept" ColumnName="FK_Dept" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MyPort_Station">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.MyPort_Station">
+        <MappingFragment StoreEntitySet="MyPort_Station">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="StaNo" ColumnName="StaNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DutyReq" ColumnName="DutyReq" />
+          <ScalarProperty Name="Makings" ColumnName="Makings" />
+          <ScalarProperty Name="StaGrade" ColumnName="StaGrade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="MyPort_EmpDept" TypeName="ScientificResearchPrjModel.MyPort_EmpDept" StoreEntitySet="MyPort_EmpDept">
+      <EndProperty Name="MyPort_Dept">
+        <ScalarProperty Name="DeptNo" ColumnName="FK_Dept" />
+      </EndProperty>
+      <EndProperty Name="MyPort_Emp">
+        <ScalarProperty Name="EmpNo" ColumnName="FK_Emp" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MyPort_EmpStation" TypeName="ScientificResearchPrjModel.MyPort_EmpStation" StoreEntitySet="MyPort_EmpStation">
+      <EndProperty Name="MyPort_Emp">
+        <ScalarProperty Name="EmpNo" ColumnName="FK_Emp" />
+      </EndProperty>
+      <EndProperty Name="MyPort_Station">
+        <ScalarProperty Name="StaNo" ColumnName="FK_Station" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

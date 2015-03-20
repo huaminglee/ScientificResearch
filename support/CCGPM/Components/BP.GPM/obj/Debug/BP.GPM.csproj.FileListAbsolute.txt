@@ -1,0 +1,9 @@
+E:\ScientificResearch\support\CCGPM\Components\BP.GPM\bin\Debug\BP.GPM.dll
+E:\ScientificResearch\support\CCGPM\Components\BP.GPM\bin\Debug\BP.GPM.pdb
+E:\ScientificResearch\support\CCGPM\Components\BP.GPM\bin\Debug\BP.En30.dll
+E:\ScientificResearch\support\CCGPM\Components\BP.GPM\bin\Debug\MySql.Data.dll
+E:\ScientificResearch\support\CCGPM\Components\BP.GPM\bin\Debug\IBM.Data.Informix.dll
+E:\ScientificResearch\support\CCGPM\Components\BP.GPM\bin\Debug\BP.En30.pdb
+E:\ScientificResearch\support\CCGPM\Components\BP.GPM\obj\Debug\BP.GPM.csprojResolveAssemblyReference.cache
+E:\ScientificResearch\support\CCGPM\Components\BP.GPM\obj\Debug\BP.GPM.dll
+E:\ScientificResearch\support\CCGPM\Components\BP.GPM\obj\Debug\BP.GPM.pdb

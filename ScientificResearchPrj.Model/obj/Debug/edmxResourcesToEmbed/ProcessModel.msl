@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ScientificResearchPrjModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="MyPort_Dept">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.MyPort_Dept">
+        <MappingFragment StoreEntitySet="MyPort_Dept">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DeptNo" ColumnName="DeptNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ParentNo" ColumnName="ParentNo" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MyPort_Emp">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.MyPort_Emp">
+        <MappingFragment StoreEntitySet="MyPort_Emp">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EmpNo" ColumnName="EmpNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="SID" ColumnName="SID" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="FK_Dept" ColumnName="FK_Dept" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MyPort_EmpDept">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.MyPort_EmpDept">
+        <MappingFragment StoreEntitySet="MyPort_EmpDept">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FK_Emp" ColumnName="FK_Emp" />
+          <ScalarProperty Name="FK_Dept" ColumnName="FK_Dept" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MyPort_EmpStation">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.MyPort_EmpStation">
+        <MappingFragment StoreEntitySet="MyPort_EmpStation">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FK_Emp" ColumnName="FK_Emp" />
+          <ScalarProperty Name="FK_Station" ColumnName="FK_Station" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MyPort_Station">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.MyPort_Station">
+        <MappingFragment StoreEntitySet="MyPort_Station">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="StaNo" ColumnName="StaNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="StaGrade" ColumnName="StaGrade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MyPort_Student">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.MyPort_Student">
+        <MappingFragment StoreEntitySet="MyPort_Student">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FK_EmpNo" ColumnName="FK_EmpNo" />
+          <ScalarProperty Name="AdmissionYear" ColumnName="AdmissionYear" />
+          <ScalarProperty Name="SchoolingLength" ColumnName="SchoolingLength" />
+          <ScalarProperty Name="FK_Tutor" ColumnName="FK_Tutor" />
+          <ScalarProperty Name="LabAddr" ColumnName="LabAddr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MyPort_Tutor">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.MyPort_Tutor">
+        <MappingFragment StoreEntitySet="MyPort_Tutor">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FK_EmpNo" ColumnName="FK_EmpNo" />
+          <ScalarProperty Name="ChargeWork" ColumnName="ChargeWork" />
+          <ScalarProperty Name="OfficeAddr" ColumnName="OfficeAddr" />
+          <ScalarProperty Name="OfficeTel" ColumnName="OfficeTel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Process_Attach">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_Attach">
+        <MappingFragment StoreEntitySet="Process_Attach">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+          <ScalarProperty Name="No_OID" ColumnName="No_OID" />
+          <ScalarProperty Name="IsShenHe" ColumnName="IsShenHe" />
+          <ScalarProperty Name="AttachName" ColumnName="AttachName" />
+          <ScalarProperty Name="AttachDesc" ColumnName="AttachDesc" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Process_BasicData">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_BasicData">
+        <MappingFragment StoreEntitySet="Process_BasicData">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FK_Proposer" ColumnName="FK_Proposer" />
+          <ScalarProperty Name="ProposeTime" ColumnName="ProposeTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Keys" ColumnName="Keys" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+          <ScalarProperty Name="LastSendTime" ColumnName="LastSendTime" />
+          <ScalarProperty Name="FK_Flow" ColumnName="FK_Flow" />
+          <ScalarProperty Name="WorkId" ColumnName="WorkId" />
+          <ScalarProperty Name="FK_Node" ColumnName="FK_Node" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Process_DeChuJieLun">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_DeChuJieLun">
+        <MappingFragment StoreEntitySet="Process_DeChuJieLun">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+          <ScalarProperty Name="FK_BDNo" ColumnName="FK_BDNo" />
+          <ScalarProperty Name="Mitigation" ColumnName="Mitigation" />
+          <ScalarProperty Name="EffectiveSolution" ColumnName="EffectiveSolution" />
+          <ScalarProperty Name="Arguments" ColumnName="Arguments" />
+          <ScalarProperty Name="FK_DBFXOID" ColumnName="FK_DBFXOID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Process_DiaoYan">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_DiaoYan">
+        <MappingFragment StoreEntitySet="Process_DiaoYan">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+          <ScalarProperty Name="FK_BDNo" ColumnName="FK_BDNo" />
+          <ScalarProperty Name="SumType" ColumnName="SumType" />
+          <ScalarProperty Name="Sum" ColumnName="Sum" />
+          <ScalarProperty Name="SurveryAddr" ColumnName="SurveryAddr" />
+          <ScalarProperty Name="Investigator" ColumnName="Investigator" />
+          <ScalarProperty Name="AnalysisResult" ColumnName="AnalysisResult" />
+          <ScalarProperty Name="AdvantageValue" ColumnName="AdvantageValue" />
+          <ScalarProperty Name="WeaknessValue" ColumnName="WeaknessValue" />
+          <ScalarProperty Name="UnsolvedProblem" ColumnName="UnsolvedProblem" />
+          <ScalarProperty Name="TechTrends" ColumnName="TechTrends" />
+          <ScalarProperty Name="BeyondPoint" ColumnName="BeyondPoint" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Process_DuiBiFenXi">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_DuiBiFenXi">
+        <MappingFragment StoreEntitySet="Process_DuiBiFenXi">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+          <ScalarProperty Name="FK_BDNo" ColumnName="FK_BDNo" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Methods" ColumnName="Methods" />
+          <ScalarProperty Name="AnalysisResult" ColumnName="AnalysisResult" />
+          <ScalarProperty Name="InferType" ColumnName="InferType" />
+          <ScalarProperty Name="InferContent" ColumnName="InferContent" />
+          <ScalarProperty Name="FK_SYOID" ColumnName="FK_SYOID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Process_GroupMember">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_GroupMember">
+        <MappingFragment StoreEntitySet="Process_GroupMember">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FK_Xmz" ColumnName="FK_Xmz" />
+          <ScalarProperty Name="FK_Emp" ColumnName="FK_Emp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Process_Link">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_Link">
+        <MappingFragment StoreEntitySet="Process_Link">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+          <ScalarProperty Name="No_OID" ColumnName="No_OID" />
+          <ScalarProperty Name="IsShenHe" ColumnName="IsShenHe" />
+          <ScalarProperty Name="LinkHref" ColumnName="LinkHref" />
+          <ScalarProperty Name="LinkDesc" ColumnName="LinkDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Process_LunWen">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_LunWen">
+        <MappingFragment StoreEntitySet="Process_LunWen">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+          <ScalarProperty Name="FK_BDNo" ColumnName="FK_BDNo" />
+          <ScalarProperty Name="Motivation" ColumnName="Motivation" />
+          <ScalarProperty Name="Questions" ColumnName="Questions" />
+          <ScalarProperty Name="Design" ColumnName="Design" />
+          <ScalarProperty Name="Realize" ColumnName="Realize" />
+          <ScalarProperty Name="TestData" ColumnName="TestData" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Process_Project">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_Project">
+        <MappingFragment StoreEntitySet="Process_Project">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+          <ScalarProperty Name="FK_BDNo" ColumnName="FK_BDNo" />
+          <ScalarProperty Name="FK_Xmz" ColumnName="FK_Xmz" />
+          <ScalarProperty Name="Columns" ColumnName="Columns" />
+          <ScalarProperty Name="Tasks" ColumnName="Tasks" />
+          <ScalarProperty Name="Questions" ColumnName="Questions" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Process_ProjectGroup">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_ProjectGroup">
+        <MappingFragment StoreEntitySet="Process_ProjectGroup">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FK_GroupLeader" ColumnName="FK_GroupLeader" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Process_ShenHe">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_ShenHe">
+        <MappingFragment StoreEntitySet="Process_ShenHe">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+          <ScalarProperty Name="ShenHeRen" ColumnName="ShenHeRen" />
+          <ScalarProperty Name="ShenHeShiJian" ColumnName="ShenHeShiJian" />
+          <ScalarProperty Name="ShenHeJieGuo" ColumnName="ShenHeJieGuo" />
+          <ScalarProperty Name="ShenHeYiJian" ColumnName="ShenHeYiJian" />
+          <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+          <ScalarProperty Name="FK_Flow" ColumnName="FK_Flow" />
+          <ScalarProperty Name="FK_Node" ColumnName="FK_Node" />
+          <ScalarProperty Name="WorkID" ColumnName="WorkID" />
+          <ScalarProperty Name="StepType" ColumnName="StepType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Process_ShiYan">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_ShiYan">
+        <MappingFragment StoreEntitySet="Process_ShiYan">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+          <ScalarProperty Name="FK_BDNo" ColumnName="FK_BDNo" />
+          <ScalarProperty Name="Design" ColumnName="Design" />
+          <ScalarProperty Name="IndexSys" ColumnName="IndexSys" />
+          <ScalarProperty Name="RealizeStep" ColumnName="RealizeStep" />
+          <ScalarProperty Name="TestCondition" ColumnName="TestCondition" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="StatistacalResult" ColumnName="StatistacalResult" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="FK_SFOID" ColumnName="FK_SFOID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Process_SiLu">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_SiLu">
+        <MappingFragment StoreEntitySet="Process_SiLu">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+          <ScalarProperty Name="FK_BDNo" ColumnName="FK_BDNo" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="FK_WTOID" ColumnName="FK_WTOID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Process_SuanFa">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_SuanFa">
+        <MappingFragment StoreEntitySet="Process_SuanFa">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+          <ScalarProperty Name="FK_BDNo" ColumnName="FK_BDNo" />
+          <ScalarProperty Name="Design" ColumnName="Design" />
+          <ScalarProperty Name="RealizeStep" ColumnName="RealizeStep" />
+          <ScalarProperty Name="FK_XSHOID" ColumnName="FK_XSHOID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Process_Subject_XuQiuFenXi">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_Subject_XuQiuFenXi">
+        <MappingFragment StoreEntitySet="Process_Subject_XuQiuFenXi">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+          <ScalarProperty Name="FK_BDNo" ColumnName="FK_BDNo" />
+          <ScalarProperty Name="FK_XmOID" ColumnName="FK_XmOID" />
+          <ScalarProperty Name="SourceDesc" ColumnName="SourceDesc" />
+          <ScalarProperty Name="AnalysisResult" ColumnName="AnalysisResult" />
+          <ScalarProperty Name="TargetTask" ColumnName="TargetTask" />
+          <ScalarProperty Name="Innovation" ColumnName="Innovation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Process_TiChuWenTi">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_TiChuWenTi">
+        <MappingFragment StoreEntitySet="Process_TiChuWenTi">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+          <ScalarProperty Name="FK_BDNo" ColumnName="FK_BDNo" />
+          <ScalarProperty Name="Mitigation" ColumnName="Mitigation" />
+          <ScalarProperty Name="OvercomeMethod" ColumnName="OvercomeMethod" />
+          <ScalarProperty Name="Argument" ColumnName="Argument" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Process_Track">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_Track">
+        <MappingFragment StoreEntitySet="Process_Track">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FK_Flow" ColumnName="FK_Flow" />
+          <ScalarProperty Name="WorkID" ColumnName="WorkID" />
+          <ScalarProperty Name="XMOID" ColumnName="XMOID" />
+          <ScalarProperty Name="XQFXOID" ColumnName="XQFXOID" />
+          <ScalarProperty Name="DYOID" ColumnName="DYOID" />
+          <ScalarProperty Name="TCWTOID" ColumnName="TCWTOID" />
+          <ScalarProperty Name="JJSLOID" ColumnName="JJSLOID" />
+          <ScalarProperty Name="XSHOID" ColumnName="XSHOID" />
+          <ScalarProperty Name="SJSFOID" ColumnName="SJSFOID" />
+          <ScalarProperty Name="SJSYOID" ColumnName="SJSYOID" />
+          <ScalarProperty Name="DBFXOID" ColumnName="DBFXOID" />
+          <ScalarProperty Name="DCJLOID" ColumnName="DCJLOID" />
+          <ScalarProperty Name="LWZXOID" ColumnName="LWZXOID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Process_XingShiHua">
+      <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_XingShiHua">
+        <MappingFragment StoreEntitySet="Process_XingShiHua">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+          <ScalarProperty Name="FK_BDNo" ColumnName="FK_BDNo" />
+          <ScalarProperty Name="FK_SLOID" ColumnName="FK_SLOID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

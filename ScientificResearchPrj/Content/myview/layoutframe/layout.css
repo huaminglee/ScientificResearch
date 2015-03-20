@@ -1,0 +1,62 @@
+﻿body {
+        margin: 0;
+        padding: 0px;
+        height: 100%;
+        position:absolute;
+        width: 100%;
+        border: 0px solid green;
+    }
+
+.frame_singletab{
+    padding: 10px; 
+    border: 0px solid red;
+}
+
+.frame_headmenu{
+    
+}
+
+.frame_headmenu .selecttype{
+     margin-top:-5px;
+     height: 30px;
+     float:left;
+     border: 0px solid red;
+}
+
+.frame_headmenu .selecttype .typeselected{
+    height:30px;
+    padding-top:6px;
+    margin-right:10px;
+    border: 0px solid red;
+}
+
+.frame_headmenu .searchtext{
+     margin-top:-5px;
+     width:180px;
+     float:left;
+     height: 30px;
+     margin-right:10px;
+     border: 0px solid red;
+}
+
+
+
+.frame_headmenu .searchtime{
+     margin-top:-5px;
+     height: 30px;
+     float:left;
+     border: 0px solid red;
+     margin-right:10px;
+}
+ 
+
+.frame_headmenu .menubtn{
+    float: left; 
+    width: 80px; 
+    height: 30px;
+    margin-right:10px;
+    margin-top: -5px; 
+    padding:0;
+}
+
+ 

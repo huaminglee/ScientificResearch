@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ScientificResearchPrjModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Port_Station">
+    <Key>
+      <PropertyRef Name="No" />
+    </Key>
+    <Property Name="No" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="DutyReq" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Makings" Type="nvarchar" MaxLength="4000" />
+    <Property Name="FK_StationType" Type="nvarchar" MaxLength="100" />
+    <Property Name="StaGrade" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityContainer Name="ScientificResearchPrjModelStoreContainer">
+    <EntitySet Name="Port_Station" EntityType="Self.Port_Station" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,273 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>项目组管理</title>
+    <!-- Jquery EasyUI styles for this template -->
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/bootstrap/easyui.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/icon.css">
+    
+    <style>
+        a {
+            color: #ff6a00;
+        }
+
+        a:hover {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div title="项目组管理" style="padding: 10px; border: 0;">
+            <div id="tb" style="height:auto">
+                <table cellspacing="0" cellpadding="0" style="margin-left:20px">
+                    <tr>
+                        <td>
+                            <a href="javascript:void(0)" id="link_add" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true">Add</a>
+                            <a href="javascript:void(0)" id="link_remove" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true">Remove</a>
+                        </td>
+                        <td>
+                            <div style="margin-left:50px">
+                                <input class="easyui-searchbox" data-options="prompt:'搜索项目组'" style="width:200px; vertical-align:middle;">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <table class="easyui-datagrid" id="tTable"
+                   data-options="fix:true,fitColumns:true" style="width:100%;position:absolute;">
+                <thead>
+                    <tr>
+                        <th data-options="field:'No',align:'center',editor:'textbox'" style="width:10%;">项目组编号</th>
+                        <th data-options="field:'Name',align:'center',editor:'textbox'" style="width: 10%;">项目组名称</th>
+                        <th data-options="field:'FK_GroupLeaderName',align:'center',editor:{
+                            type:'textbox',
+                            options:{
+                                icons: [{
+                                    iconCls:'icon-tip',
+                                    handler: function(e){
+                                        BS_.openLeaderOrMemberDialog(LeaderOrMemberType.ZUZHANG)
+                                    }
+                                }]
+                            }
+                        }" style="width: 10%;">项目组组长</th>
+                        <th data-options="field:'FK_GroupMemberName',align:'center',editor:{
+                            type:'textbox',
+                            options:{
+                                icons: [{
+                                    iconCls:'icon-tip',
+                                    handler: function(e){
+                                         BS_.openLeaderOrMemberDialog(LeaderOrMemberType.ZUYUAN)
+                                    }
+                                }]
+                            }
+                        }" style="width: 25%;">项目组成员</th>
+                        <th data-options="field:'Description',align:'center',editor:{
+                            type:'ex_wintextarea',
+                            options:{
+                                readonly:false
+                            }
+                        }" style="width: 20%;">项目组描述</th>
+                        <th data-options="field:'Projects',align:'center',editor:{
+                            type:'ex_wintextarea',
+                            options:{
+                                readonly:true
+                            }
+                        }" style="width: 20%;">已有项目</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+
+        <div id="divSelectLeaderOrMember" class="easyui-dialog"  data-options="{
+                    title: '选择组长或组员',
+                    closed: true,
+                    cache: false,
+                    height: 411,
+                    width: 800,
+                    modal: true,
+                    buttons: [{
+                            iconCls: 'icon-ok',
+                            text: '确定',
+                            handler:  BS_.selectLeaderOrMember
+                        },{
+                            text: '取消',
+                            iconCls: 'icon-cancel',
+                            handler:  BS_.cancelSelectLeaderOrMember
+                        }
+                    ]
+                 }">
+
+            <div id="tb_LeaderOrMember" style="height:auto">
+                <table cellspacing="0" cellpadding="0" style="margin-left:20px">
+                    <tr>
+                        <td>
+                            <a href="javascript:void(0)" id="link_getleaderormembertoselected" class="easyui-linkbutton" data-options="iconCls:'icon-redo',plain:true">右移</a>
+                        </td>
+                        <td>
+                        <div style="margin-left:86px">
+                            <input id="link_leaderormembertype" class="easyui-combobox" 
+                                data-options="valueField:'value',textField:'text',value:'2',data:TypeData,prompt :'类型',
+                                    onSelect:BS_.selectLeaderOrMemberType
+                                ">
+                        </div>
+                    </td>
+                    </tr>
+                </table>
+            </div>
+            <div  style="float:left;width:60%;" >
+                <table class="easyui-datagrid" id="tTableLeaderOrMember"
+                   data-options="fix:true,fitColumns:true,
+                                //显示序号
+                                rownumbers: true,
+                                //组长单选，组员多选
+                                singleSelect: false,
+                                //工具栏
+                                toolbar: '#tb_LeaderOrMember',
+                                //分页
+                                pagination: true,
+                                onClickRow: BS_.selectLeaderOrMemberOnClickRow" style="width:100%;position:absolute;">
+                    <thead>
+                        <tr>
+                            <th data-options="field:'EmpNo',align:'center'" style="width:28%;">编号</th>
+                            <th data-options="field:'Name',align:'center'" style="width:18%;">姓名</th>
+                            <th data-options="field:'FK_DeptName',align:'center',hidden:'true'" style="width:20%;">部门</th>
+                            <th data-options="field:'FK_StationName',align:'center',hidden:'true'" style="width:20%;">岗位</th>
+
+                            <th data-options="field:'AdmissionYear',align:'center'" style="width:20%;">入学年份</th>
+                            <th data-options="field:'FK_TutorName',align:'center'" style="width:20%;">导师</th>
+
+                            <th data-options="field:'Type',align:'center',
+                                formatter: function(value) {
+                                    for (var i = 0; i < TypeDataForSelect.length; i++) {
+                                        if (TypeDataForSelect[i].value == value){
+                                            return TypeDataForSelect[i].text;
+                                        }
+                                    }
+                                    return value;
+                                },editor:{
+                                    type:'combobox',
+                                    options:{
+                                        data: TypeDataForSelect,
+                                        valueField: 'value',
+                                        textfield :'text' 
+                                    }
+                                }" style="width:10%;">类型</th>
+                        </tr>
+                    </thead>
+                </table>
+           </div>
+
+            <div id="tb_SelectedLeaderOrMember" style="height:auto">
+                <table cellspacing="0" cellpadding="0" style="margin-left:20px">
+                    <tr>
+                        <td>
+                            <a href="javascript:void(0)" id="link_removeselectleaderormember" class="easyui-linkbutton" data-options="iconCls:'icon-undo',plain:true">移出</a>
+                            <a href="javascript:void(0)" id="link_removeallselectleaderormember" class="easyui-linkbutton" data-options="iconCls:'icon-cut',plain:true">全部移出</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div  style="float:right;width:35%;margin-right:3%;" >
+                <table class ="easyui-datagrid" id="tTableSelectLeaderOrMember"
+                    data-options="fix:true,fitColumns:true,
+                            //显示序号
+                            rownumbers: true,
+                            //单选还是多选
+                            singleSelect: false,
+                            //工具栏
+                            toolbar: '#tb_SelectedLeaderOrMember',
+                            onClickRow: BS_.selectedLeaderOrMemberOnClickRow" style="width:100%;position:absolute;">
+                    <thead>
+                        <tr>
+                            <th data-options="field:'EmpNo',align:'left'" style="width:40%;">编号</th>
+                            <th data-options="field:'Name',align:'center'" style="width:50%;">名称</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+    </div>
+
+    </div>
+    <!--Jquery EasyUI  js文件   -->
+    <script src="~/Content/jquery-easyui-1.4.1/jquery.min.js"></script>
+    <script src="~/Content/jquery-easyui-1.4.1/jquery.easyui.min.js"></script>
+    <script src="~/Scripts/easyui_extend.js"></script>
+    <script src="~/Scripts/jquery_extend.js"></script>
+
+    <script src="~/Views/XiangMuZu/js/AT_.js"></script>
+    <script src="~/Views/XiangMuZu/js/BS_.js"></script>
+    <script src="~/Views/XiangMuZu/js/ET_.js"></script>
+    <script>
+
+        var Type = {
+            DAOSHI: 1,//导师
+            XUESHENG: 2,//学生
+            BENKESHENG: 3,//本科生
+            YANJIUSHENG: 4,//研究生
+            BOSHISHENG: 5//博士生
+        };
+
+        //用以查询
+        var TypeData = [
+           { value: Type.DAOSHI, text: "导师" },
+           { value: Type.XUESHENG, text: "学生" },
+           { value: Type.BENKESHENG, text: "本科生" },
+           { value: Type.YANJIUSHENG, text: "研究生" },
+           { value: Type.BOSHISHENG, text: "博士生" }
+        ];
+
+        //用以datagrid选择
+        var TypeDataForSelect = [
+           { value: Type.DAOSHI, text: "导师" },
+           { value: Type.BENKESHENG, text: "本科生" },
+           { value: Type.YANJIUSHENG, text: "研究生" },
+           { value: Type.BOSHISHENG, text: "博士生" }
+        ];
+
+        var LeaderOrMemberType = {
+            ZUZHANG: 1,//组长
+            ZUYUAN: 2//组员
+        };
+
+        var jsonResult = { total: 0, rows: [] };
+        var jsonData = undefined;
+
+        $(function () {
+            $('#tTable').datagrid({
+                //显示序号
+                rownumbers: true,
+                //单选还是多选
+                singleSelect: true,
+                //工具栏
+                toolbar: '#tb',
+                //分页
+                pagination: true,
+                onClickRow: BS_.onClickRow
+            });
+
+            //设置分页数据，使得可以获取分页进行加载
+            //注意：加载成功后必须重新设置分页数据，因为分页的正确显示是在数据加载成功后设置才有效的
+            $('#tTable').datagrid("getPager").pagination({
+                pageSize: 10//每页显示的记录条数，默认为10 
+            });
+
+            $('#tTableLeaderOrMember').datagrid("getPager").pagination({
+                pageSize: 10//每页显示的记录条数，默认为10 
+            });
+
+            //初始化
+            ET_.onload();
+        });
+    </script>
+ 
+</body>
+</html>

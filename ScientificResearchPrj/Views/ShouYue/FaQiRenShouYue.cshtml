@@ -1,0 +1,217 @@
+﻿@{
+    ViewBag.Title = "发起人收阅";
+    Layout = "~/Views/Shared/_BasicProcess.cshtml";
+}
+
+ 
+
+<div id="ad" class="easyui-accordion" style="padding: 10px; width: 100%; height: 100%;border:0; position: absolute;" data-options="fit:true,fitColumns:true">
+    <!--此四个数据域保存当前流程参数
+      <input type="hidden" id="FK_Flow" value='@ViewData["FK_Flow"]' />
+      <input type="hidden" id="WorkID" value='@ViewData["WorkID"]' />
+      <input type="hidden" id="FK_Node" value='@ViewData["FK_Node"]' />
+      <input type="hidden" id="FID" value='@ViewData["FID"]' />
+
+      FK_Flow:<input type="text" id="FK_Flow" value='@ViewData["FK_Flow"]' />
+      WorkID:<input type="text" id="WorkID" value='@ViewData["WorkID"]' />
+      FK_Node:<input type="text" id="FK_Node" value='@ViewData["FK_Node"]' />
+      FID:<input type="text" id="FID" value='@ViewData["FID"]' />
+    -->
+    <div title="请查阅流程所有信息" data-options="iconCls:'icon-search'"  style="padding-top: 10px; border: 0; ">
+
+        <form method="post" novalidate>
+            <div id="pgtb" style="height:auto">
+                <table cellspacing="0" cellpadding="0" style="margin-left:10px">
+                    <tr>
+                        <td>
+                            <a href="javascript:void(0)" id="link_fasong" class="easyui-linkbutton" data-options="iconCls:'icon-ok',plain:true">确定收阅</a>
+                            <a href="javascript:void(0)" id="link_liuchengtu" class="easyui-linkbutton" data-options="iconCls:'icon-large-picture',plain:true">流程图</a>
+                        </td> 
+                    </tr>
+                </table>
+            </div>
+            <div style="width: 96%;margin-left:2%">
+                <table id="pg" style="width: 100%;"></table>
+            </div>
+        </form>
+
+    </div>
+</div>
+<script src="~/Scripts/step-data-commom.js"></script>
+<script src="~/Scripts/step-data-load.js"></script>
+<script src="~/Scripts/step-data.js"></script>
+
+<script src="~/Views/ShouYue/ShouYue/AT_.js"></script>
+<script src="~/Views/ShouYue/ShouYue/BS_.js"></script>
+<script src="~/Views/ShouYue/ShouYue/ET_.js"></script>
+<script>
+    var currentLoginUser = '@ViewData["LoginUser"]';
+    var currentLoginUserName = '@ViewData["LoginUserName"]';
+    //全局变量
+    var FK_Flow = '@ViewData["FK_Flow"]';
+    var WorkID = '@ViewData["WorkID"]';
+    var FK_Node = '@ViewData["FK_Node"]';
+    var FID = '@ViewData["FID"]';
+
+    var StepType = {
+        "PROJECT_XUQIUFENXI": 1,
+        "SUBJECT_XUQIUFENXI": 2,
+        "DIAOYAN": 3,
+        "TICHUWENTI": 4,
+        "JIEJUESILU": 5,
+        "XINGSHIHUA": 6,
+        "SHEJISUANFA": 7,
+        "SHEJISHIYAN": 8,
+        "LIANGHUADUIBIFENXI": 9,
+        "DECHUJIELUN": 10,
+        "LUNWENZHUANXIE": 11
+    };
+    var SHENHEJIEGUO = {
+        "PASS": "1",
+        "RETURN": "0"
+    };
+     
+     
+
+
+    var propertygridData = {
+        "total": XiangMuPropertygridData.length +
+                 KeTiPropertygridData.length +
+                 XQFXShenHePropertygridData.length +
+                 DYPropertygridData.length +
+                 DYShenHePropertygridData.length +
+                 TCWTPropertygridData.length +
+                 TCWTShenHePropertygridData.length +
+                 JJSLPropertygridData.length +
+                 JJSLShenHePropertygridData.length +
+                 XSHPropertygridData.length +
+                 XSHShenHePropertygridData.length +
+                 SJSFPropertygridData.length +
+                 SJSFShenHePropertygridData.length +
+                 SJSYPropertygridData.length +
+                 SJSYShenHePropertygridData.length +
+                 DBFXPropertygridData.length +
+                 DBFXShenHePropertygridData.length +
+                 DCJLPropertygridData.length +
+                 DCJLShenHePropertygridData.length +
+                 LWZXPropertygridData.length +
+                 LWZXShenHePropertygridData.length,
+        "rows": []
+    }
+
+    LWZXShenHePropertygridData.forEach(function (e) {
+        propertygridData.rows.push(e);
+    });
+    LWZXPropertygridData.forEach(function (e) {
+        propertygridData.rows.push(e);
+    });
+    DCJLShenHePropertygridData.forEach(function (e) {
+        propertygridData.rows.push(e);
+    });
+    DCJLPropertygridData.forEach(function (e) {
+        propertygridData.rows.push(e);
+    });
+    DBFXShenHePropertygridData.forEach(function (e) {
+        propertygridData.rows.push(e);
+    });
+    DBFXPropertygridData.forEach(function (e) {
+        propertygridData.rows.push(e);
+    });
+    SJSYShenHePropertygridData.forEach(function (e) {
+        propertygridData.rows.push(e);
+    });
+    SJSYPropertygridData.forEach(function (e) {
+        propertygridData.rows.push(e);
+    });
+    SJSFShenHePropertygridData.forEach(function (e) {
+        propertygridData.rows.push(e);
+    });
+    SJSFPropertygridData.forEach(function (e) {
+        propertygridData.rows.push(e);
+    });
+    XSHShenHePropertygridData.forEach(function (e) {
+        propertygridData.rows.push(e);
+    });
+    XSHPropertygridData.forEach(function (e) {
+        propertygridData.rows.push(e);
+    });
+    JJSLShenHePropertygridData.forEach(function (e) {
+        propertygridData.rows.push(e);
+    });
+    JJSLPropertygridData.forEach(function (e) {
+        propertygridData.rows.push(e);
+    });
+    TCWTShenHePropertygridData.forEach(function (e) {
+        propertygridData.rows.push(e);
+    });
+    TCWTPropertygridData.forEach(function (e) {
+        propertygridData.rows.push(e);
+    });
+    DYShenHePropertygridData.forEach(function (e) {
+        propertygridData.rows.push(e);
+    });
+    DYPropertygridData.forEach(function (e) {
+        propertygridData.rows.push(e);
+    });
+    XQFXShenHePropertygridData.forEach(function (e) {
+        propertygridData.rows.push(e);
+    });
+    KeTiPropertygridData.forEach(function (e) {
+        propertygridData.rows.push(e);
+    });
+    XiangMuPropertygridData.forEach(function (e) {
+        propertygridData.rows.push(e);
+    });
+
+     
+    $(function () {
+        if ($.fn.propertygrid) {
+            $.fn.propertygrid.defaults.columns[0][0].title = "标题"; // 对应Name
+            $.fn.propertygrid.defaults.columns[0][1].title = "内容"; // 对应Value
+            $.fn.propertygrid.defaults.columns[0][0].width = "20%"; // 对应Name
+            $.fn.propertygrid.defaults.columns[0][1].width = "75%"; // 对应Value
+        }
+        
+        $("#pg").propertygrid({
+            toolbar: pgtb,
+            showGroup: true,
+            scrollbarSize: 0,
+            groupFormatter: function (fvalue, rows) {
+                return fvalue + ' - <span style="color:red">' + rows.length + ' rows</span>';
+            },
+            data: cloneJSON(propertygridData),
+            onClickRow: function () {
+                //单击行的时候，设置进入编辑状态
+                var row = $("#pg").propertygrid("getSelected");
+                var editIndex = $("#pg").propertygrid('getRowIndex', row);
+                $("#pg").propertygrid('beginEdit', editIndex);
+            },
+            rowStyler: function (index, row) {
+                if ((row.type != undefined && row.type == "load") ) {
+                    return 'background-color:#F2F2F2;color:#000;font-weight:bold;height:100px;text-align:right';
+                }
+                if (row.name == "分隔位置") {
+                    return 'background-color:#0081C2;color:#fff;font-weight:bold;height:100px;text-align:right';
+                }
+            }
+        });
+        $("#pg").propertygrid("collapseGroup");
+        //初始化
+        ET_.onload();
+    });
+
+    $.extend($.fn.propertygrid.defaults.columns[0][1], {
+        formatter: function (value, rowData, rowIndex) {
+            if (rowData.name == "审核结果") {
+                return value == SHENHEJIEGUO.PASS ? "通过" : "退回";
+            } else {
+                return value;
+            }
+        }
+    });
+
+
+
+
+</script>
+

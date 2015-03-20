@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f86a182040b9432c8dde26c942c72236" Name="关系图1">
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.MyPort_Dept" Width="1.5" PointX="3.75" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.MyPort_Emp" Width="1.5" PointX="0.75" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.MyPort_EmpDept" Width="1.5" PointX="6" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.MyPort_EmpStation" Width="1.5" PointX="6" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.MyPort_Station" Width="1.5" PointX="3.75" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.MyPort_Student" Width="1.5" PointX="3" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.MyPort_Tutor" Width="1.5" PointX="3" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.Process_Attach" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.Process_BasicData" Width="1.5" PointX="3" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.Process_DeChuJieLun" Width="1.5" PointX="8.25" PointY="32.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.Process_DiaoYan" Width="1.5" PointX="5.25" PointY="31.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.Process_DuiBiFenXi" Width="1.5" PointX="8.25" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.Process_GroupMember" Width="1.5" PointX="6" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.Process_Link" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.Process_LunWen" Width="1.5" PointX="5.25" PointY="40.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.Process_Project" Width="1.5" PointX="8.25" PointY="36" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.Process_ProjectGroup" Width="1.5" PointX="3.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.Process_ShenHe" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.Process_ShiYan" Width="1.5" PointX="11.25" PointY="31.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.Process_SiLu" Width="1.5" PointX="7.5" PointY="42.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.Process_SuanFa" Width="1.5" PointX="15" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.Process_Subject_XuQiuFenXi" Width="1.5" PointX="10.5" PointY="36.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.Process_TiChuWenTi" Width="1.5" PointX="5.25" PointY="55.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.Process_Track" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScientificResearchPrjModel.Process_XingShiHua" Width="1.5" PointX="12.75" PointY="36.875" IsExpanded="true" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_MyPort_EmpDept_MyPort_Dept" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_MyPort_EmpDept_MyPort_Emp" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_MyPort_EmpStation_MyPort_Emp" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_MyPort_Student_MyPort_Emp" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_MyPort_Tutor_MyPort_Emp" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_Process_BasicData_Process_Emp" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_Process_GroupMember_Process_Member" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_MyPort_EmpStation_MyPort_Station" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_Process_DeChuJieLun_Process_BasicData" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_Process_DiaoYan_Process_BasicData" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_Process_DuiBiFenXi_Process_BasicData" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_Process_LunWen_Process_BasicData" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_Process_Project_Process_BasicData" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_Process_ShiYan_Process_BasicData" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_Process_SiLu_Process_BasicData" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_Process_SuanFa_Process_BasicData" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_Process_Subject_XuQiuFenXi_Process_BasciData" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_Process_TiChuWenTi_Process_BasicData" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_Process_XingShiHua_Process_BasicData" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_Process_DeChuJieLun_Process_DuiBiFenXi" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_Process_DuiBiFenXi_Process_ShiYan" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_Process_GroupMember_Process_Group" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_Process_Project_Process_ProjectGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_Process_Subject_XuQiuFenXi_Process_Project" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_Process_ShiYan_Process_SuanFa" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_Process_SiLu_Process_WenTi" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_Process_XingShiHua_Process_SiLu" ManuallyRouted="false" />
+        <AssociationConnector Association="ScientificResearchPrjModel.FK_Process_SuanFa_Process_XingShiHua" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

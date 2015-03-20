@@ -1,0 +1,1993 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ScientificResearchPrjModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ScientificResearchPrjModelStoreContainer">
+          <EntitySet Name="MyPort_Dept" EntityType="ScientificResearchPrjModel.Store.MyPort_Dept" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MyPort_Emp" EntityType="ScientificResearchPrjModel.Store.MyPort_Emp" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MyPort_EmpDept" EntityType="ScientificResearchPrjModel.Store.MyPort_EmpDept" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MyPort_EmpStation" EntityType="ScientificResearchPrjModel.Store.MyPort_EmpStation" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MyPort_Station" EntityType="ScientificResearchPrjModel.Store.MyPort_Station" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MyPort_Student" EntityType="ScientificResearchPrjModel.Store.MyPort_Student" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MyPort_Tutor" EntityType="ScientificResearchPrjModel.Store.MyPort_Tutor" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Process_Attach" EntityType="ScientificResearchPrjModel.Store.Process_Attach" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Process_BasicData" EntityType="ScientificResearchPrjModel.Store.Process_BasicData" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Process_DeChuJieLun" EntityType="ScientificResearchPrjModel.Store.Process_DeChuJieLun" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Process_DiaoYan" EntityType="ScientificResearchPrjModel.Store.Process_DiaoYan" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Process_DuiBiFenXi" EntityType="ScientificResearchPrjModel.Store.Process_DuiBiFenXi" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Process_GroupMember" EntityType="ScientificResearchPrjModel.Store.Process_GroupMember" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Process_Link" EntityType="ScientificResearchPrjModel.Store.Process_Link" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Process_LunWen" EntityType="ScientificResearchPrjModel.Store.Process_LunWen" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Process_Project" EntityType="ScientificResearchPrjModel.Store.Process_Project" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Process_ProjectGroup" EntityType="ScientificResearchPrjModel.Store.Process_ProjectGroup" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Process_ShenHe" EntityType="ScientificResearchPrjModel.Store.Process_ShenHe" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Process_ShiYan" EntityType="ScientificResearchPrjModel.Store.Process_ShiYan" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Process_SiLu" EntityType="ScientificResearchPrjModel.Store.Process_SiLu" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Process_SuanFa" EntityType="ScientificResearchPrjModel.Store.Process_SuanFa" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Process_Subject_XuQiuFenXi" EntityType="ScientificResearchPrjModel.Store.Process_Subject_XuQiuFenXi" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Process_TiChuWenTi" EntityType="ScientificResearchPrjModel.Store.Process_TiChuWenTi" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Process_Track" EntityType="ScientificResearchPrjModel.Store.Process_Track" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Process_XingShiHua" EntityType="ScientificResearchPrjModel.Store.Process_XingShiHua" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_MyPort_EmpDept_MyPort_Dept" Association="ScientificResearchPrjModel.Store.FK_MyPort_EmpDept_MyPort_Dept">
+            <End Role="MyPort_Dept" EntitySet="MyPort_Dept" />
+            <End Role="MyPort_EmpDept" EntitySet="MyPort_EmpDept" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MyPort_EmpDept_MyPort_Emp" Association="ScientificResearchPrjModel.Store.FK_MyPort_EmpDept_MyPort_Emp">
+            <End Role="MyPort_Emp" EntitySet="MyPort_Emp" />
+            <End Role="MyPort_EmpDept" EntitySet="MyPort_EmpDept" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MyPort_EmpStation_MyPort_Emp" Association="ScientificResearchPrjModel.Store.FK_MyPort_EmpStation_MyPort_Emp">
+            <End Role="MyPort_Emp" EntitySet="MyPort_Emp" />
+            <End Role="MyPort_EmpStation" EntitySet="MyPort_EmpStation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MyPort_EmpStation_MyPort_Station" Association="ScientificResearchPrjModel.Store.FK_MyPort_EmpStation_MyPort_Station">
+            <End Role="MyPort_Station" EntitySet="MyPort_Station" />
+            <End Role="MyPort_EmpStation" EntitySet="MyPort_EmpStation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MyPort_Student_MyPort_Emp" Association="ScientificResearchPrjModel.Store.FK_MyPort_Student_MyPort_Emp">
+            <End Role="MyPort_Emp" EntitySet="MyPort_Emp" />
+            <End Role="MyPort_Student" EntitySet="MyPort_Student" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MyPort_Tutor_MyPort_Emp" Association="ScientificResearchPrjModel.Store.FK_MyPort_Tutor_MyPort_Emp">
+            <End Role="MyPort_Emp" EntitySet="MyPort_Emp" />
+            <End Role="MyPort_Tutor" EntitySet="MyPort_Tutor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_BasicData_Process_Emp" Association="ScientificResearchPrjModel.Store.FK_Process_BasicData_Process_Emp">
+            <End Role="MyPort_Emp" EntitySet="MyPort_Emp" />
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_DeChuJieLun_Process_BasicData" Association="ScientificResearchPrjModel.Store.FK_Process_DeChuJieLun_Process_BasicData">
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+            <End Role="Process_DeChuJieLun" EntitySet="Process_DeChuJieLun" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_DeChuJieLun_Process_DuiBiFenXi" Association="ScientificResearchPrjModel.Store.FK_Process_DeChuJieLun_Process_DuiBiFenXi">
+            <End Role="Process_DuiBiFenXi" EntitySet="Process_DuiBiFenXi" />
+            <End Role="Process_DeChuJieLun" EntitySet="Process_DeChuJieLun" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_DiaoYan_Process_BasicData" Association="ScientificResearchPrjModel.Store.FK_Process_DiaoYan_Process_BasicData">
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+            <End Role="Process_DiaoYan" EntitySet="Process_DiaoYan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_DuiBiFenXi_Process_BasicData" Association="ScientificResearchPrjModel.Store.FK_Process_DuiBiFenXi_Process_BasicData">
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+            <End Role="Process_DuiBiFenXi" EntitySet="Process_DuiBiFenXi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_DuiBiFenXi_Process_ShiYan" Association="ScientificResearchPrjModel.Store.FK_Process_DuiBiFenXi_Process_ShiYan">
+            <End Role="Process_ShiYan" EntitySet="Process_ShiYan" />
+            <End Role="Process_DuiBiFenXi" EntitySet="Process_DuiBiFenXi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_GroupMember_Process_Group" Association="ScientificResearchPrjModel.Store.FK_Process_GroupMember_Process_Group">
+            <End Role="Process_ProjectGroup" EntitySet="Process_ProjectGroup" />
+            <End Role="Process_GroupMember" EntitySet="Process_GroupMember" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_GroupMember_Process_Member" Association="ScientificResearchPrjModel.Store.FK_Process_GroupMember_Process_Member">
+            <End Role="MyPort_Emp" EntitySet="MyPort_Emp" />
+            <End Role="Process_GroupMember" EntitySet="Process_GroupMember" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_LunWen_Process_BasicData" Association="ScientificResearchPrjModel.Store.FK_Process_LunWen_Process_BasicData">
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+            <End Role="Process_LunWen" EntitySet="Process_LunWen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_Project_Process_BasicData" Association="ScientificResearchPrjModel.Store.FK_Process_Project_Process_BasicData">
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+            <End Role="Process_Project" EntitySet="Process_Project" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_Project_Process_ProjectGroup" Association="ScientificResearchPrjModel.Store.FK_Process_Project_Process_ProjectGroup">
+            <End Role="Process_ProjectGroup" EntitySet="Process_ProjectGroup" />
+            <End Role="Process_Project" EntitySet="Process_Project" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_ShiYan_Process_BasicData" Association="ScientificResearchPrjModel.Store.FK_Process_ShiYan_Process_BasicData">
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+            <End Role="Process_ShiYan" EntitySet="Process_ShiYan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_ShiYan_Process_SuanFa" Association="ScientificResearchPrjModel.Store.FK_Process_ShiYan_Process_SuanFa">
+            <End Role="Process_SuanFa" EntitySet="Process_SuanFa" />
+            <End Role="Process_ShiYan" EntitySet="Process_ShiYan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_SiLu_Process_BasicData" Association="ScientificResearchPrjModel.Store.FK_Process_SiLu_Process_BasicData">
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+            <End Role="Process_SiLu" EntitySet="Process_SiLu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_SiLu_Process_WenTi" Association="ScientificResearchPrjModel.Store.FK_Process_SiLu_Process_WenTi">
+            <End Role="Process_TiChuWenTi" EntitySet="Process_TiChuWenTi" />
+            <End Role="Process_SiLu" EntitySet="Process_SiLu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_SuanFa_Process_BasicData" Association="ScientificResearchPrjModel.Store.FK_Process_SuanFa_Process_BasicData">
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+            <End Role="Process_SuanFa" EntitySet="Process_SuanFa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_SuanFa_Process_XingShiHua" Association="ScientificResearchPrjModel.Store.FK_Process_SuanFa_Process_XingShiHua">
+            <End Role="Process_XingShiHua" EntitySet="Process_XingShiHua" />
+            <End Role="Process_SuanFa" EntitySet="Process_SuanFa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_Subject_XuQiuFenXi_Process_BasciData" Association="ScientificResearchPrjModel.Store.FK_Process_Subject_XuQiuFenXi_Process_BasciData">
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+            <End Role="Process_Subject_XuQiuFenXi" EntitySet="Process_Subject_XuQiuFenXi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_Subject_XuQiuFenXi_Process_Project" Association="ScientificResearchPrjModel.Store.FK_Process_Subject_XuQiuFenXi_Process_Project">
+            <End Role="Process_Project" EntitySet="Process_Project" />
+            <End Role="Process_Subject_XuQiuFenXi" EntitySet="Process_Subject_XuQiuFenXi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_TiChuWenTi_Process_BasicData" Association="ScientificResearchPrjModel.Store.FK_Process_TiChuWenTi_Process_BasicData">
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+            <End Role="Process_TiChuWenTi" EntitySet="Process_TiChuWenTi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_XingShiHua_Process_BasicData" Association="ScientificResearchPrjModel.Store.FK_Process_XingShiHua_Process_BasicData">
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+            <End Role="Process_XingShiHua" EntitySet="Process_XingShiHua" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_XingShiHua_Process_SiLu" Association="ScientificResearchPrjModel.Store.FK_Process_XingShiHua_Process_SiLu">
+            <End Role="Process_SiLu" EntitySet="Process_SiLu" />
+            <End Role="Process_XingShiHua" EntitySet="Process_XingShiHua" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="MyPort_Dept">
+          <Key>
+            <PropertyRef Name="DeptNo" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DeptNo" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="ParentNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="MyPort_Emp">
+          <Key>
+            <PropertyRef Name="EmpNo" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EmpNo" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" />
+          <Property Name="Pass" Type="nvarchar" MaxLength="100" />
+          <Property Name="SID" Type="nvarchar" MaxLength="36" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="20" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="Type" Type="nvarchar" MaxLength="10" />
+          <Property Name="FK_Dept" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="MyPort_EmpDept">
+          <Key>
+            <PropertyRef Name="FK_Emp" />
+            <PropertyRef Name="FK_Dept" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Emp" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="FK_Dept" Type="nvarchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MyPort_EmpStation">
+          <Key>
+            <PropertyRef Name="FK_Emp" />
+            <PropertyRef Name="FK_Station" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Emp" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="FK_Station" Type="nvarchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MyPort_Station">
+          <Key>
+            <PropertyRef Name="StaNo" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="StaNo" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="StaGrade" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MyPort_Student">
+          <Key>
+            <PropertyRef Name="FK_EmpNo" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FK_EmpNo" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="AdmissionYear" Type="nvarchar" MaxLength="20" />
+          <Property Name="SchoolingLength" Type="nvarchar" MaxLength="20" />
+          <Property Name="FK_Tutor" Type="nvarchar" MaxLength="20" />
+          <Property Name="LabAddr" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MyPort_Tutor">
+          <Key>
+            <PropertyRef Name="FK_EmpNo" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FK_EmpNo" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ChargeWork" Type="nvarchar" MaxLength="200" />
+          <Property Name="OfficeAddr" Type="nvarchar" MaxLength="100" />
+          <Property Name="OfficeTel" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Process_Attach">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="int" Nullable="false" />
+          <Property Name="No_OID" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="IsShenHe" Type="nvarchar" MaxLength="10" />
+          <Property Name="AttachName" Type="nvarchar" MaxLength="200" />
+          <Property Name="AttachDesc" Type="nvarchar" MaxLength="200" />
+          <Property Name="Path" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Process_BasicData">
+          <Key>
+            <PropertyRef Name="No" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="No" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK_Proposer" Type="nvarchar" MaxLength="20" />
+          <Property Name="ProposeTime" Type="nvarchar" MaxLength="20" />
+          <Property Name="Description" Type="nvarchar" />
+          <Property Name="Keys" Type="nvarchar" MaxLength="200" />
+          <Property Name="Remarks" Type="nvarchar" />
+          <Property Name="ModifyTime" Type="nvarchar" MaxLength="20" />
+          <Property Name="LastSendTime" Type="nvarchar" MaxLength="20" />
+          <Property Name="FK_Flow" Type="nvarchar" MaxLength="20" />
+          <Property Name="WorkId" Type="nvarchar" MaxLength="20" />
+          <Property Name="FK_Node" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Process_DeChuJieLun">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="int" Nullable="false" />
+          <Property Name="FK_BDNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="Mitigation" Type="nvarchar" MaxLength="20" />
+          <Property Name="EffectiveSolution" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Arguments" Type="nvarchar" MaxLength="2000" />
+          <Property Name="FK_DBFXOID" Type="int" />
+        </EntityType>
+        <EntityType Name="Process_DiaoYan">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="int" Nullable="false" />
+          <Property Name="FK_BDNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="SumType" Type="nvarchar" MaxLength="10" />
+          <Property Name="Sum" Type="nvarchar" MaxLength="2000" />
+          <Property Name="SurveryAddr" Type="nvarchar" MaxLength="200" />
+          <Property Name="Investigator" Type="nvarchar" MaxLength="200" />
+          <Property Name="AnalysisResult" Type="nvarchar" MaxLength="2000" />
+          <Property Name="AdvantageValue" Type="nvarchar" MaxLength="2000" />
+          <Property Name="WeaknessValue" Type="nvarchar" MaxLength="2000" />
+          <Property Name="UnsolvedProblem" Type="nvarchar" MaxLength="2000" />
+          <Property Name="TechTrends" Type="nvarchar" MaxLength="2000" />
+          <Property Name="BeyondPoint" Type="nvarchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="Process_DuiBiFenXi">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="int" Nullable="false" />
+          <Property Name="FK_BDNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="Data" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Methods" Type="nvarchar" MaxLength="2000" />
+          <Property Name="AnalysisResult" Type="nvarchar" MaxLength="2000" />
+          <Property Name="InferType" Type="nvarchar" MaxLength="200" />
+          <Property Name="InferContent" Type="nvarchar" MaxLength="2000" />
+          <Property Name="FK_SYOID" Type="int" />
+        </EntityType>
+        <EntityType Name="Process_GroupMember">
+          <Key>
+            <PropertyRef Name="FK_Xmz" />
+            <PropertyRef Name="FK_Emp" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Xmz" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="FK_Emp" Type="nvarchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Process_Link">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="int" Nullable="false" />
+          <Property Name="No_OID" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="IsShenHe" Type="nvarchar" MaxLength="10" />
+          <Property Name="LinkHref" Type="nvarchar" MaxLength="200" />
+          <Property Name="LinkDesc" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Process_LunWen">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="int" Nullable="false" />
+          <Property Name="FK_BDNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="Motivation" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Questions" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Design" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Realize" Type="nvarchar" MaxLength="2000" />
+          <Property Name="TestData" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Result" Type="nvarchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="Process_Project">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="int" Nullable="false" />
+          <Property Name="FK_BDNo" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="FK_Xmz" Type="nvarchar" MaxLength="20" />
+          <Property Name="Columns" Type="nvarchar" MaxLength="20" />
+          <Property Name="Tasks" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Questions" Type="nvarchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="Process_ProjectGroup">
+          <Key>
+            <PropertyRef Name="No" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="No" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK_GroupLeader" Type="nvarchar" MaxLength="20" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Process_ShenHe">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="int" Nullable="false" />
+          <Property Name="ShenHeRen" Type="nvarchar" MaxLength="20" />
+          <Property Name="ShenHeShiJian" Type="nvarchar" MaxLength="20" />
+          <Property Name="ShenHeJieGuo" Type="nvarchar" MaxLength="10" />
+          <Property Name="ShenHeYiJian" Type="nvarchar" MaxLength="2000" />
+          <Property Name="ModifyTime" Type="nvarchar" MaxLength="20" />
+          <Property Name="FK_Flow" Type="nvarchar" MaxLength="20" />
+          <Property Name="FK_Node" Type="nvarchar" MaxLength="20" />
+          <Property Name="WorkID" Type="nvarchar" MaxLength="20" />
+          <Property Name="StepType" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Process_ShiYan">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="int" Nullable="false" />
+          <Property Name="FK_BDNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="Design" Type="nvarchar" MaxLength="2000" />
+          <Property Name="IndexSys" Type="nvarchar" MaxLength="200" />
+          <Property Name="RealizeStep" Type="nvarchar" MaxLength="2000" />
+          <Property Name="TestCondition" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Data" Type="nvarchar" MaxLength="2000" />
+          <Property Name="StatistacalResult" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Result" Type="nvarchar" MaxLength="2000" />
+          <Property Name="FK_SFOID" Type="int" />
+        </EntityType>
+        <EntityType Name="Process_SiLu">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="int" Nullable="false" />
+          <Property Name="FK_BDNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="Type" Type="nvarchar" MaxLength="20" />
+          <Property Name="FK_WTOID" Type="int" />
+        </EntityType>
+        <EntityType Name="Process_SuanFa">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="int" Nullable="false" />
+          <Property Name="FK_BDNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="Design" Type="nvarchar" MaxLength="2000" />
+          <Property Name="RealizeStep" Type="nvarchar" MaxLength="2000" />
+          <Property Name="FK_XSHOID" Type="int" />
+        </EntityType>
+        <EntityType Name="Process_Subject_XuQiuFenXi">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="int" Nullable="false" />
+          <Property Name="FK_BDNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="FK_XmOID" Type="int" />
+          <Property Name="SourceDesc" Type="nvarchar" MaxLength="2000" />
+          <Property Name="AnalysisResult" Type="nvarchar" MaxLength="2000" />
+          <Property Name="TargetTask" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Innovation" Type="nvarchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="Process_TiChuWenTi">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="int" Nullable="false" />
+          <Property Name="FK_BDNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="Mitigation" Type="nvarchar" MaxLength="20" />
+          <Property Name="OvercomeMethod" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Argument" Type="nvarchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="Process_Track">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Flow" Type="nvarchar" MaxLength="20" />
+          <Property Name="WorkID" Type="nvarchar" MaxLength="20" />
+          <Property Name="XMOID" Type="nvarchar" MaxLength="50" />
+          <Property Name="XQFXOID" Type="nvarchar" MaxLength="50" />
+          <Property Name="DYOID" Type="nvarchar" MaxLength="50" />
+          <Property Name="TCWTOID" Type="nvarchar" MaxLength="50" />
+          <Property Name="JJSLOID" Type="nvarchar" MaxLength="50" />
+          <Property Name="XSHOID" Type="nvarchar" MaxLength="50" />
+          <Property Name="SJSFOID" Type="nvarchar" MaxLength="50" />
+          <Property Name="SJSYOID" Type="nvarchar" MaxLength="50" />
+          <Property Name="DBFXOID" Type="nvarchar" MaxLength="50" />
+          <Property Name="DCJLOID" Type="nvarchar" MaxLength="50" />
+          <Property Name="LWZXOID" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Process_XingShiHua">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="int" Nullable="false" />
+          <Property Name="FK_BDNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="FK_SLOID" Type="int" />
+        </EntityType>
+        <Association Name="FK_MyPort_EmpDept_MyPort_Dept">
+          <End Role="MyPort_Dept" Type="ScientificResearchPrjModel.Store.MyPort_Dept" Multiplicity="1" />
+          <End Role="MyPort_EmpDept" Type="ScientificResearchPrjModel.Store.MyPort_EmpDept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MyPort_Dept">
+              <PropertyRef Name="DeptNo" />
+            </Principal>
+            <Dependent Role="MyPort_EmpDept">
+              <PropertyRef Name="FK_Dept" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MyPort_EmpDept_MyPort_Emp">
+          <End Role="MyPort_Emp" Type="ScientificResearchPrjModel.Store.MyPort_Emp" Multiplicity="1" />
+          <End Role="MyPort_EmpDept" Type="ScientificResearchPrjModel.Store.MyPort_EmpDept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MyPort_Emp">
+              <PropertyRef Name="EmpNo" />
+            </Principal>
+            <Dependent Role="MyPort_EmpDept">
+              <PropertyRef Name="FK_Emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MyPort_EmpStation_MyPort_Emp">
+          <End Role="MyPort_Emp" Type="ScientificResearchPrjModel.Store.MyPort_Emp" Multiplicity="1" />
+          <End Role="MyPort_EmpStation" Type="ScientificResearchPrjModel.Store.MyPort_EmpStation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MyPort_Emp">
+              <PropertyRef Name="EmpNo" />
+            </Principal>
+            <Dependent Role="MyPort_EmpStation">
+              <PropertyRef Name="FK_Emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MyPort_EmpStation_MyPort_Station">
+          <End Role="MyPort_Station" Type="ScientificResearchPrjModel.Store.MyPort_Station" Multiplicity="1" />
+          <End Role="MyPort_EmpStation" Type="ScientificResearchPrjModel.Store.MyPort_EmpStation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MyPort_Station">
+              <PropertyRef Name="StaNo" />
+            </Principal>
+            <Dependent Role="MyPort_EmpStation">
+              <PropertyRef Name="FK_Station" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MyPort_Student_MyPort_Emp">
+          <End Role="MyPort_Emp" Type="ScientificResearchPrjModel.Store.MyPort_Emp" Multiplicity="1" />
+          <End Role="MyPort_Student" Type="ScientificResearchPrjModel.Store.MyPort_Student" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="MyPort_Emp">
+              <PropertyRef Name="EmpNo" />
+            </Principal>
+            <Dependent Role="MyPort_Student">
+              <PropertyRef Name="FK_EmpNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MyPort_Tutor_MyPort_Emp">
+          <End Role="MyPort_Emp" Type="ScientificResearchPrjModel.Store.MyPort_Emp" Multiplicity="1" />
+          <End Role="MyPort_Tutor" Type="ScientificResearchPrjModel.Store.MyPort_Tutor" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="MyPort_Emp">
+              <PropertyRef Name="EmpNo" />
+            </Principal>
+            <Dependent Role="MyPort_Tutor">
+              <PropertyRef Name="FK_EmpNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_BasicData_Process_Emp">
+          <End Role="MyPort_Emp" Type="ScientificResearchPrjModel.Store.MyPort_Emp" Multiplicity="0..1" />
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Store.Process_BasicData" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MyPort_Emp">
+              <PropertyRef Name="EmpNo" />
+            </Principal>
+            <Dependent Role="Process_BasicData">
+              <PropertyRef Name="FK_Proposer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_DeChuJieLun_Process_BasicData">
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Store.Process_BasicData" Multiplicity="0..1" />
+          <End Role="Process_DeChuJieLun" Type="ScientificResearchPrjModel.Store.Process_DeChuJieLun" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_BasicData">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_DeChuJieLun">
+              <PropertyRef Name="FK_BDNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_DeChuJieLun_Process_DuiBiFenXi">
+          <End Role="Process_DuiBiFenXi" Type="ScientificResearchPrjModel.Store.Process_DuiBiFenXi" Multiplicity="0..1" />
+          <End Role="Process_DeChuJieLun" Type="ScientificResearchPrjModel.Store.Process_DeChuJieLun" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_DuiBiFenXi">
+              <PropertyRef Name="OID" />
+            </Principal>
+            <Dependent Role="Process_DeChuJieLun">
+              <PropertyRef Name="FK_DBFXOID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_DiaoYan_Process_BasicData">
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Store.Process_BasicData" Multiplicity="0..1" />
+          <End Role="Process_DiaoYan" Type="ScientificResearchPrjModel.Store.Process_DiaoYan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_BasicData">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_DiaoYan">
+              <PropertyRef Name="FK_BDNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_DuiBiFenXi_Process_BasicData">
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Store.Process_BasicData" Multiplicity="0..1" />
+          <End Role="Process_DuiBiFenXi" Type="ScientificResearchPrjModel.Store.Process_DuiBiFenXi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_BasicData">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_DuiBiFenXi">
+              <PropertyRef Name="FK_BDNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_DuiBiFenXi_Process_ShiYan">
+          <End Role="Process_ShiYan" Type="ScientificResearchPrjModel.Store.Process_ShiYan" Multiplicity="0..1" />
+          <End Role="Process_DuiBiFenXi" Type="ScientificResearchPrjModel.Store.Process_DuiBiFenXi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_ShiYan">
+              <PropertyRef Name="OID" />
+            </Principal>
+            <Dependent Role="Process_DuiBiFenXi">
+              <PropertyRef Name="FK_SYOID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_GroupMember_Process_Group">
+          <End Role="Process_ProjectGroup" Type="ScientificResearchPrjModel.Store.Process_ProjectGroup" Multiplicity="1" />
+          <End Role="Process_GroupMember" Type="ScientificResearchPrjModel.Store.Process_GroupMember" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_ProjectGroup">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_GroupMember">
+              <PropertyRef Name="FK_Xmz" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_GroupMember_Process_Member">
+          <End Role="MyPort_Emp" Type="ScientificResearchPrjModel.Store.MyPort_Emp" Multiplicity="1" />
+          <End Role="Process_GroupMember" Type="ScientificResearchPrjModel.Store.Process_GroupMember" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MyPort_Emp">
+              <PropertyRef Name="EmpNo" />
+            </Principal>
+            <Dependent Role="Process_GroupMember">
+              <PropertyRef Name="FK_Emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_LunWen_Process_BasicData">
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Store.Process_BasicData" Multiplicity="0..1" />
+          <End Role="Process_LunWen" Type="ScientificResearchPrjModel.Store.Process_LunWen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_BasicData">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_LunWen">
+              <PropertyRef Name="FK_BDNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_Project_Process_BasicData">
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Store.Process_BasicData" Multiplicity="1" />
+          <End Role="Process_Project" Type="ScientificResearchPrjModel.Store.Process_Project" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_BasicData">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_Project">
+              <PropertyRef Name="FK_BDNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_Project_Process_ProjectGroup">
+          <End Role="Process_ProjectGroup" Type="ScientificResearchPrjModel.Store.Process_ProjectGroup" Multiplicity="0..1" />
+          <End Role="Process_Project" Type="ScientificResearchPrjModel.Store.Process_Project" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_ProjectGroup">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_Project">
+              <PropertyRef Name="FK_Xmz" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_ShiYan_Process_BasicData">
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Store.Process_BasicData" Multiplicity="0..1" />
+          <End Role="Process_ShiYan" Type="ScientificResearchPrjModel.Store.Process_ShiYan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_BasicData">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_ShiYan">
+              <PropertyRef Name="FK_BDNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_ShiYan_Process_SuanFa">
+          <End Role="Process_SuanFa" Type="ScientificResearchPrjModel.Store.Process_SuanFa" Multiplicity="0..1" />
+          <End Role="Process_ShiYan" Type="ScientificResearchPrjModel.Store.Process_ShiYan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_SuanFa">
+              <PropertyRef Name="OID" />
+            </Principal>
+            <Dependent Role="Process_ShiYan">
+              <PropertyRef Name="FK_SFOID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_SiLu_Process_BasicData">
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Store.Process_BasicData" Multiplicity="0..1" />
+          <End Role="Process_SiLu" Type="ScientificResearchPrjModel.Store.Process_SiLu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_BasicData">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_SiLu">
+              <PropertyRef Name="FK_BDNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_SiLu_Process_WenTi">
+          <End Role="Process_TiChuWenTi" Type="ScientificResearchPrjModel.Store.Process_TiChuWenTi" Multiplicity="0..1" />
+          <End Role="Process_SiLu" Type="ScientificResearchPrjModel.Store.Process_SiLu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_TiChuWenTi">
+              <PropertyRef Name="OID" />
+            </Principal>
+            <Dependent Role="Process_SiLu">
+              <PropertyRef Name="FK_WTOID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_SuanFa_Process_BasicData">
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Store.Process_BasicData" Multiplicity="0..1" />
+          <End Role="Process_SuanFa" Type="ScientificResearchPrjModel.Store.Process_SuanFa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_BasicData">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_SuanFa">
+              <PropertyRef Name="FK_BDNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_SuanFa_Process_XingShiHua">
+          <End Role="Process_XingShiHua" Type="ScientificResearchPrjModel.Store.Process_XingShiHua" Multiplicity="0..1" />
+          <End Role="Process_SuanFa" Type="ScientificResearchPrjModel.Store.Process_SuanFa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_XingShiHua">
+              <PropertyRef Name="OID" />
+            </Principal>
+            <Dependent Role="Process_SuanFa">
+              <PropertyRef Name="FK_XSHOID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_Subject_XuQiuFenXi_Process_BasciData">
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Store.Process_BasicData" Multiplicity="0..1" />
+          <End Role="Process_Subject_XuQiuFenXi" Type="ScientificResearchPrjModel.Store.Process_Subject_XuQiuFenXi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_BasicData">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_Subject_XuQiuFenXi">
+              <PropertyRef Name="FK_BDNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_Subject_XuQiuFenXi_Process_Project">
+          <End Role="Process_Project" Type="ScientificResearchPrjModel.Store.Process_Project" Multiplicity="0..1" />
+          <End Role="Process_Subject_XuQiuFenXi" Type="ScientificResearchPrjModel.Store.Process_Subject_XuQiuFenXi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_Project">
+              <PropertyRef Name="OID" />
+            </Principal>
+            <Dependent Role="Process_Subject_XuQiuFenXi">
+              <PropertyRef Name="FK_XmOID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_TiChuWenTi_Process_BasicData">
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Store.Process_BasicData" Multiplicity="0..1" />
+          <End Role="Process_TiChuWenTi" Type="ScientificResearchPrjModel.Store.Process_TiChuWenTi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_BasicData">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_TiChuWenTi">
+              <PropertyRef Name="FK_BDNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_XingShiHua_Process_BasicData">
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Store.Process_BasicData" Multiplicity="0..1" />
+          <End Role="Process_XingShiHua" Type="ScientificResearchPrjModel.Store.Process_XingShiHua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_BasicData">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_XingShiHua">
+              <PropertyRef Name="FK_BDNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_XingShiHua_Process_SiLu">
+          <End Role="Process_SiLu" Type="ScientificResearchPrjModel.Store.Process_SiLu" Multiplicity="0..1" />
+          <End Role="Process_XingShiHua" Type="ScientificResearchPrjModel.Store.Process_XingShiHua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_SiLu">
+              <PropertyRef Name="OID" />
+            </Principal>
+            <Dependent Role="Process_XingShiHua">
+              <PropertyRef Name="FK_SLOID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ScientificResearchPrjModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MyPort_Dept" EntityType="ScientificResearchPrjModel.MyPort_Dept" />
+          <EntitySet Name="MyPort_Emp" EntityType="ScientificResearchPrjModel.MyPort_Emp" />
+          <EntitySet Name="MyPort_EmpDept" EntityType="ScientificResearchPrjModel.MyPort_EmpDept" />
+          <EntitySet Name="MyPort_EmpStation" EntityType="ScientificResearchPrjModel.MyPort_EmpStation" />
+          <EntitySet Name="MyPort_Station" EntityType="ScientificResearchPrjModel.MyPort_Station" />
+          <EntitySet Name="MyPort_Student" EntityType="ScientificResearchPrjModel.MyPort_Student" />
+          <EntitySet Name="MyPort_Tutor" EntityType="ScientificResearchPrjModel.MyPort_Tutor" />
+          <EntitySet Name="Process_Attach" EntityType="ScientificResearchPrjModel.Process_Attach" />
+          <EntitySet Name="Process_BasicData" EntityType="ScientificResearchPrjModel.Process_BasicData" />
+          <EntitySet Name="Process_DeChuJieLun" EntityType="ScientificResearchPrjModel.Process_DeChuJieLun" />
+          <EntitySet Name="Process_DiaoYan" EntityType="ScientificResearchPrjModel.Process_DiaoYan" />
+          <EntitySet Name="Process_DuiBiFenXi" EntityType="ScientificResearchPrjModel.Process_DuiBiFenXi" />
+          <EntitySet Name="Process_GroupMember" EntityType="ScientificResearchPrjModel.Process_GroupMember" />
+          <EntitySet Name="Process_Link" EntityType="ScientificResearchPrjModel.Process_Link" />
+          <EntitySet Name="Process_LunWen" EntityType="ScientificResearchPrjModel.Process_LunWen" />
+          <EntitySet Name="Process_Project" EntityType="ScientificResearchPrjModel.Process_Project" />
+          <EntitySet Name="Process_ProjectGroup" EntityType="ScientificResearchPrjModel.Process_ProjectGroup" />
+          <EntitySet Name="Process_ShenHe" EntityType="ScientificResearchPrjModel.Process_ShenHe" />
+          <EntitySet Name="Process_ShiYan" EntityType="ScientificResearchPrjModel.Process_ShiYan" />
+          <EntitySet Name="Process_SiLu" EntityType="ScientificResearchPrjModel.Process_SiLu" />
+          <EntitySet Name="Process_SuanFa" EntityType="ScientificResearchPrjModel.Process_SuanFa" />
+          <EntitySet Name="Process_Subject_XuQiuFenXi" EntityType="ScientificResearchPrjModel.Process_Subject_XuQiuFenXi" />
+          <EntitySet Name="Process_TiChuWenTi" EntityType="ScientificResearchPrjModel.Process_TiChuWenTi" />
+          <EntitySet Name="Process_Track" EntityType="ScientificResearchPrjModel.Process_Track" />
+          <EntitySet Name="Process_XingShiHua" EntityType="ScientificResearchPrjModel.Process_XingShiHua" />
+          <AssociationSet Name="FK_MyPort_EmpDept_MyPort_Dept" Association="ScientificResearchPrjModel.FK_MyPort_EmpDept_MyPort_Dept">
+            <End Role="MyPort_Dept" EntitySet="MyPort_Dept" />
+            <End Role="MyPort_EmpDept" EntitySet="MyPort_EmpDept" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MyPort_EmpDept_MyPort_Emp" Association="ScientificResearchPrjModel.FK_MyPort_EmpDept_MyPort_Emp">
+            <End Role="MyPort_Emp" EntitySet="MyPort_Emp" />
+            <End Role="MyPort_EmpDept" EntitySet="MyPort_EmpDept" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MyPort_EmpStation_MyPort_Emp" Association="ScientificResearchPrjModel.FK_MyPort_EmpStation_MyPort_Emp">
+            <End Role="MyPort_Emp" EntitySet="MyPort_Emp" />
+            <End Role="MyPort_EmpStation" EntitySet="MyPort_EmpStation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MyPort_Student_MyPort_Emp" Association="ScientificResearchPrjModel.FK_MyPort_Student_MyPort_Emp">
+            <End Role="MyPort_Emp" EntitySet="MyPort_Emp" />
+            <End Role="MyPort_Student" EntitySet="MyPort_Student" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MyPort_Tutor_MyPort_Emp" Association="ScientificResearchPrjModel.FK_MyPort_Tutor_MyPort_Emp">
+            <End Role="MyPort_Emp" EntitySet="MyPort_Emp" />
+            <End Role="MyPort_Tutor" EntitySet="MyPort_Tutor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_BasicData_Process_Emp" Association="ScientificResearchPrjModel.FK_Process_BasicData_Process_Emp">
+            <End Role="MyPort_Emp" EntitySet="MyPort_Emp" />
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_GroupMember_Process_Member" Association="ScientificResearchPrjModel.FK_Process_GroupMember_Process_Member">
+            <End Role="MyPort_Emp" EntitySet="MyPort_Emp" />
+            <End Role="Process_GroupMember" EntitySet="Process_GroupMember" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MyPort_EmpStation_MyPort_Station" Association="ScientificResearchPrjModel.FK_MyPort_EmpStation_MyPort_Station">
+            <End Role="MyPort_Station" EntitySet="MyPort_Station" />
+            <End Role="MyPort_EmpStation" EntitySet="MyPort_EmpStation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_DeChuJieLun_Process_BasicData" Association="ScientificResearchPrjModel.FK_Process_DeChuJieLun_Process_BasicData">
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+            <End Role="Process_DeChuJieLun" EntitySet="Process_DeChuJieLun" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_DiaoYan_Process_BasicData" Association="ScientificResearchPrjModel.FK_Process_DiaoYan_Process_BasicData">
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+            <End Role="Process_DiaoYan" EntitySet="Process_DiaoYan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_DuiBiFenXi_Process_BasicData" Association="ScientificResearchPrjModel.FK_Process_DuiBiFenXi_Process_BasicData">
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+            <End Role="Process_DuiBiFenXi" EntitySet="Process_DuiBiFenXi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_LunWen_Process_BasicData" Association="ScientificResearchPrjModel.FK_Process_LunWen_Process_BasicData">
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+            <End Role="Process_LunWen" EntitySet="Process_LunWen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_Project_Process_BasicData" Association="ScientificResearchPrjModel.FK_Process_Project_Process_BasicData">
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+            <End Role="Process_Project" EntitySet="Process_Project" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_ShiYan_Process_BasicData" Association="ScientificResearchPrjModel.FK_Process_ShiYan_Process_BasicData">
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+            <End Role="Process_ShiYan" EntitySet="Process_ShiYan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_SiLu_Process_BasicData" Association="ScientificResearchPrjModel.FK_Process_SiLu_Process_BasicData">
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+            <End Role="Process_SiLu" EntitySet="Process_SiLu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_SuanFa_Process_BasicData" Association="ScientificResearchPrjModel.FK_Process_SuanFa_Process_BasicData">
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+            <End Role="Process_SuanFa" EntitySet="Process_SuanFa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_Subject_XuQiuFenXi_Process_BasciData" Association="ScientificResearchPrjModel.FK_Process_Subject_XuQiuFenXi_Process_BasciData">
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+            <End Role="Process_Subject_XuQiuFenXi" EntitySet="Process_Subject_XuQiuFenXi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_TiChuWenTi_Process_BasicData" Association="ScientificResearchPrjModel.FK_Process_TiChuWenTi_Process_BasicData">
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+            <End Role="Process_TiChuWenTi" EntitySet="Process_TiChuWenTi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_XingShiHua_Process_BasicData" Association="ScientificResearchPrjModel.FK_Process_XingShiHua_Process_BasicData">
+            <End Role="Process_BasicData" EntitySet="Process_BasicData" />
+            <End Role="Process_XingShiHua" EntitySet="Process_XingShiHua" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_DeChuJieLun_Process_DuiBiFenXi" Association="ScientificResearchPrjModel.FK_Process_DeChuJieLun_Process_DuiBiFenXi">
+            <End Role="Process_DuiBiFenXi" EntitySet="Process_DuiBiFenXi" />
+            <End Role="Process_DeChuJieLun" EntitySet="Process_DeChuJieLun" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_DuiBiFenXi_Process_ShiYan" Association="ScientificResearchPrjModel.FK_Process_DuiBiFenXi_Process_ShiYan">
+            <End Role="Process_ShiYan" EntitySet="Process_ShiYan" />
+            <End Role="Process_DuiBiFenXi" EntitySet="Process_DuiBiFenXi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_GroupMember_Process_Group" Association="ScientificResearchPrjModel.FK_Process_GroupMember_Process_Group">
+            <End Role="Process_ProjectGroup" EntitySet="Process_ProjectGroup" />
+            <End Role="Process_GroupMember" EntitySet="Process_GroupMember" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_Project_Process_ProjectGroup" Association="ScientificResearchPrjModel.FK_Process_Project_Process_ProjectGroup">
+            <End Role="Process_ProjectGroup" EntitySet="Process_ProjectGroup" />
+            <End Role="Process_Project" EntitySet="Process_Project" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_Subject_XuQiuFenXi_Process_Project" Association="ScientificResearchPrjModel.FK_Process_Subject_XuQiuFenXi_Process_Project">
+            <End Role="Process_Project" EntitySet="Process_Project" />
+            <End Role="Process_Subject_XuQiuFenXi" EntitySet="Process_Subject_XuQiuFenXi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_ShiYan_Process_SuanFa" Association="ScientificResearchPrjModel.FK_Process_ShiYan_Process_SuanFa">
+            <End Role="Process_SuanFa" EntitySet="Process_SuanFa" />
+            <End Role="Process_ShiYan" EntitySet="Process_ShiYan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_SiLu_Process_WenTi" Association="ScientificResearchPrjModel.FK_Process_SiLu_Process_WenTi">
+            <End Role="Process_TiChuWenTi" EntitySet="Process_TiChuWenTi" />
+            <End Role="Process_SiLu" EntitySet="Process_SiLu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_XingShiHua_Process_SiLu" Association="ScientificResearchPrjModel.FK_Process_XingShiHua_Process_SiLu">
+            <End Role="Process_SiLu" EntitySet="Process_SiLu" />
+            <End Role="Process_XingShiHua" EntitySet="Process_XingShiHua" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_SuanFa_Process_XingShiHua" Association="ScientificResearchPrjModel.FK_Process_SuanFa_Process_XingShiHua">
+            <End Role="Process_XingShiHua" EntitySet="Process_XingShiHua" />
+            <End Role="Process_SuanFa" EntitySet="Process_SuanFa" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="MyPort_Dept">
+          <Key>
+            <PropertyRef Name="DeptNo" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DeptNo" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ParentNo" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MyPort_EmpDept" Relationship="ScientificResearchPrjModel.FK_MyPort_EmpDept_MyPort_Dept" FromRole="MyPort_Dept" ToRole="MyPort_EmpDept" />
+        </EntityType>
+        <EntityType Name="MyPort_Emp">
+          <Key>
+            <PropertyRef Name="EmpNo" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmpNo" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="Pass" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="SID" Type="String" MaxLength="36" Unicode="true" FixedLength="false" />
+          <Property Name="Tel" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Type" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="FK_Dept" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MyPort_EmpDept" Relationship="ScientificResearchPrjModel.FK_MyPort_EmpDept_MyPort_Emp" FromRole="MyPort_Emp" ToRole="MyPort_EmpDept" />
+          <NavigationProperty Name="MyPort_EmpStation" Relationship="ScientificResearchPrjModel.FK_MyPort_EmpStation_MyPort_Emp" FromRole="MyPort_Emp" ToRole="MyPort_EmpStation" />
+          <NavigationProperty Name="MyPort_Student" Relationship="ScientificResearchPrjModel.FK_MyPort_Student_MyPort_Emp" FromRole="MyPort_Emp" ToRole="MyPort_Student" />
+          <NavigationProperty Name="MyPort_Tutor" Relationship="ScientificResearchPrjModel.FK_MyPort_Tutor_MyPort_Emp" FromRole="MyPort_Emp" ToRole="MyPort_Tutor" />
+          <NavigationProperty Name="Process_BasicData" Relationship="ScientificResearchPrjModel.FK_Process_BasicData_Process_Emp" FromRole="MyPort_Emp" ToRole="Process_BasicData" />
+          <NavigationProperty Name="Process_GroupMember" Relationship="ScientificResearchPrjModel.FK_Process_GroupMember_Process_Member" FromRole="MyPort_Emp" ToRole="Process_GroupMember" />
+        </EntityType>
+        <EntityType Name="MyPort_EmpDept">
+          <Key>
+            <PropertyRef Name="FK_Emp" />
+            <PropertyRef Name="FK_Dept" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Emp" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="FK_Dept" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MyPort_Dept" Relationship="ScientificResearchPrjModel.FK_MyPort_EmpDept_MyPort_Dept" FromRole="MyPort_EmpDept" ToRole="MyPort_Dept" />
+          <NavigationProperty Name="MyPort_Emp" Relationship="ScientificResearchPrjModel.FK_MyPort_EmpDept_MyPort_Emp" FromRole="MyPort_EmpDept" ToRole="MyPort_Emp" />
+        </EntityType>
+        <EntityType Name="MyPort_EmpStation">
+          <Key>
+            <PropertyRef Name="FK_Emp" />
+            <PropertyRef Name="FK_Station" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Emp" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="FK_Station" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MyPort_Emp" Relationship="ScientificResearchPrjModel.FK_MyPort_EmpStation_MyPort_Emp" FromRole="MyPort_EmpStation" ToRole="MyPort_Emp" />
+          <NavigationProperty Name="MyPort_Station" Relationship="ScientificResearchPrjModel.FK_MyPort_EmpStation_MyPort_Station" FromRole="MyPort_EmpStation" ToRole="MyPort_Station" />
+        </EntityType>
+        <EntityType Name="MyPort_Station">
+          <Key>
+            <PropertyRef Name="StaNo" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StaNo" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="StaGrade" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MyPort_EmpStation" Relationship="ScientificResearchPrjModel.FK_MyPort_EmpStation_MyPort_Station" FromRole="MyPort_Station" ToRole="MyPort_EmpStation" />
+        </EntityType>
+        <EntityType Name="MyPort_Student">
+          <Key>
+            <PropertyRef Name="FK_EmpNo" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_EmpNo" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="AdmissionYear" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="SchoolingLength" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="FK_Tutor" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LabAddr" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MyPort_Emp" Relationship="ScientificResearchPrjModel.FK_MyPort_Student_MyPort_Emp" FromRole="MyPort_Student" ToRole="MyPort_Emp" />
+        </EntityType>
+        <EntityType Name="MyPort_Tutor">
+          <Key>
+            <PropertyRef Name="FK_EmpNo" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_EmpNo" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ChargeWork" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="OfficeAddr" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="OfficeTel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MyPort_Emp" Relationship="ScientificResearchPrjModel.FK_MyPort_Tutor_MyPort_Emp" FromRole="MyPort_Tutor" ToRole="MyPort_Emp" />
+        </EntityType>
+        <EntityType Name="Process_Attach">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="Int32" Nullable="false" />
+          <Property Name="No_OID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="IsShenHe" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="AttachName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="AttachDesc" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="Path" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Process_BasicData">
+          <Key>
+            <PropertyRef Name="No" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="No" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FK_Proposer" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ProposeTime" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="Keys" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="Remarks" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="ModifyTime" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LastSendTime" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="FK_Flow" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="WorkId" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="FK_Node" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MyPort_Emp" Relationship="ScientificResearchPrjModel.FK_Process_BasicData_Process_Emp" FromRole="Process_BasicData" ToRole="MyPort_Emp" />
+          <NavigationProperty Name="Process_DeChuJieLun" Relationship="ScientificResearchPrjModel.FK_Process_DeChuJieLun_Process_BasicData" FromRole="Process_BasicData" ToRole="Process_DeChuJieLun" />
+          <NavigationProperty Name="Process_DiaoYan" Relationship="ScientificResearchPrjModel.FK_Process_DiaoYan_Process_BasicData" FromRole="Process_BasicData" ToRole="Process_DiaoYan" />
+          <NavigationProperty Name="Process_DuiBiFenXi" Relationship="ScientificResearchPrjModel.FK_Process_DuiBiFenXi_Process_BasicData" FromRole="Process_BasicData" ToRole="Process_DuiBiFenXi" />
+          <NavigationProperty Name="Process_LunWen" Relationship="ScientificResearchPrjModel.FK_Process_LunWen_Process_BasicData" FromRole="Process_BasicData" ToRole="Process_LunWen" />
+          <NavigationProperty Name="Process_Project" Relationship="ScientificResearchPrjModel.FK_Process_Project_Process_BasicData" FromRole="Process_BasicData" ToRole="Process_Project" />
+          <NavigationProperty Name="Process_ShiYan" Relationship="ScientificResearchPrjModel.FK_Process_ShiYan_Process_BasicData" FromRole="Process_BasicData" ToRole="Process_ShiYan" />
+          <NavigationProperty Name="Process_SiLu" Relationship="ScientificResearchPrjModel.FK_Process_SiLu_Process_BasicData" FromRole="Process_BasicData" ToRole="Process_SiLu" />
+          <NavigationProperty Name="Process_SuanFa" Relationship="ScientificResearchPrjModel.FK_Process_SuanFa_Process_BasicData" FromRole="Process_BasicData" ToRole="Process_SuanFa" />
+          <NavigationProperty Name="Process_Subject_XuQiuFenXi" Relationship="ScientificResearchPrjModel.FK_Process_Subject_XuQiuFenXi_Process_BasciData" FromRole="Process_BasicData" ToRole="Process_Subject_XuQiuFenXi" />
+          <NavigationProperty Name="Process_TiChuWenTi" Relationship="ScientificResearchPrjModel.FK_Process_TiChuWenTi_Process_BasicData" FromRole="Process_BasicData" ToRole="Process_TiChuWenTi" />
+          <NavigationProperty Name="Process_XingShiHua" Relationship="ScientificResearchPrjModel.FK_Process_XingShiHua_Process_BasicData" FromRole="Process_BasicData" ToRole="Process_XingShiHua" />
+        </EntityType>
+        <EntityType Name="Process_DeChuJieLun">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="Int32" Nullable="false" />
+          <Property Name="FK_BDNo" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Mitigation" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="EffectiveSolution" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="Arguments" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="FK_DBFXOID" Type="Int32" />
+          <NavigationProperty Name="Process_BasicData" Relationship="ScientificResearchPrjModel.FK_Process_DeChuJieLun_Process_BasicData" FromRole="Process_DeChuJieLun" ToRole="Process_BasicData" />
+          <NavigationProperty Name="Process_DuiBiFenXi" Relationship="ScientificResearchPrjModel.FK_Process_DeChuJieLun_Process_DuiBiFenXi" FromRole="Process_DeChuJieLun" ToRole="Process_DuiBiFenXi" />
+        </EntityType>
+        <EntityType Name="Process_DiaoYan">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="Int32" Nullable="false" />
+          <Property Name="FK_BDNo" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="SumType" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Sum" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="SurveryAddr" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="Investigator" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="AnalysisResult" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="AdvantageValue" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="WeaknessValue" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="UnsolvedProblem" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="TechTrends" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="BeyondPoint" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Process_BasicData" Relationship="ScientificResearchPrjModel.FK_Process_DiaoYan_Process_BasicData" FromRole="Process_DiaoYan" ToRole="Process_BasicData" />
+        </EntityType>
+        <EntityType Name="Process_DuiBiFenXi">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="Int32" Nullable="false" />
+          <Property Name="FK_BDNo" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Data" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="Methods" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="AnalysisResult" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="InferType" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="InferContent" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="FK_SYOID" Type="Int32" />
+          <NavigationProperty Name="Process_BasicData" Relationship="ScientificResearchPrjModel.FK_Process_DuiBiFenXi_Process_BasicData" FromRole="Process_DuiBiFenXi" ToRole="Process_BasicData" />
+          <NavigationProperty Name="Process_DeChuJieLun" Relationship="ScientificResearchPrjModel.FK_Process_DeChuJieLun_Process_DuiBiFenXi" FromRole="Process_DuiBiFenXi" ToRole="Process_DeChuJieLun" />
+          <NavigationProperty Name="Process_ShiYan" Relationship="ScientificResearchPrjModel.FK_Process_DuiBiFenXi_Process_ShiYan" FromRole="Process_DuiBiFenXi" ToRole="Process_ShiYan" />
+        </EntityType>
+        <EntityType Name="Process_GroupMember">
+          <Key>
+            <PropertyRef Name="FK_Xmz" />
+            <PropertyRef Name="FK_Emp" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Xmz" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="FK_Emp" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MyPort_Emp" Relationship="ScientificResearchPrjModel.FK_Process_GroupMember_Process_Member" FromRole="Process_GroupMember" ToRole="MyPort_Emp" />
+          <NavigationProperty Name="Process_ProjectGroup" Relationship="ScientificResearchPrjModel.FK_Process_GroupMember_Process_Group" FromRole="Process_GroupMember" ToRole="Process_ProjectGroup" />
+        </EntityType>
+        <EntityType Name="Process_Link">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="Int32" Nullable="false" />
+          <Property Name="No_OID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="IsShenHe" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="LinkHref" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="LinkDesc" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Process_LunWen">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="Int32" Nullable="false" />
+          <Property Name="FK_BDNo" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Motivation" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="Questions" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="Design" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="Realize" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="TestData" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="Result" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Process_BasicData" Relationship="ScientificResearchPrjModel.FK_Process_LunWen_Process_BasicData" FromRole="Process_LunWen" ToRole="Process_BasicData" />
+        </EntityType>
+        <EntityType Name="Process_Project">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="Int32" Nullable="false" />
+          <Property Name="FK_BDNo" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="FK_Xmz" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Columns" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Tasks" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="Questions" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Process_BasicData" Relationship="ScientificResearchPrjModel.FK_Process_Project_Process_BasicData" FromRole="Process_Project" ToRole="Process_BasicData" />
+          <NavigationProperty Name="Process_ProjectGroup" Relationship="ScientificResearchPrjModel.FK_Process_Project_Process_ProjectGroup" FromRole="Process_Project" ToRole="Process_ProjectGroup" />
+          <NavigationProperty Name="Process_Subject_XuQiuFenXi" Relationship="ScientificResearchPrjModel.FK_Process_Subject_XuQiuFenXi_Process_Project" FromRole="Process_Project" ToRole="Process_Subject_XuQiuFenXi" />
+        </EntityType>
+        <EntityType Name="Process_ProjectGroup">
+          <Key>
+            <PropertyRef Name="No" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="No" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FK_GroupLeader" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Process_GroupMember" Relationship="ScientificResearchPrjModel.FK_Process_GroupMember_Process_Group" FromRole="Process_ProjectGroup" ToRole="Process_GroupMember" />
+          <NavigationProperty Name="Process_Project" Relationship="ScientificResearchPrjModel.FK_Process_Project_Process_ProjectGroup" FromRole="Process_ProjectGroup" ToRole="Process_Project" />
+        </EntityType>
+        <EntityType Name="Process_ShenHe">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="Int32" Nullable="false" />
+          <Property Name="ShenHeRen" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ShenHeShiJian" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ShenHeJieGuo" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="ShenHeYiJian" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="ModifyTime" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="FK_Flow" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="FK_Node" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="WorkID" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="StepType" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Process_ShiYan">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="Int32" Nullable="false" />
+          <Property Name="FK_BDNo" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Design" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="IndexSys" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="RealizeStep" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="TestCondition" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="Data" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="StatistacalResult" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="Result" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="FK_SFOID" Type="Int32" />
+          <NavigationProperty Name="Process_BasicData" Relationship="ScientificResearchPrjModel.FK_Process_ShiYan_Process_BasicData" FromRole="Process_ShiYan" ToRole="Process_BasicData" />
+          <NavigationProperty Name="Process_DuiBiFenXi" Relationship="ScientificResearchPrjModel.FK_Process_DuiBiFenXi_Process_ShiYan" FromRole="Process_ShiYan" ToRole="Process_DuiBiFenXi" />
+          <NavigationProperty Name="Process_SuanFa" Relationship="ScientificResearchPrjModel.FK_Process_ShiYan_Process_SuanFa" FromRole="Process_ShiYan" ToRole="Process_SuanFa" />
+        </EntityType>
+        <EntityType Name="Process_SiLu">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="Int32" Nullable="false" />
+          <Property Name="FK_BDNo" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Type" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="FK_WTOID" Type="Int32" />
+          <NavigationProperty Name="Process_BasicData" Relationship="ScientificResearchPrjModel.FK_Process_SiLu_Process_BasicData" FromRole="Process_SiLu" ToRole="Process_BasicData" />
+          <NavigationProperty Name="Process_TiChuWenTi" Relationship="ScientificResearchPrjModel.FK_Process_SiLu_Process_WenTi" FromRole="Process_SiLu" ToRole="Process_TiChuWenTi" />
+          <NavigationProperty Name="Process_XingShiHua" Relationship="ScientificResearchPrjModel.FK_Process_XingShiHua_Process_SiLu" FromRole="Process_SiLu" ToRole="Process_XingShiHua" />
+        </EntityType>
+        <EntityType Name="Process_SuanFa">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="Int32" Nullable="false" />
+          <Property Name="FK_BDNo" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Design" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="RealizeStep" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="FK_XSHOID" Type="Int32" />
+          <NavigationProperty Name="Process_BasicData" Relationship="ScientificResearchPrjModel.FK_Process_SuanFa_Process_BasicData" FromRole="Process_SuanFa" ToRole="Process_BasicData" />
+          <NavigationProperty Name="Process_ShiYan" Relationship="ScientificResearchPrjModel.FK_Process_ShiYan_Process_SuanFa" FromRole="Process_SuanFa" ToRole="Process_ShiYan" />
+          <NavigationProperty Name="Process_XingShiHua" Relationship="ScientificResearchPrjModel.FK_Process_SuanFa_Process_XingShiHua" FromRole="Process_SuanFa" ToRole="Process_XingShiHua" />
+        </EntityType>
+        <EntityType Name="Process_Subject_XuQiuFenXi">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="Int32" Nullable="false" />
+          <Property Name="FK_BDNo" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="FK_XmOID" Type="Int32" />
+          <Property Name="SourceDesc" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="AnalysisResult" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="TargetTask" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="Innovation" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Process_BasicData" Relationship="ScientificResearchPrjModel.FK_Process_Subject_XuQiuFenXi_Process_BasciData" FromRole="Process_Subject_XuQiuFenXi" ToRole="Process_BasicData" />
+          <NavigationProperty Name="Process_Project" Relationship="ScientificResearchPrjModel.FK_Process_Subject_XuQiuFenXi_Process_Project" FromRole="Process_Subject_XuQiuFenXi" ToRole="Process_Project" />
+        </EntityType>
+        <EntityType Name="Process_TiChuWenTi">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="Int32" Nullable="false" />
+          <Property Name="FK_BDNo" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Mitigation" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="OvercomeMethod" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="Argument" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Process_BasicData" Relationship="ScientificResearchPrjModel.FK_Process_TiChuWenTi_Process_BasicData" FromRole="Process_TiChuWenTi" ToRole="Process_BasicData" />
+          <NavigationProperty Name="Process_SiLu" Relationship="ScientificResearchPrjModel.FK_Process_SiLu_Process_WenTi" FromRole="Process_TiChuWenTi" ToRole="Process_SiLu" />
+        </EntityType>
+        <EntityType Name="Process_Track">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Flow" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="WorkID" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="XMOID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="XQFXOID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DYOID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TCWTOID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="JJSLOID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="XSHOID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SJSFOID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SJSYOID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DBFXOID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DCJLOID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LWZXOID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Process_XingShiHua">
+          <Key>
+            <PropertyRef Name="OID" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OID" Type="Int32" Nullable="false" />
+          <Property Name="FK_BDNo" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="FK_SLOID" Type="Int32" />
+          <NavigationProperty Name="Process_BasicData" Relationship="ScientificResearchPrjModel.FK_Process_XingShiHua_Process_BasicData" FromRole="Process_XingShiHua" ToRole="Process_BasicData" />
+          <NavigationProperty Name="Process_SiLu" Relationship="ScientificResearchPrjModel.FK_Process_XingShiHua_Process_SiLu" FromRole="Process_XingShiHua" ToRole="Process_SiLu" />
+          <NavigationProperty Name="Process_SuanFa" Relationship="ScientificResearchPrjModel.FK_Process_SuanFa_Process_XingShiHua" FromRole="Process_XingShiHua" ToRole="Process_SuanFa" />
+        </EntityType>
+        <Association Name="FK_MyPort_EmpDept_MyPort_Dept">
+          <End Role="MyPort_Dept" Type="ScientificResearchPrjModel.MyPort_Dept" Multiplicity="1" />
+          <End Role="MyPort_EmpDept" Type="ScientificResearchPrjModel.MyPort_EmpDept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MyPort_Dept">
+              <PropertyRef Name="DeptNo" />
+            </Principal>
+            <Dependent Role="MyPort_EmpDept">
+              <PropertyRef Name="FK_Dept" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MyPort_EmpDept_MyPort_Emp">
+          <End Role="MyPort_Emp" Type="ScientificResearchPrjModel.MyPort_Emp" Multiplicity="1" />
+          <End Role="MyPort_EmpDept" Type="ScientificResearchPrjModel.MyPort_EmpDept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MyPort_Emp">
+              <PropertyRef Name="EmpNo" />
+            </Principal>
+            <Dependent Role="MyPort_EmpDept">
+              <PropertyRef Name="FK_Emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MyPort_EmpStation_MyPort_Emp">
+          <End Role="MyPort_Emp" Type="ScientificResearchPrjModel.MyPort_Emp" Multiplicity="1" />
+          <End Role="MyPort_EmpStation" Type="ScientificResearchPrjModel.MyPort_EmpStation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MyPort_Emp">
+              <PropertyRef Name="EmpNo" />
+            </Principal>
+            <Dependent Role="MyPort_EmpStation">
+              <PropertyRef Name="FK_Emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MyPort_Student_MyPort_Emp">
+          <End Role="MyPort_Emp" Type="ScientificResearchPrjModel.MyPort_Emp" Multiplicity="1" />
+          <End Role="MyPort_Student" Type="ScientificResearchPrjModel.MyPort_Student" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="MyPort_Emp">
+              <PropertyRef Name="EmpNo" />
+            </Principal>
+            <Dependent Role="MyPort_Student">
+              <PropertyRef Name="FK_EmpNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MyPort_Tutor_MyPort_Emp">
+          <End Role="MyPort_Emp" Type="ScientificResearchPrjModel.MyPort_Emp" Multiplicity="1" />
+          <End Role="MyPort_Tutor" Type="ScientificResearchPrjModel.MyPort_Tutor" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="MyPort_Emp">
+              <PropertyRef Name="EmpNo" />
+            </Principal>
+            <Dependent Role="MyPort_Tutor">
+              <PropertyRef Name="FK_EmpNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_BasicData_Process_Emp">
+          <End Role="MyPort_Emp" Type="ScientificResearchPrjModel.MyPort_Emp" Multiplicity="0..1" />
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Process_BasicData" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MyPort_Emp">
+              <PropertyRef Name="EmpNo" />
+            </Principal>
+            <Dependent Role="Process_BasicData">
+              <PropertyRef Name="FK_Proposer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_GroupMember_Process_Member">
+          <End Role="MyPort_Emp" Type="ScientificResearchPrjModel.MyPort_Emp" Multiplicity="1" />
+          <End Role="Process_GroupMember" Type="ScientificResearchPrjModel.Process_GroupMember" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MyPort_Emp">
+              <PropertyRef Name="EmpNo" />
+            </Principal>
+            <Dependent Role="Process_GroupMember">
+              <PropertyRef Name="FK_Emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MyPort_EmpStation_MyPort_Station">
+          <End Role="MyPort_Station" Type="ScientificResearchPrjModel.MyPort_Station" Multiplicity="1" />
+          <End Role="MyPort_EmpStation" Type="ScientificResearchPrjModel.MyPort_EmpStation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MyPort_Station">
+              <PropertyRef Name="StaNo" />
+            </Principal>
+            <Dependent Role="MyPort_EmpStation">
+              <PropertyRef Name="FK_Station" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_DeChuJieLun_Process_BasicData">
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Process_BasicData" Multiplicity="0..1" />
+          <End Role="Process_DeChuJieLun" Type="ScientificResearchPrjModel.Process_DeChuJieLun" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_BasicData">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_DeChuJieLun">
+              <PropertyRef Name="FK_BDNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_DiaoYan_Process_BasicData">
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Process_BasicData" Multiplicity="0..1" />
+          <End Role="Process_DiaoYan" Type="ScientificResearchPrjModel.Process_DiaoYan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_BasicData">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_DiaoYan">
+              <PropertyRef Name="FK_BDNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_DuiBiFenXi_Process_BasicData">
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Process_BasicData" Multiplicity="0..1" />
+          <End Role="Process_DuiBiFenXi" Type="ScientificResearchPrjModel.Process_DuiBiFenXi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_BasicData">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_DuiBiFenXi">
+              <PropertyRef Name="FK_BDNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_LunWen_Process_BasicData">
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Process_BasicData" Multiplicity="0..1" />
+          <End Role="Process_LunWen" Type="ScientificResearchPrjModel.Process_LunWen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_BasicData">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_LunWen">
+              <PropertyRef Name="FK_BDNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_Project_Process_BasicData">
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Process_BasicData" Multiplicity="1" />
+          <End Role="Process_Project" Type="ScientificResearchPrjModel.Process_Project" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_BasicData">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_Project">
+              <PropertyRef Name="FK_BDNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_ShiYan_Process_BasicData">
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Process_BasicData" Multiplicity="0..1" />
+          <End Role="Process_ShiYan" Type="ScientificResearchPrjModel.Process_ShiYan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_BasicData">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_ShiYan">
+              <PropertyRef Name="FK_BDNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_SiLu_Process_BasicData">
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Process_BasicData" Multiplicity="0..1" />
+          <End Role="Process_SiLu" Type="ScientificResearchPrjModel.Process_SiLu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_BasicData">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_SiLu">
+              <PropertyRef Name="FK_BDNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_SuanFa_Process_BasicData">
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Process_BasicData" Multiplicity="0..1" />
+          <End Role="Process_SuanFa" Type="ScientificResearchPrjModel.Process_SuanFa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_BasicData">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_SuanFa">
+              <PropertyRef Name="FK_BDNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_Subject_XuQiuFenXi_Process_BasciData">
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Process_BasicData" Multiplicity="0..1" />
+          <End Role="Process_Subject_XuQiuFenXi" Type="ScientificResearchPrjModel.Process_Subject_XuQiuFenXi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_BasicData">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_Subject_XuQiuFenXi">
+              <PropertyRef Name="FK_BDNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_TiChuWenTi_Process_BasicData">
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Process_BasicData" Multiplicity="0..1" />
+          <End Role="Process_TiChuWenTi" Type="ScientificResearchPrjModel.Process_TiChuWenTi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_BasicData">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_TiChuWenTi">
+              <PropertyRef Name="FK_BDNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_XingShiHua_Process_BasicData">
+          <End Role="Process_BasicData" Type="ScientificResearchPrjModel.Process_BasicData" Multiplicity="0..1" />
+          <End Role="Process_XingShiHua" Type="ScientificResearchPrjModel.Process_XingShiHua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_BasicData">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_XingShiHua">
+              <PropertyRef Name="FK_BDNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_DeChuJieLun_Process_DuiBiFenXi">
+          <End Role="Process_DuiBiFenXi" Type="ScientificResearchPrjModel.Process_DuiBiFenXi" Multiplicity="0..1" />
+          <End Role="Process_DeChuJieLun" Type="ScientificResearchPrjModel.Process_DeChuJieLun" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_DuiBiFenXi">
+              <PropertyRef Name="OID" />
+            </Principal>
+            <Dependent Role="Process_DeChuJieLun">
+              <PropertyRef Name="FK_DBFXOID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_DuiBiFenXi_Process_ShiYan">
+          <End Role="Process_ShiYan" Type="ScientificResearchPrjModel.Process_ShiYan" Multiplicity="0..1" />
+          <End Role="Process_DuiBiFenXi" Type="ScientificResearchPrjModel.Process_DuiBiFenXi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_ShiYan">
+              <PropertyRef Name="OID" />
+            </Principal>
+            <Dependent Role="Process_DuiBiFenXi">
+              <PropertyRef Name="FK_SYOID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_GroupMember_Process_Group">
+          <End Role="Process_ProjectGroup" Type="ScientificResearchPrjModel.Process_ProjectGroup" Multiplicity="1" />
+          <End Role="Process_GroupMember" Type="ScientificResearchPrjModel.Process_GroupMember" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_ProjectGroup">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_GroupMember">
+              <PropertyRef Name="FK_Xmz" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_Project_Process_ProjectGroup">
+          <End Role="Process_ProjectGroup" Type="ScientificResearchPrjModel.Process_ProjectGroup" Multiplicity="0..1" />
+          <End Role="Process_Project" Type="ScientificResearchPrjModel.Process_Project" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_ProjectGroup">
+              <PropertyRef Name="No" />
+            </Principal>
+            <Dependent Role="Process_Project">
+              <PropertyRef Name="FK_Xmz" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_Subject_XuQiuFenXi_Process_Project">
+          <End Role="Process_Project" Type="ScientificResearchPrjModel.Process_Project" Multiplicity="0..1" />
+          <End Role="Process_Subject_XuQiuFenXi" Type="ScientificResearchPrjModel.Process_Subject_XuQiuFenXi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_Project">
+              <PropertyRef Name="OID" />
+            </Principal>
+            <Dependent Role="Process_Subject_XuQiuFenXi">
+              <PropertyRef Name="FK_XmOID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_ShiYan_Process_SuanFa">
+          <End Role="Process_SuanFa" Type="ScientificResearchPrjModel.Process_SuanFa" Multiplicity="0..1" />
+          <End Role="Process_ShiYan" Type="ScientificResearchPrjModel.Process_ShiYan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_SuanFa">
+              <PropertyRef Name="OID" />
+            </Principal>
+            <Dependent Role="Process_ShiYan">
+              <PropertyRef Name="FK_SFOID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_SiLu_Process_WenTi">
+          <End Role="Process_TiChuWenTi" Type="ScientificResearchPrjModel.Process_TiChuWenTi" Multiplicity="0..1" />
+          <End Role="Process_SiLu" Type="ScientificResearchPrjModel.Process_SiLu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_TiChuWenTi">
+              <PropertyRef Name="OID" />
+            </Principal>
+            <Dependent Role="Process_SiLu">
+              <PropertyRef Name="FK_WTOID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_XingShiHua_Process_SiLu">
+          <End Role="Process_SiLu" Type="ScientificResearchPrjModel.Process_SiLu" Multiplicity="0..1" />
+          <End Role="Process_XingShiHua" Type="ScientificResearchPrjModel.Process_XingShiHua" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_SiLu">
+              <PropertyRef Name="OID" />
+            </Principal>
+            <Dependent Role="Process_XingShiHua">
+              <PropertyRef Name="FK_SLOID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_SuanFa_Process_XingShiHua">
+          <End Role="Process_XingShiHua" Type="ScientificResearchPrjModel.Process_XingShiHua" Multiplicity="0..1" />
+          <End Role="Process_SuanFa" Type="ScientificResearchPrjModel.Process_SuanFa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Process_XingShiHua">
+              <PropertyRef Name="OID" />
+            </Principal>
+            <Dependent Role="Process_SuanFa">
+              <PropertyRef Name="FK_XSHOID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ScientificResearchPrjModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="MyPort_Dept">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.MyPort_Dept">
+              <MappingFragment StoreEntitySet="MyPort_Dept">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="DeptNo" ColumnName="DeptNo" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ParentNo" ColumnName="ParentNo" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MyPort_Emp">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.MyPort_Emp">
+              <MappingFragment StoreEntitySet="MyPort_Emp">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="EmpNo" ColumnName="EmpNo" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Pass" ColumnName="Pass" />
+                <ScalarProperty Name="SID" ColumnName="SID" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="FK_Dept" ColumnName="FK_Dept" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MyPort_EmpDept">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.MyPort_EmpDept">
+              <MappingFragment StoreEntitySet="MyPort_EmpDept">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FK_Emp" ColumnName="FK_Emp" />
+                <ScalarProperty Name="FK_Dept" ColumnName="FK_Dept" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MyPort_EmpStation">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.MyPort_EmpStation">
+              <MappingFragment StoreEntitySet="MyPort_EmpStation">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FK_Emp" ColumnName="FK_Emp" />
+                <ScalarProperty Name="FK_Station" ColumnName="FK_Station" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MyPort_Station">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.MyPort_Station">
+              <MappingFragment StoreEntitySet="MyPort_Station">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="StaNo" ColumnName="StaNo" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="StaGrade" ColumnName="StaGrade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MyPort_Student">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.MyPort_Student">
+              <MappingFragment StoreEntitySet="MyPort_Student">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FK_EmpNo" ColumnName="FK_EmpNo" />
+                <ScalarProperty Name="AdmissionYear" ColumnName="AdmissionYear" />
+                <ScalarProperty Name="SchoolingLength" ColumnName="SchoolingLength" />
+                <ScalarProperty Name="FK_Tutor" ColumnName="FK_Tutor" />
+                <ScalarProperty Name="LabAddr" ColumnName="LabAddr" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MyPort_Tutor">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.MyPort_Tutor">
+              <MappingFragment StoreEntitySet="MyPort_Tutor">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FK_EmpNo" ColumnName="FK_EmpNo" />
+                <ScalarProperty Name="ChargeWork" ColumnName="ChargeWork" />
+                <ScalarProperty Name="OfficeAddr" ColumnName="OfficeAddr" />
+                <ScalarProperty Name="OfficeTel" ColumnName="OfficeTel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Process_Attach">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_Attach">
+              <MappingFragment StoreEntitySet="Process_Attach">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OID" ColumnName="OID" />
+                <ScalarProperty Name="No_OID" ColumnName="No_OID" />
+                <ScalarProperty Name="IsShenHe" ColumnName="IsShenHe" />
+                <ScalarProperty Name="AttachName" ColumnName="AttachName" />
+                <ScalarProperty Name="AttachDesc" ColumnName="AttachDesc" />
+                <ScalarProperty Name="Path" ColumnName="Path" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Process_BasicData">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_BasicData">
+              <MappingFragment StoreEntitySet="Process_BasicData">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="No" ColumnName="No" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FK_Proposer" ColumnName="FK_Proposer" />
+                <ScalarProperty Name="ProposeTime" ColumnName="ProposeTime" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Keys" ColumnName="Keys" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="LastSendTime" ColumnName="LastSendTime" />
+                <ScalarProperty Name="FK_Flow" ColumnName="FK_Flow" />
+                <ScalarProperty Name="WorkId" ColumnName="WorkId" />
+                <ScalarProperty Name="FK_Node" ColumnName="FK_Node" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Process_DeChuJieLun">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_DeChuJieLun">
+              <MappingFragment StoreEntitySet="Process_DeChuJieLun">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OID" ColumnName="OID" />
+                <ScalarProperty Name="FK_BDNo" ColumnName="FK_BDNo" />
+                <ScalarProperty Name="Mitigation" ColumnName="Mitigation" />
+                <ScalarProperty Name="EffectiveSolution" ColumnName="EffectiveSolution" />
+                <ScalarProperty Name="Arguments" ColumnName="Arguments" />
+                <ScalarProperty Name="FK_DBFXOID" ColumnName="FK_DBFXOID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Process_DiaoYan">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_DiaoYan">
+              <MappingFragment StoreEntitySet="Process_DiaoYan">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OID" ColumnName="OID" />
+                <ScalarProperty Name="FK_BDNo" ColumnName="FK_BDNo" />
+                <ScalarProperty Name="SumType" ColumnName="SumType" />
+                <ScalarProperty Name="Sum" ColumnName="Sum" />
+                <ScalarProperty Name="SurveryAddr" ColumnName="SurveryAddr" />
+                <ScalarProperty Name="Investigator" ColumnName="Investigator" />
+                <ScalarProperty Name="AnalysisResult" ColumnName="AnalysisResult" />
+                <ScalarProperty Name="AdvantageValue" ColumnName="AdvantageValue" />
+                <ScalarProperty Name="WeaknessValue" ColumnName="WeaknessValue" />
+                <ScalarProperty Name="UnsolvedProblem" ColumnName="UnsolvedProblem" />
+                <ScalarProperty Name="TechTrends" ColumnName="TechTrends" />
+                <ScalarProperty Name="BeyondPoint" ColumnName="BeyondPoint" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Process_DuiBiFenXi">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_DuiBiFenXi">
+              <MappingFragment StoreEntitySet="Process_DuiBiFenXi">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OID" ColumnName="OID" />
+                <ScalarProperty Name="FK_BDNo" ColumnName="FK_BDNo" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="Methods" ColumnName="Methods" />
+                <ScalarProperty Name="AnalysisResult" ColumnName="AnalysisResult" />
+                <ScalarProperty Name="InferType" ColumnName="InferType" />
+                <ScalarProperty Name="InferContent" ColumnName="InferContent" />
+                <ScalarProperty Name="FK_SYOID" ColumnName="FK_SYOID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Process_GroupMember">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_GroupMember">
+              <MappingFragment StoreEntitySet="Process_GroupMember">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FK_Xmz" ColumnName="FK_Xmz" />
+                <ScalarProperty Name="FK_Emp" ColumnName="FK_Emp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Process_Link">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_Link">
+              <MappingFragment StoreEntitySet="Process_Link">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OID" ColumnName="OID" />
+                <ScalarProperty Name="No_OID" ColumnName="No_OID" />
+                <ScalarProperty Name="IsShenHe" ColumnName="IsShenHe" />
+                <ScalarProperty Name="LinkHref" ColumnName="LinkHref" />
+                <ScalarProperty Name="LinkDesc" ColumnName="LinkDesc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Process_LunWen">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_LunWen">
+              <MappingFragment StoreEntitySet="Process_LunWen">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OID" ColumnName="OID" />
+                <ScalarProperty Name="FK_BDNo" ColumnName="FK_BDNo" />
+                <ScalarProperty Name="Motivation" ColumnName="Motivation" />
+                <ScalarProperty Name="Questions" ColumnName="Questions" />
+                <ScalarProperty Name="Design" ColumnName="Design" />
+                <ScalarProperty Name="Realize" ColumnName="Realize" />
+                <ScalarProperty Name="TestData" ColumnName="TestData" />
+                <ScalarProperty Name="Result" ColumnName="Result" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Process_Project">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_Project">
+              <MappingFragment StoreEntitySet="Process_Project">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OID" ColumnName="OID" />
+                <ScalarProperty Name="FK_BDNo" ColumnName="FK_BDNo" />
+                <ScalarProperty Name="FK_Xmz" ColumnName="FK_Xmz" />
+                <ScalarProperty Name="Columns" ColumnName="Columns" />
+                <ScalarProperty Name="Tasks" ColumnName="Tasks" />
+                <ScalarProperty Name="Questions" ColumnName="Questions" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Process_ProjectGroup">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_ProjectGroup">
+              <MappingFragment StoreEntitySet="Process_ProjectGroup">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="No" ColumnName="No" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FK_GroupLeader" ColumnName="FK_GroupLeader" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Process_ShenHe">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_ShenHe">
+              <MappingFragment StoreEntitySet="Process_ShenHe">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OID" ColumnName="OID" />
+                <ScalarProperty Name="ShenHeRen" ColumnName="ShenHeRen" />
+                <ScalarProperty Name="ShenHeShiJian" ColumnName="ShenHeShiJian" />
+                <ScalarProperty Name="ShenHeJieGuo" ColumnName="ShenHeJieGuo" />
+                <ScalarProperty Name="ShenHeYiJian" ColumnName="ShenHeYiJian" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="FK_Flow" ColumnName="FK_Flow" />
+                <ScalarProperty Name="FK_Node" ColumnName="FK_Node" />
+                <ScalarProperty Name="WorkID" ColumnName="WorkID" />
+                <ScalarProperty Name="StepType" ColumnName="StepType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Process_ShiYan">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_ShiYan">
+              <MappingFragment StoreEntitySet="Process_ShiYan">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OID" ColumnName="OID" />
+                <ScalarProperty Name="FK_BDNo" ColumnName="FK_BDNo" />
+                <ScalarProperty Name="Design" ColumnName="Design" />
+                <ScalarProperty Name="IndexSys" ColumnName="IndexSys" />
+                <ScalarProperty Name="RealizeStep" ColumnName="RealizeStep" />
+                <ScalarProperty Name="TestCondition" ColumnName="TestCondition" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="StatistacalResult" ColumnName="StatistacalResult" />
+                <ScalarProperty Name="Result" ColumnName="Result" />
+                <ScalarProperty Name="FK_SFOID" ColumnName="FK_SFOID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Process_SiLu">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_SiLu">
+              <MappingFragment StoreEntitySet="Process_SiLu">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OID" ColumnName="OID" />
+                <ScalarProperty Name="FK_BDNo" ColumnName="FK_BDNo" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="FK_WTOID" ColumnName="FK_WTOID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Process_SuanFa">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_SuanFa">
+              <MappingFragment StoreEntitySet="Process_SuanFa">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OID" ColumnName="OID" />
+                <ScalarProperty Name="FK_BDNo" ColumnName="FK_BDNo" />
+                <ScalarProperty Name="Design" ColumnName="Design" />
+                <ScalarProperty Name="RealizeStep" ColumnName="RealizeStep" />
+                <ScalarProperty Name="FK_XSHOID" ColumnName="FK_XSHOID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Process_Subject_XuQiuFenXi">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_Subject_XuQiuFenXi">
+              <MappingFragment StoreEntitySet="Process_Subject_XuQiuFenXi">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OID" ColumnName="OID" />
+                <ScalarProperty Name="FK_BDNo" ColumnName="FK_BDNo" />
+                <ScalarProperty Name="FK_XmOID" ColumnName="FK_XmOID" />
+                <ScalarProperty Name="SourceDesc" ColumnName="SourceDesc" />
+                <ScalarProperty Name="AnalysisResult" ColumnName="AnalysisResult" />
+                <ScalarProperty Name="TargetTask" ColumnName="TargetTask" />
+                <ScalarProperty Name="Innovation" ColumnName="Innovation" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Process_TiChuWenTi">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_TiChuWenTi">
+              <MappingFragment StoreEntitySet="Process_TiChuWenTi">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OID" ColumnName="OID" />
+                <ScalarProperty Name="FK_BDNo" ColumnName="FK_BDNo" />
+                <ScalarProperty Name="Mitigation" ColumnName="Mitigation" />
+                <ScalarProperty Name="OvercomeMethod" ColumnName="OvercomeMethod" />
+                <ScalarProperty Name="Argument" ColumnName="Argument" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Process_Track">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_Track">
+              <MappingFragment StoreEntitySet="Process_Track">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FK_Flow" ColumnName="FK_Flow" />
+                <ScalarProperty Name="WorkID" ColumnName="WorkID" />
+                <ScalarProperty Name="XMOID" ColumnName="XMOID" />
+                <ScalarProperty Name="XQFXOID" ColumnName="XQFXOID" />
+                <ScalarProperty Name="DYOID" ColumnName="DYOID" />
+                <ScalarProperty Name="TCWTOID" ColumnName="TCWTOID" />
+                <ScalarProperty Name="JJSLOID" ColumnName="JJSLOID" />
+                <ScalarProperty Name="XSHOID" ColumnName="XSHOID" />
+                <ScalarProperty Name="SJSFOID" ColumnName="SJSFOID" />
+                <ScalarProperty Name="SJSYOID" ColumnName="SJSYOID" />
+                <ScalarProperty Name="DBFXOID" ColumnName="DBFXOID" />
+                <ScalarProperty Name="DCJLOID" ColumnName="DCJLOID" />
+                <ScalarProperty Name="LWZXOID" ColumnName="LWZXOID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Process_XingShiHua">
+            <EntityTypeMapping TypeName="ScientificResearchPrjModel.Process_XingShiHua">
+              <MappingFragment StoreEntitySet="Process_XingShiHua">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OID" ColumnName="OID" />
+                <ScalarProperty Name="FK_BDNo" ColumnName="FK_BDNo" />
+                <ScalarProperty Name="FK_SLOID" ColumnName="FK_SLOID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

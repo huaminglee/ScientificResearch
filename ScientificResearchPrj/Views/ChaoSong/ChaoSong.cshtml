@@ -1,0 +1,187 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutFrame.cshtml";
+}
+
+<!-- Jquery EasyUI styles for this template -->
+<link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/bootstrap/easyui.css">
+<link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/icon.css">
+
+<div id="tt" class="" style="padding: 10px;border:0px solid red" data-options=" ">
+    <div title="未读" style="padding:10px;">
+        <table class="easyui-datagrid" id="dg_unread"
+               data-options="fix:true,fitColumns:true" style="width:99%;height:99%;position:absolute;">
+            <thead>
+                <tr>
+                    <th data-options="field:'Title',align:'center'" style="width: 25%;">标题</th>
+                    <th data-options="field:'FlowName',align:'center'" style="width:15%;">流程名称</th>
+                    <th data-options="field:'NodeName',align:'center'" style="width:15%;">流程节点</th>
+                    <th data-options="field:'NeiRong',align:'center'" style="width:20%;">内容</th>
+                    <th data-options="field:'Rec',align:'center'" style="width:10%;">抄送人</th>
+                    <th data-options="field:'RDT',align:'center'" style="width:10%;">抄送日期</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div title="全部" style="padding:10px;">
+        <table class="easyui-datagrid" id="dg_all"
+                data-options="fix:true,fitColumns:true" style="width:99%;height:99%;position:absolute;">
+            <thead>
+                <tr>
+                    <th data-options="field:'Title',align:'center'" style="width:25%;">标题</th>
+                    <th data-options="field:'FlowName',align:'center'" style="width:15%;">流程名称</th>
+                    <th data-options="field:'NodeName',align:'center'" style="width:15%;">流程节点</th>
+                    <th data-options="field:'NeiRong',align:'center'" style="width:20%;">内容</th>
+                    <th data-options="field:'Rec',align:'center'" style="width:10%;">抄送人</th>
+                    <th data-options="field:'RDT',align:'center'" style="width:10%;">抄送日期</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div title="已读" style="padding:10px">
+        <table class="easyui-datagrid" id="dg_read"
+               data-options="fix:true,fitColumns:true" style="width:99%;height:99%;position:absolute;">
+            <thead>
+                <tr>
+                    <th data-options="field:'Title',align:'center'" style="width: 25%;">标题</th>
+                    <th data-options="field:'FlowName',align:'center'" style="width:15%;">流程名称</th>
+                    <th data-options="field:'NodeName',align:'center'" style="width:15%;">流程节点</th>
+                    <th data-options="field:'NeiRong',align:'center'" style="width:20%;">内容</th>
+                    <th data-options="field:'Rec',align:'center'" style="width:10%;">抄送人</th>
+                    <th data-options="field:'RDT',align:'center'" style="width:10%;">抄送日期</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div title="已删除" style="padding:10px">
+        <table class="easyui-datagrid" id="dg_delete"
+               data-options="fix:true,fitColumns:true" style="width:99%;height:99%;position:absolute;">
+            <thead>
+                <tr>
+                    <th data-options="field:'Title',align:'center'" style="width: 25%;">标题</th>
+                    <th data-options="field:'FlowName',align:'center'" style="width:15%;">流程名称</th>
+                    <th data-options="field:'NodeName',align:'center'" style="width:15%;">流程节点</th>
+                    <th data-options="field:'NeiRong',align:'center'" style="width:20%;">内容</th>
+                    <th data-options="field:'Rec',align:'center'" style="width:10%;">抄送人</th>
+                    <th data-options="field:'RDT',align:'center'" style="width:10%;">抄送日期</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+
+<div id="divDocDialog" class="easyui-dialog" data-options="{
+                    title: '抄送内容',
+                    closed: true,
+                    cache: false,
+                    height: 370,
+                    width: 600,
+                    modal: true,
+                    buttons: [{
+                            iconCls: 'icon-ok',
+                            text: '确定',
+                            handler: BS_.guanBiXianShi
+                        }
+                    ]
+                 }">
+    <div style="padding:20px">
+        <div style="margin-bottom:20px">
+            <div>标题：</div>
+            <div id="divTitle" style="border:2px solid green;padding-left:5px; height:20px;width:100%"></div>
+        </div>
+        <div id="">
+            <div>内容：</div>
+            <div id="divDoc" style="border: 2px solid green; padding-left: 5px; height: 180px; width: 100%; "></div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!--Jquery EasyUI  js文件   -->
+    <script src="~/Content/jquery-easyui-1.4.1/jquery.min.js"></script>
+    <script src="~/Content/jquery-easyui-1.4.1/jquery.easyui.min.js"></script>
+    <script src="~/Scripts/jquery_extend.js"></script>
+     
+    <script src="~/Views/ChaoSong/js/ChaoSong/AT_.js"></script>
+    <script src="~/Views/ChaoSong/js/ChaoSong/BS_.js"></script>
+    <script src="~/Views/ChaoSong/js/ChaoSong/ET_.js"></script>
+    <script>
+        //获取数据
+        var ccList_All = '@Html.Raw(@ViewData["ccList_All"])';
+        var ccList_Read = '@Html.Raw(@ViewData["ccList_Read"])';
+        var ccList_UnRead = '@Html.Raw(@ViewData["ccList_UnRead"])';
+        var ccList_Delete = '@Html.Raw(@ViewData["ccList_Delete"])';
+
+        ccList_All = ccList_All.replace(/[\r\n]+/g, '\\<br\\>\\<br\\>').replace(/ /gi, "&nbsp;&nbsp;");
+        ccList_Read = ccList_Read.replace(/[\r\n]+/g, '\\<br\\>\\<br\\>').replace(/ /gi, "&nbsp;&nbsp;");
+        ccList_UnRead = ccList_UnRead.replace(/[\r\n]+/g, '\\<br\\>\\<br\\>').replace(/ /gi, "&nbsp;&nbsp;");
+        ccList_Delete = ccList_Delete.replace(/[\r\n]+/g, '\\<br\\>\\<br\\>').replace(/ /gi, "&nbsp;&nbsp;");
+
+        ccList_All = parseJSON(ccList_All);
+        ccList_Read = parseJSON(ccList_Read);
+        ccList_UnRead = parseJSON(ccList_UnRead);
+        ccList_Delete = parseJSON(ccList_Delete);
+
+        $(function () {
+            //设置tabs高度
+            $("#tt").tabs({
+                //width: $("#tt").parent().width(),
+                height: $("#tt").parent().height()
+            });
+            //如果设置了显示的tabIndex
+            var tabIndex = '@ViewData["tabIndex"]';
+            if (tabIndex != '') {
+                $("#tt").tabs({ "selected": parseInt(tabIndex) });
+            }
+            //为tab添加进入事件
+            var tabs = $('#tt').tabs().tabs('tabs');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].panel('options').tab.unbind().bind('mouseenter', { index: i }, function (e) {
+                    $('#tt').tabs('select', e.data.index);
+                });
+            }
+
+
+            if (ccList_UnRead != '' && ccList_UnRead.rows.length != 0) {
+                for (var index = 0; index < ccList_UnRead.rows.length; index++) {
+                    ccList_UnRead.rows[index].NeiRong = "<a href='#' onclick='BS_.xianShiDoc(" + index + ")'>查看内容</a>";
+                }
+            }
+            if (ccList_All != '' && ccList_All.rows.length != 0) {
+                for (var index = 0; index < ccList_All.rows.length; index++) {
+                    ccList_All.rows[index].NeiRong = "<a href='#' onclick='BS_.xianShiDoc(" + index + ")'>查看内容</a>";
+                }
+            }
+            if (ccList_Read != '' && ccList_Read.rows.length != 0) {
+                for (var index = 0; index < ccList_Read.rows.length; index++) {
+                    ccList_Read.rows[index].NeiRong = "<a href='#' onclick='BS_.xianShiDoc(" + index + ")'>查看内容</a>";
+                }
+            }
+            if (ccList_Delete != '' && ccList_Delete.rows.length != 0) {
+                for (var index = 0; index < ccList_Delete.rows.length; index++) {
+                    ccList_Delete.rows[index].NeiRong = "<a href='#' onclick='BS_.xianShiDoc(" + index + ")'>查看内容</a>";
+                }
+            }
+            $('#dg_unread').datagrid({
+                //显示序号
+                rownumbers: true,
+                data: ccList_UnRead
+            });
+            $('#dg_all').datagrid({
+                //显示序号
+                rownumbers: true,
+                data: ccList_All
+            });
+            $('#dg_read').datagrid({
+                //显示序号
+                rownumbers: true,
+                data: ccList_Read
+            });
+            $('#dg_delete').datagrid({
+                //显示序号
+                rownumbers: true,
+                data: ccList_Delete
+            });
+        });
+    </script>

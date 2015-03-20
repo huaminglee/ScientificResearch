@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ScientificResearchPrjModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="MyPort_Dept">
+    <Key>
+      <PropertyRef Name="DeptNo" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DeptNo" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="ParentNo" Type="nvarchar" MaxLength="100" />
+    <Property Name="Leader" Type="nvarchar" MaxLength="100" />
+    <Property Name="Tel" Type="nvarchar" MaxLength="100" />
+    <Property Name="Addr" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="MyPort_Emp">
+    <Key>
+      <PropertyRef Name="EmpNo" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpNo" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="LoginName" Type="nvarchar" MaxLength="20" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Pass" Type="nvarchar" MaxLength="100" />
+    <Property Name="Leader" Type="nvarchar" MaxLength="50" />
+    <Property Name="SID" Type="nvarchar" MaxLength="36" />
+    <Property Name="Tel" Type="nvarchar" MaxLength="20" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="Type" Type="nvarchar" MaxLength="10" />
+    <Property Name="FK_Dept" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="MyPort_EmpDept">
+    <Key>
+      <PropertyRef Name="FK_Emp" />
+      <PropertyRef Name="FK_Dept" />
+    </Key>
+    <Property Name="FK_Emp" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="FK_Dept" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MyPort_EmpStation">
+    <Key>
+      <PropertyRef Name="FK_Emp" />
+      <PropertyRef Name="FK_Station" />
+    </Key>
+    <Property Name="FK_Emp" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="FK_Station" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MyPort_Station">
+    <Key>
+      <PropertyRef Name="StaNo" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StaNo" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="DutyReq" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Makings" Type="nvarchar" MaxLength="4000" />
+    <Property Name="StaGrade" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK_MyPort_EmpDept_MyPort_Dept">
+    <End Role="MyPort_Dept" Type="Self.MyPort_Dept" Multiplicity="1" />
+    <End Role="MyPort_EmpDept" Type="Self.MyPort_EmpDept" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MyPort_Dept">
+        <PropertyRef Name="DeptNo" />
+      </Principal>
+      <Dependent Role="MyPort_EmpDept">
+        <PropertyRef Name="FK_Dept" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MyPort_EmpDept_MyPort_Emp">
+    <End Role="MyPort_Emp" Type="Self.MyPort_Emp" Multiplicity="1" />
+    <End Role="MyPort_EmpDept" Type="Self.MyPort_EmpDept" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MyPort_Emp">
+        <PropertyRef Name="EmpNo" />
+      </Principal>
+      <Dependent Role="MyPort_EmpDept">
+        <PropertyRef Name="FK_Emp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MyPort_EmpStation_MyPort_Emp">
+    <End Role="MyPort_Emp" Type="Self.MyPort_Emp" Multiplicity="1" />
+    <End Role="MyPort_EmpStation" Type="Self.MyPort_EmpStation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MyPort_Emp">
+        <PropertyRef Name="EmpNo" />
+      </Principal>
+      <Dependent Role="MyPort_EmpStation">
+        <PropertyRef Name="FK_Emp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MyPort_EmpStation_MyPort_Station">
+    <End Role="MyPort_Station" Type="Self.MyPort_Station" Multiplicity="1" />
+    <End Role="MyPort_EmpStation" Type="Self.MyPort_EmpStation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MyPort_Station">
+        <PropertyRef Name="StaNo" />
+      </Principal>
+      <Dependent Role="MyPort_EmpStation">
+        <PropertyRef Name="FK_Station" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ScientificResearchPrjModelStoreContainer">
+    <EntitySet Name="MyPort_Dept" EntityType="Self.MyPort_Dept" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MyPort_Emp" EntityType="Self.MyPort_Emp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MyPort_EmpDept" EntityType="Self.MyPort_EmpDept" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MyPort_EmpStation" EntityType="Self.MyPort_EmpStation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MyPort_Station" EntityType="Self.MyPort_Station" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_MyPort_EmpDept_MyPort_Dept" Association="Self.FK_MyPort_EmpDept_MyPort_Dept">
+      <End Role="MyPort_Dept" EntitySet="MyPort_Dept" />
+      <End Role="MyPort_EmpDept" EntitySet="MyPort_EmpDept" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MyPort_EmpDept_MyPort_Emp" Association="Self.FK_MyPort_EmpDept_MyPort_Emp">
+      <End Role="MyPort_Emp" EntitySet="MyPort_Emp" />
+      <End Role="MyPort_EmpDept" EntitySet="MyPort_EmpDept" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MyPort_EmpStation_MyPort_Emp" Association="Self.FK_MyPort_EmpStation_MyPort_Emp">
+      <End Role="MyPort_Emp" EntitySet="MyPort_Emp" />
+      <End Role="MyPort_EmpStation" EntitySet="MyPort_EmpStation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MyPort_EmpStation_MyPort_Station" Association="Self.FK_MyPort_EmpStation_MyPort_Station">
+      <End Role="MyPort_Station" EntitySet="MyPort_Station" />
+      <End Role="MyPort_EmpStation" EntitySet="MyPort_EmpStation" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

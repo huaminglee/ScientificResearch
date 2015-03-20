@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7165EB5E-E2FC-4880-B47F-31E3236E7A4D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ScientificResearchPrj.BLL</RootNamespace>
+    <AssemblyName>ScientificResearchPrj.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BP.En30, Version=2014.11.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\support\Components\BP.En30\bin\BP.En30.dll</HintPath>
+    </Reference>
+    <Reference Include="BP.WF">
+      <HintPath>..\support\Components\BP.WF\bin\BP.WF.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="ScientificResearchPrj.DAL">
+      <HintPath>..\ScientificResearchPrj.DAL\bin\Debug\ScientificResearchPrj.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="ScientificResearchPrj.DALFactory">
+      <HintPath>..\ScientificResearchPrj.DALFactory\bin\Debug\ScientificResearchPrj.DALFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="ScientificResearchPrj.IBLL">
+      <HintPath>..\ScientificResearchPrj.IBLL\bin\Debug\ScientificResearchPrj.IBLL.dll</HintPath>
+    </Reference>
+    <Reference Include="ScientificResearchPrj.IDAL">
+      <HintPath>..\ScientificResearchPrj.IDAL\bin\Debug\ScientificResearchPrj.IDAL.dll</HintPath>
+    </Reference>
+    <Reference Include="ScientificResearchPrj.Model">
+      <HintPath>..\ScientificResearchPrj.Model\bin\Debug\ScientificResearchPrj.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseService.cs" />
+    <Compile Include="ChaoSongService.cs" />
+    <Compile Include="DataTableClone.cs" />
+    <Compile Include="DepartmentService.cs" />
+    <Compile Include="EmpService.cs" />
+    <Compile Include="AccountService.cs" />
+    <Compile Include="NoRepeatClass.cs" />
+    <Compile Include="ProcessAllService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StationService.cs" />
+    <Compile Include="WFStateTrans.cs" />
+    <Compile Include="ProjectGroupService.cs" />
+    <Compile Include="ProjectService.cs" />
+    <Compile Include="SubjectService.cs" />
+    <Compile Include="XuQiuFenXiService.cs" />
+    <Compile Include="CommonOperationService.cs" />
+    <Compile Include="ShenHeService.cs" />
+    <Compile Include="DiaoYanService.cs" />
+    <Compile Include="TiChuWenTiService.cs" />
+    <Compile Include="JieJueSiLuService.cs" />
+    <Compile Include="XingShiHuaService.cs" />
+    <Compile Include="SheJiSuanFaService.cs" />
+    <Compile Include="SheJiShiYanService.cs" />
+    <Compile Include="DuiBiFenXiService.cs" />
+    <Compile Include="DeChuJieLunService.cs" />
+    <Compile Include="LunWenZhuanXieService.cs" />
+    <Compile Include="DaiBanService.cs" />
+    <Compile Include="FaQiService.cs" />
+    <Compile Include="LiuChengSheJiService.cs" />
+    <Compile Include="ZaiTuService.cs" />
+    <Compile Include="LinkService.cs" />
+    <Compile Include="AttachService.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,97 @@
+﻿<!--布局页，用于弹出窗口页面的统一布局-->
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <!-- Jquery EasyUI styles for this template 用于tabs标签页-->
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/bootstrap/easyui.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/icon.css">
+
+    <!-- bootstrap styles for this template -->
+    <link href="~/Content/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <style>
+        body{
+            position:absolute;
+            height:100%;
+            width:100%;
+            padding:0;
+            margin:0;
+            border:0px solid red;
+        }
+    </style>
+    <style>
+        a {
+            color: #ff6a00 !important;
+        }
+
+        a:hover {
+            color: #ff0000 !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-tab">
+        @RenderSection("tab_div", true)
+    </div>
+    @RenderBody()
+
+    
+    <!--Jquery EasyUI  js文件   用于tabs标签页-->
+    <script type="text/javascript" src="~/Content/jquery-easyui-1.4.1/jquery.easyui.min.js"></script>
+
+    
+
+    <script type="text/javascript">
+        /*
+        设置esyui的tab高度方法：easyUI默认的宽度和高度是auto
+        去掉id为main-tab的div里的class="easyui-tabs"
+        加上js，
+
+                $(function(){
+　　                    $("#tabs").tabs({
+　　　　                    width:$("#tabs").parent().width(),
+　　　　                    height:$("#tabs").parent().height()
+　　                    });
+                });
+        如果容器很高则将height改为 "auto"
+        */
+        $(function () {
+            $("#main-tab").tabs({
+                width: $("#main-tab").parent().width(),
+                height: $("#main-tab").parent().height()
+            });
+        });
+
+        function judgePanel(title) {
+            if ($('#main-tab').tabs('exists', title)) {
+                $('#main-tab').tabs('select', title);
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function addPanel(json) {
+            if ($('#main-tab').tabs('exists', json.title)) {
+                $('#main-tab').tabs('select', json.title);
+            } else {
+                /**添加一个tab标签**/
+                $('#main-tab').tabs('add', {
+                    title: json.title,
+                    content: json.content,
+                    closable: true
+                });
+            }
+        }
+        function removePanel() {
+            var tab = $('#main-tab').tabs('getSelected');
+            if (tab) {
+                var index = $('#main-tab').tabs('getTabIndex', tab);
+                $('#main-tab').tabs('close', index);
+            }
+        }
+    </script>
+</body>
+</html>

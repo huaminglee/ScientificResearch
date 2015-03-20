@@ -1,0 +1,1051 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Emp_Edit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deptNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stations" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Emp_EditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Emp_EditResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Emp_New">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deptNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stations" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Emp_NewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Emp_NewResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Emp_Delete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deptNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Emp_DeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Emp_DeleteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Dept_Emp_Related">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empNos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deptNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Dept_Emp_RelatedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Dept_Emp_RelatedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Dept_Edit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deptNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stations" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dutys" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Dept_EditResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Dept_CreateSameLevel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="currDeptNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stations" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dutys" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Dept_CreateSameLevelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Dept_CreateSameLevelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Dept_CreateSubLevel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="currDeptNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attrs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stations" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dutys" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Dept_CreateSubLevelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Dept_CreateSubLevelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Dept_CheckRootNode">
+        <s:complexType />
+      </s:element>
+      <s:element name="Dept_CheckRootNodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Dept_CheckRootNodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Dept_DragTarget">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="currDeptNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDeptNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Dept_DragTargetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Dept_DragTargetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Dept_DragSort">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="currDeptNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nextDeptNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nextNodeNos" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isUpNode" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Dept_DragSortResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Dept_DragSortResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Dept_Delete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deptNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="forceDel" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Dept_DeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Dept_DeleteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmpsByDeptNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FK_Dept" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Dept_Name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmpsByDeptNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmpsByDeptNoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ParseStringToPinyin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ParseStringToPinyinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ParseStringToPinyinResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RunSQLResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sqls" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RunSQLsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLReturnTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLReturnTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RunSQLReturnTableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLReturnString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLReturnStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RunSQLReturnStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLReturnValInt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLReturnValIntResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RunSQLReturnValIntResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLReturnValFloat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLReturnValFloatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RunSQLReturnValFloatResult" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLReturnTableS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sqls" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunSQLReturnTableSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RunSQLReturnTableSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestSFTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ensName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestSFTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RequestSFTableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveEnum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="enumKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="enumLab" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cfg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveEnumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveEnumResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LetAdminLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="islogin" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LetAdminLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LetAdminLoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="doWhat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="para1" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isLogin" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Emp_EditSoapIn">
+    <wsdl:part name="parameters" element="tns:Emp_Edit" />
+  </wsdl:message>
+  <wsdl:message name="Emp_EditSoapOut">
+    <wsdl:part name="parameters" element="tns:Emp_EditResponse" />
+  </wsdl:message>
+  <wsdl:message name="Emp_NewSoapIn">
+    <wsdl:part name="parameters" element="tns:Emp_New" />
+  </wsdl:message>
+  <wsdl:message name="Emp_NewSoapOut">
+    <wsdl:part name="parameters" element="tns:Emp_NewResponse" />
+  </wsdl:message>
+  <wsdl:message name="Emp_DeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:Emp_Delete" />
+  </wsdl:message>
+  <wsdl:message name="Emp_DeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:Emp_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="Dept_Emp_RelatedSoapIn">
+    <wsdl:part name="parameters" element="tns:Dept_Emp_Related" />
+  </wsdl:message>
+  <wsdl:message name="Dept_Emp_RelatedSoapOut">
+    <wsdl:part name="parameters" element="tns:Dept_Emp_RelatedResponse" />
+  </wsdl:message>
+  <wsdl:message name="Dept_EditSoapIn">
+    <wsdl:part name="parameters" element="tns:Dept_Edit" />
+  </wsdl:message>
+  <wsdl:message name="Dept_EditSoapOut">
+    <wsdl:part name="parameters" element="tns:Dept_EditResponse" />
+  </wsdl:message>
+  <wsdl:message name="Dept_CreateSameLevelSoapIn">
+    <wsdl:part name="parameters" element="tns:Dept_CreateSameLevel" />
+  </wsdl:message>
+  <wsdl:message name="Dept_CreateSameLevelSoapOut">
+    <wsdl:part name="parameters" element="tns:Dept_CreateSameLevelResponse" />
+  </wsdl:message>
+  <wsdl:message name="Dept_CreateSubLevelSoapIn">
+    <wsdl:part name="parameters" element="tns:Dept_CreateSubLevel" />
+  </wsdl:message>
+  <wsdl:message name="Dept_CreateSubLevelSoapOut">
+    <wsdl:part name="parameters" element="tns:Dept_CreateSubLevelResponse" />
+  </wsdl:message>
+  <wsdl:message name="Dept_CheckRootNodeSoapIn">
+    <wsdl:part name="parameters" element="tns:Dept_CheckRootNode" />
+  </wsdl:message>
+  <wsdl:message name="Dept_CheckRootNodeSoapOut">
+    <wsdl:part name="parameters" element="tns:Dept_CheckRootNodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Dept_DragTargetSoapIn">
+    <wsdl:part name="parameters" element="tns:Dept_DragTarget" />
+  </wsdl:message>
+  <wsdl:message name="Dept_DragTargetSoapOut">
+    <wsdl:part name="parameters" element="tns:Dept_DragTargetResponse" />
+  </wsdl:message>
+  <wsdl:message name="Dept_DragSortSoapIn">
+    <wsdl:part name="parameters" element="tns:Dept_DragSort" />
+  </wsdl:message>
+  <wsdl:message name="Dept_DragSortSoapOut">
+    <wsdl:part name="parameters" element="tns:Dept_DragSortResponse" />
+  </wsdl:message>
+  <wsdl:message name="Dept_DeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:Dept_Delete" />
+  </wsdl:message>
+  <wsdl:message name="Dept_DeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:Dept_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmpsByDeptNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmpsByDeptNo" />
+  </wsdl:message>
+  <wsdl:message name="GetEmpsByDeptNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmpsByDeptNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ParseStringToPinyinSoapIn">
+    <wsdl:part name="parameters" element="tns:ParseStringToPinyin" />
+  </wsdl:message>
+  <wsdl:message name="ParseStringToPinyinSoapOut">
+    <wsdl:part name="parameters" element="tns:ParseStringToPinyinResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLSoapIn">
+    <wsdl:part name="parameters" element="tns:RunSQL" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLSoapOut">
+    <wsdl:part name="parameters" element="tns:RunSQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLsSoapIn">
+    <wsdl:part name="parameters" element="tns:RunSQLs" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLsSoapOut">
+    <wsdl:part name="parameters" element="tns:RunSQLsResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnTableSoapIn">
+    <wsdl:part name="parameters" element="tns:RunSQLReturnTable" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnTableSoapOut">
+    <wsdl:part name="parameters" element="tns:RunSQLReturnTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnStringSoapIn">
+    <wsdl:part name="parameters" element="tns:RunSQLReturnString" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnStringSoapOut">
+    <wsdl:part name="parameters" element="tns:RunSQLReturnStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnValIntSoapIn">
+    <wsdl:part name="parameters" element="tns:RunSQLReturnValInt" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnValIntSoapOut">
+    <wsdl:part name="parameters" element="tns:RunSQLReturnValIntResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnValFloatSoapIn">
+    <wsdl:part name="parameters" element="tns:RunSQLReturnValFloat" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnValFloatSoapOut">
+    <wsdl:part name="parameters" element="tns:RunSQLReturnValFloatResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnTableSSoapIn">
+    <wsdl:part name="parameters" element="tns:RunSQLReturnTableS" />
+  </wsdl:message>
+  <wsdl:message name="RunSQLReturnTableSSoapOut">
+    <wsdl:part name="parameters" element="tns:RunSQLReturnTableSResponse" />
+  </wsdl:message>
+  <wsdl:message name="RequestSFTableSoapIn">
+    <wsdl:part name="parameters" element="tns:RequestSFTable" />
+  </wsdl:message>
+  <wsdl:message name="RequestSFTableSoapOut">
+    <wsdl:part name="parameters" element="tns:RequestSFTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveEnumSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveEnum" />
+  </wsdl:message>
+  <wsdl:message name="SaveEnumSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveEnumResponse" />
+  </wsdl:message>
+  <wsdl:message name="LetAdminLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:LetAdminLogin" />
+  </wsdl:message>
+  <wsdl:message name="LetAdminLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LetAdminLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoSoapIn">
+    <wsdl:part name="parameters" element="tns:Do" />
+  </wsdl:message>
+  <wsdl:message name="DoSoapOut">
+    <wsdl:part name="parameters" element="tns:DoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="OSSoap">
+    <wsdl:operation name="Emp_Edit">
+      <wsdl:input message="tns:Emp_EditSoapIn" />
+      <wsdl:output message="tns:Emp_EditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Emp_New">
+      <wsdl:input message="tns:Emp_NewSoapIn" />
+      <wsdl:output message="tns:Emp_NewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Emp_Delete">
+      <wsdl:input message="tns:Emp_DeleteSoapIn" />
+      <wsdl:output message="tns:Emp_DeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Dept_Emp_Related">
+      <wsdl:input message="tns:Dept_Emp_RelatedSoapIn" />
+      <wsdl:output message="tns:Dept_Emp_RelatedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Dept_Edit">
+      <wsdl:input message="tns:Dept_EditSoapIn" />
+      <wsdl:output message="tns:Dept_EditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Dept_CreateSameLevel">
+      <wsdl:input message="tns:Dept_CreateSameLevelSoapIn" />
+      <wsdl:output message="tns:Dept_CreateSameLevelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Dept_CreateSubLevel">
+      <wsdl:input message="tns:Dept_CreateSubLevelSoapIn" />
+      <wsdl:output message="tns:Dept_CreateSubLevelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Dept_CheckRootNode">
+      <wsdl:input message="tns:Dept_CheckRootNodeSoapIn" />
+      <wsdl:output message="tns:Dept_CheckRootNodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Dept_DragTarget">
+      <wsdl:input message="tns:Dept_DragTargetSoapIn" />
+      <wsdl:output message="tns:Dept_DragTargetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Dept_DragSort">
+      <wsdl:input message="tns:Dept_DragSortSoapIn" />
+      <wsdl:output message="tns:Dept_DragSortSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Dept_Delete">
+      <wsdl:input message="tns:Dept_DeleteSoapIn" />
+      <wsdl:output message="tns:Dept_DeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpsByDeptNo">
+      <wsdl:input message="tns:GetEmpsByDeptNoSoapIn" />
+      <wsdl:output message="tns:GetEmpsByDeptNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ParseStringToPinyin">
+      <wsdl:input message="tns:ParseStringToPinyinSoapIn" />
+      <wsdl:output message="tns:ParseStringToPinyinSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQL">
+      <wsdl:input message="tns:RunSQLSoapIn" />
+      <wsdl:output message="tns:RunSQLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLs">
+      <wsdl:input message="tns:RunSQLsSoapIn" />
+      <wsdl:output message="tns:RunSQLsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnTable">
+      <wsdl:input message="tns:RunSQLReturnTableSoapIn" />
+      <wsdl:output message="tns:RunSQLReturnTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnString">
+      <wsdl:input message="tns:RunSQLReturnStringSoapIn" />
+      <wsdl:output message="tns:RunSQLReturnStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnValInt">
+      <wsdl:input message="tns:RunSQLReturnValIntSoapIn" />
+      <wsdl:output message="tns:RunSQLReturnValIntSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnValFloat">
+      <wsdl:input message="tns:RunSQLReturnValFloatSoapIn" />
+      <wsdl:output message="tns:RunSQLReturnValFloatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnTableS">
+      <wsdl:input message="tns:RunSQLReturnTableSSoapIn" />
+      <wsdl:output message="tns:RunSQLReturnTableSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestSFTable">
+      <wsdl:input message="tns:RequestSFTableSoapIn" />
+      <wsdl:output message="tns:RequestSFTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEnum">
+      <wsdl:input message="tns:SaveEnumSoapIn" />
+      <wsdl:output message="tns:SaveEnumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LetAdminLogin">
+      <wsdl:input message="tns:LetAdminLoginSoapIn" />
+      <wsdl:output message="tns:LetAdminLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Do">
+      <wsdl:input message="tns:DoSoapIn" />
+      <wsdl:output message="tns:DoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OSSoap" type="tns:OSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Emp_Edit">
+      <soap:operation soapAction="http://tempuri.org/Emp_Edit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Emp_New">
+      <soap:operation soapAction="http://tempuri.org/Emp_New" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Emp_Delete">
+      <soap:operation soapAction="http://tempuri.org/Emp_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dept_Emp_Related">
+      <soap:operation soapAction="http://tempuri.org/Dept_Emp_Related" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dept_Edit">
+      <soap:operation soapAction="http://tempuri.org/Dept_Edit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dept_CreateSameLevel">
+      <soap:operation soapAction="http://tempuri.org/Dept_CreateSameLevel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dept_CreateSubLevel">
+      <soap:operation soapAction="http://tempuri.org/Dept_CreateSubLevel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dept_CheckRootNode">
+      <soap:operation soapAction="http://tempuri.org/Dept_CheckRootNode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dept_DragTarget">
+      <soap:operation soapAction="http://tempuri.org/Dept_DragTarget" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dept_DragSort">
+      <soap:operation soapAction="http://tempuri.org/Dept_DragSort" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dept_Delete">
+      <soap:operation soapAction="http://tempuri.org/Dept_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpsByDeptNo">
+      <soap:operation soapAction="http://tempuri.org/GetEmpsByDeptNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParseStringToPinyin">
+      <soap:operation soapAction="http://tempuri.org/ParseStringToPinyin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQL">
+      <soap:operation soapAction="http://tempuri.org/RunSQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLs">
+      <soap:operation soapAction="http://tempuri.org/RunSQLs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnTable">
+      <soap:operation soapAction="http://tempuri.org/RunSQLReturnTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnString">
+      <soap:operation soapAction="http://tempuri.org/RunSQLReturnString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnValInt">
+      <soap:operation soapAction="http://tempuri.org/RunSQLReturnValInt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnValFloat">
+      <soap:operation soapAction="http://tempuri.org/RunSQLReturnValFloat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnTableS">
+      <soap:operation soapAction="http://tempuri.org/RunSQLReturnTableS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestSFTable">
+      <soap:operation soapAction="http://tempuri.org/RequestSFTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEnum">
+      <soap:operation soapAction="http://tempuri.org/SaveEnum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LetAdminLogin">
+      <soap:operation soapAction="http://tempuri.org/LetAdminLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do">
+      <soap:operation soapAction="http://tempuri.org/Do" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OSSoap12" type="tns:OSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Emp_Edit">
+      <soap12:operation soapAction="http://tempuri.org/Emp_Edit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Emp_New">
+      <soap12:operation soapAction="http://tempuri.org/Emp_New" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Emp_Delete">
+      <soap12:operation soapAction="http://tempuri.org/Emp_Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dept_Emp_Related">
+      <soap12:operation soapAction="http://tempuri.org/Dept_Emp_Related" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dept_Edit">
+      <soap12:operation soapAction="http://tempuri.org/Dept_Edit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dept_CreateSameLevel">
+      <soap12:operation soapAction="http://tempuri.org/Dept_CreateSameLevel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dept_CreateSubLevel">
+      <soap12:operation soapAction="http://tempuri.org/Dept_CreateSubLevel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dept_CheckRootNode">
+      <soap12:operation soapAction="http://tempuri.org/Dept_CheckRootNode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dept_DragTarget">
+      <soap12:operation soapAction="http://tempuri.org/Dept_DragTarget" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dept_DragSort">
+      <soap12:operation soapAction="http://tempuri.org/Dept_DragSort" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dept_Delete">
+      <soap12:operation soapAction="http://tempuri.org/Dept_Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpsByDeptNo">
+      <soap12:operation soapAction="http://tempuri.org/GetEmpsByDeptNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParseStringToPinyin">
+      <soap12:operation soapAction="http://tempuri.org/ParseStringToPinyin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQL">
+      <soap12:operation soapAction="http://tempuri.org/RunSQL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLs">
+      <soap12:operation soapAction="http://tempuri.org/RunSQLs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnTable">
+      <soap12:operation soapAction="http://tempuri.org/RunSQLReturnTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnString">
+      <soap12:operation soapAction="http://tempuri.org/RunSQLReturnString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnValInt">
+      <soap12:operation soapAction="http://tempuri.org/RunSQLReturnValInt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnValFloat">
+      <soap12:operation soapAction="http://tempuri.org/RunSQLReturnValFloat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSQLReturnTableS">
+      <soap12:operation soapAction="http://tempuri.org/RunSQLReturnTableS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestSFTable">
+      <soap12:operation soapAction="http://tempuri.org/RequestSFTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEnum">
+      <soap12:operation soapAction="http://tempuri.org/SaveEnum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LetAdminLogin">
+      <soap12:operation soapAction="http://tempuri.org/LetAdminLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do">
+      <soap12:operation soapAction="http://tempuri.org/Do" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OS">
+    <wsdl:port name="OSSoap" binding="tns:OSSoap">
+      <soap:address location="http://localhost:35586/GPM/OrganizationalStructure.asmx" />
+    </wsdl:port>
+    <wsdl:port name="OSSoap12" binding="tns:OSSoap12">
+      <soap12:address location="http://localhost:35586/GPM/OrganizationalStructure.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

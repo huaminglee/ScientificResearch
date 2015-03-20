@@ -1,0 +1,5 @@
+E:\ScientificResearch\support\DLL\BitmapCutter.Core.dll
+E:\ScientificResearch\support\DLL\BitmapCutter.Core.pdb
+E:\ScientificResearch\support\Components\BitmapCutter.Core\obj\Debug\BitmapCutter.Core.csprojResolveAssemblyReference.cache
+E:\ScientificResearch\support\Components\BitmapCutter.Core\obj\Debug\BitmapCutter.Core.dll
+E:\ScientificResearch\support\Components\BitmapCutter.Core\obj\Debug\BitmapCutter.Core.pdb

@@ -1,0 +1,255 @@
+-----------------------------------------------------------------------------------------------------
+20日00时03分32秒Info:System');"成功[BP.Port.Emp-33]放入缓存。
+-----------------------------------------------------------------------------------------------------
+20日00时19分14秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+20日00时19分16秒Info:System');"成功[BP.Sys.EnCfg-2]放入缓存。
+20日00时19分26秒Info:System');"成功[BP.Sys.ToolbarExcel-6]放入缓存。
+20日00时19分26秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日00时19分40秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日00时19分40秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日00时19分40秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日00时20分42秒Fatal:System');"SQL=Select a.EmpNo No, a.Name From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss''  Union Select a.EmpNo No, a.Name From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss''  Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日00时20分42秒Info:System');"SQL=ALTER TABLE  ND1Track ADD Tag NVARCHAR(4000) DEFAULT '' NULL,异常信息:各表中的列名必须唯一。在表 'ND1Track' 中多次指定了列名 'Tag'。
+20日00时22分23秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日00时26分59秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日00时27分35秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日00时27分42秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日00时28分40秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=132 AND FK_Flow='001' . 列= , FK_Node
+20日00时28分41秒Info:System');"成功[BP.Port.Dept-20]放入缓存。
+20日00时30分22秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=133 AND FK_Flow='001' . 列= , FK_Node
+-----------------------------------------------------------------------------------------------------
+20日10时05分47秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+20日10时11分38秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=134 AND FK_Flow='001' . 列= , FK_Node
+20日10时11分39秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+20日10时11分39秒Info:System');"成功[BP.Port.Dept-20]放入缓存。
+-----------------------------------------------------------------------------------------------------
+20日10时19分46秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+20日10时20分38秒Info:System');"成功[BP.Port.Dept-20]放入缓存。
+-----------------------------------------------------------------------------------------------------
+20日10时27分11秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+-----------------------------------------------------------------------------------------------------
+20日10时28分04秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+-----------------------------------------------------------------------------------------------------
+20日10时45分15秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+20日10时45分56秒Info:System');"SQL=DROP TABLE ND104,异常信息:无法对 表 'ND104' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日10时46分03秒Info:System');"成功[BP.Sys.EnCfg-2]放入缓存。
+20日10时46分40秒Info:System');"成功[BP.Sys.ToolbarExcel-7]放入缓存。
+20日10时46分40秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日10时48分17秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日10时48分41秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日10时48分55秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日10时49分16秒Info:System');"SQL=DROP TABLE ND105,异常信息:无法对 表 'ND105' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日10时49分48秒Info:System');"成功[BP.Sys.ToolbarExcel-8]放入缓存。
+20日10时49分48秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日10时50分13秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日10时50分57秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日10时50分58秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND104' . 列= , name
+20日10时50分58秒Info:System');"SQL=DROP INDEX ND104ID ON ND104,异常信息:无法对 索引 'ND104.ND104ID' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日10时50分58秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日10时50分58秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND105' . 列= , name
+20日10时50分58秒Info:System');"SQL=DROP INDEX ND105ID ON ND105,异常信息:无法对 索引 'ND105.ND105ID' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日10时50分58秒Info:System');"SQL=ALTER TABLE  ND1Track ADD Tag NVARCHAR(4000) DEFAULT '' NULL,异常信息:各表中的列名必须唯一。在表 'ND1Track' 中多次指定了列名 'Tag'。
+20日10时53分13秒Info:System');"成功[BP.Port.Dept-20]放入缓存。
+20日11时01分51秒Info:System');"SQL=DROP TABLE ND106,异常信息:无法对 表 'ND106' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日11时02分22秒Info:System');"成功[BP.Sys.ToolbarExcel-9]放入缓存。
+20日11时02分22秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日11时02分46秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日11时02分56秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日11时03分09秒Info:System');"SQL=DROP TABLE ND107,异常信息:无法对 表 'ND107' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日11时03分40秒Info:System');"成功[BP.Sys.ToolbarExcel-10]放入缓存。
+20日11时03分40秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日11时03分58秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日11时13分46秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=135 AND FK_Flow='001' . 列= , FK_Node
+20日11时22分41秒Info:System');"SQL=UPDATE ND106 SET CDT='2015-03-20 11:22:41',Emps='',FID=0,FK_Dept='Dept_RJGCX',RDT='2015-03-20 11:22:41',Rec='caichangzhan' WHERE ND106.OID=135,异常信息:对象名 'ND106' 无效。
+20日11时22分41秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND106' . 列= , name
+20日11时22分42秒Info:System');"SQL=DROP INDEX ND106ID ON ND106,异常信息:无法对 索引 'ND106.ND106ID' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日11时24分21秒Info:System');"SQL=UPDATE ND107 SET CDT='2015-03-20 11:24:21',Emps='',FID=0,FK_Dept='Dept_RJGCX',RDT='2015-03-20 11:24:21',Rec='zhangyiqing' WHERE ND107.OID=135,异常信息:对象名 'ND107' 无效。
+20日11时24分21秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND107' . 列= , name
+20日11时24分21秒Info:System');"SQL=DROP INDEX ND107ID ON ND107,异常信息:无法对 索引 'ND107.ND107ID' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日11时24分56秒Info:System');"SQL=DROP TABLE ND108,异常信息:无法对 表 'ND108' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日11时25分42秒Info:System');"成功[BP.Sys.ToolbarExcel-11]放入缓存。
+20日11时25分42秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日11时26分01秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日11时26分07秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日11时26分20秒Info:System');"SQL=DROP TABLE ND109,异常信息:无法对 表 'ND109' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日11时26分41秒Info:System');"成功[BP.Sys.ToolbarExcel-12]放入缓存。
+20日11时26分41秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日11时26分57秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日11时27分00秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日11时27分00秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日11时27分01秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日11时27分01秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND108' . 列= , name
+20日11时27分01秒Info:System');"SQL=DROP INDEX ND108ID ON ND108,异常信息:无法对 索引 'ND108.ND108ID' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日11时27分01秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日11时27分01秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND109' . 列= , name
+20日11时27分01秒Info:System');"SQL=DROP INDEX ND109ID ON ND109,异常信息:无法对 索引 'ND109.ND109ID' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日11时27分01秒Info:System');"SQL=ALTER TABLE  ND1Track ADD Tag NVARCHAR(4000) DEFAULT '' NULL,异常信息:各表中的列名必须唯一。在表 'ND1Track' 中多次指定了列名 'Tag'。
+-----------------------------------------------------------------------------------------------------
+20日11时40分51秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+20日11时41分21秒Info:System');"成功[BP.Sys.EnCfg-2]放入缓存。
+20日11时41分26秒Info:System');"SQL=DROP TABLE ND110,异常信息:无法对 表 'ND110' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日11时41分49秒Info:System');"成功[BP.Sys.ToolbarExcel-13]放入缓存。
+20日11时41分49秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日11时42分04秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日11时42分10秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日11时42分24秒Info:System');"SQL=DROP TABLE ND111,异常信息:无法对 表 'ND111' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日11时42分47秒Info:System');"成功[BP.Sys.ToolbarExcel-14]放入缓存。
+20日11时42分47秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日11时43分07秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+-----------------------------------------------------------------------------------------------------
+20日13时54分02秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+20日13时57分49秒Info:System');"SQL=UPDATE ND110 SET CDT='2015-03-20 13:57:49',Emps='',FID=0,FK_Dept='Dept_RJGCX',RDT='2015-03-20 13:57:49',Rec='caichangzhan' WHERE ND110.OID=135,异常信息:对象名 'ND110' 无效。
+20日13时57分49秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND110' . 列= , name
+20日13时57分49秒Info:System');"SQL=DROP INDEX ND110ID ON ND110,异常信息:无法对 索引 'ND110.ND110ID' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日13时58分16秒Info:System');"成功[BP.Port.Dept-20]放入缓存。
+20日13时59分27秒Info:System');"SQL=UPDATE ND111 SET CDT='2015-03-20 13:59:27',Emps='',FID=0,FK_Dept='Dept_RJGCX',RDT='2015-03-20 13:59:27',Rec='zhangyiqing' WHERE ND111.OID=135,异常信息:对象名 'ND111' 无效。
+20日13时59分27秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND111' . 列= , name
+20日13时59分27秒Info:System');"SQL=DROP INDEX ND111ID ON ND111,异常信息:无法对 索引 'ND111.ND111ID' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日14时00分09秒Info:System');"SQL=DROP TABLE ND112,异常信息:无法对 表 'ND112' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日14时00分28秒Info:System');"成功[BP.Sys.EnCfg-2]放入缓存。
+20日14时00分46秒Info:System');"成功[BP.Sys.ToolbarExcel-15]放入缓存。
+20日14时00分46秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时01分05秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时01分14秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时01分26秒Info:System');"SQL=DROP TABLE ND113,异常信息:无法对 表 'ND113' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日14时01分43秒Info:System');"成功[BP.Sys.ToolbarExcel-16]放入缓存。
+20日14时01分43秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时01分59秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时04分57秒Info:System');"SQL=UPDATE ND112 SET CDT='2015-03-20 14:04:57',Emps='',FID=0,FK_Dept='Dept_RJGCX',RDT='2015-03-20 14:04:57',Rec='caichangzhan' WHERE ND112.OID=135,异常信息:对象名 'ND112' 无效。
+20日14时04分57秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND112' . 列= , name
+20日14时04分57秒Info:System');"SQL=DROP INDEX ND112ID ON ND112,异常信息:无法对 索引 'ND112.ND112ID' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日14时06分17秒Info:System');"SQL=UPDATE ND113 SET CDT='2015-03-20 14:06:17',Emps='',FID=0,FK_Dept='Dept_RJGCX',RDT='2015-03-20 14:06:17',Rec='zhangyiqing' WHERE ND113.OID=135,异常信息:对象名 'ND113' 无效。
+20日14时06分17秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND113' . 列= , name
+20日14时06分17秒Info:System');"SQL=DROP INDEX ND113ID ON ND113,异常信息:无法对 索引 'ND113.ND113ID' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日14时06分57秒Info:System');"SQL=DROP TABLE ND114,异常信息:无法对 表 'ND114' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日14时07分29秒Info:System');"成功[BP.Sys.ToolbarExcel-17]放入缓存。
+20日14时07分29秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时07分51秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时07分56秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时08分13秒Info:System');"SQL=DROP TABLE ND115,异常信息:无法对 表 'ND115' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日14时09分07秒Info:System');"成功[BP.Sys.ToolbarExcel-18]放入缓存。
+20日14时09分07秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时09分21秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时09分38秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时09分39秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时09分52秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时09分52秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时09分52秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时09分52秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时09分52秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时09分52秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时09分52秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND114' . 列= , name
+20日14时09分52秒Info:System');"SQL=DROP INDEX ND114ID ON ND114,异常信息:无法对 索引 'ND114.ND114ID' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日14时09分52秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时09分52秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND115' . 列= , name
+20日14时09分52秒Info:System');"SQL=DROP INDEX ND115ID ON ND115,异常信息:无法对 索引 'ND115.ND115ID' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日14时09分53秒Info:System');"SQL=ALTER TABLE  ND1Track ADD Tag NVARCHAR(4000) DEFAULT '' NULL,异常信息:各表中的列名必须唯一。在表 'ND1Track' 中多次指定了列名 'Tag'。
+20日14时15分44秒Info:System');"SQL=DROP TABLE ND116,异常信息:无法对 表 'ND116' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日14时16分13秒Info:System');"成功[BP.Sys.ToolbarExcel-19]放入缓存。
+20日14时16分13秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时16分30秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时16分37秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时16分50秒Info:System');"SQL=DROP TABLE ND117,异常信息:无法对 表 'ND117' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日14时17分08秒Info:System');"成功[BP.Sys.ToolbarExcel-20]放入缓存。
+20日14时17分08秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时17分24秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时19分33秒Info:System');"SQL=UPDATE ND116 SET CDT='2015-03-20 14:19:33',Emps='',FID=0,FK_Dept='Dept_RJGCX',RDT='2015-03-20 14:19:33',Rec='caichangzhan' WHERE ND116.OID=135,异常信息:对象名 'ND116' 无效。
+20日14时19分33秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND116' . 列= , name
+20日14时19分33秒Info:System');"SQL=DROP INDEX ND116ID ON ND116,异常信息:无法对 索引 'ND116.ND116ID' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日14时28分55秒Info:System');"SQL=UPDATE ND117 SET CDT='2015-03-20 14:28:55',Emps='',FID=0,FK_Dept='Dept_RJGCX',RDT='2015-03-20 14:28:55',Rec='zhangyiqing' WHERE ND117.OID=135,异常信息:对象名 'ND117' 无效。
+20日14时28分55秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND117' . 列= , name
+20日14时28分55秒Info:System');"SQL=DROP INDEX ND117ID ON ND117,异常信息:无法对 索引 'ND117.ND117ID' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日14时29分29秒Info:System');"SQL=DROP TABLE ND118,异常信息:无法对 表 'ND118' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日14时29分58秒Info:System');"成功[BP.Sys.ToolbarExcel-21]放入缓存。
+20日14时29分58秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时30分15秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时30分21秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时30分46秒Info:System');"SQL=DROP TABLE ND119,异常信息:无法对 表 'ND119' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日14时31分10秒Info:System');"成功[BP.Sys.ToolbarExcel-22]放入缓存。
+20日14时31分10秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时31分32秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时31分38秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时31分41秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时31分41秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时31分42秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时31分42秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时31分42秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时31分42秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时31分42秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时31分42秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时31分42秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND118' . 列= , name
+20日14时31分42秒Info:System');"SQL=DROP INDEX ND118ID ON ND118,异常信息:无法对 索引 'ND118.ND118ID' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日14时31分42秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时31分42秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND119' . 列= , name
+20日14时31分42秒Info:System');"SQL=DROP INDEX ND119ID ON ND119,异常信息:无法对 索引 'ND119.ND119ID' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日14时31分42秒Info:System');"SQL=ALTER TABLE  ND1Track ADD Tag NVARCHAR(4000) DEFAULT '' NULL,异常信息:各表中的列名必须唯一。在表 'ND1Track' 中多次指定了列名 'Tag'。
+20日14时44分24秒Info:System');"SQL=DROP TABLE ND120,异常信息:无法对 表 'ND120' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日14时45分06秒Info:System');"成功[BP.Sys.ToolbarExcel-23]放入缓存。
+20日14时45分06秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时45分27秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时45分33秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时45分42秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时45分52秒Info:System');"SQL=DROP TABLE ND121,异常信息:无法对 表 'ND121' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日14时46分25秒Info:System');"成功[BP.Sys.ToolbarExcel-24]放入缓存。
+20日14时46分25秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时46分40秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时49分47秒Info:System');"SQL=UPDATE ND120 SET CDT='2015-03-20 14:49:47',Emps='',FID=0,FK_Dept='Dept_RJGCX',RDT='2015-03-20 14:49:47',Rec='caichangzhan' WHERE ND120.OID=135,异常信息:对象名 'ND120' 无效。
+20日14时49分47秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND120' . 列= , name
+20日14时49分47秒Info:System');"SQL=DROP INDEX ND120ID ON ND120,异常信息:无法对 索引 'ND120.ND120ID' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日14时51分29秒Info:System');"SQL=UPDATE ND121 SET CDT='2015-03-20 14:51:29',Emps='',FID=0,FK_Dept='Dept_RJGCX',RDT='2015-03-20 14:51:29',Rec='zhangyiqing' WHERE ND121.OID=135,异常信息:对象名 'ND121' 无效。
+20日14时51分29秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND121' . 列= , name
+20日14时51分29秒Info:System');"SQL=DROP INDEX ND121ID ON ND121,异常信息:无法对 索引 'ND121.ND121ID' 执行 删除，因为它不存在，或者您没有所需的权限。
+20日14时53分14秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+20日14时53分18秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时53分18秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时53分18秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时53分18秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时53分18秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时53分18秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时53分19秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时53分19秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时53分19秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时53分19秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+20日14时53分19秒Info:System');"SQL=ALTER TABLE  ND1Track ADD Tag NVARCHAR(4000) DEFAULT '' NULL,异常信息:各表中的列名必须唯一。在表 'ND1Track' 中多次指定了列名 'Tag'。
+-----------------------------------------------------------------------------------------------------
+20日17时43分53秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+20日17时44分18秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=136 AND FK_Flow='001' . 列= , FK_Node
+20日17时44分18秒Info:System');"成功[BP.Port.Dept-20]放入缓存。
+-----------------------------------------------------------------------------------------------------
+20日20时11分10秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+20日20时14分58秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=137 AND FK_Flow='001' . 列= , FK_Node
+20日20时14分58秒Info:System');"成功[BP.Port.Dept-20]放入缓存。
+20日21时07分42秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=138 AND FK_Flow='001' . 列= , FK_Node

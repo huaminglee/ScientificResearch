@@ -1,0 +1,84 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+    xmlns:my="clr-namespace:System.Windows;assembly=System.Windows.Controls"
+    xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" x:Class="OrganizationalStructure.MainPage"
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="448">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Image Height="36" Margin="7,3,89,0" x:Name="Image1" Stretch="Fill" VerticalAlignment="Top" Source="/OrganizationalStructure;component/Images/ccflow4.jpg" />
+        <toolkit:TreeViewDragDropTarget VerticalContentAlignment="Top"
+                                        ItemDroppedOnTarget="TreeViewDragDropTarget_ItemDroppedOnTarget"
+                                        ItemDragCompleted="TreeViewDragDropTarget_ItemDragCompleted">
+            <sdk:TreeView x:Name="treeView1" Width="265" MinHeight="460" Height="Auto" AllowDrop="False"
+                          HorizontalAlignment="Left" Margin="5,42,0,12"
+                          ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                          ScrollViewer.VerticalScrollBarVisibility="Auto"
+                          MouseLeftButtonUp="treeView1_MouseLeftButtonUp"
+                          MouseRightButtonDown="treeView1_MouseRightButtonDown"
+                          MouseRightButtonUp="treeView1_MouseRightButtonUp">
+                <sdk:TreeView.Effect>
+                    <DropShadowEffect/>
+                </sdk:TreeView.Effect>
+            </sdk:TreeView>
+        </toolkit:TreeViewDragDropTarget>
+        <CheckBox Content="启用拖动" Height="16" HorizontalAlignment="Left" Margin="193,14,0,0" Name="ckbEnbelDrop" VerticalAlignment="Top" Click="ckbEnbelDrop_Click" />
+        <sdk:DataGrid Margin="0,42,8,12" IsEnabled="True" Name="DG_Emp" AutoGenerateColumns="False" IsReadOnly="True" Grid.Column="1"  
+                       MouseRightButtonUp="DG_Emp_MouseRightButtonUp"
+                       MouseLeftButtonUp="DG_Emp_MouseLeftButtonDown"
+                       MouseRightButtonDown="DG_Emp_MouseRightButtonDown"
+                       SelectionMode="Single">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Width="80" Binding="{Binding No}" Header="编号" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Width="120" Binding="{Binding Name}" Header="名称" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Width="80" Binding="{Binding EmpNo}" Header="员工编号" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Width="120" Binding="{Binding Tel}" Header="电话" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Width="140" Binding="{Binding Email}" Header="邮件" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Width="80" Binding="{Binding FK_DeptText}" Header="部门" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Width="80" Binding="{Binding FK_DutyText}" Header="职务" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Width="60" Binding="{Binding DutyLevel}" Header="职务级别" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Width="180" Binding="{Binding Stations}" Header="岗位" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Width="80" Binding="{Binding Leader}" Header="直属领导" IsReadOnly="True" />
+                <sdk:DataGridTextColumn Width="0" Binding="{Binding FK_Dept}" Visibility="Collapsed"/>
+                <sdk:DataGridTextColumn Width="0" Binding="{Binding FK_Duty}" Visibility="Collapsed"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+
+        <toolkit:ContextMenu x:Name="popMenu" BorderThickness="0"   
+                             MouseLeave="popMenu_MouseLeave" Margin="94,211,0,0" 
+                             HorizontalAlignment="Left" Width="160"
+                             VerticalAlignment="Top"    Visibility="Collapsed" >
+            <toolkit:MenuItem Header="编辑部门" x:Name="Btn_Edit" Click="MenuItem_Click" FontFamily="SimSun" FontSize="13.333"/>
+            <toolkit:MenuItem Header="新建平级部门" x:Name="Btn_CrateSameLevel" Click="MenuItem_Click" FontFamily="SimSun" FontSize="13.333"/>
+            <toolkit:MenuItem Header="新建下级部门" x:Name="Btn_CrateSubLevel" Click="MenuItem_Click" FontFamily="SimSun" FontSize="13.333"/>
+            <toolkit:MenuItem Header="上移" x:Name="Btn_Up" Click="MenuItem_Click" FontFamily="SimSun" FontSize="13.333"/>
+            <toolkit:MenuItem Header="下移" x:Name="Btn_Down" Click="MenuItem_Click" FontFamily="SimSun" FontSize="13.333"/>
+            <toolkit:MenuItem Header="删除部门" x:Name="Btn_Delete" Click="MenuItem_Click" FontFamily="SimSun" FontSize="13.333"/>
+            <toolkit:MenuItem Header="编辑人员" x:Name="Btn_EditEmp" Click="MenuItem_Click" FontFamily="SimSun" FontSize="13.333"/>
+            <toolkit:MenuItem Header="增加人员" x:Name="Btn_AddEmp" Click="MenuItem_Click" FontFamily="SimSun" FontSize="13.333"/>
+            <toolkit:MenuItem Header="关联人员" x:Name="Btn_RelatedEmp" Click="MenuItem_Click" FontFamily="SimSun" FontSize="13.333"/>
+            <toolkit:MenuItem Header="刷新" x:Name="Btn_RefreshDept" Click="MenuItem_Click" FontFamily="SimSun" FontSize="13.333"/>
+
+        </toolkit:ContextMenu>
+        <CheckBox Content="显示该部门下所有人员" Grid.Column="1" Height="16" HorizontalAlignment="Left" Margin="0,15,0,0" Name="CKB_ViewAll" VerticalAlignment="Top" Click="CKB_ViewAll_Checked" />
+        <Button Content="增加人员" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="148,12,0,0" Name="Btn_Add" VerticalAlignment="Top" Width="75" Click="Btn_Add_Click" />
+        <Button Content="删除人员" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="229,12,0,0" Name="Btn_Delete1" VerticalAlignment="Top" Width="75" Click="Btn_Delete1_Click" />
+        <Button Content="刷新列表" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="310,12,0,0" Name="Btn_Refresh" VerticalAlignment="Top" Width="75" Click="Btn_Refresh_Click" />
+        <Button Content="查询人员" Height="23" HorizontalAlignment="Left" Margin="391,12,0,0" Name="Btn_QueryEmp" VerticalAlignment="Top" Width="75" Grid.Column="1" Click="Btn_QueryEmp_Click" />
+        <toolkit:ContextMenu x:Name="popMenuDataGrid" BorderThickness="0" Visibility="Collapsed"  
+                             MouseLeave="popMenuDataGrid_MouseLeave" Margin="79,88,0,0" 
+                             HorizontalAlignment="Left" Width="160" Height="68" 
+                             VerticalAlignment="Top" Grid.Column="1" d:LayoutOverrides="VerticalAlignment"      >
+            <toolkit:MenuItem Header="编辑人员" x:Name="Men_Edit" Click="Men_Click" FontFamily="SimSun" FontSize="13.333"/>
+            <toolkit:MenuItem Header="删除人员" x:Name="Men_Del" Click="Men_Click" FontFamily="SimSun" FontSize="13.333"/>
+            <toolkit:MenuItem Header="恢复密码" x:Name="Men_Reset" Click="Men_Click" FontFamily="SimSun" FontSize="13.333"/>
+        </toolkit:ContextMenu>
+    </Grid>
+</UserControl>

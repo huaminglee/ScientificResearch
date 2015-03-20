@@ -1,0 +1,68 @@
+﻿<!--登录页面-->
+
+
+@model ScientificResearchPrj.Model.AccountModel
+@{
+    ViewBag.Title = "SignIn";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+
+
+<div class="container">
+@using (Ajax.BeginForm("SignIn", "Home",
+                            new AjaxOptions()
+                            {
+                                HttpMethod = "Post",
+                                InsertionMode = InsertionMode.InsertAfter,
+                                OnSuccess = "afterSuccess",
+                                LoadingElementId = "loading"
+                            }))
+        {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        <div class="form-signin">
+            <h2 class="form-signin-heading">Please sign in
+                <span id="loading" style="display:none">
+                    <img src="~/Images/ico_loading.gif" />
+                </span>
+            </h2>
+            @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", @placeholder = "用户名" })
+            @Html.ValidationMessageFor(model => model.UserName)<br>
+            @Html.TextBoxFor(model => model.Password, new { @class = "form-control", @placeholder = "密码" })
+            @Html.ValidationMessageFor(model => model.Password)
+            <div class="checkbox">
+                <label>
+                    @Html.CheckBoxFor(model=>model.RememberMe)记住我?
+                </label>
+                <label class="passlabel">
+                    <a href="~/Home/FindPassword">Forget Password?</a>
+                </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            <div><span id="serviceResult"></span></div>
+        </div>
+}
+</div> <!-- /container -->
+
+ 
+
+
+<!-- Placed at the end of the document so the pages load faster -->
+<!--微软提供的验证，结合jquery文件-->
+<script src="~/Scripts/jquery-1.8.2.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+<!--微软提供的ajax服务-->
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script>
+    //操作成功回调函数
+    function afterSuccess(data) {
+        if(data.state=="-1")
+            document.getElementById('serviceResult').innerText = data.message;
+        else {
+            window.location.href = "/MainPage/Index";
+        }
+    }
+</script>

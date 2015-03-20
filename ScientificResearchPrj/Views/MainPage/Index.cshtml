@@ -1,0 +1,161 @@
+﻿<!--登录成功页面-->
+
+@{
+    ViewBag.Title = "Index Page";
+    Layout = "~/Views/Shared/_LayoutMainPage.cshtml";
+}
+
+
+<style>
+        .ul-link{
+            margin:0;
+            padding:0;
+        }
+        .li-link {
+            background-color: #f0f0f0;
+            height: 20px;
+            text-align: right;
+            margin-bottom: 2px;
+            list-style-type: none;
+            padding: 4px;
+            text-decoration: none;
+            font-style: italic;
+            font-weight: bold;
+        }
+        
+        .li-link:hover {
+            background-color: #fff;
+            cursor:pointer;
+        }
+        a {
+            color: #ff6a00;
+        }
+
+        a:hover {
+            color: #000;
+        }
+
+    
+</style>
+@section menu_left{
+<div id="main-ad" class="easyui-accordion" style="border:0;">
+    <div title="字典管理" data-options="iconCls:'icon-save'" style="padding: 5px; border: 0;">
+        <ul class="ul-link">
+            <li class="li-link" onclick="addPanel({ 'view': '/Emp/RenYuanGuanLi', 'title': '用户管理' })">用户管理</li>
+            <li class="li-link" onclick="addPanel({ 'view': '/Department/BuMenGuanLi', 'title': '部门管理' })">部门管理</li>
+            <li class="li-link" onclick="addPanel({ 'view': '/Station/GangWeiGuanLi', 'title': '岗位管理' })">岗位管理</li>
+        </ul>
+    </div>
+    <div title="流程信息" data-options="iconCls:'icon-save'" style="padding: 5px; border: 0;">
+        <ul class="ul-link">
+            <li class="li-link" onclick="addPanel({ 'view': '/LiuChengSheJi/LiuChengSheJi', 'title': '流程设计' })">流程设计</li>
+            <li class="li-link" onclick="addPanel({ 'view': '/ProcessAll/AllProcess', 'title': '所有流程' })">所有流程</li>
+        </ul>
+    </div>
+    <div title="科研管理" data-options="iconCls:'icon-save'" style="padding: 5px; border: 0;">
+        <ul class="ul-link">
+            <li class="li-link" onclick="addPanel({ 'view': '/XiangMuZu/XiangMuZuGuanLi', 'title': '项目组管理' })">项目组管理</li>
+            <li class="li-link" onclick="addPanel({ 'view': '/XiangMu/XiangMuGuanLi', 'title': '项目管理' })">项目管理</li>
+            <li class="li-link" onclick="addPanel({ 'view': '/KeTi/KeTiGuanLi', 'title': '课题管理' })">课题管理</li>
+        </ul>
+    </div>
+    <div title="流程运行" data-options="iconCls:'icon-save'" style="padding: 5px; border: 0;">
+        <ul class="ul-link">
+            <li class="li-link" onclick="addPanel({ 'view': '/FaQi/FaQi', 'title': '发起' })">发起</li>
+            <li class="li-link" onclick="addPanel({ 'view': '/DaiBan/DaiBan', 'title': '待办' })">待办</li>
+            <li class="li-link" onclick="addPanel({ 'view': '/ChaoSong/ChaoSong', 'title': '抄送' })">抄送</li>
+            <li class="li-link" onclick="addPanel({ 'view': '/ZaiTu/ZaiTu', 'title': '在途' })">在途</li>
+            <li class="li-link">批处理</li>
+            <li class="li-link">共享任务</li>
+            <li class="li-link">挂起</li>
+        </ul>
+    </div>
+</div>
+ 
+ 
+}
+
+
+@section content_center{
+    <!--加上data-options才能设置内容自适应-->
+    <div id="main-tab" data-options="fit:true,fitColumns:true"></div>
+}
+
+
+@section necessary_js{
+    <script type="text/javascript">
+        /*
+        设置esyui的tab高度方法：easyUI默认的宽度和高度是auto
+        去掉id为main-tab的div里的class="easyui-tabs"
+        加上js，
+
+                $(function(){
+　　                    $("#tabs").tabs({
+　　　　                    width:$("#tabs").parent().width(),
+　　　　                    height:$("#tabs").parent().height()
+　　                    });
+                });
+        如果容器很高则将height改为 "auto"
+        */
+        $(function () {
+            $("#main-tab").tabs({
+                width: $("#main-tab").parent().width(),
+                height: $("#main-tab").parent().height()
+            });
+            setMouceEnterAccordionEvent();
+        });
+        function setMouceEnterAccordionEvent() {
+            //添加鼠标进入菜单事件
+            var panels = $('#main-ad').accordion('panels');
+            for (var i = 0; i < panels.length; i++) {
+                panels[i].panel('header').unbind().bind('mouseenter', { index: i }, function (e) {
+                    $('#main-ad').accordion('select', e.data.index);
+                });
+            }
+        }
+       
+
+
+        function addPanel(json) {
+            if ($('#main-tab').tabs('exists', json.title)) {
+                $('#main-tab').tabs('select', json.title);
+            } else {
+                /**添加一个tab标签**/
+                $('#main-tab').tabs('add', {
+                    title: json.title,
+                    content: '<iframe scrolling="yes" frameborder="0" src="' + json.view + '" ' +
+                       'width="100%" height=' + $("#main-tab").parent().height() * 0.94 +
+                       ' style="border:0px solid blue;padding:0px;"></iframe>',
+                    closable: true
+                });
+                
+                setMouseEnterTabEvent();
+                setTabRemoveEvent();
+
+                //选择当前
+                var tabs = $('#main-tab').tabs().tabs('tabs');
+                $('#main-tab').tabs('select', tabs.length-1);
+            }
+        }
+
+        //添加进入事件
+        function setMouseEnterTabEvent() {
+            var tabs = $('#main-tab').tabs().tabs('tabs');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].panel('options').tab.unbind().bind('mouseenter', { index: i }, function (e) {
+                    $('#main-tab').tabs('select', e.data.index);
+                });
+            }
+        }
+
+        function setTabRemoveEvent(){
+            $('#main-tab').tabs({
+                onClose: function (title) {
+                    setMouseEnterTabEvent();
+                }
+            });
+        }
+    </script>
+
+
+}

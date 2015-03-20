@@ -1,0 +1,111 @@
+﻿@{
+    ViewBag.Title = "Index Page";
+    Layout = "~/Views/Shared/_LayoutMainPage.cshtml";
+}
+@section menu_left{
+    <div class="panel-group" role="tablist">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="ziDianGuanLiGroupHeading">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" href="#ziDianGuanLiGroup" aria-expanded="false" aria-controls="ziDianGuanLiGroup">
+                        字典管理
+                    </a>
+                </h4>
+            </div>
+            <div id="ziDianGuanLiGroup" class="panel-collapse collapse" role="tabpanel" aria-labelledby="ziDianGuanLiGroupHeading">
+                <ul class="list-group">
+                    <li class="list-group-item" onclick="addPanel({ 'view': '/Emp/EmpManage', 'title': '用户管理' })">用户管理</li>
+                    <li class="list-group-item" onclick="addPanel({ 'view': '/Department/DeptManage', 'title': '部门管理' })">部门管理</li>
+                    <li class="list-group-item" onclick="addPanel({ 'view': '/Station/StationManage', 'title': '岗位管理' })">岗位管理</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="liuChengGuanLiGroupHeading">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" href="#liuChengGuanLiGroup" aria-expanded="false" aria-controls="liuChengGuanLiGroup">
+                         流程管理
+                    </a>
+                </h4>
+            </div>
+            <div id="liuChengGuanLiGroup" class="panel-collapse collapse" role="tabpanel" aria-labelledby="liuChengGuanLiGroupHeading">
+                <ul class="list-group">
+                    <li class="list-group-item" onclick="addPanel({ 'view': '/Process/DevelopProcess', 'title': '制定流程' })">制定流程</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="keYanGuanLiGroupHeading">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" href="#keYanGuanLiGroup" aria-expanded="false" aria-controls="keYanGuanLiGroup">
+                        科研管理
+                    </a>
+                </h4>
+            </div>
+            <div id="keYanGuanLiGroup" class="panel-collapse collapse" role="tabpanel" aria-labelledby="keYanGuanLiGroupHeading">
+                <ul class="list-group">
+                    <li class="list-group-item" onclick="addPanel({ 'view': '/Process/StartList', 'title': '发起' })">发起</li>
+                    <li class="list-group-item">发起树</li>
+                    <li class="list-group-item">待办</li>
+                    <li class="list-group-item">批处理</li>
+                    <li class="list-group-item">共享任务</li>
+                    <li class="list-group-item">抄送</li>
+                    <li class="list-group-item">挂起</li>
+                    <li class="list-group-item">在途</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+}
+
+
+@section content_right{
+    <div id="main-tab"></div>
+}
+
+
+@section necessary_js{
+    <script type="text/javascript">
+        /*
+        设置esyui的tab高度方法：easyUI默认的宽度和高度是auto
+        去掉id为main-tab的div里的class="easyui-tabs"
+        加上js，
+
+                $(function(){
+　　                    $("#tabs").tabs({
+　　　　                    width:$("#tabs").parent().width(),
+　　　　                    height:$("#tabs").parent().height()
+　　                    });
+                });
+        如果容器很高则将height改为 "auto"
+        */
+        $(function () {
+            $("#main-tab").tabs({
+                width: $("#main-tab").parent().width(),
+                height: $("#main-tab").parent().height()
+            });
+        });
+
+
+        function addPanel(json) {
+            if ($('#main-tab').tabs('exists', json.title)) {
+                $('#main-tab').tabs('select', json.title);
+            } else {
+                /**添加一个tab标签**/
+                $('#main-tab').tabs('add', {
+                    title: json.title,
+                    content: '<iframe scrolling="yes" frameborder="0" src="' + json.view + '" ' +
+                       'width="100%" height=' + $("#main-tab").parent().height() * 0.87 +
+                       ' style="border:1px solid blue;padding:0px;"></iframe>',
+                    closable: true
+                });
+            }
+           // alert($("#main-tab").parent().height() * 0.87);
+        }
+
+    </script>
+
+
+}

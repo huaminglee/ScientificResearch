@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3F65D6DD-4343-4E05-A8DB-903A18A2E5F3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ScientificResearchPrj.Model</RootNamespace>
+    <AssemblyName>ScientificResearchPrj.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BP.En30">
+      <HintPath>..\support\Components\BP.En30\bin\BP.En30.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountModels.cs" />
+    <Compile Include="CCFlowArgs.cs" />
+    <Compile Include="CCModel.cs" />
+    <Compile Include="EmpForJson.cs" />
+    <Compile Include="EmpType.cs" />
+    <Compile Include="FlowOver.cs" />
+    <Compile Include="MyActionFilterAttribute.cs" />
+    <Compile Include="MyPort_Dept.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyPort_Emp.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyPort_EmpDept.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyPort_EmpStation.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyPort_Station.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyPort_Student.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyPort_Tutor.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PageModel.cs" />
+    <Compile Include="ProcessModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProcessModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProcessModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Process_Attach.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Process_BasicData.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Process_DeChuJieLun.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Process_DiaoYan.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Process_DuiBiFenXi.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Process_GroupMember.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Process_Link.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Process_LunWen.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Process_Project.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Process_ProjectGroup.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Process_ShenHe.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Process_ShiYan.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Process_SiLu.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Process_SuanFa.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Process_Subject_XuQiuFenXi.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Process_TiChuWenTi.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Process_Track.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Process_XingShiHua.cs">
+      <DependentUpon>ProcessModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReturnNodeModel.cs" />
+    <Compile Include="StepType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="ProcessModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ProcessModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ProcessModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProcessModel.edmx</DependentUpon>
+      <LastGenOutput>ProcessModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="ProcessModel.edmx.diagram">
+      <DependentUpon>ProcessModel.edmx</DependentUpon>
+    </None>
+    <None Include="ProcessModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProcessModel.edmx</DependentUpon>
+      <LastGenOutput>ProcessModel.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,427 @@
+-----------------------------------------------------------------------------------------------------
+19日15时01分18秒Info:System');"成功[BP.Port.Emp-13]放入缓存。
+19日15时01分24秒Info:System');"成功[BP.WF.Node-279]放入缓存。
+19日15时01分26秒Info:System');"成功[BP.WF.Flow-76]放入缓存。
+19日15时01分26秒Info:System');"成功[BP.Sys.EnCfg-2]放入缓存。
+19日15时01分30秒Info:System');"成功[BP.Sys.EnsAppCfg-0]放入缓存。
+19日15时01分30秒Info:System');"成功[BP.Sys.EnsAppCfg-1]放入缓存。
+19日15时01分38秒Info:System');"成功[BP.WF.Template.Selector-279]放入缓存。
+19日16时06分43秒Fatal:System');"@没有[映射基础  Sys_MapData, 类[BP.Sys.MapData], 物理表[Sys_MapData] 实例。PK = 
+19日16时06分43秒Fatal:System');"@没有[映射基础  Sys_MapData, 类[BP.Sys.MapData], 物理表[Sys_MapData] 实例。PK = 
+19日16时35分23秒Info:System');"成功[BP.Port.Emp-13]放入缓存。
+19日16时35分23秒Info:System');"成功[BP.WF.Flow-76]放入缓存。
+19日16时35分25秒Info:System');"SQL=ALTER TABLE  ND1Track ADD Tag NVARCHAR(4000) DEFAULT '' NULL,异常信息:各表中的列名必须唯一。在表 'ND1Track' 中多次指定了列名 'Tag'。
+19日18时19分05秒Info:System');"成功[BP.WF.Node-279]放入缓存。
+19日18时19分05秒Info:System');"成功[BP.Sys.EnCfg-2]放入缓存。
+-----------------------------------------------------------------------------------------------------
+19日19时22分35秒Fatal:System');"SQL= SELECT TOP 99999 No, Name,ISNULL(OfficeOpenLab, '打开本地') OfficeOpenLab, ISNULL( OfficeOpenEnable,0) OfficeOpenEnable,ISNULL(OfficeOpenTemplateLab, '打开模板') OfficeOpenTemplateLab, ISNULL( OfficeOpenTemplateEnable,0) OfficeOpenTemplateEnable,ISNULL(OfficeSaveLab, '保存') OfficeSaveLab, ISNULL(OfficeSaveEnable,1) OfficeSaveEnable,ISNULL(OfficeAcceptLab, '接受修订') OfficeAcceptLab, ISNULL( OfficeAcceptEnable,0) OfficeAcceptEnable,ISNULL(OfficeRefuseLab, '拒绝修订') OfficeRefuseLab, ISNULL( OfficeRefuseEnable,0) OfficeRefuseEnable,ISNULL(OfficeOverLab, '套红按钮') OfficeOverLab, ISNULL( OfficeOverEnable,0) OfficeOverEnable, ISNULL(OfficeMarksEnable,1) OfficeMarksEnable,ISNULL(OfficePrintLab, '打印按钮') OfficePrintLab, ISNULL( OfficePrintEnable,0) OfficePrintEnable,ISNULL(OfficeSealLab, '签章按钮') OfficeSealLab, ISNULL( OfficeSealEnable,0) OfficeSealEnable,ISNULL(OfficeInsertFlowLab, '插入流程') OfficeInsertFlowLab, ISNULL( OfficeInsertFlowEnable,0) OfficeInsertFlowEnable, ISNULL( OfficeNodeInfo,0) OfficeNodeInfo, ISNULL( OfficeReSavePDF,0) OfficeReSavePDF,ISNULL(OfficeDownLab, '下载') OfficeDownLab, ISNULL( OfficeDownEnable,0) OfficeDownEnable, ISNULL(OfficeIsMarks,1) OfficeIsMarks, OfficeTemplate, ISNULL(OfficeIsParent,1) OfficeIsParent, ISNULL( OfficeTHEnable,0) OfficeTHEnable, OfficeTHTemplate FROM Sys_MapData WHERE (1=1) Exception=列名 'OfficeOpenLab' 无效。
+列名 'OfficeOpenEnable' 无效。
+列名 'OfficeOpenTemplateLab' 无效。
+列名 'OfficeOpenTemplateEnable' 无效。
+列名 'OfficeSaveLab' 无效。
+列名 'OfficeSaveEnable' 无效。
+列名 'OfficeAcceptLab' 无效。
+列名 'OfficeAcceptEnable' 无效。
+列名 'OfficeRefuseLab' 无效。
+列名 'OfficeRefuseEnable' 无效。
+列名 'OfficeOverLab' 无效。
+列名 'OfficeOverEnable' 无效。
+列名 'OfficeMarksEnable' 无效。
+列名 'OfficePrintLab' 无效。
+列名 'OfficePrintEnable' 无效。
+列名 'OfficeSealLab' 无效。
+列名 'OfficeSealEnable' 无效。
+列名 'OfficeInsertFlowLab' 无效。
+列名 'OfficeInsertFlowEnable' 无效。
+列名 'OfficeNodeInfo' 无效。
+列名 'OfficeReSavePDF' 无效。
+列名 'OfficeDownLab' 无效。
+列名 'OfficeDownEnable' 无效。
+列名 'OfficeIsMarks' 无效。
+列名 'OfficeTemplate' 无效。
+列名 'OfficeIsParent' 无效。
+列名 'OfficeTHEnable' 无效。
+列名 'OfficeTHTemplate' 无效。
+19日19时22分39秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+19日19时22分39秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+19日19时23分24秒Info:System');"成功[BP.Sys.ToolbarExcel-5]放入缓存。
+19日19时23分24秒Info:System');"SQL=CREATE INDEX WF_GenerWorkerlistID ON WF_GenerWorkerlist (WorkID,FK_Emp,FK_Node),异常信息:操作失败，因为在 表 'WF_GenerWorkerlist' 上已存在名称为 'WF_GenerWorkerlistID' 的索引或统计信息。
+19日19时23分24秒Info:System');"SQL=UPDATE WF_Flow SET StartGuidePara1=StartGuidePara WHERE  LEN(StartGuidePara) >=1 ,异常信息:列名 'StartGuidePara' 无效。
+19日19时23分25秒Fatal:System');"SQL= SELECT TOP 99999 No, Name, PTable, FK_Flow, Note, ParentMapData,ISNULL(RightViewWay,0) RightViewWay, RightViewTag,ISNULL(RightDeptWay,0) RightDeptWay, RightDeptTag FROM Sys_MapData WHERE (1=1) AND ( ( Sys_MapData.ParentMapData =@ParentMapData) )  Exception=列名 'RightViewWay' 无效。
+列名 'RightViewTag' 无效。
+列名 'RightDeptWay' 无效。
+列名 'RightDeptTag' 无效。
+19日19时23分25秒Fatal:System');"SQL=Select a.EmpNo No, a.Name From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss''  Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+19日19时23分25秒Info:System');"SQL=ALTER TABLE  ND1Track ADD Tag NVARCHAR(4000) DEFAULT '' NULL,异常信息:各表中的列名必须唯一。在表 'ND1Track' 中多次指定了列名 'Tag'。
+19日19时23分26秒Info:System');"SQL=UPDATE Port_Station SET StaGrade=FK_StationType WHERE StaGrade IS null ,异常信息:列名 'FK_StationType' 无效。
+19日19时23分26秒Info:System');"SQL=DROP VIEW WF_NodeExt,异常信息:无法对 视图 'WF_NodeExt' 执行 删除，因为它不存在，或者您没有所需的权限。
+-----------------------------------------------------------------------------------------------------
+19日19时25分17秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+19日19时25分48秒Info:System');"成功[BP.Sys.EnCfg-2]放入缓存。
+19日19时25分58秒Info:System');"成功[BP.Sys.ToolbarExcel-5]放入缓存。
+19日19时25分58秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日19时26分06秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日19时26分31秒Fatal:System');"SQL=Select a.EmpNo No, a.Name From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss''  Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+19日19时26分31秒Info:System');"SQL=ALTER TABLE  ND1Track ADD Tag NVARCHAR(4000) DEFAULT '' NULL,异常信息:各表中的列名必须唯一。在表 'ND1Track' 中多次指定了列名 'Tag'。
+19日19时31分00秒Fatal:System');"SQL= SELECT  TOP 1 ISNULL(NodeID,0)   NodeID,ISNULL(SendLab, '发送') SendLab, SendJS,ISNULL(JumpWayLab, '跳转') JumpWayLab, ISNULL( JumpWay,0) JumpWay,ISNULL(SaveLab, '保存') SaveLab, ISNULL(SaveEnable,1) SaveEnable,ISNULL(ThreadLab, '子线程') ThreadLab, ISNULL( ThreadEnable,0) ThreadEnable,ISNULL(SubFlowLab, '子流程') SubFlowLab,ISNULL(SubFlowCtrlRole,0)   SubFlowCtrlRole, CASE SubFlowCtrlRole WHEN 0 THEN '无' WHEN 1 THEN '不可以删除子流程' WHEN 2 THEN '可以删除子流程' WHEN NULL THEN '无' END SubFlowCtrlRoleTEXT,ISNULL(ReturnLab, '退回') ReturnLab, ISNULL(ReturnRole,1) ReturnRole, ReturnField,ISNULL(CCLab, '抄送') CCLab,ISNULL(CCRole,0)   CCRole, CASE CCRole WHEN 0 THEN '不能抄送' WHEN 1 THEN '手工抄送' WHEN 2 THEN '自动抄送' WHEN 3 THEN '手工与自动' WHEN 4 THEN '按表单SysCCEmps字段计算' WHEN NULL THEN '不能抄送' END CCRoleTEXT,ISNULL(ShiftLab, '移交') ShiftLab, ISNULL(ShiftEnable,1) ShiftEnable,ISNULL(DelLab, '删除流程') DelLab, ISNULL( DelEnable,0) DelEnable,ISNULL(EndFlowLab, '结束流程') EndFlowLab, ISNULL( EndFlowEnable,0) EndFlowEnable,ISNULL(HungLab, '挂起') HungLab, ISNULL( HungEnable,0) HungEnable,ISNULL(PrintDocLab, '打印单据') PrintDocLab, ISNULL( PrintDocEnable,0) PrintDocEnable,ISNULL(TrackLab, '轨迹') TrackLab, ISNULL(TrackEnable,1) TrackEnable,ISNULL(SelectAccepterLab, '接受人') SelectAccepterLab,ISNULL(SelectAccepterEnable,0)   SelectAccepterEnable, CASE SelectAccepterEnable WHEN 0 THEN '不启用' WHEN 1 THEN '单独启用' WHEN 2 THEN '在发送前打开' WHEN 3 THEN '转入新页面' WHEN NULL THEN '不启用' END SelectAccepterEnableTEXT,ISNULL(SearchLab, '查询') SearchLab, ISNULL(SearchEnable,1) SearchEnable,ISNULL(WorkCheckLab, '审核') WorkCheckLab, ISNULL( WorkCheckEnable,0) WorkCheckEnable,ISNULL(BatchLab, '批量审核') BatchLab, ISNULL( BatchEnable,0) BatchEnable,ISNULL(AskforLab, '加签') AskforLab, ISNULL( AskforEnable,0) AskforEnable,ISNULL(TCLab, '流转自定义') TCLab, ISNULL( TCEnable,0) TCEnable,ISNULL(WebOffice, '公文') WebOffice,ISNULL(WebOfficeEnable,0)   WebOfficeEnable, CASE WebOfficeEnable WHEN 0 THEN '不启用' WHEN 1 THEN '按钮方式' WHEN 2 THEN '标签页方式' WHEN NULL THEN '不启用' END WebOfficeEnableTEXT,ISNULL(OfficeOpenLab, '打开本地') OfficeOpenLab, ISNULL( OfficeOpenEnable,0) OfficeOpenEnable,ISNULL(OfficeOpenTemplateLab, '打开模板') OfficeOpenTemplateLab, ISNULL( OfficeOpenTemplateEnable,0) OfficeOpenTemplateEnable,ISNULL(OfficeSaveLab, '保存') OfficeSaveLab, ISNULL(OfficeSaveEnable,1) OfficeSaveEnable,ISNULL(OfficeAcceptLab, '接受修订') OfficeAcceptLab, ISNULL( OfficeAcceptEnable,0) OfficeAcceptEnable,ISNULL(OfficeRefuseLab, '拒绝修订') OfficeRefuseLab, ISNULL( OfficeRefuseEnable,0) OfficeRefuseEnable,ISNULL(OfficeTHTemplate, '套红') OfficeTHTemplate, ISNULL( OfficeOverEnable,0) OfficeOverEnable, ISNULL(OfficeMarksEnable,1) OfficeMarksEnable,ISNULL(OfficePrintLab, '打印') OfficePrintLab, ISNULL( OfficePrintEnable,0) OfficePrintEnable, ISNULL( OfficeSealEnable,0) OfficeSealEnable,ISNULL(OfficeInsertFlowLab, '插入流程') OfficeInsertFlowLab, ISNULL( OfficeInsertFlowEnable,0) OfficeInsertFlowEnable, ISNULL( OfficeNodeInfo,0) OfficeNodeInfo, ISNULL( OfficeReSavePDF,0) OfficeReSavePDF,ISNULL(OfficeDownLab, '下载') OfficeDownLab, ISNULL( OfficeDownEnable,0) OfficeDownEnable, ISNULL(OfficeIsMarks,1) OfficeIsMarks, OfficeTemplate, ISNULL(OfficeIsParent,1) OfficeIsParent, ISNULL( OfficeTHEnable,0) OfficeTHEnable FROM WF_Node WHERE (1=1) AND WF_Node.NodeID=@NodeID Exception=列名 'OfficePrintLab' 无效。
+19日19时31分34秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=113 AND FK_Flow='001' . 列= , FK_Node
+19日19时31分35秒Info:System');"成功[BP.Port.Dept-20]放入缓存。
+19日19时31分35秒Warning:System');"@文本信息里面有html标记:@<img src='/WF/Img/AllotTask.gif' border=0 /><a href="/WF/WorkOpt/AllotTask.aspx?WorkID=113&FID=113&NodeID=102" >修改接受对象</a>.
+19日19时31分35秒Warning:System');"@文本信息里面有html标记:@<a href='/WF/MyFlowInfo.aspx?DoType=UnSend&WorkID=113&FK_Flow=001'><img src='/WF/Img/UnDo.gif' border=0/>撤销本次发送</a>， <a href='/WF/MyFlow.aspx?FK_Flow=001&FK_Node=00101' ><img src='/WF/Img/New.gif' border=0/>新建流程</a>。
+19日19时31分35秒Warning:System');"@文本信息里面有html标记:@<a href='/WF/WFRpt.aspx?WorkID=113&FID=113&FK_Flow=001'target='_self' >工作轨迹</a>
+19日19时32分04秒Info:System');"@SQL=SELECT NDFrom FROM ND1Track WHERE WorkID=114 AND NDTo='102' AND ActionType=1 ORDER BY RDT DESC . 列= , NDFrom
+19日19时33分04秒Info:System');"@SQL=SELECT NDFrom FROM ND1Track WHERE WorkID=115 AND NDTo='102' AND ActionType=1 ORDER BY RDT DESC . 列= , NDFrom
+-----------------------------------------------------------------------------------------------------
+19日20时11分51秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+19日20时12分09秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=116 AND FK_Flow='001' . 列= , FK_Node
+19日20时12分10秒Info:System');"成功[BP.Port.Dept-20]放入缓存。
+19日20时12分10秒Warning:System');"@文本信息里面有html标记:@<img src='/WF/Img/AllotTask.gif' border=0 /><a href="/WF/WorkOpt/AllotTask.aspx?WorkID=116&FID=116&NodeID=102" >修改接受对象</a>.
+19日20时12分10秒Warning:System');"@文本信息里面有html标记:@<a href='/WF/MyFlowInfo.aspx?DoType=UnSend&WorkID=116&FK_Flow=001'><img src='/WF/Img/UnDo.gif' border=0/>撤销本次发送</a>， <a href='/WF/MyFlow.aspx?FK_Flow=001&FK_Node=00101' ><img src='/WF/Img/New.gif' border=0/>新建流程</a>。
+19日20时12分10秒Warning:System');"@文本信息里面有html标记:@<a href='/WF/WFRpt.aspx?WorkID=116&FID=116&FK_Flow=001'target='_self' >工作轨迹</a>
+19日20时12分54秒Info:System');"@SQL=SELECT NDFrom FROM ND1Track WHERE WorkID=117 AND NDTo='102' AND ActionType=1 ORDER BY RDT DESC . 列= , NDFrom
+19日20时13分44秒Fatal:System');"SQL= SELECT  TOP 1 ISNULL(NodeID,0)   NodeID,ISNULL(Step,0)   Step, FK_Flow, Name,ISNULL(DeliveryWay,0)   DeliveryWay, CASE DeliveryWay WHEN 0 THEN '01.按当前操作员所属组织结构逐级查找岗位' WHEN 1 THEN '02.按节点绑定的部门计算' WHEN 2 THEN '03.按设置的SQL获取接受人计算' WHEN 3 THEN '04.按节点绑定的人员计算' WHEN 4 THEN '05.由上一节点发送人通过“人员选择器”选择接受人' WHEN 5 THEN '06.按上一节点表单指定的字段值作为本步骤的接受人' WHEN 6 THEN '07.与上一节点处理人员相同' WHEN 7 THEN '08.与开始节点处理人相同' WHEN 8 THEN '09.与指定节点处理人相同' WHEN 9 THEN '10.按绑定的岗位与部门交集计算' WHEN 10 THEN '11.按绑定的岗位计算并且以绑定的部门集合为纬度' WHEN 11 THEN '12.按指定节点的人员岗位计算' WHEN 12 THEN '13.按SQL确定子线程接受人与数据源' WHEN 13 THEN '14.由上一节点的明细表来决定子线程的接受人' WHEN 14 THEN '15.仅按绑定的岗位计算' WHEN 15 THEN '16.由FEE来决定' WHEN 100 THEN '16.按ccflow的BPM模式处理' WHEN NULL THEN '01.按当前操作员所属组织结构逐级查找岗位' END DeliveryWayTEXT, DeliveryParas,ISNULL(WhoExeIt,0)   WhoExeIt, CASE WhoExeIt WHEN 0 THEN '操作员执行' WHEN 1 THEN '机器执行' WHEN 2 THEN '混合执行' WHEN NULL THEN '操作员执行' END WhoExeItTEXT,ISNULL(TurnToDeal,0)   TurnToDeal, CASE TurnToDeal WHEN 0 THEN '提示ccflow默认信息' WHEN 1 THEN '提示指定信息' WHEN 2 THEN '转向指定的url' WHEN 3 THEN '按照条件转向' WHEN NULL THEN '提示ccflow默认信息' END TurnToDealTEXT, TurnToDealDoc,ISNULL(ReadReceipts,0)   ReadReceipts, CASE ReadReceipts WHEN 0 THEN '不回执' WHEN 1 THEN '自动回执' WHEN 2 THEN '由上一节点表单字段决定' WHEN 3 THEN '由SDK开发者参数决定' WHEN NULL THEN '不回执' END ReadReceiptsTEXT,ISNULL(CondModel,0)   CondModel, CASE CondModel WHEN 0 THEN '由连接线条件控制' WHEN 1 THEN '让用户手工选择' WHEN NULL THEN '由连接线条件控制' END CondModelTEXT,ISNULL(CancelRole,0)   CancelRole, CASE CancelRole WHEN 0 THEN '上一步可以撤销' WHEN 1 THEN '不能撤销' WHEN 2 THEN '上一步与开始节点可以撤销' WHEN 3 THEN '指定的节点可以撤销' WHEN NULL THEN '上一步可以撤销' END CancelRoleTEXT,ISNULL(BatchRole,0)   BatchRole, CASE BatchRole WHEN 0 THEN '不可以批处理' WHEN 1 THEN '批量审核' WHEN 2 THEN '分组批量审核' WHEN NULL THEN '不可以批处理' END BatchRoleTEXT,ISNULL(BatchListCount,12)   BatchListCount, BatchParas, ISNULL(IsTask,1) IsTask, ISNULL(IsRM,1) IsRM,ISNULL(DTFrom,'2015-03-19 20:13') DTFrom,ISNULL(DTTo,'2015-03-19 20:13') DTTo,ISNULL(FormType,1)   FormType, CASE FormType WHEN 0 THEN '傻瓜表单(ccflow6取消支持)' WHEN 1 THEN '自由表单' WHEN 2 THEN '自定义表单' WHEN 3 THEN 'SDK表单' WHEN 4 THEN 'SL表单(ccflow6取消支持)' WHEN 5 THEN '表单树' WHEN 6 THEN '动态表单树' WHEN 7 THEN '公文表单(WebOffice)' WHEN 8 THEN 'Excel表单(测试中)' WHEN 9 THEN 'Word表单(测试中)' WHEN 100 THEN '禁用(对多表单流程有效)' WHEN NULL THEN '自由表单' END FormTypeTEXT, FormUrl, FocusField, NodeFrmID,ISNULL(SaveModel,0)   SaveModel, CASE SaveModel WHEN 0 THEN '仅节点表' WHEN 1 THEN '节点表与Rpt表' WHEN NULL THEN '仅节点表' END SaveModelTEXT,ISNULL(RunModel,0)   RunModel, CASE RunModel WHEN 0 THEN '普通' WHEN 1 THEN '合流' WHEN 2 THEN '分流' WHEN 3 THEN '分合流' WHEN 4 THEN '子线程' WHEN NULL THEN '普通' END RunModelTEXT,ISNULL(SubThreadType,0)   SubThreadType, CASE SubThreadType WHEN 0 THEN '同表单' WHEN 1 THEN '异表单' WHEN NULL THEN '同表单' END SubThreadTypeTEXT, ISNULL( round(PassRate,4) ,0) AS  PassRate,ISNULL(SubFlowStartWay,0)   SubFlowStartWay, CASE SubFlowStartWay WHEN 0 THEN '不启动' WHEN 1 THEN '指定的字段启动' WHEN 2 THEN '按明细表启动' WHEN NULL THEN '不启动' END SubFlowStartWayTEXT, SubFlowStartParas,ISNULL(TodolistModel,0)   TodolistModel, CASE TodolistModel WHEN 0 THEN '抢办模式' WHEN 1 THEN '协作模式' WHEN 2 THEN '队列模式' WHEN 3 THEN '共享模式' WHEN NULL THEN '抢办模式' END TodolistModelTEXT,ISNULL(BlockModel,0)   BlockModel, CASE BlockModel WHEN 0 THEN '不阻塞' WHEN 1 THEN '当前节点的所有未完成的子流程' WHEN 2 THEN '按约定格式阻塞未完成子流程' WHEN 3 THEN '按照SQL阻塞' WHEN 4 THEN '按照表达式阻塞' WHEN NULL THEN '不阻塞' END BlockModelTEXT, BlockExp, BlockAlert, ISNULL( IsAllowRepeatEmps,0) IsAllowRepeatEmps, ISNULL( IsGuestNode,0) IsGuestNode, ISNULL( AutoJumpRole0,0) AutoJumpRole0, ISNULL( AutoJumpRole1,0) AutoJumpRole1, ISNULL( AutoJumpRole2,0) AutoJumpRole2,ISNULL(WhenNoWorker,0)   WhenNoWorker, CASE WhenNoWorker WHEN 0 THEN '提示错误' WHEN 1 THEN '自动转到下一步' WHEN NULL THEN '提示错误' END WhenNoWorkerTEXT,ISNULL(SendLab, '发送') SendLab, SendJS,ISNULL(SaveLab, '保存') SaveLab, ISNULL(SaveEnable,1) SaveEnable,ISNULL(ThreadLab, '子线程') ThreadLab, ISNULL( ThreadEnable,0) ThreadEnable,ISNULL(ThreadKillRole,0)   ThreadKillRole, CASE ThreadKillRole WHEN 0 THEN '不能删除' WHEN 1 THEN '手工删除' WHEN 2 THEN '自动删除' WHEN NULL THEN '不能删除' END ThreadKillRoleTEXT,ISNULL(SubFlowLab, '子流程') SubFlowLab,ISNULL(SubFlowCtrlRole,0)   SubFlowCtrlRole, CASE SubFlowCtrlRole WHEN 0 THEN '无' WHEN 1 THEN '不可以删除子流程' WHEN 2 THEN '可以删除子流程' WHEN NULL THEN '无' END SubFlowCtrlRoleTEXT,ISNULL(JumpWayLab, '跳转') JumpWayLab,ISNULL(JumpWay,0)   JumpWay, CASE JumpWay WHEN 0 THEN '不能跳转' WHEN 1 THEN '只能向后跳转' WHEN 2 THEN '只能向前跳转' WHEN 3 THEN '任意节点跳转' WHEN 4 THEN '按指定规则跳转' WHEN NULL THEN '不能跳转' END JumpWayTEXT, JumpToNodes,ISNULL(ReturnLab, '退回') ReturnLab,ISNULL(ReturnRole,0)   ReturnRole, CASE ReturnRole WHEN 0 THEN '不能退回' WHEN 1 THEN '只能退回上一个节点' WHEN 2 THEN '可退回以前任意节点' WHEN 3 THEN '可退回指定的节点' WHEN 4 THEN '由流程图设计的退回路线决定' WHEN NULL THEN '不能退回' END ReturnRoleTEXT, ISNULL( IsBackTracking,0) IsBackTracking, ReturnField,ISNULL(CCLab, '抄送') CCLab,ISNULL(CCRole,0)   CCRole, CASE CCRole WHEN 0 THEN '不能抄送' WHEN 1 THEN '手工抄送' WHEN 2 THEN '自动抄送' WHEN 3 THEN '手工与自动' WHEN 4 THEN '按表单SysCCEmps字段计算' WHEN NULL THEN '不能抄送' END CCRoleTEXT,ISNULL(CCWriteTo,0)   CCWriteTo, CASE CCWriteTo WHEN 0 THEN '写入抄送列表' WHEN 1 THEN '写入待办' WHEN 2 THEN '写入待办与抄送列表' WHEN NULL THEN '写入抄送列表' END CCWriteToTEXT,ISNULL(ShiftLab, '移交') ShiftLab, ISNULL( ShiftEnable,0) ShiftEnable,ISNULL(DelLab, '删除') DelLab,ISNULL(DelEnable,0)   DelEnable, CASE DelEnable WHEN 0 THEN '不能删除' WHEN 1 THEN '逻辑删除' WHEN 2 THEN '记录日志方式删除' WHEN 3 THEN '彻底删除' WHEN 4 THEN '让用户决定删除方式' WHEN NULL THEN '不能删除' END DelEnableTEXT,ISNULL(EndFlowLab, '结束流程') EndFlowLab, ISNULL( EndFlowEnable,0) EndFlowEnable,ISNULL(PrintDocLab, '打印单据') PrintDocLab,ISNULL(PrintDocEnable,0)   PrintDocEnable, CASE PrintDocEnable WHEN 0 THEN '不打印' WHEN 1 THEN '打印网页' WHEN 2 THEN '打印RTF模板' WHEN NULL THEN '不打印' END PrintDocEnableTEXT,ISNULL(TrackLab, '轨迹') TrackLab, ISNULL(TrackEnable,1) TrackEnable,ISNULL(HungLab, '挂起') HungLab, ISNULL( HungEnable,0) HungEnable,ISNULL(SelectAccepterLab, '接受人') SelectAccepterLab,ISNULL(SelectAccepterEnable,0)   SelectAccepterEnable, CASE SelectAccepterEnable WHEN 0 THEN '不启用' WHEN 1 THEN '单独启用' WHEN 2 THEN '在发送前打开' WHEN 3 THEN '转入新页面' WHEN NULL THEN '不启用' END SelectAccepterEnableTEXT,ISNULL(SearchLab, '查询') SearchLab, ISNULL( SearchEnable,0) SearchEnable,ISNULL(WorkCheckLab, '审核') WorkCheckLab, ISNULL( WorkCheckEnable,0) WorkCheckEnable,ISNULL(BatchLab, '批处理') BatchLab, ISNULL( BatchEnable,0) BatchEnable,ISNULL(AskforLab, '加签') AskforLab, ISNULL( AskforEnable,0) AskforEnable,ISNULL(TCLab, '流转自定义') TCLab, ISNULL( TCEnable,0) TCEnable,ISNULL(WebOffice, '公文') WebOffice,ISNULL(WebOfficeEnable,0)   WebOfficeEnable, CASE WebOfficeEnable WHEN 0 THEN '不启用' WHEN 1 THEN '按钮方式' WHEN 2 THEN '标签页方式' WHEN NULL THEN '不启用' END WebOfficeEnableTEXT, ISNULL( round(WarningDays,4) ,0) AS  WarningDays, ISNULL( round(DeductDays,4) ,1) AS  DeductDays, ISNULL( round(DeductCent,4) ,2) AS  DeductCent, ISNULL( round(MaxDeductCent,4) ,0) AS  MaxDeductCent, ISNULL( round(SwinkCent,4) ,0.1) AS  SwinkCent,ISNULL(OutTimeDeal,0)   OutTimeDeal, CASE OutTimeDeal WHEN 0 THEN '不处理' WHEN 1 THEN '自动向下运动(或运动到指定节点)' WHEN 2 THEN '自动跳转指定的点' WHEN 3 THEN '自动转到指定的人员' WHEN 4 THEN '向指定的人员发消息' WHEN 5 THEN '删除流程' WHEN 6 THEN '执行SQL' WHEN NULL THEN '不处理' END OutTimeDealTEXT, DoOutTime, DoOutTimeCond,ISNULL(CHWay,0)   CHWay, CASE CHWay WHEN 0 THEN '不考核' WHEN 1 THEN '按时效' WHEN 2 THEN '按工作量' WHEN NULL THEN '不考核' END CHWayTEXT, ISNULL( round(Workload,4) ,0) AS  Workload, ISNULL( IsEval,0) IsEval,ISNULL(FWCSta,0)   FWCSta, CASE FWCSta WHEN 0 THEN '禁用' WHEN 1 THEN '启用' WHEN 2 THEN '只读' WHEN NULL THEN '禁用' END FWCStaTEXT,ISNULL(FWCShowModel,1)   FWCShowModel, CASE FWCShowModel WHEN 0 THEN '表格方式' WHEN 1 THEN '自由模式' WHEN NULL THEN '自由模式' END FWCShowModelTEXT,ISNULL(FWCType,0)   FWCType, CASE FWCType WHEN 0 THEN '审核组件' WHEN 1 THEN '日志组件' WHEN NULL THEN '审核组件' END FWCTypeTEXT, ISNULL(FWCTrackEnable,1) FWCTrackEnable, ISNULL(FWCListEnable,1) FWCListEnable, ISNULL( FWCIsShowAllStep,0) FWCIsShowAllStep,ISNULL(FWCOpLabel, '审核') FWCOpLabel,ISNULL(FWCDefInfo, '同意') FWCDefInfo, ISNULL( SigantureEnabel,0) SigantureEnabel, ISNULL(FWCIsFullInfo,1) FWCIsFullInfo, ISNULL( round(FWC_H,4) ,300) AS  FWC_H, ISNULL( round(FWC_W,4) ,400) AS  FWC_W,ISNULL(OfficeOpenLab, '打开本地') OfficeOpenLab, ISNULL( OfficeOpenEnable,0) OfficeOpenEnable,ISNULL(OfficeOpenTemplateLab, '打开模板') OfficeOpenTemplateLab, ISNULL( OfficeOpenTemplateEnable,0) OfficeOpenTemplateEnable,ISNULL(OfficeSaveLab, '保存') OfficeSaveLab, ISNULL(OfficeSaveEnable,1) OfficeSaveEnable,ISNULL(OfficeAcceptLab, '接受修订') OfficeAcceptLab, ISNULL( OfficeAcceptEnable,0) OfficeAcceptEnable,ISNULL(OfficeRefuseLab, '拒绝修订') OfficeRefuseLab, ISNULL( OfficeRefuseEnable,0) OfficeRefuseEnable,ISNULL(OfficeOverLab, '套红') OfficeOverLab, ISNULL( OfficeOverEnable,0) OfficeOverEnable, ISNULL(OfficeMarksEnable,1) OfficeMarksEnable,ISNULL(OfficePrintEnable, '打印') OfficePrintEnable, ISNULL( OfficeSealEnable,0) OfficeSealEnable,ISNULL(OfficeInsertFlowLab, '插入流程') OfficeInsertFlowLab, ISNULL( OfficeInsertFlowEnable,0) OfficeInsertFlowEnable, ISNULL( OfficeNodeInfo,0) OfficeNodeInfo, ISNULL( OfficeReSavePDF,0) OfficeReSavePDF,ISNULL(OfficeDownLab, '下载') OfficeDownLab, ISNULL( OfficeDownEnable,0) OfficeDownEnable, ISNULL(OfficeIsMarks,1) OfficeIsMarks, OfficeTemplate, ISNULL(OfficeIsParent,1) OfficeIsParent, ISNULL( OfficeTHEnable,0) OfficeTHEnable, OfficeTHTemplate,ISNULL(MPhone_WorkModel,0)   MPhone_WorkModel, CASE MPhone_WorkModel WHEN 0 THEN '原生态' WHEN 1 THEN '浏览器' WHEN 2 THEN '禁用' WHEN NULL THEN '原生态' END MPhone_WorkModelTEXT,ISNULL(MPhone_SrcModel,0)   MPhone_SrcModel, CASE MPhone_SrcModel WHEN 0 THEN '强制横屏' WHEN 1 THEN '强制竖屏' WHEN 2 THEN '由重力感应决定' WHEN NULL THEN '强制横屏' END MPhone_SrcModelTEXT,ISNULL(MPad_WorkModel,0)   MPad_WorkModel, CASE MPad_WorkModel WHEN 0 THEN '原生态' WHEN 1 THEN '浏览器' WHEN 2 THEN '禁用' WHEN NULL THEN '原生态' END MPad_WorkModelTEXT,ISNULL(MPad_SrcModel,0)   MPad_SrcModel, CASE MPad_SrcModel WHEN 0 THEN '强制横屏' WHEN 1 THEN '强制竖屏' WHEN 2 THEN '由重力感应决定' WHEN NULL THEN '强制横屏' END MPad_SrcModelTEXT FROM WF_Node WHERE (1=1) AND WF_Node.NodeID=@NodeID Exception=在将 varchar 值 '打印' 转换成数据类型 int 时失败。
+19日20时13分44秒Info:System');"成功[BP.Sys.EnCfg-2]放入缓存。
+19日20时14分01秒Info:System');"成功[BP.Sys.ToolbarExcel-5]放入缓存。
+19日20时14分01秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时14分03秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时14分16秒Fatal:System');"SQL=Select a.EmpNo No, a.Name From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss''  Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+19日20时14分16秒Info:System');"SQL=ALTER TABLE  ND1Track ADD Tag NVARCHAR(4000) DEFAULT '' NULL,异常信息:各表中的列名必须唯一。在表 'ND1Track' 中多次指定了列名 'Tag'。
+19日20时15分10秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=119 AND FK_Flow='001' . 列= , FK_Node
+19日20时15分10秒Warning:System');"@文本信息里面有html标记:@<img src='/WF/Img/AllotTask.gif' border=0 /><a href="/WF/WorkOpt/AllotTask.aspx?WorkID=119&FID=119&NodeID=102" >修改接受对象</a>.
+19日20时15分10秒Warning:System');"@文本信息里面有html标记:@<a href='/WF/MyFlowInfo.aspx?DoType=UnSend&WorkID=119&FK_Flow=001'><img src='/WF/Img/UnDo.gif' border=0/>撤销本次发送</a>， <a href='/WF/MyFlow.aspx?FK_Flow=001&FK_Node=00101' ><img src='/WF/Img/New.gif' border=0/>新建流程</a>。
+19日20时15分10秒Warning:System');"@文本信息里面有html标记:@<a href='/WF/WFRpt.aspx?WorkID=119&FID=119&FK_Flow=001'target='_self' >工作轨迹</a>
+19日20时15分37秒Info:System');"@SQL=SELECT NDFrom FROM ND1Track WHERE WorkID=121 AND NDTo='102' AND ActionType=1 ORDER BY RDT DESC . 列= , NDFrom
+19日20时16分13秒Info:System');"@SQL=SELECT NDFrom FROM ND1Track WHERE WorkID=120 AND NDTo='102' AND ActionType=1 ORDER BY RDT DESC . 列= , NDFrom
+19日20时26分39秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时27分21秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=122 AND FK_Flow='001' . 列= , FK_Node
+19日20时28分06秒Info:System');"@SQL=SELECT NDFrom FROM ND1Track WHERE WorkID=118 AND NDTo='102' AND ActionType=1 ORDER BY RDT DESC . 列= , NDFrom
+19日20时28分06秒Info:System');"@SQL=SELECT NDFrom FROM ND1Track WHERE WorkID=118 AND NDTo='102' AND ActionType=1 ORDER BY RDT DESC . 列= , NDFrom
+19日20时29分19秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时29分29秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时29分31秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时35分59秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=123 AND FK_Flow='001' . 列= , FK_Node
+19日20时35分59秒Warning:System');"@文本信息里面有html标记:@<img src='/WF/Img/AllotTask.gif' border=0 /><a href="/WF/WorkOpt/AllotTask.aspx?WorkID=123&FID=123&NodeID=102" >修改接受对象</a>.
+19日20时35分59秒Warning:System');"@文本信息里面有html标记:@<a href='/WF/MyFlowInfo.aspx?DoType=UnSend&WorkID=123&FK_Flow=001'><img src='/WF/Img/UnDo.gif' border=0/>撤销本次发送</a>， <a href='/WF/MyFlow.aspx?FK_Flow=001&FK_Node=00101' ><img src='/WF/Img/New.gif' border=0/>新建流程</a>。
+19日20时35分59秒Warning:System');"@文本信息里面有html标记:@<a href='/WF/WFRpt.aspx?WorkID=123&FID=123&FK_Flow=001'target='_self' >工作轨迹</a>
+19日20时36分59秒Info:System');"@SQL=SELECT NDFrom FROM ND1Track WHERE WorkID=124 AND NDTo='102' AND ActionType=1 ORDER BY RDT DESC . 列= , NDFrom
+19日20时37分43秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时37分50秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时37分58秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时39分43秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=126 AND FK_Flow='001' . 列= , FK_Node
+19日20时44分24秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时45分12秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=127 AND FK_Flow='001' . 列= , FK_Node
+19日20时47分08秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时47分12秒Fatal:System');"SQL=Select a.EmpNo No, a.Name From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss''  Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+19日20时47分12秒Info:System');"SQL=ALTER TABLE  ND1Track ADD Tag NVARCHAR(4000) DEFAULT '' NULL,异常信息:各表中的列名必须唯一。在表 'ND1Track' 中多次指定了列名 'Tag'。
+19日20时48分00秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=128 AND FK_Flow='001' . 列= , FK_Node
+19日20时50分20秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时50分27秒Fatal:System');"SQL=Select a.EmpNo No, a.Name From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'';Select a.EmpNo No, a.Name From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss''  Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+19日20时50分27秒Info:System');"SQL=ALTER TABLE  ND1Track ADD Tag NVARCHAR(4000) DEFAULT '' NULL,异常信息:各表中的列名必须唯一。在表 'ND1Track' 中多次指定了列名 'Tag'。
+19日20时51分20秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=129 AND FK_Flow='001' . 列= , FK_Node
+19日20时52分44秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=130 AND FK_Flow='001' . 列= , FK_Node
+19日20时53分33秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=131 AND FK_Flow='001' . 列= , FK_Node
+19日20时54分10秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时54分16秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时54分16秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时54分16秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时54分20秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时54分26秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时54分26秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时54分26秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时54分49秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时54分49秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时54分49秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时54分57秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时54分58秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时55分08秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时55分13秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时55分13秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时55分13秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时55分34秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时55分45秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时55分45秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时55分45秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时56分03秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时56分05秒Fatal:System');"SQL=Select a.EmpNo No, a.Name From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'';Select a.EmpNo No, a.Name From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss''  Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+19日20时56分05秒Info:System');"SQL=ALTER TABLE  ND1Track ADD Tag NVARCHAR(4000) DEFAULT '' NULL,异常信息:各表中的列名必须唯一。在表 'ND1Track' 中多次指定了列名 'Tag'。
+19日20时56分17秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时56分26秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时56分31秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时56分31秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时56分31秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时56分37秒Fatal:System');"SQL=Select a.EmpNo No, a.Name From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'';Select a.EmpNo No, a.Name From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss''  Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+19日20时56分37秒Info:System');"SQL=ALTER TABLE  ND1Track ADD Tag NVARCHAR(4000) DEFAULT '' NULL,异常信息:各表中的列名必须唯一。在表 'ND1Track' 中多次指定了列名 'Tag'。
+19日20时56分43秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时56分47秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时56分47秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时56分47秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时56分49秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时56分49秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时56分49秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时57分02秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时57分02秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时57分02秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时57分05秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时57分05秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时57分12秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时57分12秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时57分12秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时57分15秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时58分47秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时58分51秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时58分51秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时58分51秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时59分35秒Fatal:System');"SQL=Select a.EmpNo No, a.Name From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'';Select a.EmpNo No, a.Name From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss''  Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+19日20时59分35秒Info:System');"SQL=ALTER TABLE  ND1Track ADD Tag NVARCHAR(4000) DEFAULT '' NULL,异常信息:各表中的列名必须唯一。在表 'ND1Track' 中多次指定了列名 'Tag'。
+19日20时59分42秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时59分44秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时59分44秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时59分44秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日20时59分57秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时00分05秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时00分05秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时00分05秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时01分27秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时01分48秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时01分53秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时01分53秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时01分53秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时01分56秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时01分56秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时01分56秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时02分10秒Info:System');"SQL=DROP TABLE ND104,异常信息:无法对 表 'ND104' 执行 删除，因为它不存在，或者您没有所需的权限。
+19日21时02分20秒Info:System');"SQL=DROP TABLE ND105,异常信息:无法对 表 'ND105' 执行 删除，因为它不存在，或者您没有所需的权限。
+19日21时02分51秒Info:System');"成功[BP.Sys.ToolbarExcel-7]放入缓存。
+19日21时02分51秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时02分56秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时02分56秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时02分56秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时03分37秒Info:System');"SQL=DROP TABLE ND104,异常信息:无法对 表 'ND104' 执行 删除，因为它不存在，或者您没有所需的权限。
+19日21时03分40秒Info:System');"SQL=DROP TABLE ND105,异常信息:无法对 表 'ND105' 执行 删除，因为它不存在，或者您没有所需的权限。
+19日21时03分46秒Fatal:System');"SQL=Select a.EmpNo No, a.Name From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'';Select a.EmpNo No, a.Name From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss''  Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+19日21时03分46秒Info:System');"SQL=ALTER TABLE  ND1Track ADD Tag NVARCHAR(4000) DEFAULT '' NULL,异常信息:各表中的列名必须唯一。在表 'ND1Track' 中多次指定了列名 'Tag'。
+19日21时03分54秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时03分57秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时03分57秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时03分57秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时04分03秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时04分04秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时04分08秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时04分09秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时04分24秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时04分26秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时04分26秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时04分26秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时04分31秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时04分31秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时04分31秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时04分32秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时04分37秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时04分37秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时04分37秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时04分41秒Fatal:System');"SQL=Select a.EmpNo No, a.Name From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'';Select a.EmpNo No, a.Name From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss''  Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+19日21时04分41秒Info:System');"SQL=ALTER TABLE  ND1Track ADD Tag NVARCHAR(4000) DEFAULT '' NULL,异常信息:各表中的列名必须唯一。在表 'ND1Track' 中多次指定了列名 'Tag'。
+19日21时05分29秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时05分33秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时05分33秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时05分33秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+-----------------------------------------------------------------------------------------------------
+19日21时06分41秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+19日21时06分47秒Info:System');"成功[BP.Sys.EnCfg-2]放入缓存。
+19日21时06分49秒Info:System');"成功[BP.Sys.ToolbarExcel-5]放入缓存。
+19日21时06分49秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时06分52秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时06分52秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时06分52秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时07分56秒Info:System');"SQL=DELETE FROM ND2Track ,异常信息:对象名 'ND2Track' 无效。
+19日21时07分56秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND2Rpt' . 列= , name
+19日21时07分56秒Info:System');"SQL=DELETE FROM ND2Track ,异常信息:对象名 'ND2Track' 无效。
+19日21时07分56秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND2Rpt' . 列= , name
+19日21时07分56秒Info:System');"SQL=DROP TABLE ND2Rpt,异常信息:无法对 表 'ND2Rpt' 执行 删除，因为它不存在，或者您没有所需的权限。
+19日21时07分56秒Info:System');"SQL=DROP VIEW V_002,异常信息:无法对 视图 'V_002' 执行 删除，因为它不存在，或者您没有所需的权限。
+19日21时07分56秒Info:System');"SQL=DROP TABLE ND2Track ,异常信息:无法对 表 'ND2Track' 执行 删除，因为它不存在，或者您没有所需的权限。
+19日21时07分56秒Fatal:System');"SQL=	
+ SELECT '100' AS FK_FlowSort,'001' AS FK_Flow,OID,FID,Title,WFState,CDT,FlowStarter,FlowStartRDT,FK_Dept,FK_NY,FlowDaySpan,FlowEmps,FlowEnder,FlowEnderRDT,FlowEndNode,1 as MyNum,PWorkID,PFlowNo,BillNo,ProjNo FROM ND1Rpt WHERE WFState >1  Exception=列名 'ProjNo' 无效。
+19日21时07分56秒Info:System');"SQL=DROP TABLE ND201,异常信息:无法对 表 'ND201' 执行 删除，因为它不存在，或者您没有所需的权限。
+19日21时07分57秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND201' . 列= , name
+19日21时07分57秒Info:System');"SQL=DROP INDEX ND201ID ON ND201,异常信息:无法对 索引 'ND201.ND201ID' 执行 删除，因为它不存在，或者您没有所需的权限。
+19日21时07分57秒Info:System');"SQL=DROP TABLE ND202,异常信息:无法对 表 'ND202' 执行 删除，因为它不存在，或者您没有所需的权限。
+19日21时07分57秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND202' . 列= , name
+19日21时07分57秒Info:System');"SQL=DROP INDEX ND202ID ON ND202,异常信息:无法对 索引 'ND202.ND202ID' 执行 删除，因为它不存在，或者您没有所需的权限。
+19日21时07分57秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND2Track' . 列= , name
+19日21时07分57秒Info:System');"SQL=DROP TABLE WF_Track,异常信息:无法对 表 'WF_Track' 执行 删除，因为它不存在，或者您没有所需的权限。
+19日21时07分57秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'WF_Track' . 列= , name
+19日21时07分57秒Info:System');"SQL=DROP INDEX WF_TrackID ON WF_Track,异常信息:无法对 索引 'WF_Track.WF_TrackID' 执行 删除，因为它不存在，或者您没有所需的权限。
+19日21时07分57秒Info:System');"SQL=ALTER TABLE WF_TRACK ADD CONSTRAINT WF_Trackpk PRIMARY KEY(MYPK),异常信息:数据库中已存在名为 'WF_Trackpk' 的对象。
+无法创建约束。请参阅前面的错误消息。
+19日21时07分58秒Info:System');"@SQL=SELECT name  FROM sysobjects  WHERE  name = 'ND2Rpt' . 列= , name
+19日21时07分58秒Info:System');"SQL=DROP INDEX ND2RptID ON ND2Rpt,异常信息:无法对 索引 'ND2Rpt.ND2RptID' 执行 删除，因为它不存在，或者您没有所需的权限。
+19日21时07分58秒Fatal:System');"SQL=	
+ SELECT '100' AS FK_FlowSort,'001' AS FK_Flow,OID,FID,Title,WFState,CDT,FlowStarter,FlowStartRDT,FK_Dept,FK_NY,FlowDaySpan,FlowEmps,FlowEnder,FlowEnderRDT,FlowEndNode,1 as MyNum,PWorkID,PFlowNo,BillNo,ProjNo FROM ND1Rpt WHERE WFState >1  Exception=列名 'ProjNo' 无效。
+19日21时07分58秒Fatal:System');"SQL=	
+ SELECT '100' AS FK_FlowSort,'002' AS FK_Flow,OID,FID,Title,WFState,CDT,FlowStarter,FlowStartRDT,FK_Dept,FK_NY,FlowDaySpan,FlowEmps,FlowEnder,FlowEnderRDT,FlowEndNode,1 as MyNum,PWorkID,PFlowNo,BillNo,ProjNo FROM ND2Rpt WHERE WFState >1  Exception=列名 'ProjNo' 无效。
+19日21时08分07秒Info:System');"成功[BP.Sys.ToolbarExcel-9]放入缓存。
+19日21时08分07秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时08分09秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时08分09秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时08分09秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时08分20秒Info:System');"SQL=DELETE FROM ND201,异常信息:对象名 'ND201' 无效。
+19日21时08分20秒Info:System');"SQL=DROP TABLE ND201,异常信息:无法对 表 'ND201' 执行 删除，因为它不存在，或者您没有所需的权限。
+19日21时08分20秒Info:System');"SQL=DROP VIEW V_002,异常信息:无法对 视图 'V_002' 执行 删除，因为它不存在，或者您没有所需的权限。
+19日21时08分20秒Fatal:System');"SQL=	
+ SELECT '100' AS FK_FlowSort,'001' AS FK_Flow,OID,FID,Title,WFState,CDT,FlowStarter,FlowStartRDT,FK_Dept,FK_NY,FlowDaySpan,FlowEmps,FlowEnder,FlowEnderRDT,FlowEndNode,1 as MyNum,PWorkID,PFlowNo,BillNo,ProjNo FROM ND1Rpt WHERE WFState >1  Exception=列名 'ProjNo' 无效。
+-----------------------------------------------------------------------------------------------------
+19日21时14分37秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+19日21时14分50秒Info:System');"成功[BP.Sys.EnCfg-2]放入缓存。
+19日21时15分18秒Info:System');"成功[BP.Sys.ToolbarExcel-6]放入缓存。
+19日21时15分18秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时15分26秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时15分30秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时15分30秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时15分30秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时15分58秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时16分02秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时16分02秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时16分02秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时16分05秒Fatal:System');"SQL=Select a.EmpNo No, a.Name From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss''  Union Select a.EmpNo No, a.Name From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss''  Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+19日21时16分05秒Info:System');"SQL=ALTER TABLE  ND1Track ADD Tag NVARCHAR(4000) DEFAULT '' NULL,异常信息:各表中的列名必须唯一。在表 'ND1Track' 中多次指定了列名 'Tag'。
+19日21时16分22秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时16分25秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时16分25秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时16分25秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时16分30秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时16分30秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时16分30秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时16分34秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时16分34秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时16分34秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时16分48秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时16分48秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时16分48秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时17分30秒Fatal:System');"SQL=Select a.EmpNo No, a.Name From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss''  Union Select a.EmpNo No, a.Name From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss''  Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+19日21时17分30秒Info:System');"SQL=ALTER TABLE  ND1Track ADD Tag NVARCHAR(4000) DEFAULT '' NULL,异常信息:各表中的列名必须唯一。在表 'ND1Track' 中多次指定了列名 'Tag'。
+19日21时17分39秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时17分42秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时17分42秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时17分42秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时17分46秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时17分50秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时17分50秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时17分50秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时38分17秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时38分22秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时38分22秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时38分22秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时38分26秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时38分26秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日21时38分26秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+-----------------------------------------------------------------------------------------------------
+19日22时48分49秒Info:System');"成功[BP.Sys.ToolbarExcel-6]放入缓存。
+19日22时48分49秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时49分05秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+19日22时49分13秒Info:System');"成功[BP.Sys.EnCfg-2]放入缓存。
+19日22时49分16秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时49分20秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时49分20秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时49分20秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时49分29秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时49分29秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时49分29秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时49分32秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时49分32秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时49分32秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时49分40秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时49分40秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时49分40秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时49分44秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时49分44秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时49分44秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时53分19秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时53分22秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时53分22秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时53分22秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时53分25秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时53分25秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时53分25秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时53分27秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时53分27秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时53分28秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时53分37秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时53分37秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时53分37秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时53分39秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时53分39秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时53分39秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+-----------------------------------------------------------------------------------------------------
+19日22时55分06秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+19日22时55分19秒Info:System');"成功[BP.Sys.EnCfg-2]放入缓存。
+19日22时55分22秒Info:System');"成功[BP.Sys.ToolbarExcel-6]放入缓存。
+19日22时55分22秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时55分25秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时55分25秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时55分25秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时55分35秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时55分35秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时55分35秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时55分43秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时55分43秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时55分43秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时55分46秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时55分46秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时55分46秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时57分57秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时57分59秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时57分59秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日22时57分59秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+-----------------------------------------------------------------------------------------------------
+19日23时48分12秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+19日23时48分18秒Info:System');"成功[BP.Sys.EnCfg-2]放入缓存。
+19日23时48分21秒Info:System');"成功[BP.Sys.ToolbarExcel-6]放入缓存。
+19日23时48分21秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时48分24秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时48分24秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时48分24秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时52分52秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时52分52秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时52分52秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时53分12秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时53分12秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时53分12秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时53分19秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时53分19秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时53分19秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时53分32秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时53分35秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时53分35秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时53分35秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时53分43秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时53分43秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时53分43秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时54分44秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时54分47秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时54分47秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时54分47秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时54分49秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时54分49秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时54分49秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时54分53秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时54分53秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时54分53秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时54分56秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时54分56秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时54分56秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时55分00秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时55分00秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+19日23时55分00秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
