@@ -88,6 +88,8 @@
     <Compile Include="FaQiDAL.cs" />
     <Compile Include="LinkDAL.cs" />
     <Compile Include="AttachDAL.cs" />
+    <Compile Include="ChaoSongDAL.cs" />
+    <Compile Include="ZaiTuDAL.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -78,6 +78,8 @@
     <Compile Include="IFaQiDAL.cs" />
     <Compile Include="ILinkDAL.cs" />
     <Compile Include="IAttachDAL.cs" />
+    <Compile Include="IChaoSongDAL.cs" />
+    <Compile Include="IZaiTuDAL.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

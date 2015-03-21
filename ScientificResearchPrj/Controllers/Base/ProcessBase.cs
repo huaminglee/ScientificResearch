@@ -65,9 +65,7 @@ namespace ScientificResearchPrj.Controllers.Base
             ViewData["FK_Node"] = FK_Node;
             ViewData["FID"] = FID;
 
-            //当前登陆者
-            ViewData["LoginUser"] = BP.Web.WebUser.No;
-            ViewData["LoginUserName"] = BP.Web.WebUser.Name;
+            SetLoginUserData();
 
             //查询是否有退回消息
             ReturnNodeModel retNode = new ReturnNodeModel();
@@ -87,6 +85,12 @@ namespace ScientificResearchPrj.Controllers.Base
 
             DataTable flowInfo = SrService.CommonOperationService.GetCurrentFlowInfoFromEmpWorks(args);
             ViewData["CurrentFlowInfo"] = EasyUIJson.GetEasyUIJsonFromDataTable(flowInfo);
+        }
+
+        protected void SetLoginUserData() {
+            //当前登陆者
+            ViewData["LoginUser"] = BP.Web.WebUser.No;
+            ViewData["LoginUserName"] = BP.Web.WebUser.Name;
         }
 
         protected bool FaSong(CCFlowArgs args)

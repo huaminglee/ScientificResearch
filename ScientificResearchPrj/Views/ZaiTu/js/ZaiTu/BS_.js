@@ -15,5 +15,17 @@
                     window.location.href = "/ZaiTu/JieShuLiuCheng?FK_Flow=" + fk_flow + "&WorkID=" + workID;
                 }
             });
+        },
+
+        openTargetUrl: function (openRight, url) {
+            var message = "";
+            if (openRight == "1") message = "您不是当前流程处理人，但是流程历史处理者，可以查看当前节点内容但不能编辑";
+            if (openRight == "2") message = "您不是当前流程处理人，但是流程发起者，可以查看当前节点内容但不能编辑";
+            if (openRight == "3") message = "您当前流程处理人，可以查看和编辑当前节点内容";
+            $.messager.confirm("提示", message, function (data) {
+                if (data) {
+                    window.open(url);
+                }
+            });
         }
     }

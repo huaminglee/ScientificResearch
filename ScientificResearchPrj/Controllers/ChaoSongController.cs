@@ -36,14 +36,31 @@ namespace ScientificResearchPrj.Controllers
             return View();
         }
          
-        public ActionResult CCYiYue()
+        public void CCYiYue()
         {
             string myPK = Request.Form["MyPK"];
             if (string.IsNullOrEmpty(myPK) == false)
             {
                 CurrentService.CCSetRead(myPK);
             }
-            return null;
+        }
+
+        public void CCShanChu()
+        {
+            string myPK = Request.Form["MyPK"];
+            if (string.IsNullOrEmpty(myPK) == false)
+            {
+                CurrentService.CCLogicalDelete(myPK);
+            }
+        }
+
+        public void CCCheDiShanChu()
+        {
+            string myPK = Request.Form["MyPK"];
+            if (string.IsNullOrEmpty(myPK) == false)
+            {
+                CurrentService.CCPhysicalDelete(myPK);
+            }
         }
 
         public ActionResult ChaoSongZhunBei()

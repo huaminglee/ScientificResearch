@@ -1,4 +1,5 @@
 ﻿using ScientificResearchPrj.IDAL;
+using ScientificResearchPrj.Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -15,5 +16,6 @@ namespace ScientificResearchPrj.DAL
             string sql = "SELECT  A.*,B.Name as FlowSortName FROM WF_GenerWorkFlow as A, WF_FlowSort as B where A.FK_FlowSort=B.No";
             return BP.DA.DBAccess.RunSQLReturnTable(sql);
         }
+
     }
 }

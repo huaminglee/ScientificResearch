@@ -99,7 +99,7 @@ Date.prototype.Format = function (fmt) { //author: meizz
     return fmt;
 }
 
-
+//往dom树添加js文件
 function DomAddJavaScript(headTagName, srcPath) {
     var oHead = document.getElementsByTagName(headTagName).item(0);
     var oScript = document.createElement("script");
@@ -108,3 +108,26 @@ function DomAddJavaScript(headTagName, srcPath) {
     oHead.appendChild(oScript);
 }
  
+//url中获取参数
+function getUrlArgs() {
+    var args = {};
+    var match = null;
+    var search = decodeURIComponent(location.search.substring(1));
+    var reg = /(?:([^&]+)=([^&]+))/g;
+    while ((match = reg.exec(search)) !== null) {
+        args[match[1]] = match[2];
+    }
+    return args;
+}
+
+//url中获取参数
+function getUrlArgs(argName) {
+    var args = {};
+    var match = null;
+    var search = decodeURIComponent(location.search.substring(1));
+    var reg = /(?:([^&]+)=([^&]+))/g;
+    while ((match = reg.exec(search)) !== null) {
+        args[match[1]] = match[2];
+    }
+    return args[argName];
+}

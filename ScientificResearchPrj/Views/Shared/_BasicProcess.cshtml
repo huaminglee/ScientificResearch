@@ -374,6 +374,9 @@
             "NO": "false"
         };
 
+        //根据Url CanEdit表示能否编辑，1为能，0为不能，具体在每个ET_文件中实现
+        var CanEdit = getUrlArgs("CanEdit");
+        if (CanEdit == undefined) CanEdit = 1;
     </script>
     
      @RenderBody()

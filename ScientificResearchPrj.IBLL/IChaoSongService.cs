@@ -14,6 +14,8 @@ namespace ScientificResearchPrj.IBLL
         DataTable GetUnReadCClist();
         DataTable GetDeleteCClist();
         void CCSetRead(string myPK);
+        void CCLogicalDelete(string myPK);
+        void CCPhysicalDelete(string myPK);
         string WriteToCCList(CCModel cc);
     }
 }

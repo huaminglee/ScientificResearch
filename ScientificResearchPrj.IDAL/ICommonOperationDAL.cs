@@ -14,5 +14,9 @@ namespace ScientificResearchPrj.IDAL
         DataTable SelectCurrentFlowInfoFromEmpWorks(CCFlowArgs args);
 
         DataTable SelectPreviousNodeInfo(CCFlowArgs args);
+
+        DataTable SelectUnPassedFlowWithFK_Node(CCFlowArgs args);
+
+        DataTable SelectPassedFlow(CCFlowArgs args);
     }
 }

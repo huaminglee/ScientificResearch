@@ -17,6 +17,16 @@ var _CommomOperation = {
                 console.log(id + ":" + result.rows[0][id]);
                 newData.rows[i].value = result.rows[0][id];
             }
+
+            //当前操作无编辑功能
+            if (CanEdit == 0) {
+                if (newData.rows[i].editor == "ex_textarea") {
+                    newData.rows[i].editor = "ex_wintextareareadonly";
+                }
+                else if(newData.rows[i].editor != null){
+                    newData.rows[i].editor = "";
+                }
+            }
         }
         $('#pg').propertygrid({ data: newData });
     },
@@ -44,6 +54,16 @@ var _CommomOperation = {
                 tempData = _CommomOperation.getClonePropertygridByPrefix(prefix, 0, 0);
 
             for (var j = 0; j < tempData.length; j++) {
+                //当前操作无编辑功能
+                if (CanEdit == 0) {  
+                    if (tempData[j].editor == "ex_textarea") {
+                        tempData[j].editor = "ex_wintextareareadonly";
+                    }
+                    else if(tempData[j].editor != null){
+                        tempData[j].editor = "";
+                    }
+                }
+
                 //更新index
                 tempData[j].index = i;
 

@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace ScientificResearchPrj.IDAL
 {
-    public interface IProcessAllDAL : IBaseDAL<Object>
+    public interface IChaoSongDAL : IBaseDAL<Object>
     {
-        DataTable SelectAllProcess();
-
+        void CCLogicalDelete(string myPK);
+        void CCPhysicalDelete(string myPK);
     }
 }

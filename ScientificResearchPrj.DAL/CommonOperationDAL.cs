@@ -45,5 +45,20 @@ namespace ScientificResearchPrj.DAL
              
             return BP.DA.DBAccess.RunSQLReturnTable(ps);
         }
+
+        public DataTable SelectUnPassedFlowWithFK_Node(CCFlowArgs args)
+        {
+            string sql = "SELECT A.*, B.FK_Emp FROM WF_GenerWorkFlow A, WF_GenerWorkerlist B WHERE A.WorkID=" + args.WorkID + " And A.FK_Flow=" + args.FK_Flow + " And A.FK_Node=" + args.FK_Node + " And A.FID=" + args.FID + " AND A.WorkID=B.WorkID  AND B.IsEnable=1 AND B.IsPass=0 ";
+
+            return BP.DA.DBAccess.RunSQLReturnTable(sql);
+        }
+
+        public DataTable SelectPassedFlow(CCFlowArgs args)
+        {
+            string sql = "SELECT A.*, B.FK_Emp  FROM WF_GenerWorkFlow A, WF_GenerWorkerlist B WHERE A.WorkID=" + args.WorkID + " And A.FK_Flow=" + args.FK_Flow + " And A.FID=" + args.FID + " AND A.WorkID=B.WorkID  AND B.IsEnable=1 AND B.IsPass=1 ";
+
+            return BP.DA.DBAccess.RunSQLReturnTable(sql);
+        }
+
     }
 }

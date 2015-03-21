@@ -18,6 +18,8 @@ namespace ScientificResearchPrj.Controllers
 
         public ActionResult AllProcess()
         {
+            SetLoginUserData();
+
             DataTable allFlows = CurrentService.GetAllProcess();
             ViewData["_Json"] = EasyUIJson.GetEasyUIJsonFromDataTable(allFlows);
             return View();

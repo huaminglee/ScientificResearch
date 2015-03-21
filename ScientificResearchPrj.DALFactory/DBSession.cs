@@ -135,6 +135,16 @@ namespace ScientificResearchPrj.DALFactory
             get { return new FaQiDAL(); }
         }
 
+        public IChaoSongDAL ChaoSongDAL
+        {
+            get { return new ChaoSongDAL(); }
+        }
+
+        public IZaiTuDAL ZaiTuDAL
+        {
+            get { return new ZaiTuDAL(); }
+        }
+
         public ILinkDAL LinkDAL
         {
             get { return new LinkDAL(); }

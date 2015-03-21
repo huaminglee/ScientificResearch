@@ -3,9 +3,15 @@
        
         CurrentPropertygridDataCount = 8;
 
-        $('#link_fasong').bind('click', BS_.faSong);
-        $('#link_baocun').bind('click', BS_.baoCun);
-        $('#link_chaosong').bind('click', BS_.chaoSong);
+        if (CanEdit == 0) {
+            $('#link_fasong').linkbutton("disable");
+            $('#link_baocun').linkbutton("disable");
+            $('#link_chaosong').linkbutton("disable");
+        } else {
+            $('#link_fasong').bind('click', BS_.faSong);
+            $('#link_baocun').bind('click', BS_.baoCun);
+            $('#link_chaosong').bind('click', BS_.chaoSong);
+        }
         $('#link_liuchengtu').bind('click', BS_.liuChengTu);
 
         $('#link_fasong').bind('mouseover', _CommomOperation.propertygridEndEdit);

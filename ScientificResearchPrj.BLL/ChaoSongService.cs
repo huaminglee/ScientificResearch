@@ -1,5 +1,7 @@
-﻿using ScientificResearchPrj.DALFactory;
+﻿using BP.WF.Template;
+using ScientificResearchPrj.DALFactory;
 using ScientificResearchPrj.IBLL;
+using ScientificResearchPrj.IDAL;
 using ScientificResearchPrj.Model;
 using System;
 using System.Collections.Generic;
@@ -9,12 +11,25 @@ using System.Text;
 
 namespace ScientificResearchPrj.BLL
 {
-    public class ChaoSongService:IChaoSongService
+    public class ChaoSongService : BaseService<Object>, IChaoSongService
     {
+        public override void SetCurrentDAL()
+        {
+            CurrentDAL = this.DbSession.ChaoSongDAL;
+        }
 
         public DataTable GetAllCClist()
         {
             DataTable ccList_All = BP.WF.Dev2Interface.DB_CCList(BP.Web.WebUser.No);
+            if (ccList_All != null && ccList_All.Rows != null) {
+                for (int i = ccList_All.Rows.Count-1; i >=0; i--)
+                {
+                    if (Convert.ToInt32(ccList_All.Rows[i]["Sta"]) == (int)CCSta.Del)
+                    { 
+                        ccList_All.Rows.RemoveAt(i);
+                    }
+                }
+            }
             SetRecName(ccList_All);
             return ccList_All;
         }
@@ -54,6 +69,16 @@ namespace ScientificResearchPrj.BLL
         public void CCSetRead(string myPK)
         {
             BP.WF.Dev2Interface.Node_CC_SetRead(myPK);
+        }
+
+        public void CCLogicalDelete(string myPK)
+        {
+            (CurrentDAL as IChaoSongDAL).CCLogicalDelete(myPK);
+        }
+
+        public void CCPhysicalDelete(string myPK)
+        {
+            (CurrentDAL as IChaoSongDAL).CCPhysicalDelete(myPK);
         }
 
         public string WriteToCCList(CCModel cc)
