@@ -22,7 +22,7 @@ namespace ScientificResearchPrj.BLL
         public Dictionary<string, string> SignIn(AccountModel model)
         {
             //作为密码方式加密   
-            string md5 = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(model.Password, "MD5");
+            string md5 = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(model.Password, "MD5").ToUpper();
             System.Diagnostics.Debug.WriteLine("md5========"+md5);
 
             MyPort_Emp emp=this.DbSession.EmpDAL.LoadEntities(a => a.EmpNo == model.UserName && a.Pass == md5).FirstOrDefault();
@@ -64,6 +64,52 @@ namespace ScientificResearchPrj.BLL
                 Dictionary<string, string> dictionary = new Dictionary<string, string>();
                 dictionary.Add("state", "-1");
                 dictionary.Add("message", "用户名或密码出错");
+                return dictionary;
+            }
+        }
+
+        public void SignOut() {
+            //调用ccflow的登录,返回从数据库查询到的sid
+            BP.WF.Dev2Interface.Port_SigOut();
+        }
+
+        public Dictionary<string, string> ResetPassword(Model.ResetPasswordModels model) {
+            MyPort_Emp ifEmpExist;
+            if (string.IsNullOrEmpty(model.Email) == false)
+            {
+                ifEmpExist = this.DbSession.EmpDAL.LoadEntities(a => a.EmpNo == model.UserName && a.Email == model.Email).FirstOrDefault();
+            }
+            else {
+                ifEmpExist = this.DbSession.EmpDAL.LoadEntities(a => a.EmpNo == model.UserName && (a.Email == "" || a.Email==null)).FirstOrDefault();
+            }
+
+            if (ifEmpExist == null)
+            {
+                Dictionary<string, string> dictionary = new Dictionary<string, string>();
+                dictionary.Add("state", "-1");
+                dictionary.Add("message", "用户名或邮箱出错");
+                return dictionary;
+            }
+             
+            try
+            {
+                MyPort_Emp emp = this.DbSession.EmpDAL.LoadEntities(a=>a.EmpNo==model.UserName).FirstOrDefault();
+                if (emp != null) {
+                    string md5 = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(model.UserName, "MD5").ToUpper();
+                    emp.Pass = md5;
+
+                    this.DbSession.EmpDAL.UpdateEntity(emp);
+                    this.DbSession.SaveChanges();
+                }
+                Dictionary<string, string> dictionary = new Dictionary<string, string>();
+                dictionary.Add("state", "0");
+                dictionary.Add("message", "成功重设密码，新密码为您的编号");
+                return dictionary;
+            }
+            catch (Exception e) {
+                Dictionary<string, string> dictionary = new Dictionary<string, string>();
+                dictionary.Add("state", "-1");
+                dictionary.Add("message", "重设密码失败~~"+e.Message);
                 return dictionary;
             }
         }

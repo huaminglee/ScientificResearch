@@ -84,6 +84,26 @@ namespace ScientificResearchPrj.Controllers
                 message = dictionary["message"]
             });
          }
-      
+
+        public ActionResult HuoQuGeRenXinXi() {
+            List<MyPort_Emp> emps = new List<MyPort_Emp>();
+            MyPort_Emp emp = empService.GetCurrentLoginUserInfo();
+            if (emp.EmpNo != null)
+            {
+                emps.Add(emp);
+                ViewData["Json_UserInfo"] = EasyUIJson.GetEasyUIJson_Emp(emps,emp.Type);
+            }
+
+            return View();
+        }
+
+        public ActionResult XiuGaiGeRenXinXi(MyPort_Emp emp, string NewPass) {
+            Dictionary<string, string> dictionary = empService.ModifyEmpInfo(emp, NewPass);
+            return Json(new
+            {
+                state = dictionary["state"],
+                message = dictionary["message"]
+            });
+        }
     }
 }

@@ -1,0 +1,65 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>人员信息</title>
+    <!-- Jquery EasyUI styles for this template -->
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/bootstrap/easyui.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/icon.css">
+     <style>
+         .rowDiv {
+            margin-bottom:10px;
+         }
+         .rowDiv span{
+            font-size:18px;
+            font-weight:bold;
+         }
+         .rowDiv input {
+           width:200px;
+         }
+     </style>
+</head>
+<body>
+    <div style="margin:100px 300px">
+        <div class="easyui-panel" title="修改个人信息" style="width:500px;height:320px;padding:20px 10px;text-align:center;"
+			    data-options="iconCls:'icon-edit',closable:false,tools:'#tt'">
+            <div class="rowDiv"><span>用户编号：</span><input class="easyui-textbox" data-options="readonly:true" id="EmpNo"> </div>
+            <div class="rowDiv"><span>用户姓名：</span><input class="easyui-textbox"  id="Name"> </div>
+            <div class="rowDiv"><span>用户邮箱：</span><input class="easyui-textbox" data-options="validType:'email'" id="Email"> </div>
+            <div class="rowDiv"><span>用户电话：</span><input class="easyui-numberbox" id="Tel"> </div>
+            <div class="rowDiv"><span>修改密码：</span><input type="checkbox" id="IfModifyPass" onchange="BS_.ModifyPassword()"></div>
+            <div class="rowDiv"><span>原来密码：</span><input class="easyui-textbox" disabled type="password" id="Pass"> </div>
+            <div class="rowDiv"><span>新的密码：</span><input class="easyui-textbox" disabled type="password" id="NewPass"> </div>
+            <div class="rowDiv"><span>确认密码：</span><input class="easyui-textbox" disabled type="password" id="RePass"> </div>
+        </div>
+    </div>
+    <div id="tt">
+		<a href="javascript:void(0)" class="icon-save" onclick="javascript:BS_.saveEditInfo()"></a>
+	</div>
+    <!--Jquery EasyUI  js文件   -->
+    <script src="~/Content/jquery-easyui-1.4.1/jquery.min.js"></script>
+    <script src="~/Content/jquery-easyui-1.4.1/jquery.easyui.min.js"></script>
+    <script src="~/Scripts/jquery_extend.js"></script>
+
+    <script src="~/Views/Emp/js/HuoQuGeRenXinXi/AT_.js"></script>
+    <script src="~/Views/Emp/js/HuoQuGeRenXinXi/BS_.js"></script>
+    <script src="~/Views/Emp/js/HuoQuGeRenXinXi/ET_.js"></script>
+    <script>
+        $(function () { 
+            var Json_UserInfo = parseJSON('@Html.Raw(@ViewData["Json_UserInfo"])');
+            if (Json_UserInfo != null && Json_UserInfo.rows != null) {
+                $('#EmpNo').textbox('setValue', Json_UserInfo.rows[0].EmpNo);
+                $('#Name').textbox('setValue', Json_UserInfo.rows[0].Name);
+                $('#Email').textbox('setValue', Json_UserInfo.rows[0].Email);
+                $('#Tel').numberbox('setValue', Json_UserInfo.rows[0].Tel);  
+            }
+        });
+
+    </script>
+</body>
+</html>

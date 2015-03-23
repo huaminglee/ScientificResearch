@@ -584,6 +584,10 @@ namespace BP.WF
                     wl.WorkID = nextUsersWorkID;
                 }
 
+                /*By 庄坚*/
+                wl.Sender = town.Execer;
+                /*By 庄坚*/
+
                 wl.FID = nextUsersFID;
                 wl.FK_Node = toNodeId;
                 wl.FK_NodeText = town.HisNode.Name;
@@ -707,6 +711,12 @@ namespace BP.WF
                         wl.IsEnable = false;
                     }
                     #endregion 根据记忆是否设置该操作员可用与否。
+
+
+                    /*By 庄坚*/
+                    wl.Sender = town.Execer;
+                    /*By 庄坚*/
+
 
                     wl.FK_Node = toNodeId;
                     wl.FK_NodeText = town.HisNode.Name;
@@ -5954,7 +5964,7 @@ namespace BP.WF
             wl.SDT = DataType.CurrentDataTime;
             wl.DTOfWarning = DataType.CurrentData;
             wl.RDT = DataType.CurrentDataTime;
-
+             
             try
             {
                 wl.Save();

@@ -67,6 +67,6 @@ E:\ScientificResearch\ScientificResearchPrj.IBLL\bin\Debug\ScientificResearchPrj
 E:\ScientificResearch\ScientificResearchPrj.IBLL\bin\Debug\ScientificResearchPrj.Model.pdb
 E:\ScientificResearch\ScientificResearchPrj.IBLL\bin\Debug\BP.En30.pdb
 E:\ScientificResearch\ScientificResearchPrj.IBLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
-E:\ScientificResearch\ScientificResearchPrj.IBLL\obj\Debug\ScientificResearchPrj.IBLL.csprojResolveAssemblyReference.cache
 E:\ScientificResearch\ScientificResearchPrj.IBLL\obj\Debug\ScientificResearchPrj.IBLL.dll
 E:\ScientificResearch\ScientificResearchPrj.IBLL\obj\Debug\ScientificResearchPrj.IBLL.pdb
+E:\ScientificResearch\ScientificResearchPrj.IBLL\obj\Debug\ScientificResearchPrj.IBLL.csprojResolveAssemblyReference.cache

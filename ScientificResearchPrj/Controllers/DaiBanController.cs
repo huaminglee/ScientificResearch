@@ -19,6 +19,8 @@ namespace ScientificResearchPrj.Controllers
  
         public ActionResult DaiBan()
         {
+            SetLoginUserData();
+
             DataTable todoFlows = CurrentService.GetTodoFlows();
             ViewData["_Json"] = EasyUIJson.GetEasyUIJsonFromDataTable(todoFlows);
             return View();

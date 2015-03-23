@@ -337,7 +337,10 @@ var openProjectDialogFlag = false;
             newRow["Description"] = BS_.getValueFromPropertygridById("Description");
             newRow["Remarks"] = BS_.getValueFromPropertygridById("Remarks");
 
-            if (openProjectDialogFlag == false) {
+            if (tableCount > jsonResult.rows.length && openProjectDialogFlag == false) {
+                newRow["FK_XmOID"] = "";
+            }
+            else if (openProjectDialogFlag == false) {
                 newRow["FK_XmOID"] = propertygridJsonResult.rows[0].FK_XmOID;
             } else {
                 newRow["FK_XmOID"] = editProjectOID;

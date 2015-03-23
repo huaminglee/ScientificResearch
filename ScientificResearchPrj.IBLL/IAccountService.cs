@@ -15,5 +15,9 @@ namespace ScientificResearchPrj.IBLL
         /// <param name="password"></param>
         /// <returns></returns>
         Dictionary<string, string> SignIn(AccountModel model);
+        
+        void SignOut();
+
+        Dictionary<string, string> ResetPassword(Model.ResetPasswordModels model);
     }
 }

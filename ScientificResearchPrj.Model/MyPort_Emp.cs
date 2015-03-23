@@ -39,6 +39,7 @@ namespace ScientificResearchPrj.Model
         public virtual ICollection<Process_BasicData> Process_BasicData { get; set; }
         public virtual ICollection<Process_GroupMember> Process_GroupMember { get; set; }
         //
-		public string FK_DeptName { get; set; }
+        public string FK_DeptName { get; set; }
+
     }
 }

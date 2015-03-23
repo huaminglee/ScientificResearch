@@ -154,7 +154,7 @@ namespace ScientificResearchPrj.DALFactory
         {
             get { return new AttachDAL(); }
         }
-
+         
         public List<string> ExecuteSql(string sql, params SqlParameter[] pars)
         {
             return dbEntities.Database.SqlQuery<string>(sql, pars).ToList();

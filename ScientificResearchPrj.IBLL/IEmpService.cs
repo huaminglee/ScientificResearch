@@ -15,5 +15,9 @@ namespace ScientificResearchPrj.IBLL
         Dictionary<string, string> DeleteEmp(string empNo);
   
         Dictionary<string, string> ModifyEmp(string oldNo, EmpForJson emp);
+
+        MyPort_Emp GetCurrentLoginUserInfo();
+
+        Dictionary<string, string> ModifyEmpInfo(MyPort_Emp emp, string NewPass);
     }
 }

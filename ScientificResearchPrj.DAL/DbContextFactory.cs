@@ -17,7 +17,7 @@ namespace ScientificResearchPrj.DAL
            if (dbContext == null)
            {
                System.Diagnostics.Debug.WriteLine("测试DbContext唯一性" + (++num));
-               dbContext=new ProcessEntities();
+               dbContext = new ScientificResearchPrjEntities();
                CallContext.SetData("dbContent",dbContext);
            }
            return dbContext;

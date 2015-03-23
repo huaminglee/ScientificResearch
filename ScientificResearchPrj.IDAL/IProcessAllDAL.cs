@@ -11,6 +11,7 @@ namespace ScientificResearchPrj.IDAL
     public interface IProcessAllDAL : IBaseDAL<Object>
     {
         DataTable SelectAllProcess();
-
+         
+        DataTable SelectSMS(string sentTo, string msgFlag);
     }
 }

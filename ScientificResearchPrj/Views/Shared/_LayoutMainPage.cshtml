@@ -13,23 +13,25 @@
     <!-- Jquery EasyUI styles for this template -->
     <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/bootstrap/easyui.css">
     <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/icon.css">
+
+    <link href="~/Content/myview/layoutmainpage/share.css" rel="stylesheet" />
     <style type="text/css">
-        body {
-            margin: 0px;
-            padding: 0px;
-            width: 100%;
-            height: 100%;
-            /*加上position: absolute;才能设置body的高度不为0*/
-            position: absolute;
-        }
-         
+        
     </style>
    
 </head>
 <body>
     <div class="easyui-layout"   style="width:100%;height:100%;position:absolute">
         <div data-options="region:'north',collapsible:true" style="height:50px;">
-            <div>&copy; 顶部</div>
+            <div class="header">
+                <div class="hcontent">
+                    <img src="../../Images/logo.png" alt="Logo" width="100" />
+                    <span>
+                        欢迎您：<a id="a_currentUser">@ViewData["LoginUserName"]</a>【@ViewData["FK_DeptName"]】
+                    </span>
+                    <a title="退出" class="hcontenta" onclick="SignOut()"><img src="../../Images/signout.png" alt="退出" width="25" height="25"  /></a>
+                </div>
+            </div>
         </div>
         <div data-options="region:'west',split:true" title="菜单区" style="width: 150px;" id="menuLeft">
             @RenderSection("menu_left", required: true)
@@ -38,7 +40,7 @@
             @RenderSection("content_center", required: true)
         </div>
         <div data-options="region:'south',collapsible:true" style="height:50px;">
-            <div>&copy; 底部</div>
+            <div class="footer"><div style="padding-top:25px">&copy;Keith 版权所有,详情请咨询【Keith_me_please@163.com】</div></div>
         </div>
     </div>
     @RenderBody()
@@ -49,6 +51,10 @@
     
     @RenderSection("necessary_js", required: true)
     
-     
+     <script>
+         function SignOut(){
+             window.location.href = "/MainPage/SignOut";
+         }
+     </script>
 </body>
 </html>

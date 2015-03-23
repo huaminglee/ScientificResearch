@@ -160,7 +160,7 @@
         {
             if (editDepts.length == 0) return;
             for (var i = 0; i < editDepts.length; i++) {
-                var selectedId = BS_.getTreeIdFromDeptJsonResult(editDepts[i], deptJsonResult);
+                var selectedId = BS_.getTreeIdFromDeptJsonResult(editDepts[i], deptJsonResult);  
                 if (selectedId != null) {
                     $('#tTableDept').treegrid('select', selectedId);
                 }
@@ -243,7 +243,7 @@
         },
 
         spiltDeptsFromStr: function ()
-        {
+        { 
             var row = jsonResult.rows[editIndex];
             if (row.FK_Dept == '') return [];
 
@@ -767,16 +767,22 @@
                 newRow["Tel"] = row.Tel;
                 newRow["Email"] = row.Email;
                 newRow["Type"] = row.Type;
-                if (openDeptDialogFlag == false) {
+                if (tableCount > jsonResult.rows.length && openDeptDialogFlag == false) {
+                    newRow["FK_Dept"] = "";
+                }
+                else if (openDeptDialogFlag == false) {
                     newRow["FK_Dept"] = jsonResult.rows[editIndex].FK_Dept;
                 } else {
-                    newRow["FK_Dept"] = editDepts.join(',');
-                }
+                    newRow["FK_Dept"] = editDepts.join(','); 
+                } 
                 newRow["FK_DeptName"] = row.FK_DeptName;
 
                 if (editEmpType == Type.DAOSHI) {
                     //  newRow["FK_Dept"] = editDepts.join(',');
-                    if (openStationDialogFlag == false) {
+                    if (tableCount > jsonResult.rows.length && openStationDialogFlag == false) {
+                        newRow["FK_Station"] = "";
+                    }
+                    else if (openStationDialogFlag == false) {
                         newRow["FK_Station"] = jsonResult.rows[editIndex].FK_Station;
                     } else {
                         newRow["FK_Station"] = editStations.join(',');
@@ -793,10 +799,13 @@
                     newRow["AdmissionYear"] = row.AdmissionYear;
                     newRow["SchoolingLength"] = row.SchoolingLength;
                     newRow["LabAddr"] = row.LabAddr;
-                    if (openTutorDialogFlag == false) {
+                    if (tableCount > jsonResult.rows.length && openTutorDialogFlag == false) {
+                        newRow["FK_Tutor"] = "";
+                    }
+                    else if (openTutorDialogFlag == false) {
                         newRow["FK_Tutor"] = jsonResult.rows[editIndex].FK_Tutor;
                     } else {
-                        newRow["FK_Tutor"] = editTutor;
+                        newRow["FK_Tutor"] = editTutor;  
                     }
                     newRow["FK_TutorName"] = row.FK_TutorName;
                 }
@@ -947,6 +956,7 @@
                         editStationsName = BS_.spiltStationsNameFromStr();
                     }
                     else {
+                        editDepts = BS_.spiltDeptsFromStr();
                         editTutor = jsonResult.rows[editIndex].FK_Tutor;
                     }
 

@@ -12,35 +12,47 @@ namespace ScientificResearchPrj.Controllers
     {
 
         private IAccountService AccountService = new AccountService();
-        #region 系统首页 Index()
+        
         public ActionResult Index()
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-
+           
             return View();
-        } 
-        #endregion
+        }
 
-       
-       
-        #region 找回密码 FindPassword()
-        public ActionResult FindPassword()
+        [HttpGet]
+        public ActionResult ResetPassword()
         {
-            ViewBag.Message = "Your FindPassword page.";
-
             return View();
         } 
-        #endregion
 
-        #region 登录 SignIn()
+        [HttpPost]
+        public ActionResult ResetPassword(Model.ResetPasswordModels model)
+        {
+            if (ModelState.IsValid)
+            {
+                Dictionary<string, string> dictionary = AccountService.ResetPassword(model);
+                return Json(new
+                {
+                    state = dictionary["state"],
+                    message = dictionary["message"]
+                });
+            }
+            return Json(new
+            {
+                state = "-1",
+                message = "信息验证失败"
+            });
+        } 
+
+         
         [HttpGet]
         public ActionResult SignIn()
         {
             return View();
         } 
-        #endregion
-
-        #region 登录 SignIn()
+ 
+         
         [HttpPost]
         public ActionResult SignIn(Model.AccountModel model)
         {
@@ -59,15 +71,7 @@ namespace ScientificResearchPrj.Controllers
                 message="信息验证失败"
             });
         }
-        #endregion
-
-        #region 注册 SignUp()
-        public ActionResult SignUp()
-        {
-            ViewBag.Message = "Your SignUp page.";
-
-            return View();
-        } 
-        #endregion
+         
+          
     }
 }

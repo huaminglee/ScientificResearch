@@ -6,36 +6,38 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <title>@ViewBag.Title</title>
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width" />
-    <link href="~/Content/bootstrap/css/bootstrap.css" rel="stylesheet" />
+     
     <!-- Custom styles for this template -->
     <link href="~/Content/myview/layouthome/share.css" rel="stylesheet" />
 </head>
 <body>
     <header>
-        <img src="../../Images/logo.png" alt="Logo" width="100" />
-        <button type="button" class="btn btn-default btn-sm" onclick="javascript: SignIn()">
-            <span class="glyphicon glyphicon-leaf"></span> &nbsp;sign in
-        </button>
+        <img src="../../Images/logo.png" alt="Logo" width="150" />
+        <a href="#" onclick="ResetPassword()" title="重设密码"><img src="../../Images/password.png" alt="重设密码" width="30" height="30"/></a>
+        <a href="#" onclick="SignIn()" title="登录"><img src="../../Images/login.png" alt="登录" width="30" height="30" /></a>
+        <a href="#" onclick="Index()" title="主页"><img src="../../Images/index.png" alt="主页" width="30" height="30" /></a>
     </header>
     @RenderBody()
     <footer>
-        <div>&copy; Keith</div>
+        <div style="margin:5px 0">&copy;Keith 版权所有,详情请咨询【Keith_me_please@163.com】</div>
     </footer>
    
     
     <!-- Placed at the end of the document so the pages load faster -->
     <script>
 
+        function ResetPassword() {
+            window.location.href = "/Home/ResetPassword";
+        }
+ 
         function SignIn() {
             window.location.href = "/Home/SignIn";
         }
 
-        function SignUp() {
-            window.location.href = "/Home/SignUp";
+        function Index() {
+            window.location.href = "/Home/Index";
         }
     </script>
-
 </body>
 </html>

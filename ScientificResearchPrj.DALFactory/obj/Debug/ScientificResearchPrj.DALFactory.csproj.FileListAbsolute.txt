@@ -61,6 +61,6 @@ E:\ScientificResearch\ScientificResearchPrj.DALFactory\bin\Debug\ScientificResea
 E:\ScientificResearch\ScientificResearchPrj.DALFactory\bin\Debug\BP.En30.pdb
 E:\ScientificResearch\ScientificResearchPrj.DALFactory\bin\Debug\BP.WF.pdb
 E:\ScientificResearch\ScientificResearchPrj.DALFactory\bin\Debug\zh-Hans\EntityFramework.resources.dll
-E:\ScientificResearch\ScientificResearchPrj.DALFactory\obj\Debug\ScientificResearchPrj.DALFactory.csprojResolveAssemblyReference.cache
 E:\ScientificResearch\ScientificResearchPrj.DALFactory\obj\Debug\ScientificResearchPrj.DALFactory.dll
 E:\ScientificResearch\ScientificResearchPrj.DALFactory\obj\Debug\ScientificResearchPrj.DALFactory.pdb
+E:\ScientificResearch\ScientificResearchPrj.DALFactory\obj\Debug\ScientificResearchPrj.DALFactory.csprojResolveAssemblyReference.cache

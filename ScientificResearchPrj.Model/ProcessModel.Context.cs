@@ -13,10 +13,10 @@ namespace ScientificResearchPrj.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ProcessEntities : DbContext
+    public partial class ScientificResearchPrjEntities : DbContext
     {
-        public ProcessEntities()
-            : base("name=ProcessEntities")
+        public ScientificResearchPrjEntities()
+            : base("name=ScientificResearchPrjEntities")
         {
         }
     

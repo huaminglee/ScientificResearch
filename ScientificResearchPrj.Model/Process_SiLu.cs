@@ -30,6 +30,6 @@ namespace ScientificResearchPrj.Model
         public virtual ICollection<Process_XingShiHua> Process_XingShiHua { get; set; }
         //
         public string FK_WTName { get; set; }
-   
+         
     }
 }

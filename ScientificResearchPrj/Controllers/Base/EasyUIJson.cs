@@ -105,7 +105,7 @@ namespace ScientificResearchPrj.Controllers.Base
                         "\"FK_Dept\":" + "\"" + emp.FK_Dept + "\"," +
                         "\"FK_DeptName\":" + "\"" + emp.FK_DeptName + "\",";
 
-                if (type.Equals(EmpType.DAOSHI))
+                if (type!=null && type.Equals(EmpType.DAOSHI))
                 {
                     temp +=
                         "\"FK_Station\":" + "\"" + emp.MyPort_Tutor.FK_Station + "\"," +
@@ -114,7 +114,7 @@ namespace ScientificResearchPrj.Controllers.Base
                         "\"OfficeAddr\":" + "\"" + emp.MyPort_Tutor.OfficeAddr + "\"," +
                         "\"OfficeTel\":" + "\"" + emp.MyPort_Tutor.OfficeTel + "\"";
                 }
-                else
+                else if (type != null)
                 {
                     temp +=
                         "\"AdmissionYear\":" + "\"" + emp.MyPort_Student.AdmissionYear + "\"," +

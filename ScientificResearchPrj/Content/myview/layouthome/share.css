@@ -1,24 +1,31 @@
-﻿header{
+﻿body {
+    background:url(../../../Images/loginbackground.jpg) no-repeat 
+}
+
+header{
     margin:40px 50px 0 50px;
-    border:5px solid red;
+    border:0px solid red;
     position:relative;
-    height:50px;
+    height:30px;
     padding:5px;
 }
-header button{
-    position:absolute;
-    right:10px;
-    text-transform:uppercase;
+header a{
+     float:right;
+     border:0 ;
+
+}
+header a img{
+     border:0 ;
+     margin-right:10px;
 }
 
-
 section .content{
-    margin:100px auto;
+    margin:150px auto;
     text-align:center;
 }
 section .brand-h1{
     font-weight:bold;
-    font-size:60px;
+    font-size:70px;
 }
 section button{
     width:400px;
@@ -27,7 +34,7 @@ section button{
 
 
 footer{
-    border:5px solid red;
+    border:0px solid red;
     width:100%;
     position:fixed;
     bottom:0;
@@ -36,43 +43,37 @@ footer{
 
 
 .form-signin {
-    max-width: 330px;
-    padding: 15px;
-    margin: 0 auto;
+    margin:130px auto;
+    padding: 15px;  
+    text-align: center;
 }
-.form-signin .form-signin-heading,
-.form-signin .checkbox {
-    margin-bottom: 10px;
+
+ .form-signin  button{
+   background-color:transparent;
+   border:0
 }
-.form-signin .checkbox {
-    font-weight: normal;
+ .form-signin  button img{
+   background-color:transparent;
+   border:0;
+   width:100px;
+   height:30px
 }
+
 .form-signin .form-control {
     position: relative;
     height: auto;
+    width:300px;
     -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
             box-sizing: border-box;
     padding: 10px;
     font-size: 16px;
+    margin-bottom:20px;
+    background-color:transparent;
 }
 .form-signin .form-control:focus {
     z-index: 2;
 }
-.form-signin input[type="text"] {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;  
-}
-.form-signin input[type="password"] {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;  
-}
-
-.form-signin input[type="email"] {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;  
-}
+ 
 
  

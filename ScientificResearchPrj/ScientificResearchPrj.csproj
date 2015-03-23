@@ -4678,6 +4678,7 @@
     <Content Include="Content\myview\layouthome\share.css" />
     <Content Include="Content\myview\process.css" />
     <Content Include="Content\myview\scoller.css" />
+    <Content Include="Content\myview\layoutmainpage\share.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -4945,7 +4946,15 @@
     <Content Include="Content\jquery-easyui-1.4.1\demo\treegrid\treegrid_data3.json" />
     <Content Include="Content\jquery-easyui-1.4.1\demo\tree\tree_data1.json" />
     <Content Include="Content\jquery-easyui-1.4.1\demo\tree\tree_data2.json" />
+    <Content Include="Images\footer.png" />
+    <Content Include="Images\header.png" />
     <Content Include="Images\ico_loading.gif" />
+    <Content Include="Images\index.png" />
+    <Content Include="Images\login.png" />
+    <Content Include="Images\loginbackground.jpg" />
+    <Content Include="Images\password.png" />
+    <Content Include="Images\signin.png" />
+    <Content Include="Images\signout.png" />
     <Content Include="Scripts\easyui_extend.js" />
     <Content Include="Scripts\jquery_extend.js" />
     <Content Include="Scripts\step-data.js" />
@@ -5003,9 +5012,12 @@
     <Content Include="Views\DuiBiFenXi\js\DuiBiFenXi\BS_.js" />
     <Content Include="Views\DuiBiFenXi\js\DuiBiFenXi\ET_.js" />
     <Content Include="Views\DuiBiFenXi\js\DuiBiFenXi\副本 BS_.js" />
-    <Content Include="Views\Emp\js\AT_.js" />
-    <Content Include="Views\Emp\js\BS_.js" />
-    <Content Include="Views\Emp\js\ET_.js" />
+    <Content Include="Views\Emp\js\HuoQuGeRenXinXi\AT_.js" />
+    <Content Include="Views\Emp\js\HuoQuGeRenXinXi\BS_.js" />
+    <Content Include="Views\Emp\js\HuoQuGeRenXinXi\ET_.js" />
+    <Content Include="Views\Emp\js\RenYuanGuanLi\AT_.js" />
+    <Content Include="Views\Emp\js\RenYuanGuanLi\BS_.js" />
+    <Content Include="Views\Emp\js\RenYuanGuanLi\ET_.js" />
     <Content Include="Views\JieJueSiLu\js\JieJueSiLuShenHe\AT_.js" />
     <Content Include="Views\JieJueSiLu\js\JieJueSiLuShenHe\BS_.js" />
     <Content Include="Views\JieJueSiLu\js\JieJueSiLuShenHe\ET_.js" />
@@ -10850,10 +10862,9 @@
     <Content Include="Views\Shared\_LayoutHome.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Home\FindPassword.cshtml" />
+    <Content Include="Views\Home\ResetPassword.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\SignIn.cshtml" />
-    <Content Include="Views\Home\SignUp.cshtml" />
     <Content Include="WF\Admin\CCFlowDesigner\Site.Master" />
     <Content Include="WF\Admin\CCFormDesigner\Site.Master" />
     <Content Include="WF\Admin\Condition.Master" />
@@ -10927,6 +10938,7 @@
     <Content Include="WF\WorkOpt\OneWork\OneWork.master" />
     <Content Include="WF\WorkOpt\ServAccepter.ashx" />
     <Content Include="WF\WorkOpt\WinOpen.master" />
+    <Content Include="Views\Emp\HuoQuGeRenXinXi.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

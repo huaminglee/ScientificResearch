@@ -3,7 +3,7 @@
 
 @model ScientificResearchPrj.Model.AccountModel
 @{
-    ViewBag.Title = "SignIn";
+    ViewBag.Title = "登录";
     Layout = "~/Views/Shared/_LayoutHome.cshtml";
 }
 
@@ -17,30 +17,22 @@
                                 InsertionMode = InsertionMode.InsertAfter,
                                 OnSuccess = "afterSuccess",
                                 LoadingElementId = "loading"
-                            }))
+                            }, new { id = "LoginForm" }))
         {
         @Html.AntiForgeryToken()
         @Html.ValidationSummary(true)
         <div class="form-signin">
-            <h2 class="form-signin-heading">Please sign in
-                <span id="loading" style="display:none">
+             <div><span id="serviceResult"></span></div>
+            @Html.ValidationMessageFor(model => model.UserName)<br />
+            @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", @placeholder = "用户名" })<br>
+            @Html.ValidationMessageFor(model => model.Password)<br>
+            @Html.PasswordFor(model => model.Password, new { @class = "form-control", @placeholder = "密码" })<br>
+            <button type="submit">
+                <img src="../../Images/signin.png" alt="登录"  style="cursor:pointer"/>
+            </button>
+            <span id="loading" style="display:none;margin-left:20px">
                     <img src="~/Images/ico_loading.gif" />
-                </span>
-            </h2>
-            @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", @placeholder = "用户名" })
-            @Html.ValidationMessageFor(model => model.UserName)<br>
-            @Html.TextBoxFor(model => model.Password, new { @class = "form-control", @placeholder = "密码" })
-            @Html.ValidationMessageFor(model => model.Password)
-            <div class="checkbox">
-                <label>
-                    @Html.CheckBoxFor(model=>model.RememberMe)记住我?
-                </label>
-                <label class="passlabel">
-                    <a href="~/Home/FindPassword">Forget Password?</a>
-                </label>
-            </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-            <div><span id="serviceResult"></span></div>
+            </span>
         </div>
 }
 </div> <!-- /container -->

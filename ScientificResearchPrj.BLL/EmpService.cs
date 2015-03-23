@@ -176,7 +176,7 @@ namespace ScientificResearchPrj.BLL
 
             emp.FK_Dept = firstDept;
             emp.SID = "";
-            emp.Pass = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(emp.EmpNo, "MD5"); 
+            emp.Pass = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(emp.EmpNo, "MD5").ToUpper(); 
 
             this.AddEntity(emp);
         }
@@ -202,7 +202,7 @@ namespace ScientificResearchPrj.BLL
 
             emp.FK_Dept = firstDept;
             emp.SID = "";
-            emp.Pass = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(emp.EmpNo, "MD5"); 
+            emp.Pass = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(emp.EmpNo, "MD5").ToUpper(); 
             this.AddEntity(emp);
         }
 
@@ -429,6 +429,62 @@ namespace ScientificResearchPrj.BLL
             emp.FK_Dept = firstDept;
             emp.SID = emp.SID;
             emp.Pass = emp.Pass;
+        }
+
+        public MyPort_Emp GetCurrentLoginUserInfo() {
+            MyPort_Emp emp = CurrentDAL.LoadEntities(a => a.EmpNo == BP.Web.WebUser.No).FirstOrDefault();
+            if (emp != null) return emp;
+            else return new MyPort_Emp();
+        }
+
+        public Dictionary<string, string> ModifyEmpInfo(MyPort_Emp emp, string NewPass)
+        {
+            Dictionary<string, string> dictionary = new Dictionary<string, string>();
+            try
+            {
+                MyPort_Emp empDesc = this.CurrentDAL.LoadEntities(a => a.EmpNo == emp.EmpNo).FirstOrDefault(); 
+                if (empDesc != null)
+                {
+                    //需要更新密码
+                    if (string.IsNullOrEmpty(NewPass) == false)
+                    {
+                        //作为密码方式加密   
+                        string oldMd5 = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(emp.Pass, "MD5").ToUpper();
+                        string newMd5 = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(NewPass, "MD5").ToUpper();
+
+
+                        //与原来密码不一致
+                        if ((string.IsNullOrEmpty(empDesc.Pass) == true && string.IsNullOrEmpty(emp.Pass) == false) ||
+                            (string.IsNullOrEmpty(empDesc.Pass) == false && string.IsNullOrEmpty(emp.Pass) == true) ||
+                            (string.IsNullOrEmpty(empDesc.Pass) == false && string.IsNullOrEmpty(emp.Pass) == false && empDesc.Pass.ToUpper().Equals(oldMd5) == false))
+                        {
+                            dictionary.Add("state", "-1");
+                            dictionary.Add("message", "与原来密码不一致");
+                            return dictionary;
+                        }
+
+                        //与原来密码一致,更新
+                        empDesc.Pass = newMd5;
+                    }
+
+                    empDesc.Name = emp.Name;
+                    empDesc.Email = emp.Email;
+                    empDesc.Tel = emp.Tel;
+                    this.UpdateEntity(empDesc);
+
+                    dictionary.Add("state", "0");
+                    dictionary.Add("message", "修改成功");
+                    return dictionary;
+                }
+            }catch(Exception e){
+                dictionary.Add("state", "-1");
+                dictionary.Add("message", "修改失败~~" + e.Message);
+                return dictionary;
+            }
+
+            dictionary.Add("state", "-1");
+            dictionary.Add("message", "服务器未知错误");
+            return dictionary;
         }
     }
 }

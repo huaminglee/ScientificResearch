@@ -1,0 +1,147 @@
+-----------------------------------------------------------------------------------------------------
+23日10时12分55秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+23日10时13分11秒Info:System');"成功[BP.Sys.EnCfg-2]放入缓存。
+23日10时13分28秒Info:System');"成功[BP.Sys.ToolbarExcel-24]放入缓存。
+23日10时13分28秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+23日10时28分07秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=140 AND FK_Flow='001' . 列= , FK_Node
+23日10时28分08秒Info:System');"成功[BP.Port.Dept-20]放入缓存。
+23日10时37分49秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时37分49秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时37分49秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时37分49秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时37分49秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时37分50秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时37分50秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时37分50秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时37分50秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时37分50秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时37分50秒Info:System');"SQL=ALTER TABLE  ND1Track ADD Tag NVARCHAR(4000) DEFAULT '' NULL,异常信息:各表中的列名必须唯一。在表 'ND1Track' 中多次指定了列名 'Tag'。
+23日10时51分20秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+23日10时51分23秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时51分23秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时51分23秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时51分23秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时51分23秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时51分23秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时51分23秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时51分23秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时51分23秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时51分24秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时51分24秒Info:System');"SQL=ALTER TABLE  ND1Track ADD Tag NVARCHAR(4000) DEFAULT '' NULL,异常信息:各表中的列名必须唯一。在表 'ND1Track' 中多次指定了列名 'Tag'。
+23日10时51分27秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+23日10时51分27秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时51分27秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时51分27秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时51分27秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时51分28秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时51分28秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时51分28秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时51分28秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时51分28秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时51分28秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日10时51分28秒Info:System');"SQL=ALTER TABLE  ND1Track ADD Tag NVARCHAR(4000) DEFAULT '' NULL,异常信息:各表中的列名必须唯一。在表 'ND1Track' 中多次指定了列名 'Tag'。
+23日10时52分02秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=141 AND FK_Flow='001' . 列= , FK_Node
+23日10时52分02秒Info:System');"成功[BP.Port.Dept-20]放入缓存。
+23日10时53分30秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=142 AND FK_Flow='001' . 列= , FK_Node
+23日11时00分03秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=143 AND FK_Flow='001' . 列= , FK_Node
+-----------------------------------------------------------------------------------------------------
+23日13时34分38秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+23日13时35分02秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=144 AND FK_Flow='001' . 列= , FK_Node
+23日13时35分02秒Info:System');"成功[BP.Port.Dept-20]放入缓存。
+-----------------------------------------------------------------------------------------------------
+23日13时36分42秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+23日13时37分00秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=145 AND FK_Flow='001' . 列= , FK_Node
+23日13时37分00秒Info:System');"成功[BP.Port.Dept-20]放入缓存。
+-----------------------------------------------------------------------------------------------------
+23日13时41分01秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+-----------------------------------------------------------------------------------------------------
+23日14时08分36秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+23日14时09分25秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=146 AND FK_Flow='001' . 列= , FK_Node
+23日14时15分52秒Info:System');"成功[BP.Port.Dept-20]放入缓存。
+23日14时16分38秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=147 AND FK_Flow='001' . 列= , FK_Node
+-----------------------------------------------------------------------------------------------------
+23日14时42分58秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+23日14时43分51秒Info:System');"成功[BP.Port.Dept-20]放入缓存。
+-----------------------------------------------------------------------------------------------------
+23日14时47分26秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+23日14时47分58秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=148 AND FK_Flow='001' . 列= , FK_Node
+23日14时48分32秒Info:System');"成功[BP.Port.Dept-20]放入缓存。
+-----------------------------------------------------------------------------------------------------
+23日14时59分11秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+23日14时59分38秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=149 AND FK_Flow='001' . 列= , FK_Node
+23日15时02分57秒Info:System');"成功[BP.Port.Dept-20]放入缓存。
+23日15时07分42秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=150 AND FK_Flow='001' . 列= , FK_Node
+-----------------------------------------------------------------------------------------------------
+23日15时18分45秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+-----------------------------------------------------------------------------------------------------
+23日15时26分02秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+23日15时26分22秒Info:System');"成功[BP.Port.Dept-20]放入缓存。
+23日15时59分00秒Info:System');"成功[BP.Sys.EnCfg-2]放入缓存。
+23日15时59分06秒Info:System');"成功[BP.Sys.ToolbarExcel-24]放入缓存。
+23日15时59分06秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+23日15时59分10秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日15时59分10秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日15时59分10秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日15时59分10秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日15时59分10秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日15时59分10秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日15时59分10秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日15时59分10秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日15时59分11秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日15时59分11秒Fatal:System');"SQL=Select a.EmpNo No, a.Name,0 As SN From MyPort_Emp a,Process_GroupMember b,Process_ProjectGroup c,WF_GenerWorkFlow d Where d.WorkID='0' And d.Starter=b.FK_Emp And b.FK_Xmz=c.No And c.FK_GroupLeader=a.EmpNo And a.EmpNo != ''ss'' Union Select a.EmpNo No, a.Name,1 As SN From MyPort_Emp a,MyPort_Student b,WF_GenerWorkFlow c Where c.WorkID = '0' And c.Starter=b.FK_EmpNo And b.FK_Tutor=a.EmpNo And a.EmpNo != ''ss'' ORDER BY SN Exception=“ss”附近有语法错误。
+“ss”附近有语法错误。
+23日15时59分11秒Info:System');"SQL=ALTER TABLE  ND1Track ADD Tag NVARCHAR(4000) DEFAULT '' NULL,异常信息:各表中的列名必须唯一。在表 'ND1Track' 中多次指定了列名 'Tag'。
+23日15时59分40秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=151 AND FK_Flow='001' . 列= , FK_Node
+23日16时04分52秒Fatal:System');"@表[ToolbarExcel功能控制]在获取属性[OfficePrintEnable]值,出现错误，不能将[打印]转换为int类型.错误信息：输入字符串的格式不正确。@请检查是否在存储枚举类型时，您在SetValbyKey中没有转换。正确做法是:this.SetValByKey( Key ,(int)value)  
+-----------------------------------------------------------------------------------------------------
+23日16时39分53秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+23日16时40分14秒Info:System');"@SQL=SELECT FK_Node FROM WF_GenerWorkFlow WHERE WorkID=152 AND FK_Flow='001' . 列= , FK_Node
+23日16时40分14秒Info:System');"成功[BP.Port.Dept-20]放入缓存。
+-----------------------------------------------------------------------------------------------------
+23日20时16分13秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+-----------------------------------------------------------------------------------------------------
+23日20时35分59秒Info:System');"成功[BP.Port.Emp-32]放入缓存。
+-----------------------------------------------------------------------------------------------------
+23日21时12分28秒Fatal:System');"SQL=SELECT * FROM  Sys_SMS where SendTo = chenruihao and MsgFlag = RP140_102 Exception=列名 'chenruihao' 无效。
+列名 'RP140_102' 无效。
+-----------------------------------------------------------------------------------------------------
+23日21时16分54秒Info:System');"成功[BP.Port.Emp-32]放入缓存。

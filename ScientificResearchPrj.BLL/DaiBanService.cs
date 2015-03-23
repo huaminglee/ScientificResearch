@@ -43,8 +43,16 @@ namespace ScientificResearchPrj.BLL
                 row["_parentId"] = row["FK_Flow"] + nowTime;
                 //更新TitleLink字段
                 string paras = row["AtPara"] as string;
-                row["TitleLink"] =
-                    "/WF/MyFlow.aspx?FK_Flow=" + row["FK_Flow"] + "&FK_Node=" + row["FK_Node"] + "&FID=" + row["FID"] + "&WorkID=" + row["WorkID"] + "&Paras=" + paras + "&T=" + nowTime;
+                int isRead = Convert.ToInt32(row["IsRead"]);
+                if (isRead == 0) {
+                    row["TitleLink"] =
+                        "/WF/MyFlow.aspx?FK_Flow=" + row["FK_Flow"] + "&FK_Node=" + row["FK_Node"] + "&FID=" + row["FID"] + "&WorkID=" + row["WorkID"] + "&Paras=" + paras + "&IsRead=0&T=" + nowTime;
+                }
+                else
+                {
+                    row["TitleLink"] =
+                        "/WF/MyFlow.aspx?FK_Flow=" + row["FK_Flow"] + "&FK_Node=" + row["FK_Node"] + "&FID=" + row["FID"] + "&WorkID=" + row["WorkID"] + "&Paras=" + paras + "&T=" + nowTime;
+                }
                 //更新状态
                 DateTime mysdt = DataType.ParseSysDate2DateTime(row["SDTOfNode"] as string);
                 DateTime cdt = DateTime.Now;

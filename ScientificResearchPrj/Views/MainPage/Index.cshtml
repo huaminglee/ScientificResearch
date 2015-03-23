@@ -1,7 +1,7 @@
 ﻿<!--登录成功页面-->
 
 @{
-    ViewBag.Title = "Index Page";
+    ViewBag.Title = "主页";
     Layout = "~/Views/Shared/_LayoutMainPage.cshtml";
 }
 
@@ -84,6 +84,12 @@
 
 @section necessary_js{
     <script type="text/javascript">
+        //绑定修改用户信息事件
+        $("#a_currentUser").bind("click", function () {
+            addPanel({ 'view': '/Emp/HuoQuGeRenXinXi', 'title': '个人信息' })
+        });
+
+
         /*
         设置esyui的tab高度方法：easyUI默认的宽度和高度是auto
         去掉id为main-tab的div里的class="easyui-tabs"

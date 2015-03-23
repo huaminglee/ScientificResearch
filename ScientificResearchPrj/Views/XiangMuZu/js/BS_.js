@@ -529,12 +529,19 @@
                 newRow["No"] = row.No;
                 newRow["Name"] = row.Name;
                 newRow["Description"] = row.Description;
-                if (openLeaderDialogFlag == false) {
+                if (tableCount > jsonResult.rows.length && openLeaderDialogFlag == false) {
+                    newRow["FK_GroupLeader"] = "";
+                }
+                else if (openLeaderDialogFlag == false) {
                     newRow["FK_GroupLeader"] = jsonResult.rows[editIndex].FK_GroupLeader;
                 } else {
                     newRow["FK_GroupLeader"] = editLeader;
                 }
-                if (openMemberDialogFlag == false) {
+
+                if (tableCount > jsonResult.rows.length && openMemberDialogFlag == false) {
+                    newRow["FK_GroupMember"] = "";
+                }
+                else if (openMemberDialogFlag == false) {
                     newRow["FK_GroupMember"] = jsonResult.rows[editIndex].FK_GroupMember;
                 } else {
                     newRow["FK_GroupMember"] = editMembers.join(',');

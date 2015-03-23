@@ -5,3 +5,4 @@ E:\ScientificResearch\support\Components\BP.En30\bin\IBM.Data.Informix.dll
 E:\ScientificResearch\support\Components\BP.En30\bin\MySql.Data.dll
 E:\ScientificResearch\support\Components\BP.En30\obj\Debug\BP.En30.dll
 E:\ScientificResearch\support\Components\BP.En30\obj\Debug\BP.En30.pdb
+E:\ScientificResearch\support\Components\BP.En30\obj\Debug\BP.En30.csprojResolveAssemblyReference.cache

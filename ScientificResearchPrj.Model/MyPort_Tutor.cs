@@ -21,7 +21,7 @@ namespace ScientificResearchPrj.Model
         public string OfficeTel { get; set; }
     
         public virtual MyPort_Emp MyPort_Emp { get; set; }
-        //
+        //         
         public string FK_Station { get; set; }
         public string FK_StationName { get; set; }
 
