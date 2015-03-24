@@ -15,5 +15,11 @@
                     window.location.href = "/DaiBan/JieShuLiuCheng?FK_Flow=" + fk_flow + "&WorkID=" + workID;
                 }
             });
+        },
+        
+        readPress: function (i) {
+            $('#div_press').html(jsonData[i]["Press"]);
+            $('#pressdlg').dialog('open');
         }
+
     }

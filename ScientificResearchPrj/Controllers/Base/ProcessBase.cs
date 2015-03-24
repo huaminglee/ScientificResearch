@@ -162,6 +162,27 @@ namespace ScientificResearchPrj.Controllers.Base
             }
         }
 
+        public ActionResult CuiBan(int workID, string msg)
+        {
+            try
+            {
+                string info = this.SrService.CommonOperationService.Press(workID,msg);
+                return Json(new
+                {
+                    state = "0",
+                    message = info,
+                });
+            }
+            catch (Exception ex)
+            {
+                return Json(new
+                {
+                    state = "-1",
+                    message = ex.Message,
+                });
+            }
+        }
+
         public ActionResult JieShuLiuCheng()
         {
             FlowOver args = new FlowOver();

@@ -3407,9 +3407,17 @@ namespace BP.WF
 
                 toEmp += wl.FK_Emp + ",";
                 toEmpName += wl.FK_EmpText + ",";
-
+                /*
                 // 发消息.
                 BP.WF.Dev2Interface.Port_SendMsg(wl.FK_Emp, mailTitle, msg, null, BP.WF.SMSMsgType.Self, gwf.FK_Flow, gwf.FK_Node, gwf.WorkID, gwf.FID);
+                */
+
+                /*By 庄坚*/
+                // 发消息.
+                string msgFlag = "Press" + wl.WorkID + "_" + wl.FK_Node;
+                BP.WF.Dev2Interface.Port_SendMsg(wl.FK_Emp, mailTitle, msg, msgFlag, BP.WF.SMSMsgType.Self, gwf.FK_Flow, gwf.FK_Node, gwf.WorkID, gwf.FID);
+                /*By 庄坚*/
+
 
                 wl.PressTimes = wl.PressTimes + 1;
                 wl.Update();

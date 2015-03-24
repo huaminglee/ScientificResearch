@@ -12,6 +12,5 @@ namespace ScientificResearchPrj.IDAL
     {
         DataTable SelectAllProcess();
          
-        DataTable SelectSMS(string sentTo, string msgFlag);
     }
 }

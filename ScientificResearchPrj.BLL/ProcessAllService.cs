@@ -34,8 +34,6 @@ namespace ScientificResearchPrj.BLL
             runningFlows.Columns.Add("State");
             //添加权限字段           
             runningFlows.Columns.Add("OpenRight");
-            //添加回执字段           
-            runningFlows.Columns.Add("RP");
 
             DataTable parentClass = DataTableClone.CloneStructureFromDataTable(runningFlows);
             NoRepeatClass noRepeatClass = new NoRepeatClass();
@@ -53,8 +51,6 @@ namespace ScientificResearchPrj.BLL
                 row["_parentId"] = row["FK_FlowSort"] + nowTime;
                 //更新TitleLink字段
                 row["TitleLink"] = GetTitleLink(row);
-                //更新回执字段
-                row["RP"] = GetSMS(row);
 
                 //更新状态
                 DateTime mysdt = DataType.ParseSysDate2DateTime(row["SDTOfNode"] as string);
@@ -73,7 +69,6 @@ namespace ScientificResearchPrj.BLL
                     continue;
                 }
                 noRepeatClass.AddClass(row["FK_FlowSort"].ToString(), row["FK_FlowSort"].ToString());
-
 
                 DataRow parentNewRow = parentClass.NewRow();
                 //类别对应的编号,作为树的Id，不能为空，应该与子节点的_parentId一致
@@ -201,28 +196,6 @@ namespace ScientificResearchPrj.BLL
             return false;
         }
 
-        private string GetSMS(DataRow row)
-        {
-            string fk_Node = row["FK_Node"].ToString();
-            string workID = row["WorkID"].ToString();
-            string msgFlag = "RP" + workID + "_" + fk_Node;
-            string rpSender = "";
-
-            DataTable table = (CurrentDAL as IProcessAllDAL).SelectSMS(BP.Web.WebUser.No, msgFlag);
-            if (table != null && table.Rows != null)
-            {
-                foreach (DataRow r in table.Rows) {
-                    rpSender += "【发送者】:&nbsp;&nbsp;";
-                    string sender=r["Sender"].ToString();
-                    MyPort_Emp emp = DbSession.EmpDAL.LoadEntities(a => a.EmpNo == sender).FirstOrDefault();
-                    if (emp != null) {
-                        rpSender += emp.Name + "<br>";
-                    }
-                    rpSender += "【标题】:&nbsp;&nbsp;" + r["EmailTitle"].ToString() + "<br>";
-                    rpSender += "【内容】:&nbsp;&nbsp;" + r["EmailDoc"].ToString().Substring(0, r["EmailDoc"].ToString().IndexOf("<")) + "<br><br>";
-                }
-            }
-            return rpSender;
-        }
+        
     }
 }

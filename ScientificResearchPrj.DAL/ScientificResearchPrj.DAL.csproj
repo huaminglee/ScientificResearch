@@ -90,6 +90,7 @@
     <Compile Include="AttachDAL.cs" />
     <Compile Include="ChaoSongDAL.cs" />
     <Compile Include="ZaiTuDAL.cs" />
+    <Compile Include="DaiBanDAL.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

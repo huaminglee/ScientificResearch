@@ -18,5 +18,9 @@ namespace ScientificResearchPrj.IDAL
         DataTable SelectUnPassedFlowWithFK_Node(CCFlowArgs args);
 
         DataTable SelectPassedFlow(CCFlowArgs args);
+
+        bool IsPressExist(string msgFlag);
+
+        DataTable SelectSMS(string sentTo, string msgFlag);
     }
 }

@@ -28,5 +28,7 @@ namespace ScientificResearchPrj.IBLL
        DataTable GetCurrentFlowInfoFromEmpWorks(CCFlowArgs args);
 
        DataTable GetPreviousNodeInfo(CCFlowArgs args);
+
+       string Press(int workID, string msg);
    }
 }

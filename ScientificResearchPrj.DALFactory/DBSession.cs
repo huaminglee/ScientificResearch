@@ -145,6 +145,11 @@ namespace ScientificResearchPrj.DALFactory
             get { return new ZaiTuDAL(); }
         }
 
+        public IDaiBanDAL DaiBanDAL
+        {
+            get { return new DaiBanDAL(); }
+        }
+
         public ILinkDAL LinkDAL
         {
             get { return new LinkDAL(); }

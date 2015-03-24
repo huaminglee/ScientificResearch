@@ -27,16 +27,20 @@
                     RDT -记录时间,ADT  -发送时间,SDT - 应该完成日期
                 -->
                 <th data-options="field:'FlowName'" width="20%">流程名称</th>
-                <th data-options="field:'Title'" width="28%">标题</th>
-                <th data-options="field:'NodeName'" width="12%">当前节点</th>
+                <th data-options="field:'Title'" width="30%">标题</th>
+                <th data-options="field:'NodeName'" width="7%">当前节点</th>
                 <th data-options="field:'StarterName'" width="5%">发起人</th>
                 <th data-options="field:'ADT'" width="10%">发送时间</th>
                 <th data-options="field:'SDT'" width="10%">期限</th>
                 <th data-options="field:'State'" width="5%">状态</th>
-                <th data-options="field:'Operation'" width="5%">操作</th>
+                <th data-options="field:'Operation'" width="10%">操作</th>
             </tr>
         </thead>
     </table>
+</div>
+
+<div id="pressdlg" class="easyui-dialog" title="阅读催办" data-options="iconCls:'icon-tip',modal:true,closed:'true'" style="width:400px;height:300px;padding:10px">
+     <div id="div_press"></div>
 </div>
 
 <!--Jquery EasyUI  js文件   -->
@@ -51,12 +55,13 @@
      var currentLoginUser = '@ViewData["LoginUser"]';
      var currentLoginUserName = '@ViewData["LoginUserName"]';
 
-     
+     var jsonResult;
+     var jsonData;
     $(function () {
         //获取数据
-        var jsonResult = parseJSON('@Html.Raw(@ViewData["_Json"])');
+        jsonResult = parseJSON('@Html.Raw(@ViewData["_Json"])');
         var total = jsonResult.total;
-        var jsonData = jsonResult.rows;
+        jsonData = jsonResult.rows;
         var index = 1;
         for (var i = 0; i < total; i++) {
             if (jsonData[i]["_parentId"] != null) {
@@ -66,9 +71,9 @@
                     */
                 jsonData[i]["Title"] = '<a href="javascript:void(0)" onclick="window.open(\''
                      + jsonData[i]["TitleLink"] + '\')">' + jsonData[i]["Title"] + '</a>';
-                if (jsonData[i]["Starter"] == currentLoginUser) {
-                    jsonData[i]["Operation"] = '<a href="javascript:void(0)" onclick="BS_.jieShuLiuCheng(\''
-                         + jsonData[i]["FK_Flow"] + '\',\'' + jsonData[i]["WorkID"] + '\')">结束流程</a>';
+                
+                if (jsonData[i]["Press"] != "") {
+                    jsonData[i]["Operation"] = '<a style="margin-left:5px" href="javascript:void(0)" onclick="BS_.readPress(' + i + ')">阅读催办</a>';
                 }
             }
         }

@@ -19,15 +19,5 @@ namespace ScientificResearchPrj.DAL
             return BP.DA.DBAccess.RunSQLReturnTable(sql);
         }
 
-        public DataTable SelectSMS(string sentTo, string msgFlag) {
-            Paras ps = new Paras();
-            string dbstr = BP.Sys.SystemConfig.AppCenterDBVarStr;
-
-            ps.SQL = "SELECT * FROM  Sys_SMS where SendTo=" + dbstr + "SendTo and MsgFlag=" + dbstr + "MsgFlag";
-
-            ps.Add("SendTo", sentTo);
-            ps.Add("MsgFlag", msgFlag);
-            return BP.DA.DBAccess.RunSQLReturnTable(ps);
-        }
     }
 }

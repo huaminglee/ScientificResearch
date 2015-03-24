@@ -45,3 +45,4 @@ E:\ScientificResearch\ScientificResearchPrj.IDAL\bin\Debug\BP.En30.pdb
 E:\ScientificResearch\ScientificResearchPrj.IDAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
 E:\ScientificResearch\ScientificResearchPrj.IDAL\obj\Debug\ScientificResearchPrj.IDAL.dll
 E:\ScientificResearch\ScientificResearchPrj.IDAL\obj\Debug\ScientificResearchPrj.IDAL.pdb
+E:\ScientificResearch\ScientificResearchPrj.IDAL\obj\Debug\ScientificResearchPrj.IDAL.csprojResolveAssemblyReference.cache

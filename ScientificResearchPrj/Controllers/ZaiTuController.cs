@@ -19,6 +19,8 @@ namespace ScientificResearchPrj.Controllers
          
         public ActionResult ZaiTu()
         {
+            SetLoginUserData();
+
             DataTable runningFlows = CurrentService.GetRunningFlows();
             ViewData["_Json"] = EasyUIJson.GetEasyUIJsonFromDataTable(runningFlows);
             return View();

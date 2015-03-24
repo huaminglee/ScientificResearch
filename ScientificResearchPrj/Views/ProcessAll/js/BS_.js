@@ -28,10 +28,5 @@
                     window.open(url);
                 }
             });
-        },
-
-        readRP: function (content) {
-            $('#div_rp').html(content);
-            $('#dlg').dialog('open');
         }
     }

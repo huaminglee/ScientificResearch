@@ -115,5 +115,17 @@ namespace ScientificResearchPrj.BLL
 
             return preNodesInfoTable;
         }
+
+        public string Press(int workID,string msg) {
+            GenerWorkFlow flow = new GenerWorkFlow(workID);
+            string msgFlag = "Press" + workID + "_" + flow.FK_Node;
+            if ((CurrentDAL as CommonOperationDAL).IsPressExist(msgFlag))
+            {
+                return "已经催办过该工作，请不要重复催办！";
+            }
+
+            string info = BP.WF.Dev2Interface.Flow_DoPress(workID, msg, true);
+            return info;
+        }
     }
 }
