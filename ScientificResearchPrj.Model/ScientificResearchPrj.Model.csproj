@@ -160,6 +160,7 @@
     <Compile Include="ReturnNodeModel.cs" />
     <Compile Include="StepType.cs" />
     <Compile Include="ResetPasswordModels.cs" />
+    <Compile Include="PageModelForDataTable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config">

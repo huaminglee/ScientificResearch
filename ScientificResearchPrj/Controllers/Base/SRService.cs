@@ -118,5 +118,10 @@ namespace ScientificResearchPrj.Controllers.Base
         {
             get { return new AttachService(); }
         }
+
+        public IJournalService JournalService
+        {
+            get { return new JournalService(); }
+        }
     }
 }

@@ -99,6 +99,13 @@ Date.prototype.Format = function (fmt) { //author: meizz
     return fmt;
 }
 
+function GetDateDiff(startDate, endDate) {
+    var startTime = new Date(Date.parse(startDate.replace(/-/g, "/"))).getTime();
+    var endTime = new Date(Date.parse(endDate.replace(/-/g, "/"))).getTime();
+    var dates = Math.abs((startTime - endTime)) / (1000 * 60 * 60 * 24);
+    return dates;
+}
+
 //往dom树添加js文件
 function DomAddJavaScript(headTagName, srcPath) {
     var oHead = document.getElementsByTagName(headTagName).item(0);

@@ -491,6 +491,7 @@
     <Compile Include="Controllers\DuiBiFenXiController.cs" />
     <Compile Include="Controllers\DeChuJieLunController.cs" />
     <Compile Include="Controllers\LunWenZhuanXieController.cs" />
+    <Compile Include="Controllers\JournalController.cs" />
     <Compile Include="DataUser\AppCoder\FrmEventHandle.aspx.cs">
       <DependentUpon>FrmEventHandle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -5026,6 +5027,9 @@
     <Content Include="Views\JieJueSiLu\js\JieJueSiLu\BS_.js" />
     <Content Include="Views\JieJueSiLu\js\JieJueSiLu\ET_.js" />
     <Content Include="Views\JieJueSiLu\js\JieJueSiLu\副本 BS_.js" />
+    <Content Include="Views\Journal\js\Search\AT_.js" />
+    <Content Include="Views\Journal\js\Search\BS_.js" />
+    <Content Include="Views\Journal\js\Search\ET_.js" />
     <Content Include="Views\KeTi\js\AT_.js" />
     <Content Include="Views\KeTi\js\BS_.js" />
     <Content Include="Views\KeTi\js\ET_.js" />
@@ -10939,6 +10943,8 @@
     <Content Include="WF\WorkOpt\ServAccepter.ashx" />
     <Content Include="WF\WorkOpt\WinOpen.master" />
     <Content Include="Views\Emp\HuoQuGeRenXinXi.cshtml" />
+    <Content Include="Views\Journal\RiZhi.cshtml" />
+    <Content Include="Views\Journal\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

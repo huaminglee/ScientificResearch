@@ -75,4 +75,3 @@ E:\ScientificResearch\ScientificResearchPrj.BLL\bin\Debug\ScientificResearchPrj.
 E:\ScientificResearch\ScientificResearchPrj.BLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
 E:\ScientificResearch\ScientificResearchPrj.BLL\obj\Debug\ScientificResearchPrj.BLL.dll
 E:\ScientificResearch\ScientificResearchPrj.BLL\obj\Debug\ScientificResearchPrj.BLL.pdb
-E:\ScientificResearch\ScientificResearchPrj.BLL\obj\Debug\ScientificResearchPrj.BLL.csprojResolveAssemblyReference.cache

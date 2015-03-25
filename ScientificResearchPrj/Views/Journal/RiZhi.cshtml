@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "RiZhi";
+    Layout = "~/Views/Shared/_LayoutFrame.cshtml";
+}
+
+<!-- Jquery EasyUI styles for this template -->
+<link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/bootstrap/easyui.css">
+<link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/icon.css">
+
+<div title="流程树" style="padding: 10px; border: 0px solid red;">
+    <div id="tb" style="height:auto">
+        <table cellspacing="0" cellpadding="0" style="margin-left:18px">
+            <tr>
+                <td>
+                    <a href="/Journal/RiZhi" class="easyui-linkbutton" data-options="iconCls:'icon-reload',plain:true" id="link_reload">刷新</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <table id="tTable" class="easyui-treegrid" style="width: 100%; "
+           data-options="fix:true,fitColumns:true">
+    </table>
+</div>
+
+<!--Jquery EasyUI  js文件   -->
+<script src="~/Content/jquery-easyui-1.4.1/jquery.min.js"></script>
+<script src="~/Content/jquery-easyui-1.4.1/jquery.easyui.min.js"></script>
+
+<script src="~/Scripts/jquery_extend.js"></script>
+ 
+<script>
+    
+    $(function () {
+        //获取数据
+        var jsonResult = parseJSON('@Html.Raw(@ViewData["FlowTree"])');
+         
+        //设置treegrid
+        $('#tTable').treegrid({
+            data: jsonResult,
+            singleSelect: true,
+            rownumbers: true,
+            line: true,
+            toolbar: '#tb',
+            fitColumns: true,
+            idField: 'No',
+            treeField: 'Name',
+            method: 'get',
+            columns: [[{
+                title: '名称', field: 'Name', width: 360, align: 'left', formatter: function (value, rec) {
+                    if (rec.Element == "flow") {
+                        var reVal = "/Journal/Search?RptNo=" + Number(rec.No);
+                        reVal = "<a href=javascript:openRec('" + reVal + "')>" + rec.Name + "</a>";
+                        return reVal;
+                    }
+                    return rec.Name;
+                }
+            } ]],
+            onLoadSuccess: function (row, data) {
+                $('#tTable').treegrid('expandAll');
+            }
+        });
+    })
+
+    function openRec(reVal) {
+        window.open(reVal)
+    }
+
+</script>

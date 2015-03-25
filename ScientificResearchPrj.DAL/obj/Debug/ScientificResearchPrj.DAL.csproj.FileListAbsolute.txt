@@ -57,4 +57,3 @@ E:\ScientificResearch\ScientificResearchPrj.DAL\bin\Debug\ScientificResearchPrj.
 E:\ScientificResearch\ScientificResearchPrj.DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
 E:\ScientificResearch\ScientificResearchPrj.DAL\obj\Debug\ScientificResearchPrj.DAL.dll
 E:\ScientificResearch\ScientificResearchPrj.DAL\obj\Debug\ScientificResearchPrj.DAL.pdb
-E:\ScientificResearch\ScientificResearchPrj.DAL\obj\Debug\ScientificResearchPrj.DAL.csprojResolveAssemblyReference.cache

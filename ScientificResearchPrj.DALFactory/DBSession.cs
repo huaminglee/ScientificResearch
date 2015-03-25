@@ -159,6 +159,11 @@ namespace ScientificResearchPrj.DALFactory
         {
             get { return new AttachDAL(); }
         }
+
+        public IJournalDAL JournalDAL
+        {
+            get { return new JournalDAL(); }
+        }
          
         public List<string> ExecuteSql(string sql, params SqlParameter[] pars)
         {

@@ -102,6 +102,7 @@
     <Compile Include="ZaiTuService.cs" />
     <Compile Include="LinkService.cs" />
     <Compile Include="AttachService.cs" />
+    <Compile Include="JournalService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

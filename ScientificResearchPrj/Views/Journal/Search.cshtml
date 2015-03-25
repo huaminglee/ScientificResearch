@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "发起历史";
+    Layout = "~/Views/Shared/_LayoutFrame.cshtml";
+}
+
+<!-- Jquery EasyUI styles for this template -->
+<link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/bootstrap/easyui.css">
+<link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/icon.css">
+
+<div id="tt" class="" style="padding: 5px 10px;border:0px solid red;height:98%;" data-options=" " >
+    <div title="未读" style="padding:10px;">
+        <table class="easyui-datagrid" id="tTable"
+               data-options="fix:true,fitColumns:true" style="width:100%;position:absolute;">
+            <thead>
+                <tr>
+                    <th data-options="field:'Title',align:'center'" style="width: 23%;">标题</th>
+                    <th data-options="field:'DeptName',align:'center'" style="width:7%;">隶属部门</th>
+                    <th data-options="field:'KuaDu',align:'center'" style="width:4%;">跨度(天)</th>
+                    <th data-options="field:'FlowEmps',align:'center'" style="width:25%;">参与人</th>
+                    <th data-options="field:'FlowEnderName',align:'center'" style="width:6%;">结束人</th>
+                    <th data-options="field:'FlowEnderRDT',align:'center'" style="width:7%;">结束时间</th>
+                    <th data-options="field:'FlowEndNode',align:'center'" style="width:5%;">结束节点</th>
+                    <th data-options="field:'FlowStarterName',align:'center'" style="width:6%;">发起人</th>
+                    <th data-options="field:'FlowStartRDT',align:'center'" style="width:7%;">发起时间</th>
+                    <th data-options="field:'OID',align:'center'" style="width:4%;">WorkID</th>
+                    <th data-options="field:'WFState',align:'center'" style="width:5%;">流程状态</th>
+                </tr>
+            </thead>
+        </table>
+    </div> 
+</div>
+ 
+
+    <!--Jquery EasyUI  js文件   -->
+    <script src="~/Content/jquery-easyui-1.4.1/jquery.min.js"></script>
+    <script src="~/Content/jquery-easyui-1.4.1/jquery.easyui.min.js"></script>
+    <script src="~/Scripts/jquery_extend.js"></script>
+      
+    <script src="~/Views/Journal/js/Search/AT_.js"></script>
+    <script src="~/Views/Journal/js/Search/BS_.js"></script>
+    <script src="~/Views/Journal/js/Search/ET_.js"></script>
+    <script>
+        var currentLoginUser = '@ViewData["LoginUser"]';
+        var currentLoginUserName = '@ViewData["LoginUserName"]';
+        var RptNo = '@ViewData["RptNo"]';
+
+        var jsonResult = { total: 0, rows: [] };
+        var jsonData = undefined;
+
+        $(function () {
+            $('#tTable').datagrid({
+                //显示序号
+                rownumbers: true,
+                //单选还是多选
+                singleSelect: true, 
+                //分页
+                pagination: true 
+            });
+
+            //设置分页数据，使得可以获取分页进行加载
+            //注意：加载成功后必须重新设置分页数据，因为分页的正确显示是在数据加载成功后设置才有效的
+            $('#tTable').datagrid("getPager").pagination({
+                pageSize: 10//每页显示的记录条数，默认为10 
+            });
+
+            //初始化
+            ET_.onload();
+        });
+
+    </script>
