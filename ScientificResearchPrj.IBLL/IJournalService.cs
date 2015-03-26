@@ -12,5 +12,7 @@ namespace ScientificResearchPrj.IBLL
         string FlowSearchMethod();
 
         PageModelForDataTable SearchRpt(string RptNo, int pageSize, int pageNow);
+
+        DataTable ReadTrack(CCFlowArgs args);
     }
 }

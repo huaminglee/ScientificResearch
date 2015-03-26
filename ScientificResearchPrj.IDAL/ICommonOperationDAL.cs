@@ -22,5 +22,9 @@ namespace ScientificResearchPrj.IDAL
         bool IsPressExist(string msgFlag);
 
         DataTable SelectSMS(string sentTo, string msgFlag);
+
+        DataTable SelectNodes(CCFlowArgs args);
+
+        DataTable SelectAllNodes(string fk_flow);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using BP.WF;
 using ScientificResearchPrj.DAL;
 using ScientificResearchPrj.IBLL;
+using ScientificResearchPrj.IDAL;
 using ScientificResearchPrj.Model;
 using System;
 using System.Collections.Generic;
@@ -126,6 +127,19 @@ namespace ScientificResearchPrj.BLL
 
             string info = BP.WF.Dev2Interface.Flow_DoPress(workID, msg, true);
             return info;
+        }
+
+        public DataTable GetNodes(CCFlowArgs args) {
+            return (CurrentDAL as ICommonOperationDAL).SelectNodes(args);
+        }
+
+        public DataTable GetAllNodes(string fk_flow)
+        {
+            return (CurrentDAL as ICommonOperationDAL).SelectAllNodes(fk_flow);
+        }
+
+        public string DoRebackWorkFlow(BackFlow back) {
+            return BP.WF.Dev2Interface.Flow_DoRebackWorkFlow(back.FK_Flow, back.WorkID, back.FK_Node, back.Note);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace ScientificResearchPrj.BLL
                 //加上时间是为了防止FK_FlowSort与子节点的No一样，父节点No赋值为FK_FlowSort导致tree的id重复
                 row["_parentId"] = row["FK_FlowSort"] + nowTime;
                 //更新发起链接字段
-                row["StartLink"] = "/WF/MyFlow.aspx?FK_Flow=" + row["No"] + "&FK_Node=" + int.Parse(row["No"].ToString()) + "01";
+                row["StartLink"] = "/WF/MyFlow.aspx?FK_Flow=" + row["No"] + "&FK_Node=" + int.Parse(row["No"].ToString()) + "01&CanEdit=1";
                 //更新历史发起链接字段
                 row["HistoryFK_Flow"] = row["No"];
                 //更新查看流程图链接字段

@@ -70,7 +70,7 @@
                     + "'" + jsonData[i]["TitleLink"] + "','待办"+(index++)+"_" + jsonData[i]["FlowName"] + "'" + ')">' + jsonData[i]["Title"] + '</a>';
                     */
                 jsonData[i]["Title"] = '<a href="javascript:void(0)" onclick="window.open(\''
-                     + jsonData[i]["TitleLink"] + '\')">' + jsonData[i]["Title"] + '</a>';
+                     + jsonData[i]["TitleLink"] + "&random=" + new Date().getTime() + '\')">' + jsonData[i]["Title"] + '</a>';
                 
                 if (jsonData[i]["Press"] != "") {
                     jsonData[i]["Operation"] = '<a style="margin-left:5px" href="javascript:void(0)" onclick="BS_.readPress(' + i + ')">阅读催办</a>';

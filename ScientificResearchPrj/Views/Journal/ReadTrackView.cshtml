@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "流程日志";
+    Layout = "~/Views/Shared/_LayoutFrame.cshtml";
+}
+
+
+<!-- Jquery EasyUI styles for this template -->
+<link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/bootstrap/easyui.css">
+<link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/icon.css">
+<div class="easyui-panel" title="流程日志" style="width:100%;height:100%;padding:0px;text-align:center;"
+			    data-options="iconCls:'icon-tip',closable:false">
+    <div id="tt" class="" style="padding: 5px 10px;border:0px solid red;height:98%;" data-options=" " >
+        <div title="" style="padding:10px;">
+            <table class="easyui-datagrid" id="tTable"
+                   data-options="fix:true,fitColumns:true" style="width:100%;position:absolute;">
+                <thead>
+                    <tr>
+                        <th data-options="field:'RDT',align:'center'" style="width: 9%;">操作时间</th>
+                        <th data-options="field:'FormLink',align:'center'" style="width:4%;">表单</th>
+                        <th data-options="field:'ChartLink',align:'center'" style="width:4%;">流程图</th>
+                        <th data-options="field:'NDFromT',align:'center'" style="width:10%;">从节点</th>
+                        <th data-options="field:'EmpFromT',align:'center'" style="width:10%;">人员</th>
+                        <th data-options="field:'NDToT',align:'center'" style="width:10%;">到节点</th>
+                        <th data-options="field:'EmpToT',align:'center'" style="width:10%;">人员</th>
+                        <th data-options="field:'ArriveTime',align:'center'" style="width:9%;">到达时间</th>
+                        <th data-options="field:'TimeSpan',align:'center'" style="width:5%;">用时(天)</th>
+                        <th data-options="field:'ActionTypeText',align:'center'" style="width:8%;">活动</th>
+                        <th data-options="field:'Msg',align:'center',editor:{
+                            type:'ex_wintextarea',
+                            options:{
+                                readonly:true
+                            }}" style="width:10%;">信息</th>
+                        <th data-options="field:'Exer',align:'center'" style="width:10%;">执行人</th>
+                    </tr>
+                </thead>
+            </table>
+        </div> 
+    </div>
+ </div>
+
+    <!--Jquery EasyUI  js文件   -->
+    <script src="~/Content/jquery-easyui-1.4.1/jquery.min.js"></script>
+    <script src="~/Content/jquery-easyui-1.4.1/jquery.easyui.min.js"></script>
+    <script src="~/Scripts/jquery_extend.js"></script>
+    <script src="~/Scripts/easyui_extend.js"></script>
+    <script src="~/Views/Journal/js/ReadTrackView/AT_.js"></script>
+    <script src="~/Views/Journal/js/ReadTrackView/BS_.js"></script>
+    <script src="~/Views/Journal/js/ReadTrackView/ET_.js"></script>
+    <script>
+        var FK_Flow = '@ViewData["FK_Flow"]';
+        var WorkID = '@ViewData["WorkID"]';
+        var FID = '@ViewData["FID"]';
+
+        var jsonResult = { total: 0, rows: [] };
+        var jsonData = undefined;
+
+        $(function () {
+            $('#tTable').datagrid({
+                //显示序号
+                rownumbers: true,
+                //单选还是多选
+                singleSelect: true,
+                onClickRow: BS_.onClickRow
+            });
+             
+            //初始化
+            ET_.onload();
+        });
+
+    </script>

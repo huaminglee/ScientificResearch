@@ -195,6 +195,50 @@ namespace ScientificResearchPrj.Controllers.Base
             return Redirect(this.Request.UrlReferrer.AbsoluteUri);
         }
 
+        public ActionResult GetAllNodes() {
+            DataTable table = SrService.CommonOperationService.GetAllNodes(FK_Flow);
+
+            if (table == null || table.Rows == null || table.Rows.Count == 0)
+            {
+                return Json(new
+                {
+                    state = "-1",
+                    message = "加载节点失败"
+                }, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                return Json(new
+                {
+                    state = "0",
+                    message = "成功加载节点",
+                    _Json = EasyUIJson.GetEasyUIJsonFromDataTable(table)
+                }, JsonRequestBehavior.AllowGet);
+            }
+        }
+
+        public ActionResult HuiGun(BackFlow back)
+        {
+            try
+            {
+                string mess = SrService.CommonOperationService.DoRebackWorkFlow(back);
+
+                return Json(new
+                {
+                    state = "0",
+                    message = mess
+                });
+            }
+            catch (Exception e)
+            {
+                return Json(new
+                {
+                    state = "-1",
+                    message = "会滚失败~~"+e.Message
+                });
+            } 
+        }
+
         public ActionResult GetHistoryDataFromTrack(CCFlowArgs args,string stepType)
         {
             if (stepType.Equals(StepType.PROJECT_XUQIUFENXI)) return GetProjectHistoryData(args);

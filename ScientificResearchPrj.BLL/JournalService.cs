@@ -70,11 +70,15 @@ namespace ScientificResearchPrj.BLL
                 table.Columns.Add("FlowStarterName");
                 table.Columns.Add("FlowEnderName");
                 table.Columns.Add("DeptName");
+                table.Columns.Add("FlowEndNodeName");
+                table.Columns.Add("WFStateName");
 
                 foreach (DataRow r in table.Rows) {
                     r["FlowStarterName"] = GetEmpName(r["FlowStarter"].ToString());
                     r["FlowEnderName"] = GetEmpName(r["FlowEnder"].ToString());
                     r["DeptName"] = GetDeptName(r["FK_Dept"].ToString());
+                    r["FlowEndNodeName"] = GetNodeName(r["FlowEndNode"].ToString());
+                    r["WFStateName"] = WFStateTrans.GetWFStateStr(r["WFState"].ToString());
                 }
             }
 
@@ -102,6 +106,36 @@ namespace ScientificResearchPrj.BLL
                 return dept.Name;
             }
             return "";
+        }
+
+        private string GetNodeName(string nodeNo) 
+        {
+            Node node = new Node(nodeNo);
+            if (node != null) {
+                return node.Name;
+            }
+            return "";
+        }
+
+        public DataTable ReadTrack(CCFlowArgs args)
+        {
+            try
+            {
+                DataTable table = BP.WF.Dev2Interface.DB_GenerTrack(args.FK_Flow, args.WorkID, args.FID).Tables["Track"];
+                if (table != null && table.Rows != null && table.Rows.Count != 0) {
+                    table.Columns.Add("FormLink");
+                    table.Columns.Add("ChartLink");
+
+                    foreach (DataRow row in table.Rows) {
+                        row["FormLink"] = "/WF/MyFlow.aspx?FK_Flow=" + args.FK_Flow + "&FK_Node=" + row["NDFrom"] + "&FID=" + row["FID"] + "&WorkID=" + row["WorkID"] + "&Paras=" + "&T=" + DateTime.Now.ToString("yyyyMMddHHmmss") + "&CanEdit=0";
+                        row["ChartLink"] = "/WF/Chart.aspx?FK_Flow=" + args.FK_Flow + "&DoType=Chart&T=" + DateTime.Now.ToString("yyyyMMddHHmmss");
+                    }
+                }
+                return table;
+            }
+            catch (Exception e) {
+                return new DataTable();
+            }
         }
     }
 }

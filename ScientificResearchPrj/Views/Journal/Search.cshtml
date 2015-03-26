@@ -6,30 +6,31 @@
 <!-- Jquery EasyUI styles for this template -->
 <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/bootstrap/easyui.css">
 <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.4.1/themes/icon.css">
-
-<div id="tt" class="" style="padding: 5px 10px;border:0px solid red;height:98%;" data-options=" " >
-    <div title="未读" style="padding:10px;">
-        <table class="easyui-datagrid" id="tTable"
-               data-options="fix:true,fitColumns:true" style="width:100%;position:absolute;">
-            <thead>
-                <tr>
-                    <th data-options="field:'Title',align:'center'" style="width: 23%;">标题</th>
-                    <th data-options="field:'DeptName',align:'center'" style="width:7%;">隶属部门</th>
-                    <th data-options="field:'KuaDu',align:'center'" style="width:4%;">跨度(天)</th>
-                    <th data-options="field:'FlowEmps',align:'center'" style="width:25%;">参与人</th>
-                    <th data-options="field:'FlowEnderName',align:'center'" style="width:6%;">结束人</th>
-                    <th data-options="field:'FlowEnderRDT',align:'center'" style="width:7%;">结束时间</th>
-                    <th data-options="field:'FlowEndNode',align:'center'" style="width:5%;">结束节点</th>
-                    <th data-options="field:'FlowStarterName',align:'center'" style="width:6%;">发起人</th>
-                    <th data-options="field:'FlowStartRDT',align:'center'" style="width:7%;">发起时间</th>
-                    <th data-options="field:'OID',align:'center'" style="width:4%;">WorkID</th>
-                    <th data-options="field:'WFState',align:'center'" style="width:5%;">流程状态</th>
-                </tr>
-            </thead>
-        </table>
-    </div> 
-</div>
- 
+<div class="easyui-panel" title="历史发起" style="width:100%;height:100%;padding:0px;text-align:center;"
+			    data-options="iconCls:'icon-tip',closable:false">
+    <div id="tt" class="" style="padding: 5px 10px;border:0px solid red;height:98%;" data-options=" " >
+        <div title="" style="padding:10px;">
+            <table class="easyui-datagrid" id="tTable"
+                   data-options="fix:true,fitColumns:true" style="width:100%;position:absolute;">
+                <thead>
+                    <tr>
+                        <th data-options="field:'Title',align:'center'" style="width: 23%;">标题</th>
+                        <th data-options="field:'DeptName',align:'center'" style="width:7%;">隶属部门</th>
+                        <th data-options="field:'KuaDu',align:'center'" style="width:4%;">跨度(天)</th>
+                        <th data-options="field:'FlowEmps',align:'center'" style="width:25%;">参与人</th>
+                        <th data-options="field:'FlowEnderName',align:'center'" style="width:5%;">结束人</th>
+                        <th data-options="field:'FlowEnderRDT',align:'center'" style="width:7%;">结束时间</th>
+                        <th data-options="field:'FlowEndNodeName',align:'center'" style="width:7%;">结束节点</th>
+                        <th data-options="field:'FlowStarterName',align:'center'" style="width:5%;">发起人</th>
+                        <th data-options="field:'FlowStartRDT',align:'center'" style="width:7%;">发起时间</th>
+                        <th data-options="field:'OID',align:'center'" style="width:4%;">WorkID</th>
+                        <th data-options="field:'WFStateName',align:'center'" style="width:5%;">流程状态</th>
+                    </tr>
+                </thead>
+            </table>
+        </div> 
+    </div>
+ </div>
 
     <!--Jquery EasyUI  js文件   -->
     <script src="~/Content/jquery-easyui-1.4.1/jquery.min.js"></script>
@@ -42,6 +43,7 @@
     <script>
         var currentLoginUser = '@ViewData["LoginUser"]';
         var currentLoginUserName = '@ViewData["LoginUserName"]';
+        var FK_Flow = '@ViewData["FK_Flow"]';
         var RptNo = '@ViewData["RptNo"]';
 
         var jsonResult = { total: 0, rows: [] };

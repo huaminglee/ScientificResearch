@@ -48,7 +48,7 @@
             columns: [[{
                 title: '名称', field: 'Name', width: 360, align: 'left', formatter: function (value, rec) {
                     if (rec.Element == "flow") {
-                        var reVal = "/Journal/Search?RptNo=" + Number(rec.No);
+                        var reVal = "/Journal/Search?FK_Flow=" + rec.No + "&RptNo=" + Number(rec.No);
                         reVal = "<a href=javascript:openRec('" + reVal + "')>" + rec.Name + "</a>";
                         return reVal;
                     }
@@ -62,7 +62,7 @@
     })
 
     function openRec(reVal) {
-        window.open(reVal)
+        window.open(reVal+ "&random=" + new Date().getTime())
     }
 
 </script>

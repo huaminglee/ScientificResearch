@@ -117,7 +117,14 @@ namespace ScientificResearchPrj.BLL
                 {
                     row["OpenRight"] = 3;//3表示能查看能编辑
                     string paras = row["AtPara"] as string;
-                    int isRead = Convert.ToInt32(row["IsRead"]);
+
+                    long workid = Convert.ToInt64(row["WorkID"]);
+                    string fk_node = row["FK_Node"].ToString();
+                    DataTable readT = (this.CurrentDAL as IProcessAllDAL).SelectCurrentGenerWorkerlistIsRead(workid,fk_node);
+                    int isRead = 1;
+                    if (readT != null && readT.Rows != null) {
+                        isRead = Convert.ToInt32(readT.Rows[0]["IsRead"]);
+                    }
                     //当前登陆者能编辑，则应当判断是否需要回执
                     if (isRead == 0)
                     {

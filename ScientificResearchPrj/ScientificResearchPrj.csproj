@@ -5030,6 +5030,9 @@
     <Content Include="Views\Journal\js\Search\AT_.js" />
     <Content Include="Views\Journal\js\Search\BS_.js" />
     <Content Include="Views\Journal\js\Search\ET_.js" />
+    <Content Include="Views\Journal\js\ReadTrackView\AT_.js" />
+    <Content Include="Views\Journal\js\ReadTrackView\BS_.js" />
+    <Content Include="Views\Journal\js\ReadTrackView\ET_.js" />
     <Content Include="Views\KeTi\js\AT_.js" />
     <Content Include="Views\KeTi\js\BS_.js" />
     <Content Include="Views\KeTi\js\ET_.js" />
@@ -10945,6 +10948,7 @@
     <Content Include="Views\Emp\HuoQuGeRenXinXi.cshtml" />
     <Content Include="Views\Journal\RiZhi.cshtml" />
     <Content Include="Views\Journal\Search.cshtml" />
+    <Content Include="Views\Journal\ReadTrackView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

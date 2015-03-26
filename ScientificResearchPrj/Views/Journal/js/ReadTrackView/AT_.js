@@ -6,7 +6,7 @@
             type: "POST",
             dataType: "json",
             data: data,
-            success: success
+            success:  success
         });
     }
 }

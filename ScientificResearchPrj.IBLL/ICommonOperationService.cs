@@ -30,5 +30,10 @@ namespace ScientificResearchPrj.IBLL
        DataTable GetPreviousNodeInfo(CCFlowArgs args);
 
        string Press(int workID, string msg);
+
+       DataTable GetNodes(CCFlowArgs args);
+       DataTable GetAllNodes(string fk_flow);
+
+       string DoRebackWorkFlow(BackFlow back);
    }
 }

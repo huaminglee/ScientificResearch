@@ -11,6 +11,6 @@ namespace ScientificResearchPrj.IDAL
     public interface IProcessAllDAL : IBaseDAL<Object>
     {
         DataTable SelectAllProcess();
-         
+        DataTable SelectCurrentGenerWorkerlistIsRead(long WorkID, string FK_Node);
     }
 }

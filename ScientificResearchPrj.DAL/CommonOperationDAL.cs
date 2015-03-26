@@ -17,7 +17,7 @@ namespace ScientificResearchPrj.DAL
             Paras ps = new Paras();
             string dbstr = BP.Sys.SystemConfig.AppCenterDBVarStr;
             ps.SQL = "SELECT Top(1) * FROM  ND" + int.Parse(retNode.FK_Flow) + "Track  " +
-                "Where ActionType=2 And FID=" + dbstr + "FID And WorkID=" + dbstr + "WorkID And NDTo=" + dbstr + "NDTo And EmpTo=" + dbstr + "EmpTo order By RDT desc;";
+                "Where (ActionType=2 Or ActionType=13 ) And FID=" + dbstr + "FID And WorkID=" + dbstr + "WorkID And NDTo=" + dbstr + "NDTo And EmpTo=" + dbstr + "EmpTo order By RDT desc;";
             ps.Add("FID", retNode.FID);
             ps.Add("WorkID", retNode.WorkID);
             ps.Add("NDTo", retNode.ReturnToNode);
@@ -48,14 +48,14 @@ namespace ScientificResearchPrj.DAL
 
         public DataTable SelectUnPassedFlowWithFK_Node(CCFlowArgs args)
         {
-            string sql = "SELECT A.*, B.FK_Emp FROM WF_GenerWorkFlow A, WF_GenerWorkerlist B WHERE A.WorkID=" + args.WorkID + " And A.FK_Flow=" + args.FK_Flow + " And A.FK_Node=" + args.FK_Node + " And A.FID=" + args.FID + " AND A.WorkID=B.WorkID  AND B.IsEnable=1 AND B.IsPass=0 ";
+            string sql = "SELECT A.*, B.FK_Emp FROM WF_GenerWorkFlow A, WF_GenerWorkerlist B WHERE A.WorkID=" + args.WorkID + " And A.FK_Flow=" + args.FK_Flow + " And A.FK_Node=" + args.FK_Node + " And A.FID=" + args.FID + " And A.FK_Node=B.FK_Node AND A.WorkID=B.WorkID  AND B.IsEnable=1 AND B.IsPass=0 ";
 
             return BP.DA.DBAccess.RunSQLReturnTable(sql);
         }
 
         public DataTable SelectPassedFlow(CCFlowArgs args)
         {
-            string sql = "SELECT A.*, B.FK_Emp  FROM WF_GenerWorkFlow A, WF_GenerWorkerlist B WHERE A.WorkID=" + args.WorkID + " And A.FK_Flow=" + args.FK_Flow + " And A.FID=" + args.FID + " AND A.WorkID=B.WorkID  AND B.IsEnable=1 AND B.IsPass=1 ";
+            string sql = "SELECT A.*, B.FK_Emp  FROM WF_GenerWorkFlow A, WF_GenerWorkerlist B WHERE A.WorkID=" + args.WorkID + " And A.FK_Flow=" + args.FK_Flow + " And A.FID=" + args.FID + " And A.FK_Node=B.FK_Node AND A.WorkID=B.WorkID  AND B.IsEnable=1 AND B.IsPass=1 ";
 
             return BP.DA.DBAccess.RunSQLReturnTable(sql);
         }
@@ -86,6 +86,30 @@ namespace ScientificResearchPrj.DAL
 
             ps.Add("SendTo", sentTo);
             ps.Add("MsgFlag", msgFlag);
+            return BP.DA.DBAccess.RunSQLReturnTable(ps);
+        }
+
+        public DataTable SelectNodes(CCFlowArgs args)
+        {
+            Paras ps = new Paras();
+            string dbstr = BP.Sys.SystemConfig.AppCenterDBVarStr;
+
+            ps.SQL = " SELECT  FK_Node,FK_NodeText FROM WF_GenerWorkerlist Where WorkID=" + dbstr + "WorkID And FK_Flow=" + dbstr + "FK_Flow And FID=" + dbstr + "FID Group By FK_Node,FK_NodeText Order By FK_Node";
+
+            ps.Add("WorkID", args.WorkID);
+            ps.Add("FK_Flow", args.FK_Flow);
+            ps.Add("FID", args.FID);
+            return BP.DA.DBAccess.RunSQLReturnTable(ps);
+        }
+
+        public DataTable SelectAllNodes(string fk_flow)
+        {
+            Paras ps = new Paras();
+            string dbstr = BP.Sys.SystemConfig.AppCenterDBVarStr;
+
+            ps.SQL = " SELECT NodeID as FK_Node,Name as FK_NodeText FROM WF_Node Where FK_Flow=" + dbstr + "FK_Flow Order By NodeID";
+
+            ps.Add("FK_Flow", fk_flow);
             return BP.DA.DBAccess.RunSQLReturnTable(ps);
         }
     }

@@ -6,7 +6,8 @@
             var pageVal = {
                 "pageNow": pageopt.pageNumber == 0 ? 1 : pageopt.pageNumber,
                 "pageSize": pageopt.pageSize,
-                "RptNo": RptNo
+                "RptNo": RptNo,
+                "random" : new Date().getTime()
             }
 
             $('#tTable').datagrid("loading");
@@ -31,7 +32,7 @@
                         jsonData.rows[i]["KuaDu"] = diff;
 
                         if (currentLoginUser == jsonData.rows[i]["FlowStarter"] || jsonData.rows[i]["FlowEmps"].indexOf(currentLoginUser) != -1) {
-                            jsonData.rows[i]["Title"] = "<a>" + jsonData.rows[i]["Title"] + "</a>"
+                            jsonData.rows[i]["Title"] = "<a onclick=javascript:BS_.readTrack(" + jsonData.rows[i]["OID"] + ","+jsonData.rows[i]["FID"] +")>" + jsonData.rows[i]["Title"] + "</a>"
                         }
                     }
                 }
@@ -70,5 +71,9 @@
                 pageNumber: pageArgs.pageNumber,
                 total: pageArgs.total
             });
+        },
+
+        readTrack: function (oid,fid) {
+            window.open("/Journal/ReadTrackView?FK_Flow=" + FK_Flow + "&WorkID=" + oid + "&FID=" + fid + "&random=" + new Date().getTime());
         }
     }

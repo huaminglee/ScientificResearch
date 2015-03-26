@@ -82,7 +82,7 @@
         var index = 1;
         for (var i = 0; i < total; i++) {
             if (jsonData[i]["_parentId"] != null) {
-                jsonData[i]["Title"] = '<a href="javascript:void(0)" onclick="BS_.openTargetUrl(' + jsonData[i]["OpenRight"] + ',\'' + jsonData[i]["TitleLink"] + '\')">' + jsonData[i]["Title"] + '</a>';
+                jsonData[i]["Title"] = '<a href="javascript:void(0)" onclick="BS_.openTargetUrl(\'' + jsonData[i]["TitleLink"] + "&random=" + new Date().getTime() + '\')">' + jsonData[i]["Title"] + '</a>';
                 /*
                 jsonData[i]["Operation"] = '<a href="javascript:void(0)" onclick="BS_.jieShuLiuCheng(\''
                      + jsonData[i]["FK_Flow"] + '\',\'' + jsonData[i]["WorkID"] + '\')">结束流程</a>';
@@ -101,7 +101,7 @@
                         jsonData[i]["TodoEmps"] = empStr.substring(0, empStr.length - 1);
                     }
                 }
-                
+                jsonData[i]["Operation"]="";
                 jsonData[i]["Operation"] = '<a style="margin-left:5px" href="javascript:void(0)" onclick="BS_.cuiBan(\''
                           + jsonData[i]["TodoEmps"] + '\',\'' + jsonData[i]["WorkID"] + '\',\'' + jsonData[i]["NodeName"] + '\')">催办</a>';
 

@@ -54,12 +54,12 @@ namespace ScientificResearchPrj.BLL
                 int isRead = Convert.ToInt32(row["IsRead"]);
                 if (isRead == 0) {
                     row["TitleLink"] =
-                        "/WF/MyFlow.aspx?FK_Flow=" + row["FK_Flow"] + "&FK_Node=" + row["FK_Node"] + "&FID=" + row["FID"] + "&WorkID=" + row["WorkID"] + "&Paras=" + paras + "&IsRead=0&T=" + nowTime;
+                        "/WF/MyFlow.aspx?FK_Flow=" + row["FK_Flow"] + "&FK_Node=" + row["FK_Node"] + "&FID=" + row["FID"] + "&WorkID=" + row["WorkID"] + "&Paras=" + paras + "&IsRead=0&CanEdit=1&T=" + nowTime;
                 }
                 else
                 {
                     row["TitleLink"] =
-                        "/WF/MyFlow.aspx?FK_Flow=" + row["FK_Flow"] + "&FK_Node=" + row["FK_Node"] + "&FID=" + row["FID"] + "&WorkID=" + row["WorkID"] + "&Paras=" + paras + "&T=" + nowTime;
+                        "/WF/MyFlow.aspx?FK_Flow=" + row["FK_Flow"] + "&FK_Node=" + row["FK_Node"] + "&FID=" + row["FID"] + "&WorkID=" + row["WorkID"] + "&Paras=" + paras + "&CanEdit=1&T=" + nowTime;
                 }
                 //更新回执字段
                 row["Press"] = GetPress(row);
